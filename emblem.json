@@ -1,0 +1,11 @@
+[
+    {
+        "name": "ClickSend",
+        "items": [
+            {
+                "url": "https://raw.githubusercontent.com/genecyber/generated-circuit-components/master/ClickSend/send-sms.js",
+                "version": "1.0.0"
+            }
+        ]
+    }
+]
