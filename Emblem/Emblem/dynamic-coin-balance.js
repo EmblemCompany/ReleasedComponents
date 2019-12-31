@@ -4,23 +4,18 @@ exports.group ="Emblem";
 exports.color ="#61affe";
 exports.input =true;
 exports.output =1;
-exports.version ="1.0.0";
+exports.version ="2.0.0";
 exports.author ="Shannon Code";
 exports.icon ="commenting-o";
 exports.options ={};
 exports.npm =[];
 var request = {
     "method": "GET",
-    "header": [
-        {
-            "key": "service",
-            "value": "dexray2"
-        }
-    ],
+    "header": [],
     "url": {
         "raw": "{{host}}:{{port}}/:coin/:address/balance?asset=xcp",
         "host": [
-            "https://api.emblemvault.io"
+            "{{host}}"
         ],
         "port": "{{port}}",
         "path": [
@@ -181,10 +176,22 @@ exports.install =function(instance) {
     }
 };
 exports.html = `<div class="padding">
+    <div class="row">
+        <div class="col-md-12">
+            <div data-jc="textbox" data-jc-path="host" data-jc-config="placeholder:http://someurl.tld">@(Host) ()</div>
+            <div class="help">@(Ignored if variable not present in url)</div>
+        </div>
+    </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div data-jc="textbox" data-jc-path="service" data-jc-config="placeholder:dexray">@(Service) ()</div>
+                <div class="help"></div>
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-12">
                 <div data-jc="textbox" data-jc-path="asset" data-jc-config="placeholder:">@(asset) </div>
-                <div class="help">Leave blank if chain only has one asset type, such as btc</div>
+                <div class="help">Leave blank if chain only has one asset type, such as btc. This is useful when working with ERC-20 tokens, for example.</div>
             </div>
         </div>
         <div class="row">
