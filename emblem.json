@@ -3,7 +3,7 @@
         "name": "ClickSend",
         "items": [
             {
-                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/ClickSend/send-sms.js",
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/ClickSend/sendsms.js",
                 "version": "3.0.0"
             }
         ]
