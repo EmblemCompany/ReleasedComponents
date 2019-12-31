@@ -3,7 +3,7 @@
         "name": "ClickSend",
         "items": [
             {
-                "url": "https://raw.githubusercontent.com/genecyber/generated-circuit-components/master/ClickSend/send-sms.js",
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/ClickSend/send-sms.js",
                 "version": "1.0.0"
             }
         ]
