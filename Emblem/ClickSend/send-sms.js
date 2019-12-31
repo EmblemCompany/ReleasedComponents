@@ -215,7 +215,7 @@ exports.install =function(instance) {
 exports.html = `<div class="padding">
         <div class="row">
             <div class="col-md-12">
-                <div data-jc="textbox" data-jc-path="message" data-jc-config="placeholder:[ { "source":"Circuit Builder", "body":"Hello from Emblem", "to":"+12345678901" } ]">@(messages) </div>
+                <div data-jc="textbox" data-jc-path="messages" data-jc-config="placeholder:[ { \"source\":\"Circuit Builder\", \"body\":\"Hello from Emblem\", \"to\":\"+12345678901\" } ]">@(messages) </div>
                 <div class="help"></div>
             </div>
         </div>
