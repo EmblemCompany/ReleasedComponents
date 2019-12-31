@@ -13,7 +13,15 @@ exports.npm =[];
 
 exports.readme = `# Send SMS
 
-This component sends an SMS message using ClickSend.`;
+This component sends an SMS message using ClickSend.
+
+\`message\`: Enter the message that will go into the SMS here. The format looks like this:
+\`[ { "source":"Circuit Builder", "body":"Hello from Emblem", "to":"+12345678901" } ]\`
+
+\`username\`: Enter your ClickSend username here
+
+\`password\`: Enter your ClickSend password here
+`;
 
 var request = {
     "auth": {
@@ -205,27 +213,9 @@ exports.install =function(instance) {
     }
 };
 exports.html = `<div class="padding">
-    <div class="row">
-        <div class="col-md-12">
-            <div data-jc="textbox" data-jc-path="host" data-jc-config="placeholder:http://someurl.tld">@(Host) ()</div>
-            <div class="help">@(Ignored if variable not present in url)</div>
-        </div>
-    </div>
         <div class="row">
             <div class="col-md-12">
-                <div data-jc="textbox" data-jc-path="service" data-jc-config="placeholder:dexray">@(Service) ()</div>
-                <div class="help"></div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div data-jc="textbox" data-jc-path="messages" data-jc-config="placeholder:[object Object],[object Object]">@(messages) </div>
-                <div class="help"></div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div data-jc="textbox" data-jc-path="password" data-jc-config="placeholder:{{password}};type:password">@(password) </div>
+                <div data-jc="textbox" data-jc-path="message" data-jc-config="placeholder:[ { "source":"Circuit Builder", "body":"Hello from Emblem", "to":"+12345678901" } ]">@(messages) </div>
                 <div class="help"></div>
             </div>
         </div>
@@ -235,4 +225,11 @@ exports.html = `<div class="padding">
                 <div class="help"></div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div data-jc="textbox" data-jc-path="password" data-jc-config="placeholder:{{password}};type:password">@(password) </div>
+                <div class="help"></div>
+            </div>
+        </div>
+
 </div>`
