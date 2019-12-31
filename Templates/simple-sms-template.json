@@ -39,7 +39,7 @@
 		},
 		{
 			"id": "1577813918881",
-			"component": "getdynamiccoinbalance",
+			"component": "get-dynamic-coin-balance",
 			"tab": "1577813912294",
 			"name": "Emblem:Get Dynamic Coin Balance",
 			"x": 231,

@@ -1,4 +1,4 @@
-exports.id ="getdynamiccoinbalance";
+exports.id ="get-dynamic-coin-balance";
 exports.title ="Emblem:Get Dynamic Coin Balance";
 exports.group ="Emblem";
 exports.color ="#61affe";
