@@ -1,10 +1,10 @@
-exports.id ="get-dynamic-coin-balance";
+exports.id ="getdynamiccoinbalance";
 exports.title ="Emblem:Get Dynamic Coin Balance";
 exports.group ="Emblem";
 exports.color ="#61affe";
 exports.input =true;
 exports.output =1;
-exports.version ="3.0.0";
+exports.version ="4.0.0";
 exports.author ="Shannon Code";
 exports.icon ="commenting-o";
 exports.options ={};

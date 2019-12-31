@@ -12,8 +12,8 @@
         "name": "Emblem",
         "items": [
             {
-                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/get-dynamic-coin-balance.js",
-                "version": "3.0.0"
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/getdynamiccoinbalance.js",
+                "version": "4.0.0"
             }
         ]
     }
