@@ -4,7 +4,7 @@ exports.group ="ClickSend";
 exports.color ="#49cc90";
 exports.input =true;
 exports.output =1;
-exports.version ="3.0.0";
+exports.version ="4.0.0";
 exports.author ="Shannon Code";
 exports.icon ="commenting-o";
 exports.options ={};
@@ -15,8 +15,12 @@ exports.readme = `# Send SMS
 
 This component sends an SMS message using ClickSend.
 
-\`message\`: Enter the message that will go into the SMS here. The format looks like this:
-\`[ { "source":"Circuit Builder", "body":"Hello from Emblem", "to":"+12345678901" } ]\`
+\`msg\`: Enter the message that will go into the SMS here.\`
+
+\`to\`: Enter the phone number for the recipient here. This 
+needs to be in the E.164 standard format, which looks like the following:
+\`+[country code][subscriber number]\`. An example US phone number would be
+\`+18888511920\`.
 
 \`username\`: Enter your ClickSend username here
 
@@ -111,42 +115,13 @@ exports.install =function(instance) {
             var body = {}
             if (theRequest.body) {
                 var body = {}
-                if (theRequest.body.mode) {
-                    theRequest.body = theRequest.body[theRequest.body.mode]
-                }
-                theRequest.body.forEach(item=>{
-                    if (instance.options[item.key] || response.data[item.key] || FLOW.variables[item.key]) {
-                        if (instance.options[item.key].includes('${')) {
-                            var pieces = instance.options[item.key].split('$')
-                            var replacedPieces = []
-                            pieces.forEach((piece, index)=>{
-                                if (piece.includes('{') && piece.includes('}')) {
-                                    var editedPiece = piece.replace('{', 'response.data.')
-                                    editedPiece = editedPiece.replace('}', '')
-                                    var replacement = eval(editedPiece.trim())				                    
-                                    replacedPieces.push(replacement)
-                                } else {
-                                    replacedPieces.push(piece)
-                                }
-                                if (pieces.length === index) {
-                                    instance.options[item.key] = replacedPieces.join('')
-                                }
-                            })
-                            instance.options[item.key] = replacedPieces.join('')
-                        }
-                        if (instance.options[item.key].includes('msg.')) {
-                            instance.options[item.key] = response.data[instance.options[item.key].replace('msg.', '')]
-                        }                        
-                        try {
-                            body[item.key] = JSON.parse(instance.options[item.key] || response.data[item.key] || FLOW.variables[item.key])
-                        } catch(err){
-                            body[item.key] = instance.options[item.key] || response.data[item.key] || FLOW.variables[item.key]
-                        }                        
-                    } else {
-                        body[item.key] = item.value
+                body.messages = []
+                body.messages.push(
+                    {
+                        to: instance.options.to || response.data.to || FLOW.variables.to,
+                        body: instance.options.msg || response.data.msg || FLOW.variables.msg
                     }
-                    
-                })
+                )
                 builder.json(body);      
             }
             builder.method(theRequest.method.toLowerCase() || 'get')
@@ -215,21 +190,29 @@ exports.install =function(instance) {
 exports.html = `<div class="padding">
         <div class="row">
             <div class="col-md-12">
-                <div data-jc="textbox" data-jc-path="messages" data-jc-config="placeholder:[ { \"source\":\"Circuit Builder\", \"body\":\"Hello from Emblem\", \"to\":\"+12345678901\" } ]">@(messages) </div>
+                <div data-jc="textbox" data-jc-path="msg" data-jc-config="placeholder:Enter the text of your message here">@(msg) </div>
                 <div class="help"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div data-jc="textbox" data-jc-path="to" data-jc-config="placeholder:Recipient phone number">@(to) </div>
+                <div class="help">This 
+                needs to be in the E.164 standard format, which looks like the following:
+                +[country code][subscriber number]. An example US phone number would be
+                +18888511920.</div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
                 <div data-jc="textbox" data-jc-path="username" data-jc-config="placeholder:{{username}}">@(username) </div>
-                <div class="help"></div>
+                <div class="help">Your ClickSend username. Leave this empty if you have defined this in variables.</div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
                 <div data-jc="textbox" data-jc-path="password" data-jc-config="placeholder:{{password}};type:password">@(password) </div>
-                <div class="help"></div>
+                <div class="help">You ClickSend password. Leave this empty if you have defined this in variables.</div>
             </div>
         </div>
-
 </div>`
