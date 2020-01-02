@@ -7,8 +7,19 @@ exports.output =1;
 exports.version ="4.0.0";
 exports.author ="Shannon Code";
 exports.icon ="commenting-o";
-exports.options ={};
+exports.options ={
+    service: "dexray2",
+    host: "api.emblemvault.io"
+};
 exports.npm =[];
+
+exports.readme = `# Emblem:Get Dynamic Coin Balance
+
+This component will retrieve the balance from any cryptocurrency coin
+on any blockchain, given the address.
+
+`;
+
 var request = {
     "method": "GET",
     "header": [],
@@ -176,18 +187,6 @@ exports.install =function(instance) {
     }
 };
 exports.html = `<div class="padding">
-    <div class="row">
-        <div class="col-md-12">
-            <div data-jc="textbox" data-jc-path="host" data-jc-config="placeholder:http://someurl.tld">@(Host) ()</div>
-            <div class="help">@(Ignored if variable not present in url)</div>
-        </div>
-    </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div data-jc="textbox" data-jc-path="service" data-jc-config="placeholder:dexray">@(Service) ()</div>
-                <div class="help"></div>
-            </div>
-        </div>
         <div class="row">
             <div class="col-md-12">
                 <div data-jc="textbox" data-jc-path="asset" data-jc-config="placeholder:">@(asset) </div>
