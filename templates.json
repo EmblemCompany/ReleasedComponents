@@ -4,5 +4,11 @@
         "name": "Send SMS with balance", 
         "description": "A simple Circuit for beginners. It checks an address for a balance and sends the balance via SMS", 
         "author": "UNspecified <dawn@unspecified.me>" 
+    },
+    { 
+        "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Templates/flow_20200102-1805.json", 
+        "name": "Send SMS with balance 2", 
+        "description": "A simple Circuit for beginners. It checks an address for a balance and sends the balance via SMS", 
+        "author": "UNspecified <dawn@unspecified.me>" 
     }
 ]
