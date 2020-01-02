@@ -118,10 +118,14 @@ exports.install =function(instance) {
             if (theRequest.body) {
                 var body = {}
                 body.messages = []
+                var smsBody = instance.options.msg || response.data.msg || FLOW.variables.msg
+                if (smsBody.includes('{msg.')) {
+                    smsBody = replaceTokenizedString(response, smsBody)
+                }
                 body.messages.push(
                     {
                         to: instance.options.to || response.data.to || FLOW.variables.to,
-                        body: instance.options.msg || response.data.msg || FLOW.variables.msg
+                        body: smsBody
                     }
                 )
                 builder.json(body);      
@@ -147,6 +151,19 @@ exports.install =function(instance) {
 
 	instance.on('options', instance.reconfigure);
     instance.reconfigure();
+
+    function replaceTokenizedString(response, myString) {
+        var tokenRegex = /[^{\}]+(?=})/g
+        var replaceArray = myString.match(tokenRegex);
+        console.log('replaceArray', replaceArray)
+
+        replaceArray.forEach(item=>{
+                objectPath = item.replace('msg.', 'response.data.')
+                console.log('item', item, objectPath)
+        		myString = myString.replace('{' + item + '}', eval(objectPath))
+        })
+        return myString
+    }
     
     function generateUrl(request) {
         var url;
