@@ -4,7 +4,7 @@ exports.group ="Emblem";
 exports.color ="#61affe";
 exports.input =true;
 exports.output =1;
-exports.version ="0.0.5";
+exports.version ="0.0.6";
 exports.author ="Shannon Code";
 exports.icon ="commenting-o";
 exports.options ={
@@ -138,8 +138,8 @@ exports.install =function(instance) {
             }
             builder.method(theRequest.method.toLowerCase() || 'get')
             builder.exec(function(err, response) {
-                // instance.send(response);
-                instance.send({response: response, url: url, parsedUrl: generateUrl(theRequest), builder: builder})
+                instance.send({response: response});
+                // instance.send({response: response, url: url, parsedUrl: generateUrl(theRequest), builder: builder})
 				LOGGER('Notifications', 'response:', JSON.stringify(response), 'error:', err);
 			});
 		});
