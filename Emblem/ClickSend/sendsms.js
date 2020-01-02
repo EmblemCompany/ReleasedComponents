@@ -4,7 +4,7 @@ exports.group ="ClickSend";
 exports.color ="#49cc90";
 exports.input =true;
 exports.output =1;
-exports.version ="4.0.0";
+exports.version ="0.0.4";
 exports.author ="Shannon Code";
 exports.icon ="commenting-o";
 exports.options ={};
@@ -30,7 +30,7 @@ needs to be in the E.164 standard format, which looks like the following:
 `;
 
 var request = {
-    "auth": {
+    "auth-removed": {
         "type": "basic",
         "basic": [
             {
@@ -50,6 +50,9 @@ var request = {
         {
             "key": "Content-Type",
             "value": "application/json"
+        }, {
+            "key": "Authorization",
+            "value": "Basic c2hhbm5vbkB1bnNwZWNpZmllZC5tZTpBc3RtZC00MjM2"
         }
     ],
     "body": [
@@ -220,18 +223,6 @@ exports.html = `<div class="padding">
                 needs to be in the E.164 standard format, which looks like the following:
                 +[country code][subscriber number]. An example US phone number would be
                 +18888511920.</div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div data-jc="textbox" data-jc-path="username" data-jc-config="placeholder:{{username}}">@(username) </div>
-                <div class="help">Your ClickSend username. Leave this empty if you have defined this in variables.</div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div data-jc="textbox" data-jc-path="password" data-jc-config="placeholder:{{password}};type:password">@(password) </div>
-                <div class="help">You ClickSend password. Leave this empty if you have defined this in variables.</div>
             </div>
         </div>
 </div>`
