@@ -250,5 +250,22 @@
 				"version": "1.0.0"
 			}
 		]
-	}
+    },
+    {
+        "name": "Templates Only",
+        "items": [
+            {
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Templates/Components/sms_trigger.js",
+                "version": "0.0.1"
+            },
+            {
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Templates/Components/sms_getdynamiccoinbalance.js",
+                "version": "0.0.1"
+            },
+            {
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Templates/Components/sms_sendsms.js",
+                "version": "0.0.1"
+            }
+        ]
+    }
 ]
