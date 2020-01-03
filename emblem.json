@@ -4,7 +4,8 @@
         "items": [
             {
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/ClickSend/sendsms.js",
-                "version": "0.0.4"
+                "version": "0.0.4",
+                "friendly_name": "Send SMS"
             }
         ]
     },
