@@ -2,7 +2,7 @@
     "tabs": [
         {
             "id": "1577813912294",
-            "name": "Send SMS with balance 2",
+            "name": "SMS balance",
             "icon": "fa-object-ungroup",
             "linker": "main",
             "index": 0
@@ -11,7 +11,7 @@
     "components": [
         {
             "id": "1577813916753",
-            "component": "trigger",
+            "component": "sms_trigger",
             "tab": "1577813912294",
             "name": "Trigger",
             "x": 89,
@@ -39,7 +39,7 @@
         },
         {
             "id": "1577813918881",
-            "component": "getdynamiccoinbalance",
+            "component": "sms_getdynamiccoinbalance",
             "tab": "1577813912294",
             "name": "Emblem:Get Dynamic Coin Balance",
             "x": 231,
@@ -74,7 +74,7 @@
         },
         {
             "id": "1577814031038",
-            "component": "sendsms",
+            "component": "sms_sendsms",
             "tab": "1577813912294",
             "name": "Send SMS",
             "x": 555,
