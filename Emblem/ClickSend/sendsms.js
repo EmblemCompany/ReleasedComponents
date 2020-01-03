@@ -6,7 +6,7 @@ exports.input =true;
 exports.output =1;
 exports.version ="0.0.4";
 exports.author ="Shannon Code";
-exports.icon ="commenting-o";
+exports.icon ="sms";
 exports.options ={};
 exports.npm =[];
 

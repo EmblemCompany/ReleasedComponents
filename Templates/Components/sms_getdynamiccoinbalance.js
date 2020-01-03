@@ -6,7 +6,7 @@ exports.input =true;
 exports.output =1;
 exports.version ="0.0.1";
 exports.author ="Shannon Code";
-exports.icon ="btc";
+exports.icon ="bitcoin";
 exports.options ={
     service: "dexray2",
     host: "api.emblemvault.io"
