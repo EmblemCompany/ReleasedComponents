@@ -13,7 +13,7 @@ exports.npm =[];
 
 exports.readme = `# Send SMS
 
-This component sends an SMS message using ClickSend. In order to use this, you must have a registered account with ClickSend. At least it's free for this kind of use!
+This component sends an SMS message using ClickSend.
 
 ## Fields
 
