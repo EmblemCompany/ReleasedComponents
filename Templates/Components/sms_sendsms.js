@@ -27,6 +27,10 @@ needs to be in the E.164 standard format, which looks like the following: +[coun
 In the \`msg\` field, you can retrieve data from the previous component. The Console tab of that component displays the json response. To use that response data, enter {message.<your json path here>}. For example, in this template, {message.response.balance} retrieves the balance from Emblem: Get Dynamic Coin Balance. 
 
 Learn more [here](https://unspecifiedsupport.freshdesk.com/support/solutions/articles/60000182172-using-a-component-s-response-data)!
+
+## Having trouble?
+
+Did you check that you entered a phone number for a recipient, and that it is in the correct format?
 `;
 
 var request = {
