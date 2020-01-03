@@ -1,6 +1,6 @@
 exports.id = 'sms_trigger';
 exports.title = 'Trigger';
-exports.group = 'Inputs';
+exports.group = 'Templates Only';
 exports.color = '#F6BB42';
 exports.click = true;
 exports.output =  1;

@@ -158,11 +158,9 @@ exports.install =function(instance) {
     function replaceTokenizedString(response, myString) {
         var tokenRegex = /[^{\}]+(?=})/g
         var replaceArray = myString.match(tokenRegex);
-        console.log('replaceArray', replaceArray)
 
         replaceArray.forEach(item=>{
                 objectPath = item.replace('msg.', 'response.data.')
-                console.log('item', item, objectPath)
         		myString = myString.replace('{' + item + '}', eval(objectPath))
         })
         return myString

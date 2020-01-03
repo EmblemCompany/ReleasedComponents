@@ -1,6 +1,6 @@
-exports.id ="sendsms";
+exports.id ="sms_sendsms";
 exports.title ="Send SMS";
-exports.group ="ClickSend";
+exports.group ="Templates Only";
 exports.color ="#49cc90";
 exports.input =true;
 exports.output =1;
@@ -158,11 +158,9 @@ exports.install =function(instance) {
     function replaceTokenizedString(response, myString) {
         var tokenRegex = /[^{\}]+(?=})/g
         var replaceArray = myString.match(tokenRegex);
-        console.log('replaceArray', replaceArray)
 
         replaceArray.forEach(item=>{
                 objectPath = item.replace('msg.', 'response.data.')
-                console.log('item', item, objectPath)
         		myString = myString.replace('{' + item + '}', eval(objectPath))
         })
         return myString

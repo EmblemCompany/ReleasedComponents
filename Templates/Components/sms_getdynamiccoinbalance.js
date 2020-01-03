@@ -1,6 +1,6 @@
 exports.id ="sms_getdynamiccoinbalance";
 exports.title ="Emblem:Get Dynamic Coin Balance";
-exports.group ="Emblem";
+exports.group ="Templates Only";
 exports.color ="#61affe";
 exports.input =true;
 exports.output =1;
