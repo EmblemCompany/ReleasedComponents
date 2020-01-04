@@ -1,10 +1,10 @@
-exports.id ="getdynamiccoinbalance";
+exports.id ="sms_getdynamiccoinbalance";
 exports.title ="Emblem:Get Dynamic Coin Balance";
-exports.group ="Emblem";
+exports.group ="Templates Only";
 exports.color ="#61affe";
 exports.input =true;
 exports.output =1;
-exports.version ="0.0.6";
+exports.version ="0.0.1";
 exports.author ="Shannon Code";
 exports.icon ="coins";
 exports.options ={

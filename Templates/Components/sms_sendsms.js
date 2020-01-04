@@ -1,67 +1,93 @@
-exports.id ="getdynamiccoinbalance";
-exports.title ="Emblem:Get Dynamic Coin Balance";
-exports.group ="Emblem";
-exports.color ="#61affe";
+exports.id ="sms_sendsms";
+exports.title ="Send SMS";
+exports.group ="Templates Only";
+exports.color ="#49cc90";
 exports.input =true;
 exports.output =1;
-exports.version ="0.0.6";
+exports.version ="0.0.1";
 exports.author ="Shannon Code";
-exports.icon ="coins";
-exports.options ={
-    service: "dexray2",
-    host: "api.emblemvault.io"
-};
+exports.icon ="sms";
+exports.options ={};
 exports.npm =[];
 
-exports.readme = `# Emblem:Get Dynamic Coin Balance
 
-This component will retrieve the balance from any cryptocurrency coin on any blockchain, given the address.
+exports.readme = `# Send SMS
+
+This component sends an SMS message using ClickSend.
 
 ## Fields
 
-\`asset\`: This is the name of the asset on the blockchain you are requesting a balance from.
+\`msg\`: Enter the message that will go into the SMS here.\`
 
-\`coin\`: This is the name of the blockchain your asset lives on.
+\`to\`: Enter the phone number for the recipient here. This 
+needs to be in the E.164 standard format, which looks like the following: +[country code][subscriber number]. An example US phone number would be +18888511920.
 
-\`address\`: This is the address that contains the asset you would like the balance for.
+## Stuff you need to know
 
-## What is the difference between asset and coin?
+In the \`msg\` field, you can retrieve data from the previous component. The Console tab of that component displays the json response. To use that response data, enter {message.<your json path here>}. For example, in this template, {message.response.balance} retrieves the balance from Emblem: Get Dynamic Coin Balance. 
 
-In the most popular example, BTC, these are the same. The blockchain is the Bitcoin chain and the asset is Bitcoin.
+Learn more [here](https://unspecifiedsupport.freshdesk.com/support/solutions/articles/60000182172-using-a-component-s-response-data)!
 
-In other examples, however, like ETH, there are many assets that use the same blockchain. Every ERC-20 asset uses an ETH address. Entering asset ensures that you get only the balance for that asset.
+## Having trouble?
 
+Did you check that you entered a phone number for a recipient, and that it is in the correct format?
 `;
 
 var request = {
-    "method": "GET",
-    "header": [],
-    "url": {
-        "raw": "{{host}}:{{port}}/:coin/:address/balance?asset=xcp",
-        "host": [
-            "{{host}}"
-        ],
-        "port": "{{port}}",
-        "path": [
-            ":coin",
-            ":address",
-            "balance"
-        ],
-        "query": [
+    "auth-removed": {
+        "type": "basic",
+        "basic": [
             {
-                "key": "asset",
-                "value": "xcp"
-            }
-        ],
-        "variable": [
-            {
-                "key": "coin",
-                "value": "xcp"
+                "key": "password",
+                "value": "{{password}}",
+                "type": "string"
             },
             {
-                "key": "address",
-                "value": "19cCGRb5XLuuzoRvDLyRm888G8ank5WFyM"
+                "key": "username",
+                "value": "{{username}}",
+                "type": "string"
             }
+        ]
+    },
+    "method": "POST",
+    "header": [
+        {
+            "key": "Content-Type",
+            "value": "application/json"
+        }, {
+            "key": "Authorization",
+            "value": "Basic aGVsbG9AdW5zcGVjaWZpZWQubWU6VU5zcDNjaWZpM2QxNyE="
+        }
+    ],
+    "body": [
+        {
+            "key": "messages",
+            "value": [
+                {
+                    "source": "php",
+                    "body": "Jelly liquorice marshmallow candy carrot cake 4Eyffjs1vL.",
+                    "to": "+17574691070"
+                },
+                {
+                    "source": "php",
+                    "body": "Chocolate bar icing icing oat cake carrot cake jelly cotton MWEvciEPIr.",
+                    "list_id": 428
+                }
+            ]
+        }
+    ],
+    "url": {
+        "raw": "https://rest.clicksend.com/v3/sms/send",
+        "protocol": "https",
+        "host": [
+            "rest",
+            "clicksend",
+            "com"
+        ],
+        "path": [
+            "v3",
+            "sms",
+            "send"
         ]
     }
 };
@@ -98,47 +124,22 @@ exports.install =function(instance) {
             var body = {}
             if (theRequest.body) {
                 var body = {}
-                if (theRequest.body.mode) {
-                    theRequest.body = theRequest.body[theRequest.body.mode]
+                body.messages = []
+                var smsBody = instance.options.msg || response.data.msg || FLOW.variables.msg
+                if (smsBody.includes('{msg.')) {
+                    smsBody = replaceTokenizedString(response, smsBody)
                 }
-                theRequest.body.forEach(item=>{
-                    if (instance.options[item.key] || response.data[item.key] || FLOW.variables[item.key]) {
-                        if (instance.options[item.key].includes('${')) {
-                            var pieces = instance.options[item.key].split('$')
-                            var replacedPieces = []
-                            pieces.forEach((piece, index)=>{
-                                if (piece.includes('{') && piece.includes('}')) {
-                                    var editedPiece = piece.replace('{', 'response.data.')
-                                    editedPiece = editedPiece.replace('}', '')
-                                    var replacement = eval(editedPiece.trim())				                    
-                                    replacedPieces.push(replacement)
-                                } else {
-                                    replacedPieces.push(piece)
-                                }
-                                if (pieces.length === index) {
-                                    instance.options[item.key] = replacedPieces.join('')
-                                }
-                            })
-                            instance.options[item.key] = replacedPieces.join('')
-                        }
-                        if (instance.options[item.key].includes('msg.')) {
-                            instance.options[item.key] = response.data[instance.options[item.key].replace('msg.', '')]
-                        }                        
-                        try {
-                            body[item.key] = JSON.parse(instance.options[item.key] || response.data[item.key] || FLOW.variables[item.key])
-                        } catch(err){
-                            body[item.key] = instance.options[item.key] || response.data[item.key] || FLOW.variables[item.key]
-                        }                        
-                    } else {
-                        body[item.key] = item.value
+                body.messages.push(
+                    {
+                        to: instance.options.to || response.data.to || FLOW.variables.to,
+                        body: smsBody
                     }
-                    
-                })
+                )
                 builder.json(body);      
             }
             builder.method(theRequest.method.toLowerCase() || 'get')
             builder.exec(function(err, response) {
-                instance.send({response: response});
+                instance.send(response);
                 // instance.send({response: response, url: url, parsedUrl: generateUrl(theRequest), builder: builder})
 				LOGGER('Notifications', 'response:', JSON.stringify(response), 'error:', err);
 			});
@@ -157,6 +158,17 @@ exports.install =function(instance) {
 
 	instance.on('options', instance.reconfigure);
     instance.reconfigure();
+
+    function replaceTokenizedString(response, myString) {
+        var tokenRegex = /[^{\}]+(?=})/g
+        var replaceArray = myString.match(tokenRegex);
+
+        replaceArray.forEach(item=>{
+                objectPath = item.replace('msg.', 'response.data.')
+        		myString = myString.replace('{' + item + '}', eval(objectPath))
+        })
+        return myString
+    }
     
     function generateUrl(request) {
         var url;
@@ -202,20 +214,17 @@ exports.install =function(instance) {
 exports.html = `<div class="padding">
         <div class="row">
             <div class="col-md-12">
-                <div data-jc="textbox" data-jc-path="asset" data-jc-config="placeholder:">@(asset) </div>
-                <div class="help">This is the symbol for the asset, such as coval.</div>
+                <div data-jc="textbox" data-jc-path="msg" data-jc-config="placeholder:Enter the text of your message here">@(msg) </div>
+                <div class="help"></div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
-                <div data-jc="textbox" data-jc-path="coin" data-jc-config="placeholder:btc">@(coin) </div>
-                <div class="help">This is the blockchain the asset lives on, such as eth for Coval.</div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div data-jc="textbox" data-jc-path="address" data-jc-config="placeholder:19cCGRb5XLuuzoRvDLyRm888G8ank5WFyM">@(address) </div>
-                <div class="help">Try this example for btc, btc: 19cCGRb5XLuuzoRvDLyRm888G8ank5WFyM, or this example for coval, eth: 0x5b3cfb86a9575a2c42fd88aa71f0957004fa9209</div>
+                <div data-jc="textbox" data-jc-path="to" data-jc-config="placeholder:Recipient phone number">@(to) </div>
+                <div class="help">This 
+                needs to be in the E.164 standard format, which looks like the following:
+                +[country code][subscriber number]. An example US phone number would be
+                +18888511920.</div>
             </div>
         </div>
 </div>`

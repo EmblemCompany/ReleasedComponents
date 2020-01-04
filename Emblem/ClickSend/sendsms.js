@@ -6,27 +6,27 @@ exports.input =true;
 exports.output =1;
 exports.version ="0.0.4";
 exports.author ="Shannon Code";
-exports.icon ="commenting-o";
+exports.icon ="sms";
 exports.options ={};
 exports.npm =[];
 
 
 exports.readme = `# Send SMS
 
-This component sends an SMS message using ClickSend. In order to use this, you must have a registered account with ClickSend. At least it's free for this kind of use!
+This component sends an SMS message using ClickSend.
 
 ## Fields
 
 \`msg\`: Enter the message that will go into the SMS here.\`
 
 \`to\`: Enter the phone number for the recipient here. This 
-needs to be in the E.164 standard format, which looks like the following:
-\`+[country code][subscriber number]\`. An example US phone number would be
-\`+18888511920\`.
+needs to be in the E.164 standard format, which looks like the following: +[country code][subscriber number]. An example US phone number would be +18888511920.
 
-\`username\`: Enter your ClickSend username here
+## Stuff you need to know
 
-\`password\`: Enter your ClickSend password here
+In the \`msg\` field, you can retrieve data from the previous component. The Console tab of that component displays the json response. To use that response data, enter {message.<your json path here>}. For example, in this template, {message.response.balance} retrieves the balance from Emblem: Get Dynamic Coin Balance. 
+
+Learn more [here](https://bit.ly/2FbjaOB)!
 `;
 
 var request = {
@@ -158,11 +158,9 @@ exports.install =function(instance) {
     function replaceTokenizedString(response, myString) {
         var tokenRegex = /[^{\}]+(?=})/g
         var replaceArray = myString.match(tokenRegex);
-        console.log('replaceArray', replaceArray)
 
         replaceArray.forEach(item=>{
                 objectPath = item.replace('msg.', 'response.data.')
-                console.log('item', item, objectPath)
         		myString = myString.replace('{' + item + '}', eval(objectPath))
         })
         return myString
