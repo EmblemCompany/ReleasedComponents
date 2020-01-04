@@ -4,7 +4,8 @@
         "items": [
             {
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/ClickSend/sendsms.js",
-                "version": "0.0.4"
+                "version": "0.0.4",
+                "display-name": "Send SMS"
             }
         ]
     },
@@ -13,7 +14,8 @@
         "items": [
             {
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/getdynamiccoinbalance.js",
-                "version": "0.0.6"
+                "version": "0.0.6",
+                "display-name": "Emblem: Get Dynamic Coin Balance"
             }
         ]
     }

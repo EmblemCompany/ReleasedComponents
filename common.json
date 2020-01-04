@@ -4,43 +4,53 @@
 		"items": [
 			{
 				"url": "https://cdn.totaljs.com/flow/code.js",
-				"version": "1.2.0"
+				"version": "1.2.0",
+                "display-name": "Code"
 			},
 			{
 				"url": "https://cdn.totaljs.com/flow/comment.js",
-				"version": "1.0.0"
+				"version": "1.0.0",
+                "display-name": "Comment"
 			},
 			{
 				"url": "https://cdn.totaljs.com/flow/count.js",
-				"version": "1.0.0"
+				"version": "1.0.0",
+                "display-name": "Count"
 			},
 			{
 				"url": "https://cdn.totaljs.com/flow/debug.js",
-				"version": "2.0.3"
+				"version": "2.0.3",
+                "display-name": "Debug"
 			},
 			{
 				"url": "https://cdn.totaljs.com/flow/filereader.js",
-				"version": "1.0.1"
+				"version": "1.0.1",
+                "display-name": "File Reader"
 			},
 			{
 				"url": "https://cdn.totaljs.com/flow/filewriter.js",
-				"version": "1.0.1"
+				"version": "1.0.1",
+                "display-name": "File Writer"
 			},
 			{
 				"url": "https://cdn.totaljs.com/flow/modified.js",
-				"version": "1.0.0"
+				"version": "1.0.0",
+                "display-name": "Modified"
 			},
 			{
 				"url": "https://cdn.totaljs.com/flow/pass.js",
-				"version": "1.0.0"
+				"version": "1.0.0",
+                "display-name": "Pass"
 			},
 			{
 				"url": "https://cdn.totaljs.com/flow/repository.js",
-				"version": "1.0.0"
+				"version": "1.0.0",
+                "display-name": "Repository"
 			},
 			{
 				"url": "https://cdn.totaljs.com/flow/split.js",
-				"version": "1.1.1"
+				"version": "1.1.1",
+                "display-name": "Split"
 			}
 		]
 	},
@@ -49,15 +59,18 @@
 		"items": [
 			{
 				"url": "https://cdn.totaljs.com/flow/console.js",
-				"version": "1.0.0"
+				"version": "1.0.0",
+                "display-name": "Console"
 			},
 			{
 				"url": "https://cdn.totaljs.com/flow/trigger.js",
-				"version": "1.1.0"
+				"version": "1.1.0",
+                "display-name": "Trigger"
 			},
 			{
 				"url": "https://cdn.totaljs.com/flow/triggertoggle.js",
-				"version": "1.1.0"
+				"version": "1.1.0",
+                "display-name": "Trigger Toggle"
 			}
 		]
 	},
@@ -66,23 +79,28 @@
 		"items": [
 			{
 				"url": "https://cdn.totaljs.com/flow/delay.js",
-				"version": "1.0.0"
+				"version": "1.0.0",
+                "display-name": "Delay"
 			},
 			{
 				"url": "https://cdn.totaljs.com/flow/duration.js",
-				"version": "1.0.0"
+				"version": "1.0.0",
+                "display-name": "Duration"
 			},
 			{
 				"url": "https://cdn.totaljs.com/flow/feedtodelay.js",
-				"version": "1.0.0"
+				"version": "1.0.0",
+                "display-name": "Feed to Delay"
 			},
 			{
 				"url": "https://cdn.totaljs.com/flow/scheduler.js",
-				"version": "1.0.0"
+				"version": "1.0.0",
+                "display-name": "Scheduler"
 			},
 			{
 				"url": "https://cdn.totaljs.com/flow/timer.js",
-				"version": "1.0.0"
+				"version": "1.0.0",
+                "display-name": "Timer"
 			}
 		]
 	},
@@ -91,15 +109,18 @@
 		"items": [
 			{
 				"url": "https://cdn.totaljs.com/flow/email.js",
-				"version": "1.4.0"
+				"version": "1.4.0",
+                "display-name": "Email"
 			},
 			{
 				"url": "https://cdn.totaljs.com/flow/sms.js",
-				"version": "1.0.0"
+				"version": "1.0.0",
+                "display-name": "SMS"
 			},
 			{
 				"url": "https://cdn.totaljs.com/flow/twilio.js",
-				"version": "1.0.0"
+				"version": "1.0.0",
+                "display-name": "Twilio"
 			}
 		]
 	},
@@ -108,35 +129,43 @@
 		"items": [
 			{
 				"url": "https://cdn.totaljs.com/flow/httpdownloader.js",
-				"version": "1.0.0"
+				"version": "1.0.0",
+                "display-name": "HTTP Downloader"
 			},
 			{
 				"url": "https://cdn.totaljs.com/flow/httpgeoip.js",
-				"version": "1.0.0"
+				"version": "1.0.0",
+                "display-name": "HTTP Geo IP"
 			},
 			{
 				"url": "https://cdn.totaljs.com/flow/httplistener.js",
-				"version": "1.0.0"
+				"version": "1.0.0",
+                "display-name": "HTTP Listener"
 			},
 			{
 				"url": "https://cdn.totaljs.com/flow/httpreceiver.js",
-				"version": "1.0.0"
+				"version": "1.0.0",
+                "display-name": "HTTP Receiver"
 			},
 			{
 				"url": "https://cdn.totaljs.com/flow/httpredirect.js",
-				"version": "1.0.0"
+				"version": "1.0.0",
+                "display-name": "HTTP Redirect"
 			},
 			{
 				"url": "https://cdn.totaljs.com/flow/httprequest.js",
-				"version": "2.0.0"
+				"version": "2.0.0",
+                "display-name": "HTTP Request"
 			},
 			{
 				"url": "https://cdn.totaljs.com/flow/httpresponse.js",
-				"version": "2.0.0"
+				"version": "2.0.0",
+                "display-name": "HTTP Response"
 			},
 			{
 				"url": "https://cdn.totaljs.com/flow/httproute.js",
-				"version": "1.2.2"
+				"version": "1.2.2",
+                "display-name": "HTTP Route"
 			}
 		]
 	},
@@ -145,7 +174,8 @@
 		"items": [
 			{
 				"url": "https://cdn.totaljs.com/flow/ifttthookrequest.js",
-				"version": "1.0.0"
+				"version": "1.0.0",
+                "display-name": "IFTTT Hook Request"
 			}
 		]
 	},
@@ -154,15 +184,18 @@
 		"items": [
 			{
 				"url": "https://cdn.totaljs.com/flow/logtodb.js",
-				"version": "1.0.0"
+				"version": "1.0.0",
+                "display-name": "Log to DB"
 			},
 			{
 				"url": "https://cdn.totaljs.com/flow/nosql.js",
-				"version": "1.2.0"
+				"version": "1.2.0",
+                "display-name": "NOSQL"
 			},
 			{
 				"url": "https://cdn.totaljs.com/flow/nosql2.js",
-				"version": "1.0.0"
+				"version": "1.0.0",
+                "display-name": "NOSQL 2"
 			}
 		]
 	},
@@ -171,27 +204,33 @@
 		"items": [
 			{
 				"url": "https://cdn.totaljs.com/flow/monitorconsumption.js",
-				"version": "1.0.0"
+				"version": "1.0.0",
+                "display-name": "Monitor Consumption"
 			},
 			{
 				"url": "https://cdn.totaljs.com/flow/monitorcpu.js",
-				"version": "1.0.0"
+				"version": "1.0.0",
+                "display-name": "Monitor CPU"
 			},
 			{
 				"url": "https://cdn.totaljs.com/flow/monitordisk.js",
-				"version": "1.0.0"
+				"version": "1.0.0",
+                "display-name": "Monitor Disk"
 			},
 			{
 				"url": "https://cdn.totaljs.com/flow/monitormemory.js",
-				"version": "1.0.0"
+				"version": "1.0.0",
+                "display-name": "Monitor Memory"
 			},
 			{
 				"url": "https://cdn.totaljs.com/flow/monitornetwork.js",
-				"version": "1.0.0"
+				"version": "1.0.0",
+                "display-name": "Nomitor Network"
 			},
 			{
 				"url": "https://cdn.totaljs.com/flow/monitorprocess.js",
-				"version": "1.0.0"
+				"version": "1.0.0",
+                "display-name": "Monitor Process"
 			}
 		]
 	},
@@ -200,19 +239,23 @@
 		"items": [
 			{
 				"url": "https://cdn.totaljs.com/flow/mosca.js",
-				"version": "1.1.0"
+				"version": "1.1.0",
+                "display-name": "Mosca"
 			},
 			{
 				"url": "https://cdn.totaljs.com/flow/mqtt.js",
-				"version": "1.0.1"
+				"version": "1.0.1",
+                "display-name": "MQTT"
 			},
 			{
 				"url": "https://cdn.totaljs.com/flow/mqttpublish.js",
-				"version": "1.1.0"
+				"version": "1.1.0",
+                "display-name": "MQTT Publish"
 			},
 			{
 				"url": "https://cdn.totaljs.com/flow/mqttsubscribe.js",
-				"version": "1.1.0"
+				"version": "1.1.0",
+                "display-name": "MQTT Subscribe"
 			}
 		]
 	},
@@ -221,11 +264,13 @@
 		"items": [
 			{
 				"url": "https://cdn.totaljs.com/flow/transform.js",
-				"version": "1.0.0"
+				"version": "1.0.0",
+                "display-name": "Transform"
 			},
 			{
 				"url": "https://cdn.totaljs.com/flow/xlstojson.js",
-				"version": "1.0.1"
+				"version": "1.0.1",
+                "display-name": "XML to JSON"
 			}
 		]
 	},
@@ -234,7 +279,8 @@
 		"items": [
 			{
 				"url": "https://cdn.totaljs.com/flow/switch.js",
-				"version": "1.1.1"
+				"version": "1.1.1",
+                "display-name": "Switch"
 			}
 		]
 	},
@@ -243,11 +289,13 @@
 		"items": [
 			{
 				"url": "https://cdn.totaljs.com/flow/wsclient.js",
-				"version": "1.0.0"
+				"version": "1.0.0",
+                "display-name": "Websocket Client"
 			},
 			{
 				"url": "https://cdn.totaljs.com/flow/wsserver.js",
-				"version": "1.0.0"
+				"version": "1.0.0",
+                "display-name": "Websocket Server"
 			}
 		]
     },
@@ -256,15 +304,18 @@
         "items": [
             {
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Templates/Components/sms_trigger.js",
-                "version": "0.0.1"
+                "version": "0.0.1",
+                "display-name": "SMS Template Trigger"
             },
             {
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Templates/Components/sms_getdynamiccoinbalance.js",
-                "version": "0.0.1"
+                "version": "0.0.1",
+                "display-name": "SMS Template Get Dynamic Coin Balance"
             },
             {
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Templates/Components/sms_sendsms.js",
-                "version": "0.0.1"
+                "version": "0.0.1",
+                "display-name": "SMS Template Send SMS"
             }
         ]
     }
