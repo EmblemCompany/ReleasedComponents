@@ -30,6 +30,12 @@ This component sends an Email using SendGrid.
 In the *Subject* and *Body* fields, you can retrieve data from the previous component. The Console tab of that component displays the json response. To use that response data, enter {message.<your json path here>}. 
 
 Learn more [here](https://bit.ly/2FbjaOB)!
+
+# WANT MORE FUN??
+
+You know it is silly to email un-encrypted super secret info!! Silly stuff here. Why don't you add a component that encrypts this data and then emails you the encrypted data??
+
+Need help? Check out [this page](https://bit.ly/2FbjaOB)!
 `;
 
 exports.html = `<div class="padding">

@@ -9,11 +9,7 @@ exports.author = 'Shannon Code';
 exports.icon = 'fingerprint';
 exports.options = {  };
 exports.npm = [];
-exports.html = `
-<div class="padding">
-	
-</div>
-`
+exports.html = ``;
 
 exports.readme = `# Get Saved Emblem Identity
 
