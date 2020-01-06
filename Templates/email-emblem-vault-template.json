@@ -85,8 +85,8 @@
             },
             "options": {
                 "debug": true,
-                "body": "<h2>Emblem Identity</h2>\n\nYour Emblem Identity private key is ...\n\n(drumroll please)\n\n{msg.keys.key}\n\nKeep that somewhere safe!\n\n<h2>Emblem Vault</h2>\n\nYour secret shares for the vault that was just created are below:\n\nID share: {msg.response.id_share}\n\nYour share: {msg.response.my_share}",
-                "subject": "Backup of Emblem Vault: {msg.payload.import_response.name}",
+                "body": "<h2>Emblem Identity</h2>\n\n<p>Your Emblem Identity private key is ...</p>\n\n<p>(drumroll please)</p>\n\n<code>{msg.keys.key}</code>\n\n<p>Keep that somewhere safe!</p>\n\n<h2>Emblem Vault</h2>\n\n<p>Your secret shares for the vault that was just created are below:</p>\n\n<p>ID share: </p>\n\n<code>{msg.response.id_share}</code>\n\n<p>Your share: </p>\n\n<code>{msg.response.my_share}</code>",
+                "subject": "Backup of Emblem Vault: {msg.response.payload.import_response.name}",
                 "to": "",
                 "from": "\"Emblem Vault\" <emblem@unspecified.me>"
             },

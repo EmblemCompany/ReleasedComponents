@@ -62,12 +62,9 @@ exports.html = `<div class="padding">
 exports.install = function(instance) {
 
 	instance.on('data', function(flowdata) {
-        // "use strict";
         const nodemailer = require("nodemailer");
 
-        // async..await is not allowed in global scope, must use a wrapper
         async function main() {
-            // create reusable transporter object using the default SMTP transport
             let transporter = nodemailer.createTransport({
                 host: "smtp.sendgrid.net",
                 port: 587,
@@ -80,7 +77,6 @@ exports.install = function(instance) {
 
             // send mail with defined transport object
             var to = replaceTokenizedString(flowdata, instance.options.to || FLOW.variables.to || flowdata.data.to)
-            // console.log("to", to)
             let info = await transporter.sendMail({
                 from: replaceTokenizedString(flowdata, instance.options.from || FLOW.variables.from || flowdata.data.from || '"Circuit Builder" <hello@unspecified.me>'), // sender address
                 to: to, // list of receivers
@@ -98,7 +94,6 @@ exports.install = function(instance) {
             var tokenRegex = /[^{\}]+(?=})/g
             
             var replaceArray = myString.match(tokenRegex);
-            // console.log('myString', myString, "arr", replaceArray)
             if (replaceArray) {
                 replaceArray.forEach(item=>{
                         objectPath = item.replace('msg.', 'response.data.')
