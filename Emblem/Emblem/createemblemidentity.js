@@ -12,10 +12,10 @@ exports.npm = [];
 exports.html = `
 <div class="padding">
 	<div class="row">
-		<div class="col-md-3 m">
+		<div class="col-md-6 m">
 			<div data-jc="checkbox" data-jc-path="persistKey">Save this identity in memory for use in this circuit?</div>
 		</div>
-		<div class="col-md-3 m">
+		<div class="col-md-6 m">
 			<div data-jc="checkbox" data-jc-path="removeKey">Remove previously saved identity?</div>
 		</div>
 	</div>

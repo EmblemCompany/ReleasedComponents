@@ -12,7 +12,7 @@ exports.npm = [];
 exports.html = `
 <div class="padding">
 	<div class="row">
-		<div class="col-md-3 m">
+		<div class="col-md-12 m">
 			<div data-jc="checkbox" data-jc-path="persistVault">Store vault in identity saved in this circuit?</div>
 		</div>
 	</div>
