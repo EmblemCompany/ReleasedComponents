@@ -202,7 +202,7 @@ exports.install =function(instance) {
 exports.html = `<div class="padding">
         <div class="row">
             <div class="col-md-12">
-                <div data-jc="textbox" data-jc-path="asset" data-jc-config="placeholder:">@(asset) </div>
+                <div data-jc="textbox" data-jc-path="asset" data-jc-config="placeholder:btc">@(asset) </div>
                 <div class="help">This is the symbol for the asset, such as coval.</div>
             </div>
         </div>
