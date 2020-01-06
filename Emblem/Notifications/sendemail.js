@@ -1,4 +1,4 @@
-exports.id ="sendsms";
+exports.id ="sendemail";
 exports.title ="Send Email";
 exports.group ="Notifications";
 exports.color ="#61affe";
