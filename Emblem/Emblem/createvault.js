@@ -9,15 +9,7 @@ exports.author = 'Shannon Code';
 exports.icon = 'piggy-bank';
 exports.options = {  };
 exports.npm = [];
-exports.html = `
-<div class="padding">
-	<div class="row">
-		<div class="col-md-12 m">
-			<div data-jc="checkbox" data-jc-path="persistVault">Store vault in identity saved in this circuit?</div>
-		</div>
-	</div>
-</div>
-`
+exports.html = ``;
 
 exports.readme = `# Create Vault
 
@@ -25,13 +17,13 @@ This creates an Emblem Vault.
 
 ## Using this Component
 
-Most uses of this component will require creating an Emblem Identity to store the newly created vault, using the 'Create Emblem Identity' component. 
+This component creates an emblem vault, and by default, a new identity to store the Emblem Vault into.  In case you are working with a locally saved identity where you want to store multiple vaults, it first checks to see if you have a specific identity saved locally. 
 
-If you intend for the vault you are creating here to be transient (claimed within this circuit), then uncheck the checkbox in the settings.
+## Response
 
-### List of Keys
+The response object is a large, complex data object that represents both the keys for the identity that stores the vault that created, and all of the information contained in a vaultbundleRenderer.renderToStream
 
-This component returns a list of keys, generated for each supported cryptocurrency. Those key can then be used later in the workflow.
+Read more about Emblem Vaults here.
 `;
 
 exports.install = function(instance) {

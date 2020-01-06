@@ -58,5 +58,15 @@
                 "display-name": "Send Email"
             }
         ]
+    },
+    {
+        "name": "CoinCap",
+        "items": [
+            {
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/CoinCap/assetsid.js",
+                "version": "0.0.1",
+                "display-name": "Get Asset Details"
+            }
+        ]
     }
 ]
