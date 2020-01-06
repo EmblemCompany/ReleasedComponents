@@ -13,7 +13,7 @@ exports.npm =['nodemailer'];
 
 exports.readme = `# Send Email
 
-This component sends an SMS message using ClickSend.
+This component sends an Email.
 
 ## Fields
 
