@@ -28,13 +28,13 @@ exports.html = `
 
 exports.readme = `# Encrypt a String
 
-Um, enerypts a string.
+Um, encrypts a string.
 
 ## Fields
 
-*Data*: This is the data to encrypt. Only use this field if you are not otherwise sending data to this component from another component (such as the *Random String Generator*)
+*Data* (optional): This is the data to encrypt. Only use this field if you are not otherwise sending data to this component from another component (such as the *Random String Generator*)
 
-*Password*: Enter a password to be used to encrypt the data, if desired.
+*Password* (optional): Enter a password to be used to encrypt the data, if desired.
 
 `;
 

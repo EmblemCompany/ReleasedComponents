@@ -26,15 +26,15 @@ exports.html = `
 </div>
 `;
 
-exports.readme = `Decrypt a String
+exports.readme = `# Decrypt a String
 
 Um, decrypts a string.
 
 ## Fields
 
-*Data*: This is the data to decrypt. Only enter data in this field if you are not otherwise sending data to this component from another component (such as *Encrypt String*)
+*Data* (optional): This is the data to decrypt. Only enter data in this field if you are not otherwise sending data to this component from another component (such as *Encrypt String*)
 
-*Password*: Enter a password to be used to encrypt the data, if data was encrypted with a password.
+*Password* (optional): Enter a password to be used to encrypt the data, if data was encrypted with a password.
 
 `;
 

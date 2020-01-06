@@ -18,14 +18,14 @@ exports.html = `
 		</div>
 	</div>
 </div>
-`
+`;
 
 exports.readme = `# Get Emblem Vaults by Identity
 This gets a list of Embem Vaults for a given identity.
 
 ## Fields
 
-Address (optional): Leave blank if using the saved identity created earlier in this circuit. Or, enter the address of a specific Emblem Identity in this field to get a list of Emblem Vaults stored in that identity.
+*Address* (optional): Leave blank if using the saved identity created earlier in this circuit. Or, enter the address of a specific Emblem Identity in this field to get a list of Emblem Vaults stored in that identity.
 `;
 
 exports.install = function(instance) {
