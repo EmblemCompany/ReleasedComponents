@@ -50,13 +50,7 @@ exports.html = `<div class="padding">
         </div>
         <div class="row">
             <div class="col-md-12">
-                <div data-jc="textbox" data-jc-path="text" data-jc-config="placeholder:Plain text of the email body">@(text) </div>
-                <div class="help"></div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div data-jc="textbox" data-jc-path="html" data-jc-config="placeholder:Html body of the email">@(html) </div>
+                <div data-jc="textbox" data-jc-path="body" data-jc-config="placeholder:Body of the email">@(body) </div>
                 <div class="help"></div>
             </div>
         </div>
@@ -82,17 +76,35 @@ exports.install = function(instance) {
             });
 
             // send mail with defined transport object
+            var to = replaceTokenizedString(flowdata, instance.options.to || FLOW.variables.to || flowdata.data.to)
+            // console.log("to", to)
             let info = await transporter.sendMail({
-                from: instance.options.from || FLOW.variables.from || flowdata.from || '"Circuit Builder" <hello@unspecified.me>', // sender address
-                to: instance.options.to || FLOW.variables.to || flowdata.to, // list of receivers
-                subject: instance.options.subject || FLOW.variables.subject || flowdata.subject, // Subject line
-                text: instance.options.text || FLOW.variables.text || flowdata.text, // plain text body
-                html: instance.options.html || FLOW.variables.html || flowdata.html // html body
+                from: replaceTokenizedString(flowdata, instance.options.from || FLOW.variables.from || flowdata.data.from || '"Circuit Builder" <hello@unspecified.me>'), // sender address
+                to: to, // list of receivers
+                subject: replaceTokenizedString(flowdata, instance.options.subject || FLOW.variables.subject || flowdata.data.subject), // Subject line
+                // text: instance.options.text || FLOW.variables.text || flowdata.text, // plain text body
+                html: replaceTokenizedString(flowdata, instance.options.body || FLOW.variables.body || flowdata.data.body) // html body
             });
-            instance.send({msg: 'Message sent: ' + info.messageId, preview: nodemailer.getTestMessageUrl(info)})
+            // console.log("info", info)
+            instance.send(info)
         }
 
         main().catch(console.error);
 
+        function replaceTokenizedString(response, myString) {
+            var tokenRegex = /[^{\}]+(?=})/g
+            
+            var replaceArray = myString.match(tokenRegex);
+            // console.log('myString', myString, "arr", replaceArray)
+            if (replaceArray) {
+                replaceArray.forEach(item=>{
+                        objectPath = item.replace('msg.', 'response.data.')
+                        // console.log("objectPath", objectPath, "to replace", "{" + item + "}", "eval" , eval(objectPath), "myString", myString)
+                        myString = myString.replace('{' + item + '}', eval(objectPath))
+                        // console.log("Replaced!", myString)
+                })
+            };
+            return myString;
+        }
 	});
 };
