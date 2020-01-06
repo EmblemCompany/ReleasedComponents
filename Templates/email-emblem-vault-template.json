@@ -34,7 +34,8 @@
             },
             "options": {},
             "color": "#F6BB42",
-            "notes": ""
+            "notes": "",
+			"errors": {}
         },
         {
             "id": "1578341165178",
@@ -56,14 +57,15 @@
                 "output": []
             },
             "state": {
-                "text": "EMBLEM-305347-209618",
+                "text": "",
                 "color": "green"
             },
             "options": {
                 "debug": true
             },
             "color": "#37BC9B",
-            "notes": ""
+            "notes": "",
+			"errors": {}
         },
         {
             "id": "1578341171534",
@@ -89,7 +91,8 @@
                 "from": "\"Emblem Vault\" <emblem@unspecified.me>"
             },
             "color": "#61affe",
-            "notes": ""
+            "notes": "",
+			"errors": {}
         }
     ],
     "variables": "",

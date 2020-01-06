@@ -8,7 +8,7 @@
     { 
         "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Templates/email-emblem-vault-template.json", 
         "name": "Create a Vault and Email a Backup", 
-        "description": "A simple Circuit for beginners using Emblem Vaults. Create an Emblem Vault and then email the necessary backup information to any email address you'd like.", 
+        "description": "Create an Emblem Vault and then email the necessary backup information to any email address you'd like.", 
         "author": "UNspecified <dawn@unspecified.me>" 
     }
 ]
