@@ -207,13 +207,8 @@ exports.install =function(instance) {
         return url
     }
 };
-exports.html = `<div class="padding">
-        <div class="row">
-            <div class="col-md-12">
-                <div data-jc="textbox" data-jc-path="msg" data-jc-config="placeholder:Enter the text of your message here">@(msg) </div>
-                <div class="help"></div>
-            </div>
-        </div>
+exports.html = `
+    <div class="padding">
         <div class="row">
             <div class="col-md-12">
                 <div data-jc="textbox" data-jc-path="to" data-jc-config="placeholder:Recipient phone number">@(to) </div>
@@ -223,4 +218,10 @@ exports.html = `<div class="padding">
                 +18888511920.</div>
             </div>
         </div>
-</div>`
+        <div class="row">
+            <div class="col-md-12">
+                <div data-jc="textbox" data-jc-path="msg" data-jc-config="placeholder:Enter the text of your message here">@(msg) </div>
+                <div class="help"></div>
+            </div>
+        </div>
+    </div>`

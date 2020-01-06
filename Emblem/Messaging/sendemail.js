@@ -1,6 +1,6 @@
 exports.id ="sendemail";
 exports.title ="Send Email";
-exports.group ="Notifications";
+exports.group = "Messaging";
 exports.color ="#61affe";
 exports.input =true;
 exports.output =1;
@@ -17,14 +17,17 @@ This component sends an Email.
 
 ## Fields
 
-\`msg\`: Enter the message that will go into the SMS here.\`
+*From*: Enter the email address this email will be from. The format is: ["My Name" <my@email.com>]
 
-\`to\`: Enter the phone number for the recipient here. This 
-needs to be in the E.164 standard format, which looks like the following: +[country code][subscriber number]. An example US phone number would be +18888511920.
+*To*: Enter the email address of the intended recipient of this email. This is email address only.
+
+*Subject*: Enter the subject of the email. This can utilize data from the previous component.
+
+*Body*: Enter the body for the email. HTML is supported. If plain text is required, enter only plain text. This can utilize data from the previous component.
 
 ## Stuff you need to know
 
-In the \`msg\` field, you can retrieve data from the previous component. The Console tab of that component displays the json response. To use that response data, enter {message.<your json path here>}. For example, in this template, {message.response.balance} retrieves the balance from Emblem: Get Dynamic Coin Balance. 
+In the *Subject* and *Body* fields, you can retrieve data from the previous component. The Console tab of that component displays the json response. To use that response data, enter {message.<your json path here>}. 
 
 Learn more [here](https://bit.ly/2FbjaOB)!
 `;
@@ -32,25 +35,25 @@ Learn more [here](https://bit.ly/2FbjaOB)!
 exports.html = `<div class="padding">
         <div class="row">
             <div class="col-md-12">
-                <div data-jc="textbox" data-jc-path="from" data-jc-config="placeholder:Enter the text of your message here">@(from) </div>
+                <div data-jc="textbox" data-jc-path="from" data-jc-config="placeholder:Who is this email coming from?">@(from) </div>
                 <div class="help">Format: "My Name" &lt;my@email.com&gt; </div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
-                <div data-jc="textbox" data-jc-path="to" data-jc-config="placeholder:Recipient email">@(to) </div>
+                <div data-jc="textbox" data-jc-path="to" data-jc-config="placeholder:Recipient email address">@(to) </div>
                 <div class="help"></div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
-                <div data-jc="textbox" data-jc-path="subject" data-jc-config="placeholder:Subject of your email">@(subject) </div>
+                <div data-jc="textbox" data-jc-path="subject" data-jc-config="placeholder:Subject of the email">@(subject) </div>
                 <div class="help"></div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
-                <div data-jc="textbox" data-jc-path="body" data-jc-config="placeholder:Body of the email">@(body) </div>
+                <div data-jc="textarea" data-jc-path="body" data-jc-config="placeholder:Body of the email">@(body) </div>
                 <div class="help"></div>
             </div>
         </div>

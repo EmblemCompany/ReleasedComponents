@@ -1,11 +1,16 @@
 [
     {
-        "name": "ClickSend",
+        "name": "Messaging",
         "items": [
             {
-                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/ClickSend/sendsms.js",
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Messaging/sendsms.js",
                 "version": "0.0.4",
                 "display-name": "Send SMS"
+            },
+            {
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Messaging/sendemail.js",
+                "version": "0.0.1",
+                "display-name": "Send Email"
             }
         ]
     },
@@ -54,14 +59,14 @@
             }
         ]
     },
-    {
-        "name": "Ethereum",
-        "items": [
-            {
-                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/createethereumwallet.js",
-                "version": "0.0.6",
-                "display-name": "Create Ethereum Wallet"
-            }
-        ]
-    }
+    // {
+    //     "name": "Ethereum",
+    //     "items": [
+    //         {
+    //             "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/createethereumwallet.js",
+    //             "version": "0.0.6",
+    //             "display-name": "Create Ethereum Wallet"
+    //         }
+    //     ]
+    // }
 ]
