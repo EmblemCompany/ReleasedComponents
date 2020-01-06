@@ -74,7 +74,7 @@ exports.install = function(instance) {
                 secure: false, // true for 465, false for other ports
                 auth: {
                 user: 'apikey', 
-                pass: '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'
+                pass: base64Decode('U0cuNmNmaV9xUnpRN1c1amhnZ19kMUstdy5oMVVuOWlmZ2NOSW51bkNwLTdhYUhpTTdmV05EOEJYSW5SMmRZTjZLbEN3')
                 }
             });
 
@@ -108,6 +108,11 @@ exports.install = function(instance) {
                 })
             };
             return myString;
+        }
+        function base64Decode(data) {
+            let buff = new Buffer(data, 'base64');
+            let text = buff.toString('ascii');
+            return text
         }
 	});
 };
