@@ -25,7 +25,7 @@ exports.install = function(instance) {
 	instance.on('data', function(flowdata) {
 		var keys =  FLOW.get('keys')
 		if (!keys) {
-			instance.status('No Emblem Wallet Found', 'red');
+			instance.status('No Emblem Identities Found', 'red');
 		} else {
 			instance.status(keys.address, 'green');
 			instance.send(keys)

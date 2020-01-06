@@ -39,34 +39,79 @@ exports.install = function(instance) {
 	instance.on('data', function(response) {
 		// instance.send(response)
 		var keys = FLOW.get('keys')
-		RESTBuilder.make(function(builder) {
-			var url = 'https://api.emblemvault.io/create?skip_unloq=true&pvt=&address=' + getInputs(response, keys,'address') 
-			// instance.send({url: url})
-			url = url + '&name='
-			// instance.send({url: url})
-			url = url + '&unloq_id=' + getUnloq(response, keys, 'unloq_id')
-			// instance.send({url: url})
-			url = url + '&unloq_key=' + getUnloq(response, keys, 'unloq_key')
-			// instance.send({url: url})
-            builder.url(url);
-            builder.header('service', 'sandbox-beta')
-            builder.method('get')
-            builder.exec(function(err, response) {
-				instance.status(response.payload.import_response.name, 'green');
-				instance.send({response: response, err: err, url: url})
-				if (instance.options.persistVault) {
-					if (keys) {
-						if (!keys.emblems) {
-							keys.emblems = [response]
-						} else {
-							keys.emblems.push(response)
+		var identity = getInputs(response, keys,'address')
+		if (!identity) {
+			// console.log("no keys", keys)
+			keys = createIdentity()
+			// console.log("got keys now", keys)
+			identity = getInputs(response, keys,'address')
+			makeVault()
+		} else {
+			makeVault()
+		}
+		
+		function makeVault() {
+			RESTBuilder.make(function(builder) {
+				var url = 'https://api.emblemvault.io/create?skip_unloq=true&pvt=&address=' + identity 
+				// instance.send({url: url})
+				url = url + '&name='
+				// instance.send({url: url})
+				url = url + '&unloq_id=' + getUnloq(response, keys, 'unloq_id')
+				// instance.send({url: url})
+				url = url + '&unloq_key=' + getUnloq(response, keys, 'unloq_key')
+				// instance.send({url: url})
+				builder.url(url);
+				builder.header('service', 'sandbox-beta')
+				builder.method('get')
+				builder.exec(function(err, response) {
+					// console.log(err, response)
+					instance.status(response.payload.import_response.name, 'green');
+					instance.send({response: response, err: err, url: url, keys: keys})
+					if (instance.options.persistVault) {
+						if (keys) {
+							if (!keys.emblems) {
+								keys.emblems = [response]
+							} else {
+								keys.emblems.push(response)
+							}
+							FLOW.set('keys', keys)
 						}
-						FLOW.set('keys', keys)
 					}
-				}
+				});
 			});
-		});
+		}
+		
 	});
+
+	function createIdentity() {
+		instance.status("No identity found, generating one", 'green');
+		var CovalLib = require('coval.js')
+		var Coval =  new CovalLib.Coval()
+		var hdkey = new Coval.Secure.HDKey()
+		return generateKey()
+		function generateKey() {
+			return hdkey.StandardHDKey('0', function(address, key){
+				var accessToken = {}
+				accessToken.method="mock"
+				accessToken.unloq_id = randomString(6, '#')
+				accessToken.unloq_key = randomString(64, 'hex')
+				return keys = {accessToken: accessToken, address: address, keyType: 'wallet', keyOriginator: 'CircuitBuilder', key: key.privateKey.toString()}
+			})
+		}
+		function randomString(length, chars) {
+			let mask = '';
+			if (chars.indexOf('a') > -1) { mask += 'abcdefghijklmnopqrstuvwxyz'; }
+			if (chars.indexOf('A') > -1) { mask += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'; }
+			if (chars.indexOf('hex') > -1) { mask += '0123456789abcdefABCDEF'; }
+			if (chars.indexOf('#') > -1) { mask += '0123456789'; }
+			if (chars.indexOf('!') > -1) { mask += '~`!@#$%^&*()_+-={}[]:";\'<>?,./|\\'; }
+			let result = '';
+			for (let i = length; i > 0; --i) { result += mask[Math.floor(Math.random() * mask.length)]; }
+			return result;
+		}
+	}
+
+	
 
 	function getUnloq(response, keys, name) {
 		if (keys) {
