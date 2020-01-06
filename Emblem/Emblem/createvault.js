@@ -15,7 +15,9 @@ exports.readme = `# Create Vault
 
 This creates an Emblem Vault.
 
-## Using this Component
+## No Fields Here!
+
+## Stuff You Need to Know
 
 This component creates an emblem vault, and by default, a new identity to store the Emblem Vault into.  In case you are working with a locally saved identity where you want to store multiple vaults, it first checks to see if you have a specific identity saved locally. 
 
