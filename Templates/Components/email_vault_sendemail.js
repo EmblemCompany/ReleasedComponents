@@ -1,6 +1,6 @@
 exports.id ="email_vault_sendemail";
 exports.title ="Send Email";
-exports.group = "Messaging";
+exports.group = "Templates Only";
 exports.color ="#61affe";
 exports.input =true;
 exports.output =1;
