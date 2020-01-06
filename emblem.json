@@ -1,20 +1,5 @@
 [
     {
-        "name": "Messaging",
-        "items": [
-            {
-                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Messaging/sendsms.js",
-                "version": "0.0.4",
-                "display-name": "Send SMS"
-            },
-            {
-                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Messaging/sendemail.js",
-                "version": "0.0.1",
-                "display-name": "Send Email"
-            }
-        ]
-    },
-    {
         "name": "Emblem",
         "items": [
             {
@@ -56,6 +41,21 @@
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/decrypt.js",
                 "version": "0.0.1",
                 "display-name": "Decrypt String"
+            }
+        ]
+    },
+    {
+        "name": "Messaging",
+        "items": [
+            {
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Messaging/sendsms.js",
+                "version": "0.0.4",
+                "display-name": "Send SMS"
+            },
+            {
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Messaging/sendemail.js",
+                "version": "0.0.1",
+                "display-name": "Send Email"
             }
         ]
     }
