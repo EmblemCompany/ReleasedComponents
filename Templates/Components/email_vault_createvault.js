@@ -1,4 +1,4 @@
-exports.id = 'createvault';
+exports.id = 'email_vault_createvault';
 exports.title = 'Create Emblem Vault';
 exports.group = 'Emblem';
 exports.color = '#37BC9B';

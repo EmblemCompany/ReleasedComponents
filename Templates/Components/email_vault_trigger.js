@@ -1,4 +1,4 @@
-exports.id = 'sms_trigger';
+exports.id = 'email_vault_trigger';
 exports.title = 'Trigger';
 exports.group = 'Templates Only';
 exports.color = '#F6BB42';

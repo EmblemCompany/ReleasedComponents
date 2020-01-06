@@ -1,4 +1,4 @@
-exports.id ="sendemail";
+exports.id ="email_vault_sendemail";
 exports.title ="Send Email";
 exports.group = "Messaging";
 exports.color ="#61affe";
