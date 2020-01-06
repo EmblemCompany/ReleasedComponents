@@ -13,9 +13,54 @@
         "name": "Emblem",
         "items": [
             {
-                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/getdynamiccoinbalance.js",
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/createemblemidentity.js",
+                "version": "0.0.9",
+                "display-name": "Create Emblem Identity"
+            },
+            {
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/getemblemsbyidentity.js",
+                "version": "0.0.1",
+                "display-name": "Get Emblems by Identity"
+            },
+            {
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/createvault.js",
+                "version": "0.0.9",
+                "display-name": "Create Vault"
+            },
+            {
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/getsavedemblemidentity.js",
+                "version": "0.0.1",
+                "display-name": "Get Saved Emblem Identity"
+            },
+            {
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/getcoinbalancebyaddress.js",
                 "version": "0.0.6",
-                "display-name": "Emblem: Get Dynamic Coin Balance"
+                "display-name": "Get Coin Balance by Address"
+            },
+            {
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/randomstring.js",
+                "version": "0.0.3",
+                "display-name": "Random String Generator"
+            },
+            {
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/encrypt.js",
+                "version": "0.0.3",
+                "display-name": "Encrypt String"
+            },
+            {
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/decrypt.js",
+                "version": "0.0.1",
+                "display-name": "Decrypt String"
+            }
+        ]
+    },
+    {
+        "name": "Ethereum",
+        "items": [
+            {
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/createethereumwallet.js",
+                "version": "0.0.6",
+                "display-name": "Create Ethereum Wallet"
             }
         ]
     }

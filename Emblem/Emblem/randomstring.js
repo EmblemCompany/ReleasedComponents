@@ -1,5 +1,5 @@
 exports.id = 'randomstring';
-exports.title = 'Generate a Random String';
+exports.title = 'Random String Generator';
 exports.group = 'Emblem';
 exports.color = '#37BC9B';
 exports.input = true;
@@ -13,20 +13,41 @@ exports.html = `
 <div class="padding">
     <div class="row">
         <div class="col-md-6">
-            <div data-jc="textbox" data-jc-path="length" data-jc-config="placeholder:32">@(length) (@(optional))</div>
-            <div class="help">@(Specify the length of your desired string)</div>
+            <div data-jc="textbox" data-jc-path="length" data-jc-config="placeholder:64">@(length) (@(optional))</div>
+            <div class="help">Specify the length of your desired string. Default is 64 if not specified.</div>
         </div>
     </div>
     <div class="row">
         <div class="col-md-6">
             <div data-jc="textbox" data-jc-path="chars" data-jc-config="placeholder:hex">@(chars) (@(optional))</div>
-            <div class="help">@(Specify the allowable characters you want in your string: Aa#!)</div>
+            <div class="help">Specify the allowable characters you want in your string, i.e. Aa#! Default is hex is not specified.</div>
         </div>
     </div>
 </div>
 `;
 
-exports.readme = `Generates a random string`;
+exports.readme = `# Random String Generator
+
+Generates a random string for use in multiple applications, used to generate a seed, for example.
+
+## Fields
+
+*Length*: How long should the random string be? Default is 64 if not specified.
+
+*Chars*: Which characters are allowed in the string? Default is hex if not specified.
+
+Use the following table for reference:
+
+|What to enter in the field|What it means you will get as allowable characters|
+|--------------------------|--------------------------------------------------|
+|hex                       |The string generated will be a hex string         |
+|OR any combination of:    |                                                  |
+|a                         |Lowercase letters (abcdefghijklmnopqrstuvwxyz)    |
+|A                         |Uppercase letters (ABCDEFGHIJKLMNOPQRSTUVWXYZ)    |
+|#                         |Digits (0123456789)                               |
+|!                         |Special Characters (!@#$%^&*()_+-={}[]:";\'<>?,./|\\)|
+
+`;
 
 exports.install = function(instance) {
 

@@ -1,12 +1,12 @@
-exports.id = 'getemblemwallet';
-exports.title = 'Get Saved Emblem Wallet';
+exports.id = 'getsavedemblemidentity';
+exports.title = 'Get Saved Emblem Identity';
 exports.group = 'Emblem';
 exports.color = '#37BC9B';
 exports.input = true;
 exports.output = 1;
 exports.version = '0.0.1';
 exports.author = 'Shannon Code';
-exports.icon = 'random';
+exports.icon = 'fingerprint';
 exports.options = {  };
 exports.npm = [];
 exports.html = `
@@ -15,7 +15,9 @@ exports.html = `
 </div>
 `
 
-exports.readme = `Reads Emblem Wallet`;
+exports.readme = `# Get Saved Emblem Identity
+
+Retrieves the Emblem Identity created earlier within a circuit. Requires you have previously used the *Create Emblem Identity* component.`;
 
 exports.install = function(instance) {
 	

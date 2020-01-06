@@ -6,7 +6,7 @@ exports.input = true;
 exports.output = 1;
 exports.version = '0.0.6';
 exports.author = 'Shannon Code';
-exports.icon = 'random';
+exports.icon = 'wallet';
 exports.options = {  };
 exports.npm = [];
 exports.html = `
@@ -20,7 +20,7 @@ exports.html = `
 		</div>
 	</div>
 </div>
-`
+`;
 
 exports.readme = `Ethereum Wallet Functionality`;
 
