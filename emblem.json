@@ -58,15 +58,5 @@
                 "display-name": "Decrypt String"
             }
         ]
-    },
-    // {
-    //     "name": "Ethereum",
-    //     "items": [
-    //         {
-    //             "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/createethereumwallet.js",
-    //             "version": "0.0.6",
-    //             "display-name": "Create Ethereum Wallet"
-    //         }
-    //     ]
-    // }
+    }
 ]
