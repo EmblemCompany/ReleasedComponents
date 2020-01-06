@@ -1,5 +1,5 @@
-exports.id = 'getemblemsbyidentity';
-exports.title = 'Get Emblems by Identity';
+exports.id = 'getemblemvaultsbyidentity';
+exports.title = 'Get Emblem Vaults by Identity';
 exports.group = 'Emblem';
 exports.color = '#37BC9B';
 exports.input = true;

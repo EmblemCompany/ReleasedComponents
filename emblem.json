@@ -18,9 +18,9 @@
                 "display-name": "Create Emblem Identity"
             },
             {
-                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/getemblemsbyidentity.js",
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/getemblemvaultsbyidentity.js",
                 "version": "0.0.1",
-                "display-name": "Get Emblems by Identity"
+                "display-name": "Get Emblem Vaults by Identity"
             },
             {
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/createvault.js",

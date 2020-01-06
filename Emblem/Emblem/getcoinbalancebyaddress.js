@@ -13,7 +13,7 @@ exports.options ={
 };
 exports.npm =[];
 
-exports.readme = `# Emblem:Get Dynamic Coin Balance
+exports.readme = `# Get Coin Balance by Address
 
 This component will retrieve the balance from any cryptocurrency coin on any blockchain, given the address.
 
