@@ -15,7 +15,7 @@
             {
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/createvault.js",
                 "version": "0.0.9",
-                "display-name": "Create Vault"
+                "display-name": "Create Emblem Vault"
             },
             {
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/getsavedemblemidentity.js",
