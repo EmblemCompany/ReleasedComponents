@@ -6,7 +6,7 @@ exports.input = true;
 exports.output = 1;
 exports.version = '0.0.1';
 exports.author = 'Shannon Code';
-exports.icon = 'random';
+exports.icon = 'money-check-alt';
 exports.options = {  };
 exports.npm = [];
 exports.html = `
@@ -15,7 +15,9 @@ exports.html = `
 </div>
 `
 
-exports.readme = `Imports Emblem Wallet Functionality`;
+exports.readme = `# Get Emblem Balance
+
+This gets a list of Embem Vaults for a given identity.`;
 
 exports.install = function(instance) {
 	
@@ -44,22 +46,6 @@ exports.install = function(instance) {
 		});
 	});
 
-	function getUnloq(response, keys, name) {
-		if (keys) {
-			return keys.accessToken[name]
-		} else {
-			if (instance.options[name]) {
-				return instance.options[name]
-			} else if(FLOW.variables[name]) {
-				return FLOW.variables[name]
-			} else if(response.data.accessToken && response.data.accessToken[name]){
-				return response.data.accessToken[name]
-			} else {
-				return ''
-			}
-		}
-	}
-
 	function getInputs(response, keys, name, path) {
 		if (keys) {
 			if (path) {
@@ -78,16 +64,4 @@ exports.install = function(instance) {
 			return instance.options[name] || FLOW.variables[name] || response.data[name] || ''
 		}
 	}
-	
-	function randomString(length, chars) {
-        let mask = '';
-        if (chars.indexOf('a') > -1) { mask += 'abcdefghijklmnopqrstuvwxyz'; }
-        if (chars.indexOf('A') > -1) { mask += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'; }
-        if (chars.indexOf('hex') > -1) { mask += '0123456789abcdefABCDEF'; }
-        if (chars.indexOf('#') > -1) { mask += '0123456789'; }
-        if (chars.indexOf('!') > -1) { mask += '~`!@#$%^&*()_+-={}[]:";\'<>?,./|\\'; }
-        let result = '';
-        for (let i = length; i > 0; --i) { result += mask[Math.floor(Math.random() * mask.length)]; }
-        return result;
-    }
 };

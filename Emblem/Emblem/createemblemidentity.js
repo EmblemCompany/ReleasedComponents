@@ -1,28 +1,30 @@
-exports.id = 'createemblemwallet';
-exports.title = 'Create Emblem Wallet';
+exports.id = 'createemblemidentity';
+exports.title = 'Create Emblem Identity';
 exports.group = 'Emblem';
 exports.color = '#37BC9B';
 exports.input = true;
 exports.output = 1;
 exports.version = '0.0.9';
 exports.author = 'Shannon Code';
-exports.icon = 'random';
+exports.icon = 'fingerprint';
 exports.options = {  };
 exports.npm = [];
 exports.html = `
 <div class="padding">
 	<div class="row">
 		<div class="col-md-3 m">
-			<div data-jc="checkbox" data-jc-path="persistKey">Save wallet?</div>
+			<div data-jc="checkbox" data-jc-path="persistKey">Save this identity in memory for use in this circuit?</div>
 		</div>
 		<div class="col-md-3 m">
-			<div data-jc="checkbox" data-jc-path="removeKey">Remove saved wallet?</div>
+			<div data-jc="checkbox" data-jc-path="removeKey">Remove previously saved identity?</div>
 		</div>
 	</div>
 </div>
 `
 
-exports.readme = `Imports Emblem Wallet Functionality`;
+exports.readme = `# Create Emblem Identity
+
+Create a new identity to store Emblem Vaults. Once you have created this identity, you can begin creating Emblem Vaults and storing them in this identity.`;
 
 exports.install = function(instance) {
 	var CovalLib = require('coval.js')

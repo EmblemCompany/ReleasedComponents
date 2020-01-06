@@ -6,20 +6,33 @@ exports.input = true;
 exports.output = 1;
 exports.version = '0.0.9';
 exports.author = 'Shannon Code';
-exports.icon = 'random';
+exports.icon = 'piggy-bank';
 exports.options = {  };
 exports.npm = [];
 exports.html = `
 <div class="padding">
 	<div class="row">
 		<div class="col-md-3 m">
-			<div data-jc="checkbox" data-jc-path="persistVault">Save vault?</div>
+			<div data-jc="checkbox" data-jc-path="persistVault">Store vault in identity saved in this circuit?</div>
 		</div>
 	</div>
 </div>
 `
 
-exports.readme = `Imports Emblem Wallet Functionality`;
+exports.readme = `# Create Vault
+
+This creates an Emblem Vault.
+
+## Using this Component
+
+Most uses of this component will require creating an Emblem Identity to store the newly created vault, using the 'Create Emblem Identity' component. 
+
+If you intend for the vault you are creating here to be transient (claimed within this circuit), then uncheck the checkbox in the settings.
+
+### List of Keys
+
+This component returns a list of keys, generated for each supported cryptocurrency. Those key can then be used later in the workflow.
+`;
 
 exports.install = function(instance) {
 	
@@ -89,16 +102,4 @@ exports.install = function(instance) {
 			return instance.options[name] || FLOW.variables[name] || response.data[name] || ''
 		}
 	}
-	
-	function randomString(length, chars) {
-        let mask = '';
-        if (chars.indexOf('a') > -1) { mask += 'abcdefghijklmnopqrstuvwxyz'; }
-        if (chars.indexOf('A') > -1) { mask += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'; }
-        if (chars.indexOf('hex') > -1) { mask += '0123456789abcdefABCDEF'; }
-        if (chars.indexOf('#') > -1) { mask += '0123456789'; }
-        if (chars.indexOf('!') > -1) { mask += '~`!@#$%^&*()_+-={}[]:";\'<>?,./|\\'; }
-        let result = '';
-        for (let i = length; i > 0; --i) { result += mask[Math.floor(Math.random() * mask.length)]; }
-        return result;
-    }
 };
