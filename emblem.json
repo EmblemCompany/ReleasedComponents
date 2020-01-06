@@ -1,11 +1,16 @@
 [
     {
-        "name": "ClickSend",
+        "name": "Messaging",
         "items": [
             {
-                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/ClickSend/sendsms.js",
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Messaging/sendsms.js",
                 "version": "0.0.4",
                 "display-name": "Send SMS"
+            },
+            {
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Messaging/sendemail.js",
+                "version": "0.0.1",
+                "display-name": "Send Email"
             }
         ]
     },
@@ -18,9 +23,9 @@
                 "display-name": "Create Emblem Identity"
             },
             {
-                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/getemblemsbyidentity.js",
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/getemblemvaultsbyidentity.js",
                 "version": "0.0.1",
-                "display-name": "Get Emblems by Identity"
+                "display-name": "Get Emblem Vaults by Identity"
             },
             {
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/createvault.js",
@@ -51,16 +56,6 @@
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/decrypt.js",
                 "version": "0.0.1",
                 "display-name": "Decrypt String"
-            }
-        ]
-    },
-    {
-        "name": "Ethereum",
-        "items": [
-            {
-                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/createethereumwallet.js",
-                "version": "0.0.6",
-                "display-name": "Create Ethereum Wallet"
             }
         ]
     }

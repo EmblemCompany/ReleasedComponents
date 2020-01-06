@@ -34,7 +34,7 @@ Um, encrypts a string.
 
 *Data* (optional): This is the data to encrypt. Only use this field if you are not otherwise sending data to this component from another component (such as the *Random String Generator*)
 
-*Password* (optional): Enter a password to be used to encrypt the data, if desired.
+*Password* (optional): Enter a password to be used to encrypt the data, if desired. If no password is given, it will encrypt with a blank password (not recommended).
 
 `;
 
