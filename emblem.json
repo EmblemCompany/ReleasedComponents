@@ -51,6 +51,11 @@
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/IO/csv2json.js",
                 "version": "0.0.1",
                 "display-name": "CSV to JSON"
+            },
+            {
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/IO/mergeupstream.js",
+                "version": "0.0.2",
+                "display-name": "Merge Upstream"
             }
         ]
     },
