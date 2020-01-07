@@ -14,7 +14,7 @@ This component sends an SMS message using ClickSend.
 
 ## Fields
 
-*msg*: Enter the message that will go into the SMS here.\`
+*msg*: Enter the message that will go into the SMS here.
 
 *to*: Enter the phone number for the recipient here. This 
 needs to be in the E.164 standard format, which looks like the following: +[country code][subscriber number]. An example US phone number would be +18888511920.
