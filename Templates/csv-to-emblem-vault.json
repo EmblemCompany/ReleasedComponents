@@ -1,0 +1,110 @@
+{
+  "tabs": [
+    {
+      "id": "1578341155899",
+      "name": "Email Emblem Vault",
+      "icon": "fa-object-ungroup",
+      "linker": "main",
+      "index": 0
+    }
+  ],
+  "components": [
+    {
+      "id": "1578424656998",
+      "component": "trigger",
+      "tab": "1578341155899",
+      "name": "Trigger",
+      "x": 35,
+      "y": 94,
+      "connections": { "0": [{ "index": "0", "id": "1578424663589" }] },
+      "disabledio": { "input": [], "output": [] },
+      "state": { "text": "", "color": "gray" },
+      "options": { "restart": false },
+      "color": "#F6BB42",
+      "notes": ""
+    },
+    {
+      "id": "1578424663589",
+      "component": "csv2json",
+      "tab": "1578341155899",
+      "name": "CSV 2 JSON",
+      "x": 189,
+      "y": 71,
+      "connections": { "0": [{ "index": "0", "id": "1578424786067" }] },
+      "disabledio": { "input": [], "output": [] },
+      "state": { "text": "", "color": "green" },
+      "options": { "outputs": 1, "filename": "user-sample.csv" },
+      "color": "#656D78",
+      "notes": ""
+    },
+    {
+      "id": "1578424786067",
+      "component": "createvault",
+      "tab": "1578341155899",
+      "name": "Create Emblem Vault",
+      "x": 392,
+      "y": 94,
+      "connections": { "0": [{ "index": "0", "id": "1578425960831" }] },
+      "disabledio": { "input": [], "output": [] },
+      "state": { "text": "", "color": "green" },
+      "options": {},
+      "color": "#37BC9B",
+      "notes": ""
+    },
+    {
+      "id": "1578425244182",
+      "component": "debug",
+      "tab": "1578341155899",
+      "name": "Debug",
+      "x": 1021,
+      "y": 58,
+      "connections": {},
+      "disabledio": { "input": [], "output": [] },
+      "state": { "text": "Enabled", "color": "gray" },
+      "options": { "type": "data", "repository": false, "enabled": true },
+      "color": "#E9573F",
+      "notes": ""
+    },
+    {
+      "id": "1578425960831",
+      "component": "mergeupstream",
+      "tab": "1578341155899",
+      "name": "Merge Upstream",
+      "x": 626,
+      "y": 115,
+      "connections": { "0": [{ "index": "0", "id": "1578426528676" }] },
+      "disabledio": { "input": [], "output": [] },
+      "state": { "text": "", "color": "gray" },
+      "options": {},
+      "color": "#ffa824",
+      "notes": ""
+    },
+    {
+      "id": "1578426528676",
+      "component": "transformobject",
+      "tab": "1578341155899",
+      "name": "Transform Object",
+      "x": 825,
+      "y": 58,
+      "connections": { "0": [{ "index": "0", "id": "1578425244182" }] },
+      "disabledio": { "input": [], "output": [] },
+      "state": { "text": "", "color": "gray" },
+      "options": {
+        "name": ["EmblemName", "UserEmail", "IdentityAddress", "IdentityKey"],
+        "debug": true,
+        "properties": [
+          "response.payload.import_response.name",
+          "item.Email",
+          "keys.address",
+          "keys.key"
+        ]
+      },
+      "color": "#3BAFDA",
+      "notes": ""
+    }
+  ],
+  "variables": "",
+  "panel": "debug",
+  "url": "http://127.0.0.1:8000/$flow/#main",
+  "created": "2020-01-07T20:12:23.722Z"
+}
