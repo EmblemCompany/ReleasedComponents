@@ -3,52 +3,52 @@
 		"name": "Common",
 		"items": [
 			{
-				"url": "https://cdn.totaljs.com/flow/code.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/code/code.js",
 				"version": "1.2.0",
                 "display-name": "Code"
 			},
 			{
-				"url": "https://cdn.totaljs.com/flow/comment.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/comment/comment.js",
 				"version": "1.0.0",
                 "display-name": "Comment"
 			},
 			{
-				"url": "https://cdn.totaljs.com/flow/count.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/count/count.js",
 				"version": "1.0.0",
                 "display-name": "Count"
 			},
 			{
-				"url": "https://cdn.totaljs.com/flow/debug.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/debug/debug.js",
 				"version": "2.0.3",
                 "display-name": "Debug"
 			},
 			{
-				"url": "https://cdn.totaljs.com/flow/filereader.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/filereader/filereader.js",
 				"version": "1.0.1",
                 "display-name": "File Reader"
 			},
 			{
-				"url": "https://cdn.totaljs.com/flow/filewriter.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/filewriter/filewriter.js",
 				"version": "1.0.1",
                 "display-name": "File Writer"
 			},
 			{
-				"url": "https://cdn.totaljs.com/flow/modified.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/modified/modified.js",
 				"version": "1.0.0",
                 "display-name": "Modified"
 			},
 			{
-				"url": "https://cdn.totaljs.com/flow/pass.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/pass/pass.js",
 				"version": "1.0.0",
                 "display-name": "Pass"
 			},
 			{
-				"url": "https://cdn.totaljs.com/flow/repository.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/repository/repository.js",
 				"version": "1.0.0",
                 "display-name": "Repository"
 			},
 			{
-				"url": "https://cdn.totaljs.com/flow/split.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/split/split.js",
 				"version": "1.1.1",
                 "display-name": "Split"
 			}
@@ -58,17 +58,17 @@
 		"name": "Inputs",
 		"items": [
 			{
-				"url": "https://cdn.totaljs.com/flow/console.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/console/console.js",
 				"version": "1.0.0",
                 "display-name": "Console"
 			},
 			{
-				"url": "https://cdn.totaljs.com/flow/trigger.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/trigger/trigger.js",
 				"version": "1.1.0",
                 "display-name": "Trigger"
 			},
 			{
-				"url": "https://cdn.totaljs.com/flow/triggertoggle.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/triggertoggle/triggertoggle.js",
 				"version": "1.1.0",
                 "display-name": "Trigger Toggle"
 			}
@@ -78,27 +78,27 @@
 		"name": "Time",
 		"items": [
 			{
-				"url": "https://cdn.totaljs.com/flow/delay.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/delay/delay.js",
 				"version": "1.0.0",
                 "display-name": "Delay"
 			},
 			{
-				"url": "https://cdn.totaljs.com/flow/duration.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/duration/duration.js",
 				"version": "1.0.0",
                 "display-name": "Duration"
 			},
 			{
-				"url": "https://cdn.totaljs.com/flow/feedtodelay.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/feedtodelay/feedtodelay.js",
 				"version": "1.0.0",
                 "display-name": "Feed to Delay"
 			},
 			{
-				"url": "https://cdn.totaljs.com/flow/scheduler.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/scheduler/scheduler.js",
 				"version": "1.0.0",
                 "display-name": "Scheduler"
 			},
 			{
-				"url": "https://cdn.totaljs.com/flow/timer.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/timer/timer.js",
 				"version": "1.0.0",
                 "display-name": "Timer"
 			}
@@ -108,17 +108,17 @@
 		"name": "Notifications",
 		"items": [
 			{
-				"url": "https://cdn.totaljs.com/flow/email.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/email/email.js",
 				"version": "1.4.0",
                 "display-name": "Email"
 			},
 			{
-				"url": "https://cdn.totaljs.com/flow/sms.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/sms/sms.js",
 				"version": "1.0.0",
                 "display-name": "SMS"
 			},
 			{
-				"url": "https://cdn.totaljs.com/flow/twilio.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/twilio/twilio.js",
 				"version": "1.0.0",
                 "display-name": "Twilio"
 			}
@@ -128,42 +128,42 @@
 		"name": "HTTP",
 		"items": [
 			{
-				"url": "https://cdn.totaljs.com/flow/httpdownloader.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/httpdownloader/httpdownloader.js",
 				"version": "1.0.0",
                 "display-name": "HTTP Downloader"
 			},
 			{
-				"url": "https://cdn.totaljs.com/flow/httpgeoip.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/httpgeoip/httpgeoip.js",
 				"version": "1.0.0",
                 "display-name": "HTTP Geo IP"
 			},
 			{
-				"url": "https://cdn.totaljs.com/flow/httplistener.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/httplistener/httplistener.js",
 				"version": "1.0.0",
                 "display-name": "HTTP Listener"
 			},
 			{
-				"url": "https://cdn.totaljs.com/flow/httpreceiver.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/httpreceiver/httpreceiver.js",
 				"version": "1.0.0",
                 "display-name": "HTTP Receiver"
 			},
 			{
-				"url": "https://cdn.totaljs.com/flow/httpredirect.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/httpredirect/httpredirect.js",
 				"version": "1.0.0",
                 "display-name": "HTTP Redirect"
 			},
 			{
-				"url": "https://cdn.totaljs.com/flow/httprequest.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/httprequest/httprequest.js",
 				"version": "2.0.0",
                 "display-name": "HTTP Request"
 			},
 			{
-				"url": "https://cdn.totaljs.com/flow/httpresponse.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/httpresponse/httpresponse.js",
 				"version": "2.0.0",
                 "display-name": "HTTP Response"
 			},
 			{
-				"url": "https://cdn.totaljs.com/flow/httproute.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/httproute/httproute.js",
 				"version": "1.2.2",
                 "display-name": "HTTP Route"
 			}
@@ -173,7 +173,7 @@
 		"name": "IFTTT",
 		"items": [
 			{
-				"url": "https://cdn.totaljs.com/flow/ifttthookrequest.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/ifttthookrequest/ifttthookrequest.js",
 				"version": "1.0.0",
                 "display-name": "IFTTT Hook Request"
 			}
@@ -183,17 +183,17 @@
 		"name": "Databases",
 		"items": [
 			{
-				"url": "https://cdn.totaljs.com/flow/logtodb.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/logtodb/logtodb.js",
 				"version": "1.0.0",
                 "display-name": "Log to DB"
 			},
 			{
-				"url": "https://cdn.totaljs.com/flow/nosql.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/nosql/nosql.js",
 				"version": "1.2.0",
                 "display-name": "NOSQL"
 			},
 			{
-				"url": "https://cdn.totaljs.com/flow/nosql2.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/nosql2/nosql2.js",
 				"version": "1.0.0",
                 "display-name": "NOSQL 2"
 			}
@@ -203,32 +203,32 @@
 		"name": "Monitoring",
 		"items": [
 			{
-				"url": "https://cdn.totaljs.com/flow/monitorconsumption.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/monitorconsumption/monitorconsumption.js",
 				"version": "1.0.0",
                 "display-name": "Monitor Consumption"
 			},
 			{
-				"url": "https://cdn.totaljs.com/flow/monitorcpu.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/monitorcpu/monitorcpu.js",
 				"version": "1.0.0",
                 "display-name": "Monitor CPU"
 			},
 			{
-				"url": "https://cdn.totaljs.com/flow/monitordisk.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/monitordisk/monitordisk.js",
 				"version": "1.0.0",
                 "display-name": "Monitor Disk"
 			},
 			{
-				"url": "https://cdn.totaljs.com/flow/monitormemory.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/monitormemory/monitormemory.js",
 				"version": "1.0.0",
                 "display-name": "Monitor Memory"
 			},
 			{
-				"url": "https://cdn.totaljs.com/flow/monitornetwork.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/monitornetwork/monitornetwork.js",
 				"version": "1.0.0",
                 "display-name": "Nomitor Network"
 			},
 			{
-				"url": "https://cdn.totaljs.com/flow/monitorprocess.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/monitorprocess/monitorprocess.js",
 				"version": "1.0.0",
                 "display-name": "Monitor Process"
 			}
@@ -238,22 +238,22 @@
 		"name": "MQTT",
 		"items": [
 			{
-				"url": "https://cdn.totaljs.com/flow/mosca.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/mosca/mosca.js",
 				"version": "1.1.0",
                 "display-name": "Mosca"
 			},
 			{
-				"url": "https://cdn.totaljs.com/flow/mqtt.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/mqtt/mqtt.js",
 				"version": "1.0.1",
                 "display-name": "MQTT"
 			},
 			{
-				"url": "https://cdn.totaljs.com/flow/mqttpublish.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/mqttpublish/mqttpublish.js",
 				"version": "1.1.0",
                 "display-name": "MQTT Publish"
 			},
 			{
-				"url": "https://cdn.totaljs.com/flow/mqttsubscribe.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/mqttsubscribe/mqttsubscribe.js",
 				"version": "1.1.0",
                 "display-name": "MQTT Subscribe"
 			}
@@ -263,12 +263,12 @@
 		"name": "Parsers",
 		"items": [
 			{
-				"url": "https://cdn.totaljs.com/flow/transform.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/transform/transform.js",
 				"version": "1.0.0",
                 "display-name": "Transform"
 			},
 			{
-				"url": "https://cdn.totaljs.com/flow/xlstojson.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/xlstojson/xlstojson.js",
 				"version": "1.0.1",
                 "display-name": "XML to JSON"
 			}
@@ -278,7 +278,7 @@
 		"name": "Logic",
 		"items": [
 			{
-				"url": "https://cdn.totaljs.com/flow/switch.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/switch/switch.js",
 				"version": "1.1.1",
                 "display-name": "Switch"
 			}
@@ -288,12 +288,12 @@
 		"name": "WebSocket",
 		"items": [
 			{
-				"url": "https://cdn.totaljs.com/flow/wsclient.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/wsclient/wsclient.js",
 				"version": "1.0.0",
                 "display-name": "Websocket Client"
 			},
 			{
-				"url": "https://cdn.totaljs.com/flow/wsserver.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/wsserver/wsserver.js",
 				"version": "1.0.0",
                 "display-name": "Websocket Server"
 			}
