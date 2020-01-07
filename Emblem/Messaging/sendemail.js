@@ -59,12 +59,8 @@ exports.html = `<div class="padding">
 exports.install = function(instance) {
 
 	instance.on('data', function(flowdata) {
-        // "use strict";
         const nodemailer = require("nodemailer");
-
-        // async..await is not allowed in global scope, must use a wrapper
         async function main() {
-            // create reusable transporter object using the default SMTP transport
             let transporter = nodemailer.createTransport({
                 host: "smtp.sendgrid.net",
                 port: 587,
@@ -74,21 +70,17 @@ exports.install = function(instance) {
                 pass: base64Decode('U0cuNmNmaV9xUnpRN1c1amhnZ19kMUstdy5oMVVuOWlmZ2NOSW51bkNwLTdhYUhpTTdmV05EOEJYSW5SMmRZTjZLbEN3')
                 }
             });
-
-            // send mail with defined transport object
             
-            var to = replaceTokenizedString(flowdata, instance.options.to || FLOW.variables.to || flowdata.data.to)
-            var html = replaceTokenizedString(flowdata, instance.options.body || FLOW.variables.body || flowdata.data.body) // html body
-            var from = replaceTokenizedString(flowdata, instance.options.from || FLOW.variables.from || flowdata.data.from || '"Circuit Builder" <hello@unspecified.me>') // sender address
-            var subject = replaceTokenizedString(flowdata, instance.options.subject || FLOW.variables.subject || flowdata.data.subject) // Subject line
+            var to = replaceTokenizedString(flowdata, instance.options.to || FLOW.variables.to || flowdata.data.to);
+            var html = replaceTokenizedString(flowdata, instance.options.body || FLOW.variables.body || flowdata.data.body);
+            var from = replaceTokenizedString(flowdata, instance.options.from || FLOW.variables.from || flowdata.data.from || '"Circuit Builder" <hello@unspecified.me>');
+            var subject = replaceTokenizedString(flowdata, instance.options.subject || FLOW.variables.subject || flowdata.data.subject);
             let info = await transporter.sendMail({
                 from: from,
-                to: to, // list of receivers
+                to: to, 
                 subject: subject,
-                // text: instance.options.text || FLOW.variables.text || flowdata.text, // plain text body
                 html: html
             });
-            // console.log("info", info)
             instance.send(info)
         }
 
@@ -98,13 +90,10 @@ exports.install = function(instance) {
             var tokenRegex = /[^{\}]+(?=})/g
             
             var replaceArray = myString.match(tokenRegex);
-            // console.log('myString', myString, "arr", replaceArray)
             if (replaceArray) {
                 replaceArray.forEach(item=>{
                         objectPath = item.replace('msg.', 'response.data.')
-                        // console.log("objectPath", objectPath, "to replace", "{" + item + "}", "eval" , eval(objectPath), "myString", myString)
                         myString = myString.replace('{' + item + '}', eval(objectPath))
-                        // console.log("Replaced!", myString)
                 })
             };
             return myString;
