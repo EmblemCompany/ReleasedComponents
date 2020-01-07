@@ -14,7 +14,7 @@
             },
             {
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/createvault.js",
-                "version": "0.0.9",
+                "version": "0.0.10",
                 "display-name": "Create Emblem Vault"
             },
             {
@@ -45,6 +45,16 @@
         ]
     },
     {
+        "name": "IO",
+        "items": [
+            {
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/IO/csv2json.js",
+                "version": "0.0.1",
+                "display-name": "CSV to JSON"
+            }
+        ]
+    },
+    {
         "name": "Messaging",
         "items": [
             {
@@ -54,7 +64,7 @@
             },
             {
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Messaging/sendemail.js",
-                "version": "0.0.1",
+                "version": "0.0.2",
                 "display-name": "Send Email"
             }
         ]

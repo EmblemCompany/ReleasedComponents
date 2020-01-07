@@ -4,7 +4,7 @@ exports.group = "Templates Only";
 exports.color ="#61affe";
 exports.input =true;
 exports.output =1;
-exports.version ="0.0.1";
+exports.version ="0.0.2";
 exports.author ="Shannon Code";
 exports.icon ="paper-plane";
 
@@ -82,14 +82,17 @@ exports.install = function(instance) {
             });
 
             // send mail with defined transport object
+
             var to = replaceTokenizedString(flowdata, instance.options.to || FLOW.variables.to || flowdata.data.to)
-            // console.log("to", to)
+            var html = replaceTokenizedString(flowdata, instance.options.body || FLOW.variables.body || flowdata.data.body) // html body
+            var from = replaceTokenizedString(flowdata, instance.options.from || FLOW.variables.from || flowdata.data.from || '"Circuit Builder" <hello@unspecified.me>') // sender address
+            var subject = replaceTokenizedString(flowdata, instance.options.subject || FLOW.variables.subject || flowdata.data.subject) // Subject line
             let info = await transporter.sendMail({
-                from: replaceTokenizedString(flowdata, instance.options.from || FLOW.variables.from || flowdata.data.from || '"Circuit Builder" <hello@unspecified.me>'), // sender address
+                from: from,
                 to: to, // list of receivers
-                subject: replaceTokenizedString(flowdata, instance.options.subject || FLOW.variables.subject || flowdata.data.subject), // Subject line
+                subject: subject,
                 // text: instance.options.text || FLOW.variables.text || flowdata.text, // plain text body
-                html: replaceTokenizedString(flowdata, instance.options.body || FLOW.variables.body || flowdata.data.body) // html body
+                html: html
             });
             // console.log("info", info)
             instance.send(info)
@@ -112,7 +115,6 @@ exports.install = function(instance) {
             };
             return myString;
         }
-
         function base64Decode(data) {
             let buff = new Buffer(data, 'base64');
             let text = buff.toString('ascii');

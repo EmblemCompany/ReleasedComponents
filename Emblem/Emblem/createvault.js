@@ -4,11 +4,12 @@ exports.group = 'Emblem';
 exports.color = '#37BC9B';
 exports.input = true;
 exports.output = 1;
-exports.version = '0.0.9';
+exports.version = '0.0.10';
 exports.author = 'Shannon Code';
 exports.icon = 'piggy-bank';
 exports.options = {  };
 exports.npm = [];
+exports.html = ``;
 
 exports.readme = `# Create Vault
 
@@ -27,41 +28,34 @@ The response object is a large, complex data object that represents both the key
 Read more about Emblem Vaults here.
 `;
 
-exports.html = ``;
-
 exports.install = function(instance) {
 	
 	instance.on('data', function(response) {
-		// instance.send(response)
 		var keys = FLOW.get('keys')
 		var identity = getInputs(response, keys,'address')
 		if (!identity) {
-			// console.log("no keys", keys)
 			keys = createIdentity()
-			// console.log("got keys now", keys)
 			identity = getInputs(response, keys,'address')
-			makeVault()
+			makeVault(response)
 		} else {
-			makeVault()
+			makeVault(response)
 		}
 		
-		function makeVault() {
+		function makeVault(response) {
 			RESTBuilder.make(function(builder) {
 				var url = 'https://api.emblemvault.io/create?skip_unloq=true&pvt=&address=' + identity 
-				// instance.send({url: url})
 				url = url + '&name='
-				// instance.send({url: url})
 				url = url + '&unloq_id=' + getUnloq(response, keys, 'unloq_id')
-				// instance.send({url: url})
 				url = url + '&unloq_key=' + getUnloq(response, keys, 'unloq_key')
-				// instance.send({url: url})
 				builder.url(url);
 				builder.header('service', 'sandbox-beta')
 				builder.method('get')
-				builder.exec(function(err, response) {
-					// console.log(err, response)
-					instance.status(response.payload.import_response.name, 'green');
-					instance.send({response: response, err: err, url: url, keys: keys})
+				builder.exec(function(err, api_response) {
+					response.set('keys', keys)
+					response.set('response', api_response)
+					response.data = {response: api_response, keys: keys}
+					instance.status(api_response.payload.import_response.name, 'green');
+					instance.send(response)
 					if (instance.options.persistVault) {
 						if (keys) {
 							if (!keys.emblems) {
@@ -128,7 +122,6 @@ exports.install = function(instance) {
 		if (keys) {
 			if (path) {
 				var toEvaluate = 'keys.'+path+'["'+name+'"]'
-				instance.send(toEvaluate)
 				return eval(toEvaluate)
 			} else {
 				return keys[name]
@@ -136,7 +129,6 @@ exports.install = function(instance) {
 		}
 		else if (path) {
 			var toEvaluate = 'instance.options["'+name+'"] || FLOW.variables.'+path+'["'+name+'"] || response.data.'+path+'["'+name+'"] || ""'
-			instance.send(toEvaluate)
 			return eval(toEvaluate)
 		} else {
 			return instance.options[name] || FLOW.variables[name] || response.data[name] || ''
