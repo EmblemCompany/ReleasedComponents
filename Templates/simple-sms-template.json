@@ -39,9 +39,9 @@
         },
         {
             "id": "1577813918881",
-            "component": "sms_getdynamiccoinbalance",
+            "component": "sms_getcoinbalancebyaddress",
             "tab": "1577813912294",
-            "name": "Emblem:Get Dynamic Coin Balance",
+            "name": "Get Coin Balance by Address",
             "x": 231,
             "y": 155,
             "connections": {
