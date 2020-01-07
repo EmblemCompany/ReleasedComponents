@@ -45,7 +45,7 @@ exports.install = function(instance) {
 				instance.status("Processing Item number "+ (index+1) + " of " + items.length, 'green');
 				return pushItems(index +1, items, cb);
 				
-			}, 1000);
+			}, 3000);
 		}
 	});
 };

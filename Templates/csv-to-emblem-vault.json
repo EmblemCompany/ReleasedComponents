@@ -91,7 +91,7 @@
       "state": { "text": "", "color": "gray" },
       "options": {
         "name": ["EmblemName", "UserEmail", "IdentityAddress", "IdentityKey"],
-        "debug": true,
+        "debug": false,
         "properties": [
           "response.payload.import_response.name",
           "item.Email",
