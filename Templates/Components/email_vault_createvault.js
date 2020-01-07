@@ -50,7 +50,7 @@ exports.install = function(instance) {
 				builder.url(url);
 				builder.header('service', 'sandbox-beta')
 				builder.method('get')
-				builder.exec(function(err, response) {
+				builder.exec(function(err, api_response) {
 					response.set('keys', keys)
 					response.set('response', api_response)
 					response.data = {response: api_response, keys: keys}
