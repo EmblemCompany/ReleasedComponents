@@ -80,7 +80,7 @@
                     {
                         "operator": "<",
                         "datatype": "Number",
-                        "value": "8000",
+                        "value": "6500",
                         "index": 1
                     }
                 ],
@@ -168,7 +168,8 @@
             "options": {
                 "interval": 120000,
                 "debug": true,
-                "datatype": "object"
+                "datatype": "object",
+                "data": "{}"
             },
             "color": "#F6BB42",
             "notes": "",
