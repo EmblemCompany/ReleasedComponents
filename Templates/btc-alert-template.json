@@ -1,0 +1,182 @@
+﻿{
+    "tabs": [
+        {
+            "id": "1578357251268",
+            "name": "BTC Alert Template",
+            "icon": "fa-object-ungroup",
+            "linker": "main",
+            "index": 0
+        }
+    ],
+    "components": [
+        {
+            "id": "1578357258685",
+            "component": "btc_alert_assetsid",
+            "tab": "1578357251268",
+            "name": "Get Asset Details",
+            "x": 173,
+            "y": 134,
+            "connections": {
+                "0": [
+                    {
+                        "index": "0",
+                        "id": "1578357742195"
+                    }
+                ]
+            },
+            "disabledio": {
+                "input": [],
+                "output": []
+            },
+            "state": {
+                "text": "",
+                "color": "gray"
+            },
+            "options": {
+                "id": "bitcoin",
+                "debug": true
+            },
+            "color": "#61affe",
+            "notes": "",
+            "errors": {}
+        },
+        {
+            "id": "1578357742195",
+            "component": "btc_alert_switch",
+            "tab": "1578357251268",
+            "name": "Threshold Picker",
+            "x": 353,
+            "y": 227,
+            "connections": {
+                "0": [
+                    {
+                        "index": "0",
+                        "id": "1578358722390"
+                    }
+                ],
+                "1": [
+                    {
+                        "index": "0",
+                        "id": "1578358853944"
+                    }
+                ]
+            },
+            "disabledio": {
+                "input": [],
+                "output": []
+            },
+            "state": {
+                "text": "",
+                "color": "gray"
+            },
+            "options": {
+                "conditions": [
+                    {
+                        "operator": ">",
+                        "datatype": "Number",
+                        "value": "10000",
+                        "index": 0
+                    },
+                    {
+                        "operator": "<",
+                        "datatype": "Number",
+                        "value": "8000",
+                        "index": 1
+                    }
+                ],
+                "property": "data.priceUsd",
+                "debug": true
+            },
+            "color": "#ffa824",
+            "notes": "",
+            "output": 2,
+            "errors": {}
+        },
+        {
+            "id": "1578358722390",
+            "component": "btc_alert_sendsms",
+            "tab": "1578357251268",
+            "name": "Text SELL SELL SELL",
+            "x": 550,
+            "y": 109,
+            "connections": {},
+            "disabledio": {
+                "input": [],
+                "output": []
+            },
+            "state": {
+                "text": "",
+                "color": "gray"
+            },
+            "options": {
+                "msg": "SELL SELL SELL",
+                "to": "",
+                "debug": true
+            },
+            "color": "#DA4453",
+            "notes": "",
+            "errors": {}
+        },
+        {
+            "id": "1578358853944",
+            "component": "btc_alert_sendsms",
+            "tab": "1578357251268",
+            "name": "Text BUY BUY BUY",
+            "x": 548,
+            "y": 380,
+            "connections": {},
+            "disabledio": {
+                "input": [],
+                "output": []
+            },
+            "state": {
+                "text": "",
+                "color": "gray"
+            },
+            "options": {
+                "msg": "BUY BUY BUY",
+                "to": "",
+                "debug": true
+            },
+            "color": "#49cc90",
+            "notes": "",
+            "errors": {}
+        },
+        {
+            "id": "1578359503768",
+            "component": "btc_alert_timer",
+            "tab": "1578357251268",
+            "name": "Every 2 minutes",
+            "x": 21.77777777777778,
+            "y": 42.333333333333336,
+            "connections": {
+                "0": [
+                    {
+                        "index": "0",
+                        "id": "1578357258685"
+                    }
+                ]
+            },
+            "disabledio": {
+                "input": [],
+                "output": []
+            },
+            "state": {
+                "text": "",
+                "color": "gray"
+            },
+            "options": {
+                "interval": 120000,
+                "debug": true,
+                "datatype": "object"
+            },
+            "color": "#F6BB42",
+            "notes": "",
+            "errors": {}
+        }
+    ],
+    "variables": "",
+    "panel": "debug",
+    "url": "http://127.0.0.1:8000/$flow/#main",
+    "created": "2020-01-07T01:20:44.459Z"
+}

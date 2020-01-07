@@ -27,9 +27,9 @@ This component sends an Email using SendGrid.
 
 ## Stuff you need to know
 
-In the *Subject* and *Body* fields, you can retrieve data from the previous component. The Console tab of that component displays the json response. To use that response data, enter {message.<your json path here>}. 
+In the *Subject* and *Body* fields, you can retrieve data from the previous component. The Console tab of that component displays the json response. To use that response data, enter {msg.<your json path here>}. 
 
-Learn more [here](https://bit.ly/2FbjaOB)!
+Learn more [here](https://unspecifiedsupport.freshdesk.com/support/solutions/articles/60000182172-using-a-component-s-response-data)!
 `;
 
 exports.html = `<div class="padding">
@@ -48,13 +48,13 @@ exports.html = `<div class="padding">
         <div class="row">
             <div class="col-md-12">
                 <div data-jc="textbox" data-jc-path="subject" data-jc-config="placeholder:Subject of the email">@(subject) </div>
-                <div class="help"></div>
+                <div class="help">To inject data into this field, use {msg.<path>} syntax <a href="https://unspecifiedsupport.freshdesk.com/support/solutions/articles/60000182172-using-a-component-s-response-data">More info here</a></div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
                 <div data-jc="textarea" data-jc-path="body" data-jc-config="placeholder:Body of the email">@(body) </div>
-                <div class="help"></div>
+                <div class="help">To inject data into this field, use {msg.<path>} syntax <a href="https://unspecifiedsupport.freshdesk.com/support/solutions/articles/60000182172-using-a-component-s-response-data">More info here</a></div>
             </div>
         </div>
 </div>`
