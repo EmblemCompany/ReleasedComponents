@@ -9,7 +9,6 @@ exports.author = 'Shannon Code';
 exports.icon = 'piggy-bank';
 exports.options = {  };
 exports.npm = [];
-exports.html = ``;
 
 exports.readme = `# Create Vault
 
@@ -27,6 +26,8 @@ The response object is a large, complex data object that represents both the key
 
 Read more about Emblem Vaults here.
 `;
+
+exports.html = ``;
 
 exports.install = function(instance) {
 	

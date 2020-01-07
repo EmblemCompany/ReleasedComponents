@@ -11,7 +11,6 @@ exports.options ={
     service: "dexray2",
     host: "api.emblemvault.io"
 };
-exports.npm =[];
 
 exports.readme = `# Emblem:Get Dynamic Coin Balance
 
@@ -31,6 +30,28 @@ In the most popular example, BTC, these are the same. The blockchain is the Bitc
 
 In other examples, however, like ETH, there are many assets that use the same blockchain. Every ERC-20 asset uses an ETH address. Entering asset ensures that you get only the balance for that asset.
 
+`;
+
+exports.html = `<div class="padding">
+        <div class="row">
+            <div class="col-md-12">
+                <div data-jc="textbox" data-jc-path="asset" data-jc-config="placeholder:">@(asset) </div>
+                <div class="help">This is the symbol for the asset, such as coval.</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div data-jc="textbox" data-jc-path="coin" data-jc-config="placeholder:btc">@(coin) </div>
+                <div class="help">This is the blockchain the asset lives on, such as eth for Coval.</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div data-jc="textbox" data-jc-path="address" data-jc-config="placeholder:19cCGRb5XLuuzoRvDLyRm888G8ank5WFyM">@(address) </div>
+                <div class="help">Try this example for btc, btc: 19cCGRb5XLuuzoRvDLyRm888G8ank5WFyM, or this example for coval, eth: 0x5b3cfb86a9575a2c42fd88aa71f0957004fa9209</div>
+            </div>
+        </div>
+</div>
 `;
 
 var request = {
@@ -199,23 +220,3 @@ exports.install =function(instance) {
         return url
     }
 };
-exports.html = `<div class="padding">
-        <div class="row">
-            <div class="col-md-12">
-                <div data-jc="textbox" data-jc-path="asset" data-jc-config="placeholder:">@(asset) </div>
-                <div class="help">This is the symbol for the asset, such as coval.</div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div data-jc="textbox" data-jc-path="coin" data-jc-config="placeholder:btc">@(coin) </div>
-                <div class="help">This is the blockchain the asset lives on, such as eth for Coval.</div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
-                <div data-jc="textbox" data-jc-path="address" data-jc-config="placeholder:19cCGRb5XLuuzoRvDLyRm888G8ank5WFyM">@(address) </div>
-                <div class="help">Try this example for btc, btc: 19cCGRb5XLuuzoRvDLyRm888G8ank5WFyM, or this example for coval, eth: 0x5b3cfb86a9575a2c42fd88aa71f0957004fa9209</div>
-            </div>
-        </div>
-</div>`

@@ -9,6 +9,11 @@ exports.author = 'Shannon Code';
 exports.icon = 'fingerprint';
 exports.options = {  };
 exports.npm = [];
+
+exports.readme = `# Create Emblem Identity
+
+Create a new identity to store Emblem Vaults. Once you have created this identity, you can begin creating Emblem Vaults and storing them in this identity.`;
+
 exports.html = `
 <div class="padding">
 	<div class="row">
@@ -17,11 +22,7 @@ exports.html = `
 		</div>
 	</div>
 </div>
-`
-
-exports.readme = `# Create Emblem Identity
-
-Create a new identity to store Emblem Vaults. Once you have created this identity, you can begin creating Emblem Vaults and storing them in this identity.`;
+`;
 
 exports.install = function(instance) {
 	var CovalLib = require('coval.js')

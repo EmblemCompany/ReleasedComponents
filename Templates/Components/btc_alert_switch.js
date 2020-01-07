@@ -9,6 +9,37 @@ exports.output = 1;
 exports.author = 'Martin Smola';
 exports.options = { conditions: [{ operator: '==', datatype: 'Number', value: 1, index: 0 }]};
 
+exports.readme = `
+# Switch
+
+This component allows you to read in data from the previous component and perform actions based on a set of conditions.
+
+## Fields
+
+*Property*: This is the incoming property you will use for the comparison. In the case of this template, we are getting the USD price of BTC from CoinCap's Get Asset Details, and we reference it by entering "data.priceUsd".
+
+*Conditions*: This is a complex field that allows you to choose one or more condition(s) to perform next actions on. Each condition creates a new output element on the component. The first output element will fire when the first condition is met, the second output element will fire when the second condition is met, etc. Conditions can overlap if you choose.
+
+### Options for Conditions
+
+#### Operator
+
+*Basic operators*: Typical logical operators include >, <, >=, <=, == (equal to), !== (not equal to)
+
+*String only operators*: Starts with, ends with, and regex. When given a string, match on the beginning or end of a string, or match based on a given regex. Read more about [Regex here](https://www.w3schools.com/jsref/jsref_obj_regexp.asp).
+
+*Index Of*: Returns the position in the incoming data (array or string, for exmaple) of the first occurrence of the given value
+
+#### Data Type
+
+*Options*: Number, String Boolean
+
+#### Value
+
+Enter the value to match in the condition.
+
+`;
+
 exports.html = `<style>
 	.cond-col1 { width:20px; float:left; }
 	.cond-col2 { width:150px; float:left; }
@@ -88,37 +119,6 @@ exports.html = `<style>
 	};
 
 </script>`;
-
-exports.readme = `
-# Switch
-
-This component allows you to read in data from the previous component and perform actions based on a set of conditions.
-
-## Fields
-
-*Property*: This is the incoming property you will use for the comparison. In the case of this template, we are getting the USD price of BTC from CoinCap's Get Asset Details, and we reference it by entering "data.priceUsd".
-
-*Conditions*: This is a complex field that allows you to choose one or more condition(s) to perform next actions on. Each condition creates a new output element on the component. The first output element will fire when the first condition is met, the second output element will fire when the second condition is met, etc. Conditions can overlap if you choose.
-
-### Options for Conditions
-
-#### Operator
-
-*Basic operators*: Typical logical operators include >, <, >=, <=, == (equal to), !== (not equal to)
-
-*String only operators*: Starts with, ends with, and regex. When given a string, match on the beginning or end of a string, or match based on a given regex. Read more about [Regex here](https://www.w3schools.com/jsref/jsref_obj_regexp.asp).
-
-*Index Of*: Returns the position in the incoming data (array or string, for exmaple) of the first occurrence of the given value
-
-#### Data Type
-
-*Options*: Number, String Boolean
-
-#### Value
-
-Enter the value to match in the condition.
-
-`;
 
 exports.install = function(instance) {
 

@@ -9,11 +9,13 @@ exports.author = 'Shannon Code';
 exports.icon = 'fingerprint';
 exports.options = {  };
 exports.npm = [];
-exports.html = ``;
 
 exports.readme = `# Get Saved Emblem Identity
 
-Retrieves the Emblem Identity created earlier within a circuit. Requires you have previously used the *Create Emblem Identity* component.`;
+Retrieves the Emblem Identity created earlier within a circuit. Requires you have previously used the *Create Emblem Identity* component.
+`;
+
+exports.html = ``;
 
 exports.install = function(instance) {
 	

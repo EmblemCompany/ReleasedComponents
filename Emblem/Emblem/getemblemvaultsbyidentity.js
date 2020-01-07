@@ -9,6 +9,15 @@ exports.author = 'Shannon Code';
 exports.icon = 'list-alt';
 exports.options = {  };
 exports.npm = [];
+
+exports.readme = `# Get Emblem Vaults by Identity
+This gets a list of Embem Vaults for a given identity.
+
+## Fields
+
+*Address* (optional): Leave blank if using the saved identity created earlier in this circuit. Or, enter the address of a specific Emblem Identity in this field to get a list of Emblem Vaults stored in that identity.
+`;
+
 exports.html = `
 <div class="padding">
 	<div class="row">
@@ -18,14 +27,6 @@ exports.html = `
 		</div>
 	</div>
 </div>
-`;
-
-exports.readme = `# Get Emblem Vaults by Identity
-This gets a list of Embem Vaults for a given identity.
-
-## Fields
-
-*Address* (optional): Leave blank if using the saved identity created earlier in this circuit. Or, enter the address of a specific Emblem Identity in this field to get a list of Emblem Vaults stored in that identity.
 `;
 
 exports.install = function(instance) {

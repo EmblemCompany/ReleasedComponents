@@ -9,22 +9,6 @@ exports.author = 'Shannon Code';
 exports.icon = 'random';
 exports.options = {  };
 exports.npm = [];
-exports.html = `
-<div class="padding">
-    <div class="row">
-        <div class="col-md-6">
-            <div data-jc="textbox" data-jc-path="length" data-jc-config="placeholder:64">@(length) (@(optional))</div>
-            <div class="help">Specify the length of your desired string. Default is 64 if not specified.</div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-6">
-            <div data-jc="textbox" data-jc-path="chars" data-jc-config="placeholder:hex">@(chars) (@(optional))</div>
-            <div class="help">Specify the allowable characters you want in your string, i.e. Aa#! Default is hex is not specified.</div>
-        </div>
-    </div>
-</div>
-`;
 
 exports.readme = `# Random String Generator
 
@@ -47,6 +31,23 @@ Use the following table for reference:
 |#                         |Digits (0123456789)                               |
 |!                         |Special Characters (!@#$%^&*()_+-={}[]:";\'<>?,./|\\)|
 
+`;
+
+exports.html = `
+<div class="padding">
+    <div class="row">
+        <div class="col-md-6">
+            <div data-jc="textbox" data-jc-path="length" data-jc-config="placeholder:64">@(length) (@(optional))</div>
+            <div class="help">Specify the length of your desired string. Default is 64 if not specified.</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div data-jc="textbox" data-jc-path="chars" data-jc-config="placeholder:hex">@(chars) (@(optional))</div>
+            <div class="help">Specify the allowable characters you want in your string, i.e. Aa#! Default is hex is not specified.</div>
+        </div>
+    </div>
+</div>
 `;
 
 exports.install = function(instance) {

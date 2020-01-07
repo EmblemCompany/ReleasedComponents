@@ -9,6 +9,19 @@ exports.author = 'Shannon Code';
 exports.icon = 'lock';
 exports.options = {  };
 exports.npm = [];
+
+exports.readme = `# Encrypt a String
+
+Um, encrypts a string.
+
+## Fields
+
+*Data* (optional): This is the data to encrypt. Only use this field if you are not otherwise sending data to this component from another component (such as the *Random String Generator*)
+
+*Password* (optional): Enter a password to be used to encrypt the data, if desired. If no password is given, it will encrypt with a blank password (not recommended).
+
+`;
+
 exports.html = `
 <div class="padding">
     <div class="row">
@@ -24,18 +37,6 @@ exports.html = `
         </div>
     </div>
 </div>
-`;
-
-exports.readme = `# Encrypt a String
-
-Um, encrypts a string.
-
-## Fields
-
-*Data* (optional): This is the data to encrypt. Only use this field if you are not otherwise sending data to this component from another component (such as the *Random String Generator*)
-
-*Password* (optional): Enter a password to be used to encrypt the data, if desired. If no password is given, it will encrypt with a blank password (not recommended).
-
 `;
 
 exports.install = function(instance) {

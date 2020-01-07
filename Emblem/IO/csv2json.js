@@ -7,8 +7,25 @@ exports.output = 1;
 exports.author = 'Peter Širka';
 exports.icon = 'code';
 exports.version = '1.2.0';
-exports.npm = ['csvtojson']
 exports.options = { outputs: 1, code: 'send(0, value);', keepmessage: true };
+exports.npm = ['csvtojson'];
+
+exports.readme = `# CSV to JSON
+
+This component executes custom JavaScript code as it is and it doesn't contain any secure scope.
+
+\`\`\`javascript
+// value {Object} contains received data
+// send(outputIndex, newValue) sends a new value
+// error(value) sends an error
+// instance {Object} a current component instance
+// flowdata {Object} a current flowdata
+// repository {Object} a current repository of flowdata
+// Example:
+
+// send() can be execute multiple times
+send(0, value);
+\`\`\``;
 
 exports.html = `<div class="padding">
 	<div class="row">
@@ -36,24 +53,8 @@ exports.html = `<div class="padding">
 			component.output = options.outputs || 1;
 		}
 	});
-</script>`;
-
-exports.readme = `# Code
-
-This component executes custom JavaScript code as it is and it doesn't contain any secure scope.
-
-\`\`\`javascript
-// value {Object} contains received data
-// send(outputIndex, newValue) sends a new value
-// error(value) sends an error
-// instance {Object} a current component instance
-// flowdata {Object} a current flowdata
-// repository {Object} a current repository of flowdata
-// Example:
-
-// send() can be execute multiple times
-send(0, value);
-\`\`\``;
+</script>
+`;
 
 exports.install = function(instance) {
 

@@ -9,6 +9,9 @@ exports.author = 'Shannon Code';
 exports.icon = 'wallet';
 exports.options = {  };
 exports.npm = [];
+
+exports.readme = `Ethereum Wallet Functionality`;
+
 exports.html = `
 <div class="padding">
 	<div class="row">
@@ -21,8 +24,6 @@ exports.html = `
 	</div>
 </div>
 `;
-
-exports.readme = `Ethereum Wallet Functionality`;
 
 exports.install = function(instance) {
 

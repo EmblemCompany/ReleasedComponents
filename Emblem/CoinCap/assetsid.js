@@ -7,8 +7,6 @@ exports.output =1;
 exports.version ="0.0.1";
 exports.author ="Shannon Code";
 exports.icon ="info-circle";
-exports.options ={};
-exports.npm =[];
 
 exports.readme = `# Get Asset Details
 

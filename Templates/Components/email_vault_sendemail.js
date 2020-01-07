@@ -7,9 +7,6 @@ exports.output =1;
 exports.version ="0.0.1";
 exports.author ="Shannon Code";
 exports.icon ="paper-plane";
-exports.options ={};
-exports.npm =['nodemailer'];
-
 
 exports.readme = `# Send Email
 

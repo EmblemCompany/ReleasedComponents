@@ -7,9 +7,6 @@ exports.output =1;
 exports.version ="0.0.1";
 exports.author ="Shannon Code";
 exports.icon ="sms";
-exports.options ={};
-exports.npm =[];
-
 
 exports.readme = `# Send SMS
 
@@ -31,6 +28,25 @@ Learn more [here](https://unspecifiedsupport.freshdesk.com/support/solutions/art
 ## Having trouble?
 
 Did you check that you entered a phone number for a recipient, and that it is in the correct format?
+`;
+
+exports.html = `<div class="padding">
+    <div class="row">
+        <div class="col-md-12">
+            <div data-jc="textbox" data-jc-path="to" data-jc-config="placeholder:Recipient phone number">@(to) </div>
+            <div class="help">This 
+            needs to be in the E.164 standard format, which looks like the following:
+            +[country code][subscriber number]. An example US phone number would be
+            +18888511920.</div>
+        </div>
+    </div>
+    <div class="row">
+            <div class="col-md-12">
+                <div data-jc="textbox" data-jc-path="msg" data-jc-config="placeholder:Enter the text of your message here">@(msg) </div>
+                <div class="help">To inject data into this message, use {msg.<path>} syntax <a href="https://unspecifiedsupport.freshdesk.com/support/solutions/articles/60000182172-using-a-component-s-response-data">More info here</a></div>
+            </div>
+        </div>
+</div>
 `;
 
 var request = {
@@ -211,20 +227,3 @@ exports.install =function(instance) {
         return url
     }
 };
-exports.html = `<div class="padding">
-    <div class="row">
-        <div class="col-md-12">
-            <div data-jc="textbox" data-jc-path="to" data-jc-config="placeholder:Recipient phone number">@(to) </div>
-            <div class="help">This 
-            needs to be in the E.164 standard format, which looks like the following:
-            +[country code][subscriber number]. An example US phone number would be
-            +18888511920.</div>
-        </div>
-    </div>
-    <div class="row">
-            <div class="col-md-12">
-                <div data-jc="textbox" data-jc-path="msg" data-jc-config="placeholder:Enter the text of your message here">@(msg) </div>
-                <div class="help">To inject data into this message, use {msg.<path>} syntax <a href="https://unspecifiedsupport.freshdesk.com/support/solutions/articles/60000182172-using-a-component-s-response-data">More info here</a></div>
-            </div>
-        </div>
-</div>`

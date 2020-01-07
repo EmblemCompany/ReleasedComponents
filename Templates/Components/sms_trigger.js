@@ -8,18 +8,20 @@ exports.version = '0.0.1';
 exports.author = 'Martin Smola';
 exports.icon = 'play';
 
+exports.readme = `# Trigger
+
+This component starts the workflow when clicked. To start it, click the tiny white box with the 'x' on the bottom of the component.  Then watch the magic happen!
+
+**Note that for this template to execute fully, you will need to enter a phone number for the text recipient in the Send SMS component.
+`;
+
+
 exports.html = `<div class="padding">
 	<div data-jc="dropdown__datatype__items:,String|string,Integer|integer,Float|float,Boolean|boolean,Date|date,Object|object,Base64 as Buffer|buffer" class="m">@(Data type (String by default))</div>
 	<div data-jc="textbox__data__placeholder:@(e.g. Hello world or { hello: 'world'} or ['hello', 'world']))" class="m">@(Data)</div>
 	<div data-jc="checkbox__restart">Trigger 5s after initialization.</div>
 	<div class="help">@(Useful when there's a need to run certain flow when the app restarts, etc.)</div>
 </div>`;
-
-exports.readme = `# Trigger
-
-This component starts the workflow when clicked. To start it, click the tiny white box with the 'x' on the bottom of the component.  Then watch the magic happen!
-
-**Note that for this template to execute fully, you will need to enter a phone number for the text recipient in the Send SMS component.`;
 
 exports.install = function(instance) {
 
