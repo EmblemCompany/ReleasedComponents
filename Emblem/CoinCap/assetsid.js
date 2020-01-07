@@ -141,7 +141,6 @@ exports.install =function(instance) {
             builder.method(theRequest.method.toLowerCase() || 'get')
             builder.exec(function(err, response) {
                 instance.send(response);
-				LOGGER('Notifications', 'response:', JSON.stringify(response), 'error:', err);
 			});
 		});
 	});
