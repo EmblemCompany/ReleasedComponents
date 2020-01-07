@@ -310,7 +310,7 @@
             {
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Templates/Components/sms_getcoinbalancebyaddress.js",
                 "version": "0.0.1",
-                "display-name": "SMS Template Get Dynamic Coin Balance"
+                "display-name": "SMS Template Get Coin Balance by Address"
             },
             {
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Templates/Components/sms_sendsms.js",
