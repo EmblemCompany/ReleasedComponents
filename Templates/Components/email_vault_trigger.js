@@ -1,5 +1,5 @@
 exports.id = 'email_vault_trigger';
-exports.title = 'Trigger';
+exports.title = 'Email Vault Template Trigger';
 exports.group = 'Templates Only';
 exports.color = '#F6BB42';
 exports.click = true;

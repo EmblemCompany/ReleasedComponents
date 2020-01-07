@@ -330,7 +330,27 @@
             {
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Templates/Components/email_vault_sendemail.js",
                 "version": "0.0.1",
-                "display-name": "Email Vault Template Send SMS"
+                "display-name": "Email Vault Template Send Email"
+			},
+			{
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Templates/Components/btc_alert_timer.js",
+                "version": "1.0.0",
+                "display-name": "BTC Alert Template Timer"
+            },
+			{
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Templates/Components/btc_alert_assetsid.js",
+                "version": "0.0.1",
+                "display-name": "BTC Alert Template Get Asset Details"
+			},
+			{
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Templates/Components/btc_alert_switch.js",
+                "version": "1.1.1",
+                "display-name": "BTC Alert Template Switch"
+			},
+			{
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Templates/Components/btc_alert_sendsms.js",
+                "version": "0.0.1",
+                "display-name": "BTC Alert Template Send SMS"
             }
         ]
     }

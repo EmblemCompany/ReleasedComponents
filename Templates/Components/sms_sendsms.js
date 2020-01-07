@@ -1,5 +1,5 @@
 exports.id ="sms_sendsms";
-exports.title ="Send SMS";
+exports.title ="SMS Template Send SMS";
 exports.group ="Templates Only";
 exports.color ="#49cc90";
 exports.input =true;

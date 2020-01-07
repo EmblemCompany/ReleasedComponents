@@ -1,5 +1,5 @@
 exports.id = 'email_vault_createvault';
-exports.title = 'Create Emblem Vault';
+exports.title = 'Email Vault Template Create Emblem Vault';
 exports.group = 'Templates Only';
 exports.color = '#37BC9B';
 exports.input = true;

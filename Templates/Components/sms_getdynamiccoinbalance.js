@@ -1,5 +1,5 @@
 exports.id ="sms_getdynamiccoinbalance";
-exports.title ="Emblem:Get Dynamic Coin Balance";
+exports.title ="SMS Template Get Dynamic Coin Balance";
 exports.group ="Templates Only";
 exports.color ="#61affe";
 exports.input =true;
