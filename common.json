@@ -308,7 +308,7 @@
                 "display-name": "SMS Template Trigger"
             },
             {
-                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Templates/Components/sms_getdynamiccoinbalance.js",
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Templates/Components/sms_getcoinbalancebyaddress.js",
                 "version": "0.0.1",
                 "display-name": "SMS Template Get Dynamic Coin Balance"
             },
