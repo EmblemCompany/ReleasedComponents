@@ -35,21 +35,13 @@ exports.install = function(instance) {
 			FLOW.rem('keys')
 		}
 		if (instance.options.persistKey){
-			keys = FLOW.get('keys') || "";		
-			// if (!keys) {
-				keys = generateKey()
-				FLOW.set("keys",keys)				
-				// flowdata.set('keys', keys)
-				instance.status(keys.address, 'green');
-				instance.send(flowdata.keys = keys)
-			// } else {
-			// 	// flowdata.set('keys', keys)
-			// 	instance.status(keys.address, 'green');
-			// 	instance.send(flowdata.keys = keys)
-			// }
+			keys = FLOW.get('keys') || "";
+			keys = generateKey()
+			FLOW.set("keys",keys)
+			instance.status(keys.address, 'green');
+			instance.send(flowdata.keys = keys)
 		} else {
 			keys = generateKey()
-			// flowdata.set('keys', keys)
 			instance.status(keys.address, 'green');
 			instance.send(flowdata.keys = keys)
 		}

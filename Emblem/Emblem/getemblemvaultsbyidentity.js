@@ -32,7 +32,6 @@ exports.html = `
 exports.install = function(instance) {
 	
 	instance.on('data', function(response) {
-		// instance.send(response)
 		var keys = FLOW.get('keys')
 		RESTBuilder.make(function(builder) {
 			var url = 'https://api.emblemvault.io/balance?address=' + getInputs(response, keys,'address') 
@@ -40,7 +39,6 @@ exports.install = function(instance) {
             builder.header('service', 'sandbox-beta')
             builder.method('get')
             builder.exec(function(err, response) {
-				// instance.status(response.payload.import_response.name, 'green');
 				instance.send({response: response, err: err, url: url})
 			});
 		});

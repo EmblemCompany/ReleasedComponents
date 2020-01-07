@@ -324,12 +324,12 @@
             },
             {
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Templates/Components/email_vault_createvault.js",
-                "version": "0.0.1",
+                "version": "0.0.2",
                 "display-name": "Email Vault Template Create Emblem Vault"
             },
             {
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Templates/Components/email_vault_sendemail.js",
-                "version": "0.0.1",
+                "version": "0.0.2",
                 "display-name": "Email Vault Template Send Email"
 			},
 			{

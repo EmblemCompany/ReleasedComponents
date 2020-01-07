@@ -91,9 +91,7 @@ exports.install =function(instance) {
 	instance.on('data', function(response) {
         theRequest = request
         RESTBuilder.make(function(builder) {
-			// builder.url('https://{0}:{1}@api.twilio.com/2010-04-01/Accounts/{0}/Messages'.format(instance.options.key, instance.options.secret));
-			// builder.urlencoded({ To: instance.options.target, From: instance.options.sender, Body: typeof(message) === 'object' ? JSON.stringify(message) : message.toString() });
-            var url = generateUrl(theRequest)
+			var url = generateUrl(theRequest)
             builder.url(url);
             if (instance.options.service || response.data.service || FLOW.variables.service ) {
                 builder.header('service', instance.options.service || response.data.service || FLOW.variables.service)
@@ -160,8 +158,6 @@ exports.install =function(instance) {
             builder.method(theRequest.method.toLowerCase() || 'get')
             builder.exec(function(err, response) {
                 instance.send({response: response});
-                // instance.send({response: response, url: url, parsedUrl: generateUrl(theRequest), builder: builder})
-				LOGGER('Notifications', 'response:', JSON.stringify(response), 'error:', err);
 			});
 		});
 	});
@@ -171,9 +167,7 @@ exports.install =function(instance) {
 	};
 
 	instance.reconfigure = function() {
-		//can = instance.options.key && instance.options.secret && instance.options.sender && instance.options.target ? true : false;
-        //instance.status(can ? '' : 'Not configured', can ? undefined : 'red');
-        
+		
 	};
 
 	instance.on('options', instance.reconfigure);

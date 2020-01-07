@@ -16,5 +16,11 @@
         "name": "BTC Alert Template", 
         "description": "Send an SMS on given threshold to buy or sell btc.", 
         "author": "UNspecified <dawn@unspecified.me>" 
+    },
+    { 
+        "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Templates/csv-to-emblem-vault.json", 
+        "name": "Emblem Vaults from CSV List Template", 
+        "description": "Parses a CSV file and produces vaults for each entry.", 
+        "author": "UNspecified <shannon@unspecified.me>" 
     }
 ]
