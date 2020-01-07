@@ -14,14 +14,14 @@ This component sends an SMS message using ClickSend.
 
 ## Fields
 
-\`msg\`: Enter the message that will go into the SMS here.\`
+*msg*: Enter the message that will go into the SMS here.\`
 
-\`to\`: Enter the phone number for the recipient here. This 
+*to*: Enter the phone number for the recipient here. This 
 needs to be in the E.164 standard format, which looks like the following: +[country code][subscriber number]. An example US phone number would be +18888511920.
 
 ## Stuff you need to know
 
-In the \`msg\` field, you can retrieve data from the previous component. The Console tab of that component displays the json response. To use that response data, enter {message.<your json path here>}. For example, in this template, {message.response.balance} retrieves the balance from Emblem: Get Dynamic Coin Balance. 
+In the *msg* field, you can retrieve data from the previous component. The Console tab of that component displays the json response. To use that response data, enter {message.<your json path here>}. For example, in this template, {message.response.balance} retrieves the balance from Emblem: Get Dynamic Coin Balance. 
 
 Learn more [here](https://unspecifiedsupport.freshdesk.com/support/solutions/articles/60000182172-using-a-component-s-response-data)!
 

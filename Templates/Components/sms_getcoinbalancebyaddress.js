@@ -18,11 +18,11 @@ This component will retrieve the balance from any cryptocurrency coin on any blo
 
 ## Fields
 
-\`asset\`: This is the name of the asset on the blockchain you are requesting a balance from.
+*Asset*: This is the name of the asset on the blockchain you are requesting a balance from.
 
-\`coin\`: This is the name of the blockchain your asset lives on.
+*Coin*: This is the name of the blockchain your asset lives on.
 
-\`address\`: This is the address that contains the asset you would like the balance for.
+*Address*: This is the address that contains the asset you would like the balance for.
 
 ## What is the difference between asset and coin?
 
