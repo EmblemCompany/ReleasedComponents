@@ -6,7 +6,7 @@ exports.input = true;
 exports.output = 1;
 exports.author = 'Shannon code';
 exports.icon = 'dharmachakra';
-exports.version = '0.0.1';
+exports.version = '0.0.2';
 exports.npm = []
 exports.options = { outputs: 1};
 
@@ -24,15 +24,25 @@ exports.readme = `# CSV 2 JSON
 This component converts specified csv file to json`;
 
 exports.install = function(instance) {
+	var chunk = 0;
+	var lastChunk;
 	instance.on('data', function(response) {
 		const csv = require("csvtojson");
-		var file = instance.options.filename || FLOW.variables.filename || response.data.filename;
-		csv().fromFile('./' + file)
-		.then((jsonObj)=>{
-			pushItems(0, jsonObj, ()=>{
-				instance.status("Processing Complete", 'green');
+		if (response.data && !response.data.filename) {
+			csv().fromString(response.data).then((jsonObj)=>{
+				pushItems(0, jsonObj, ()=>{
+					instance.status("Processing Complete", 'green');
+				})
 			})
-		})
+		} else {
+			var file = instance.options.filename || FLOW.variables.filename || response.data.filename;
+			csv().fromFile('./' + file).then((jsonObj)=>{
+				pushItems(0, jsonObj, ()=>{
+					instance.status("Processing Complete", 'green');
+				})
+			})
+		}
+		
 		function pushItems(index, items, cb) {
 			var item = items[index];
 			setTimeout(()=>{

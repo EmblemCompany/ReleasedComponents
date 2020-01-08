@@ -129,7 +129,7 @@
 		"items": [
 			{
 				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/httpdownloader/httpdownloader.js",
-				"version": "1.0.0",
+				"version": "1.0.2",
                 "display-name": "HTTP Downloader"
 			},
 			{
