@@ -10,59 +10,20 @@
   ],
   "components": [
     {
-      "id": "1578424656998",
-      "component": "trigger",
-      "tab": "1578341155899",
-      "name": "Trigger",
-      "x": 35,
-      "y": 94,
-      "connections": { "0": [{ "index": "0", "id": "1578424663589" }] },
-      "disabledio": { "input": [], "output": [] },
-      "state": { "text": "", "color": "gray" },
-      "options": { "restart": false },
-      "color": "#F6BB42",
-      "notes": ""
-    },
-    {
-      "id": "1578424663589",
-      "component": "csv2json",
-      "tab": "1578341155899",
-      "name": "CSV 2 JSON",
-      "x": 189,
-      "y": 71,
-      "connections": { "0": [{ "index": "0", "id": "1578424786067" }] },
-      "disabledio": { "input": [], "output": [] },
-      "state": { "text": "", "color": "green" },
-      "options": { "outputs": 1, "filename": "user-sample.csv" },
-      "color": "#656D78",
-      "notes": ""
-    },
-    {
       "id": "1578424786067",
       "component": "createvault",
       "tab": "1578341155899",
       "name": "Create Emblem Vault",
-      "x": 392,
-      "y": 94,
+      "x": 144,
+      "y": 359,
       "connections": { "0": [{ "index": "0", "id": "1578425960831" }] },
       "disabledio": { "input": [], "output": [] },
-      "state": { "text": "", "color": "green" },
+      "state": {
+        "text": "",
+        "color": "green"
+      },
       "options": {},
       "color": "#37BC9B",
-      "notes": ""
-    },
-    {
-      "id": "1578425244182",
-      "component": "debug",
-      "tab": "1578341155899",
-      "name": "Debug",
-      "x": 1021,
-      "y": 58,
-      "connections": {},
-      "disabledio": { "input": [], "output": [] },
-      "state": { "text": "Enabled", "color": "gray" },
-      "options": { "type": "data", "repository": false, "enabled": true },
-      "color": "#E9573F",
       "notes": ""
     },
     {
@@ -70,8 +31,8 @@
       "component": "mergeupstream",
       "tab": "1578341155899",
       "name": "Merge Upstream",
-      "x": 626,
-      "y": 115,
+      "x": 12,
+      "y": 455,
       "connections": { "0": [{ "index": "0", "id": "1578426528676" }] },
       "disabledio": { "input": [], "output": [] },
       "state": { "text": "", "color": "gray" },
@@ -84,9 +45,9 @@
       "component": "transformobject",
       "tab": "1578341155899",
       "name": "Transform Object",
-      "x": 825,
-      "y": 58,
-      "connections": { "0": [{ "index": "0", "id": "1578425244182" }] },
+      "x": 207,
+      "y": 452,
+      "connections": { "0": [{ "index": "0", "id": "1578500758956" }] },
       "disabledio": { "input": [], "output": [] },
       "state": { "text": "", "color": "gray" },
       "options": {
@@ -101,10 +62,69 @@
       },
       "color": "#3BAFDA",
       "notes": ""
+    },
+    {
+      "id": "1578434234906",
+      "component": "downloader",
+      "tab": "1578341155899",
+      "name": "Download CSV",
+      "x": 141,
+      "y": 262,
+      "connections": { "0": [{ "index": "0", "id": "1578439286225" }] },
+      "disabledio": { "input": [], "output": [] },
+      "state": { "text": "", "color": "gray" },
+      "options": { "url": "" },
+      "color": "#5D9CEC",
+      "notes": ""
+    },
+    {
+      "id": "1578434266055",
+      "component": "trigger",
+      "tab": "1578341155899",
+      "name": "Trigger",
+      "x": 9,
+      "y": 265,
+      "connections": { "0": [{ "index": "0", "id": "1578434234906" }] },
+      "disabledio": { "input": [], "output": [] },
+      "state": { "text": "", "color": "gray" },
+      "options": {
+        "datatype": "object",
+        "data": "{url: 'https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/user-sample.csv'}"
+      },
+      "color": "#8CC152",
+      "notes": ""
+    },
+    {
+      "id": "1578439286225",
+      "component": "csv2json",
+      "tab": "1578341155899",
+      "name": "CSV 2 JSON",
+      "x": 324,
+      "y": 258,
+      "connections": { "0": [{ "index": "0", "id": "1578424786067" }] },
+      "disabledio": { "input": [], "output": [] },
+      "state": { "text": "", "color": "green" },
+      "options": { "outputs": 1, "filename": "" },
+      "color": "#656D78",
+      "notes": ""
+    },
+    {
+      "id": "1578500758956",
+      "component": "debug",
+      "tab": "1578341155899",
+      "name": "Debug",
+      "x": 402,
+      "y": 448,
+      "connections": {},
+      "disabledio": { "input": [], "output": [] },
+      "state": { "text": "Enabled", "color": "gray" },
+      "options": { "type": "data", "repository": false, "enabled": true },
+      "color": "#967ADC",
+      "notes": ""
     }
   ],
   "variables": "",
   "panel": "debug",
   "url": "http://127.0.0.1:8000/$flow/#main",
-  "created": "2020-01-07T20:12:23.722Z"
+  "created": "2020-01-08T16:44:53.247Z"
 }
