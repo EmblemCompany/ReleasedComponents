@@ -65,7 +65,7 @@
     },
     {
       "id": "1578434234906",
-      "component": "downloader",
+      "component": "httpdownloader",
       "tab": "1578341155899",
       "name": "Download CSV",
       "x": 141,
