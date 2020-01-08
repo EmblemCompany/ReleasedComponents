@@ -1,6 +1,6 @@
 exports.id ="btc_alert_assetsid";
 exports.title ="BTC Alert Template Get Asset Details";
-exports.group ="Templates Only";
+exports.group ="Template Components";
 exports.color ="#61affe";
 exports.input =true;
 exports.output =1;

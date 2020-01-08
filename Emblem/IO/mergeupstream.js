@@ -10,18 +10,16 @@ exports.icon ="compress-arrows-alt";
 
 exports.readme = `# Merge Upstream
 
-This component Merges all  upstream results into a single object
+This component Merges all upstream results into a single object
 
-## Fields
-
-no fields
+## NO FIELDS HERE!
 
 ## Stuff you need to know
 
 Learn more [here](https://unspecifiedsupport.freshdesk.com/support/solutions/articles/60000182172-using-a-component-s-response-data)!
 `;
 
-exports.html = ``
+exports.html = ``;
 
 exports.install = function(instance) {
 

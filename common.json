@@ -300,7 +300,7 @@
 		]
     },
     {
-        "name": "Templates Only",
+        "name": "Template Components",
         "items": [
             {
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Templates/Components/sms_trigger.js",

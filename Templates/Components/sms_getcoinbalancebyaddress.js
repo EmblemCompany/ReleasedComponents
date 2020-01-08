@@ -1,6 +1,6 @@
 exports.id ="sms_getcoinbalancebyaddress";
 exports.title ="SMS Template Get Coin Balance by Address";
-exports.group ="Templates Only";
+exports.group ="Template Components";
 exports.color ="#61affe";
 exports.input =true;
 exports.output =1;
