@@ -9,7 +9,13 @@ exports.version = '2.0.3';
 exports.options = { enabled: true, repository: false, type: 'data' };
 exports.readme = `# Debug
 
-Prints data to the debug tab.`;
+Writes data to the console tab
+
+## Fields
+
+- enabled \`->\` enable/disable output to the console tab
+
+`;
 
 exports.html = `<div class="padding">
 	<div class="row">

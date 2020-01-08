@@ -9,6 +9,15 @@ exports.version = '1.0.0';
 exports.author = 'Peter Širka';
 exports.options = { delay: 1000 };
 
+exports.readme = `# Delay
+
+This component just pauses (a delay) between receiving and sending data.
+
+## Fields
+
+*Delay*: This is the amount of time to pause between receiving data and sending data. It is in milliseconds.
+`;
+
 exports.html = `<div class="padding">
 	<div class="row">
 		<div class="col-md-3">
@@ -16,10 +25,6 @@ exports.html = `<div class="padding">
 		</div>
 	</div>
 </div>`;
-
-exports.readme = `# Delay
-
-This component creates a delay between receiving and sending data.`;
 
 exports.install = function(instance) {
 

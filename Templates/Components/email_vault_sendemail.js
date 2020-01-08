@@ -1,5 +1,5 @@
 exports.id ="email_vault_sendemail";
-exports.title ="Emblem Vault Template Send Email";
+exports.title ="Email Vault Template Send Email";
 exports.group = "Templates Only";
 exports.color ="#61affe";
 exports.input =true;
