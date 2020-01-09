@@ -55,7 +55,10 @@ exports.install = function(instance) {
 		} else {
             url && U.request(url, FLAGS, {}, function(err, data, status, headers, host) {
                 if (response && !err) {
-                    response.data = data;
+					response.data = data;
+					if (instance.options.downstream) {
+						response.set(instance.name, response);
+					}
                     instance.send2(response);
                 } else if (err)
                     instance.error(err, response);

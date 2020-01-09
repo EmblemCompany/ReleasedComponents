@@ -44,9 +44,13 @@ exports.install = function(instance) {
 				count = instance.options.initialvalue;
  			} else {
 				count = count+instance.options.increment;
- 			}
+			}
+			if (instance.options.downstream) {
+				flowdata.set(instance.name, count);
+			}
+			flowdata.data = count;
 			instance.status('Count:' + count);
- 			instance.send2(count);
+ 			instance.send2(flowdata);
 		} else { // Second bubble, reset counter.
  			instance.debug('Reset Count.');
 			count = instance.options.initialvalue;

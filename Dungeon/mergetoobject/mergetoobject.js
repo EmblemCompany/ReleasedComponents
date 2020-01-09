@@ -46,13 +46,15 @@ exports.install = function(instance) {
 
 		instance.status(Object.keys(data[id]).join(', '), 'red');
 
-		if (Object.keys(data[id]).length === instance.options.props.length) {
+		if (instance.options.props && Object.keys(data[id]).length === instance.options.props.length) {
 
 			if (instance.options.id) {
 				response.data = data[id];
 				instance.send2(response);
-			} else
+			} else{
+				console.log("grrr", data, instance.options.props);
 				instance.send2(data[id]);
+			}				
 
 			setTimeout2(instance.id, () => instance.status(''), 500, 10);
 			data[id] = null;

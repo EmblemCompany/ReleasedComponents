@@ -31,7 +31,12 @@ exports.install = function(instance) {
 	instance.on('0', function(response) {
 		if (keys[response.id]) {
 			var sec = ((new Date() - keys[response.id]) / 1000).floor(2);
-			instance.send2(sec);
+			if (instance.options.downstream) {
+				response.set(instance.name, sec);
+				response.data = item
+			}
+			response.data = sec
+			instance.send2(response);
 			instance.status(sec + ' sec.');
 			delete keys[response.id];
 		} else
@@ -41,7 +46,12 @@ exports.install = function(instance) {
 	instance.on('1', function(response) {
 		if (keys[response.id]) {
 			var sec = ((new Date() - keys[response.id]) / 1000).floor(2);
-			instance.send2(sec);
+			if (instance.options.downstream) {
+				response.set(instance.name, sec);
+				response.data = item
+			}
+			response.data = sec
+			instance.send2(response);
 			instance.status(sec + ' sec.');
 			delete keys[response.id];
 		} else
