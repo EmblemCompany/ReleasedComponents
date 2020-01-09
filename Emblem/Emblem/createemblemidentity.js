@@ -14,15 +14,7 @@ exports.readme = `# Create Emblem Identity
 
 Create a new identity to store Emblem Vaults. Once you have created this identity, you can begin creating Emblem Vaults and storing them in this identity.`;
 
-exports.html = `
-<div class="padding">
-	<div class="row">
-		<div class="col-md-12 m">
-			<div data-jc="checkbox" data-jc-path="persistKey">Save this identity in memory for use in this circuit?</div>
-		</div>
-	</div>
-</div>
-`;
+exports.html = ``;
 
 exports.install = function(instance) {
 	var CovalLib = require('coval.js')
@@ -30,21 +22,14 @@ exports.install = function(instance) {
 	var hdkey = new Coval.Secure.HDKey()
 
 	instance.on('data', function(flowdata) {
-		var keys = ""
-		if (instance.options.removeKey) {
-			FLOW.rem('keys')
+		var keys = generateKey()
+		instance.status(keys.address, 'green');
+		flowdata.data = keys
+		if (instance.options.downstream) {
+			flowdata.set(instance.name, flowdata.data);
 		}
-		if (instance.options.persistKey){
-			keys = FLOW.get('keys') || "";
-			keys = generateKey()
-			FLOW.set("keys",keys)
-			instance.status(keys.address, 'green');
-			instance.send(flowdata.keys = keys)
-		} else {
-			keys = generateKey()
-			instance.status(keys.address, 'green');
-			instance.send(flowdata.keys = keys)
-		}
+		instance.send(flowdata)
+	
 	});
 	function generateKey() {
 		return hdkey.StandardHDKey('0', function(address, key){

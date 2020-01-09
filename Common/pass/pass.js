@@ -79,12 +79,17 @@ exports.install = function(instance) {
 
 		instance.options.values[index - 1] = enabled;
 		instance.custom.enabled();
-
+		if (instance.options.downstream) {
+			flowdata.set(instance.name, flowdata.data);
+		}
 		instance.options.enabled && instance.options.passallinputs && instance.send(flowdata);
 		instance.custom.status();
 	});
 
 	instance.on('0', function(flowdata) {
+		if (instance.options.downstream) {
+			flowdata.set(instance.name, flowdata.data);
+		}
 		instance.options.enabled && instance.send(flowdata);
 	});
 

@@ -140,6 +140,9 @@ exports.install =function(instance) {
             }
             builder.method(theRequest.method.toLowerCase() || 'get')
             builder.exec(function(err, response) {
+                if (instance.options.downstream) {
+					response.set(instance.name, response.data);
+				}
                 instance.send(response);
 			});
 		});

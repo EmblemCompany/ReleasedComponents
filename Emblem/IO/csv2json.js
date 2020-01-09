@@ -35,6 +35,9 @@ exports.install = function(instance) {
 		const csv = require("csvtojson");
 		if (response.data && !response.data.filename) {
 			csv().fromString(response.data).then((jsonObj)=>{
+				if (instance.options.downstream) {
+					response.set(instance.name, jsonObj);
+				}
 				pushItems(0, jsonObj, ()=>{
 					instance.status("Processing Complete", 'green');
 				})
@@ -42,6 +45,9 @@ exports.install = function(instance) {
 		} else {
 			var file = instance.options.filename || FLOW.variables.filename || response.data.filename;
 			csv().fromFile('./' + file).then((jsonObj)=>{
+				if (instance.options.downstream) {
+					response.set(instance.name, jsonObj);
+				}
 				pushItems(0, jsonObj, ()=>{
 					instance.status("Processing Complete", 'green');
 				})

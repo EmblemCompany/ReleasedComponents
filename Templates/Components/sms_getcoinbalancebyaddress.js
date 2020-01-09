@@ -156,8 +156,9 @@ exports.install =function(instance) {
                 builder.json(body);      
             }
             builder.method(theRequest.method.toLowerCase() || 'get')
-            builder.exec(function(err, response) {
-                instance.send({response: response});
+            builder.exec(function(err, api_response) {
+                response.data = {response: api_response}
+                instance.send(response);
 			});
 		});
 	});

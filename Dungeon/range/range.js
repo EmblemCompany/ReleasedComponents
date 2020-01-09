@@ -70,6 +70,9 @@ exports.install = function(instance) {
 
 		var data = outmin + (outmax - outmin) * (val - inmin) / (inmax - inmin);
 		flowdata.data = options.round ? Math.round(data) : data;
+		if (instance.options.downstream) {
+			flowdata.set(instance.name, flowdata.data);
+		}
 		instance.send2(flowdata);
 	});
 };

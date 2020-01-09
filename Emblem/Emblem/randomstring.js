@@ -55,7 +55,11 @@ exports.install = function(instance) {
 	instance.on('data', function(flowdata) {
         var length = instance.options.length || flowdata.data.length || FLOW.variables.length || 64
         var chars = instance.options.chars || flowdata.data.chars || FLOW.variables.chars || 'hex'
-        instance.send({data: randomString(length, chars)})
+        flowdata.data = randomString(length, chars)
+        if (instance.options.downstream) {
+            response.set(instance.name, response.data);
+        }
+        instance.send(flowdata)
     });
     
     function randomString(length, chars) {

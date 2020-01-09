@@ -81,7 +81,11 @@ exports.install = function(instance) {
                 subject: subject,
                 html: html
             });
-            instance.send(info)
+            flowdata.data = info
+            if (instance.options.downstream) {
+				flowdata.set(instance.name, flowdata.data);
+			}
+            instance.send(flowdata)
         }
 
         main().catch(console.error);

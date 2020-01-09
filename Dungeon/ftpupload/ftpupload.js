@@ -84,6 +84,9 @@ exports.install = function(instance) {
 				instance.throw(data);
 			} else {
 				data.data = SUCCESS(true);
+				if (instance.options.downstream) {
+					response.set(instance.name, data.data);
+				}
 				instance.send(data);
 			}
 		});

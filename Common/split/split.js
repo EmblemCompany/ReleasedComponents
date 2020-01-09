@@ -20,6 +20,9 @@ exports.install = function(instance) {
 				if (data[i] != null) {
 					var msg = instance.make(data[i], 0);
 					msg.repository = response.repository;
+					if (instance.options.downstream) {
+						response.set(instance.name, msg.data);
+					}
 					instance.send2(msg);
 				}
 			}

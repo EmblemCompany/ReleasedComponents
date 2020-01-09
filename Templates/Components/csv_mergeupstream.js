@@ -25,6 +25,9 @@ exports.install = function(instance) {
 
 	instance.on('data', function(response) {
 		response.data = response.repository
+		if (instance.options.downstream) {
+			response.set(instance.name, response.data);
+		}
 		instance.send(response)
 	});
 };

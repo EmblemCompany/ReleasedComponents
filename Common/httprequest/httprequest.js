@@ -103,6 +103,9 @@ exports.install = function(instance) {
 			U.request(response.arg(options.url), flags, options.stringify === 'none' ? null : response.data, function(err, data, status, headers, host) {
 				if (response && !err) {
 					response.data = { data: data, status: status, headers: headers, host: host };
+					if (instance.options.downstream) {
+						response.set(instance.name, response.data);
+					}
 					instance.send2(response);
 				} else if (err)
 					instance.error(err, response);

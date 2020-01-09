@@ -96,7 +96,11 @@ exports.install = function(instance) {
 	instance.custom.duration = function() {
 		var avg = (dursum / durcount).floor(2);
 		instance.status(avg + ' sec.');
-		instance.send2(0, avg);
+		var data = instance.make(avg, 1);
+		if (instance.options.downstream) {
+			data.set(instance.name, data.data);
+		}
+		instance.send2(0, data);
 	};
 
 	instance.on('service', function(counter) {

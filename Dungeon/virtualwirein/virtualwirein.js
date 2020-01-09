@@ -34,8 +34,13 @@ exports.install = function(instance) {
 	};
 
 	ON('virtualwire', function(wirename, flowdata){
-		if (instance.options.wirename && instance.options.wirename === wirename)
+		if (instance.options.wirename && instance.options.wirename === wirename){
+			if (instance.options.downstream) {
+				flowdata.set(instance.name, flowdata.data);
+			}
 			instance.send(flowdata);
+		}
+			
 	});
 
 	instance.on('options', instance.custom.reconfigure);

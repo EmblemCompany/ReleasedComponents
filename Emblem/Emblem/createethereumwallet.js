@@ -12,18 +12,7 @@ exports.npm = [];
 
 exports.readme = `Ethereum Wallet Functionality`;
 
-exports.html = `
-<div class="padding">
-	<div class="row">
-		<div class="col-md-3 m">
-			<div data-jc="checkbox" data-jc-path="persistKey">Save wallet?</div>
-		</div>
-		<div class="col-md-3 m">
-			<div data-jc="checkbox" data-jc-path="removeKey">Remove saved wallet?</div>
-		</div>
-	</div>
-</div>
-`;
+exports.html = ``;
 
 exports.install = function(instance) {
 
@@ -31,26 +20,13 @@ exports.install = function(instance) {
 	var ethereum = require('ethereumjs-wallet')
 
 	instance.on('data', function(flowdata) {
-		var keys = ""
-		if (instance.options.removeKey) {
-			FLOW.rem('eth-keys')
+		var keys = generateKey()
+		flowdata.data = keys
+		if (instance.options.downstream) {
+			flowdata.set(instance.name, flowdata.data);
 		}
-		if (instance.options.persistKey) {
-			keys = FLOW.get('eth-keys') || "";
-			if (!keys) {
-				keys = generateKey()
-				FLOW.set("eth-keys",keys)				
-				flowdata.set('eth-keys', keys)
-				instance.send(flowdata.keys = keys)
-			} else {
-				flowdata.set('eth-keys', keys)
-				instance.send(flowdata.keys = keys)
-			}
-		} else {
-			keys = generateKey()
-			flowdata.set('keys', keys)
-			instance.send(flowdata.keys = keys)
-		}
+		instance.send(flowdata)
+		
 	});
 
 	function generateKey() {

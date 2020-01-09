@@ -25,7 +25,7 @@ exports.install = function(instance) {
 
 	var count = 0;
 
-	instance.on('data', function() {
+	instance.on('data', function(response) {
 		count++;
 		NOSQL(ID).counter.hit(instance.id, 1);
 		instance.custom.status();
@@ -46,7 +46,11 @@ exports.install = function(instance) {
 	instance.custom.status = function() {
 		setTimeout2(instance.id, function() {
 			instance.status(count.format(0));
-			instance.send2(count);
+			response.data = count
+			if (instance.options.downstream) {
+				response.set(instance.name, response.data);
+			}
+			instance.send2(response);
 		}, 100);
 	};
 

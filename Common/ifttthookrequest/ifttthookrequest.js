@@ -61,7 +61,7 @@ exports.install = function(instance) {
 		if (typeof(response.data) !== 'object')
 			return;
 		fn && fn(response.data, function(err, data) {
-			!err && post(data);
+			!err && post(data, response);
 		}, response);
 	});
 
@@ -75,7 +75,7 @@ exports.install = function(instance) {
 	instance.on('options', instance.custom.reconfigure);
 	instance.custom.reconfigure();
 
-	function post(data) {
+	function post(data, response) {
 
 		var event = instance.options.event;
 		var key = instance.options.key;
@@ -92,7 +92,11 @@ exports.install = function(instance) {
 			return instance.status('No config to use', 'red');
 
 		U.request(url.format(event, key), ['post', 'json'], d || EMPTYOBJECT, function(err, data, status) {
-			instance.send2(status);
+			if (instance.options.downstream) {
+				response.set(instance.name, status);
+			}
+			response.data = status
+			instance.send2(response);
 		});
 	}
 };

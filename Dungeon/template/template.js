@@ -27,6 +27,9 @@ exports.install = function(instance) {
 		if (can) {
 			try {
 				response.data = F.viewCompile('@{nocompress all}\n' + instance.options.template, response.data, '', response.parent);
+				if (instance.options.downstream) {
+					response.set(instance.name, response.data);
+				}
 				instance.send2(response);
 			} catch (e) {}
 		}

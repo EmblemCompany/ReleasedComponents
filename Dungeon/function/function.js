@@ -78,10 +78,16 @@ exports.install = function(instance) {
 				if (data === undefined) {
 					flowdata = flowdata.clone();
 					flowdata.data = index;
+					if (instance.options.downstream) {
+						flowdata.set(instance.name, flowdata.data);
+					}
 					instance.send2(flowdata);
 				} else {
 					flowdata = flowdata.clone();
 					flowdata.data = data;
+					if (instance.options.downstream) {
+						flowdata.set(instance.name, flowdata.data);
+					}
 					instance.send2(index, flowdata);
 				}
 			}

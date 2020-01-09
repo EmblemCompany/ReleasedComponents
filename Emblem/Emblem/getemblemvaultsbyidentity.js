@@ -38,8 +38,12 @@ exports.install = function(instance) {
             builder.url(url);
             builder.header('service', 'sandbox-beta')
             builder.method('get')
-            builder.exec(function(err, response) {
-				instance.send({response: response, err: err, url: url})
+            builder.exec(function(err, api_response) {
+				response.data = api_response
+				if (instance.options.downstream) {
+                    response.set(instance.name, response.data);
+                }
+				instance.send(response)
 			});
 		});
 	});
@@ -48,7 +52,6 @@ exports.install = function(instance) {
 		if (keys) {
 			if (path) {
 				var toEvaluate = 'keys.'+path+'["'+name+'"]'
-				instance.send(toEvaluate)
 				return eval(toEvaluate)
 			} else {
 				return keys[name]
@@ -56,7 +59,6 @@ exports.install = function(instance) {
 		}
 		else if (path) {
 			var toEvaluate = 'instance.options["'+name+'"] || FLOW.variables.'+path+'["'+name+'"] || response.data.'+path+'["'+name+'"] || ""'
-			instance.send(toEvaluate)
 			return eval(toEvaluate)
 		} else {
 			return instance.options[name] || FLOW.variables[name] || response.data[name] || ''

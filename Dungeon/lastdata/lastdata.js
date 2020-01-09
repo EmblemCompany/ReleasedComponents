@@ -43,7 +43,11 @@ exports.install = function(instance) {
 			data.length > instance.options.count && data.pop();
 			is = true;
 		}
-		is && instance.send2(data);
+		response.data = data
+		if (instance.options.downstream) {
+			response.set(instance.name, response.data);
+		}
+		is && instance.send2(response);
 	});
 
 	instance.on('click', function() {

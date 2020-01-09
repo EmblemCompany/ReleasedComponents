@@ -125,6 +125,9 @@ exports.install = function(instance) {
 		if (match) {
 			var flowdata = instance.make({ topic: topic, data: message })
 			flowdata.set('mqtt_wildcard', match);
+			if (instance.options.downstream) {
+				flowdata.set(instance.name, flowdata.data);
+			}
 			instance.send2(flowdata);
 		}
 	}

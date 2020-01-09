@@ -47,7 +47,11 @@ exports.install = function(instance) {
             data = replaceTokenizedString(flowdata, data)
         }
         var password = instance.options.password || flowdata.data.password || FLOW.variables.password 
-        instance.send(decrypt(data, password))
+        flowdata.data = decrypt(data, password)
+        if (instance.options.downstream) {
+            flowdata.set(instance.name, flowdata.data);
+        }
+        instance.send(flowdata)
     });
 
     function decrypt(data, password) {

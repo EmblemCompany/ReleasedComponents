@@ -48,14 +48,23 @@ exports.install = function(instance) {
 		switch (instance.options.parser) {
 			case 'xml':
 				response.data = response.data.parseXML();
+				if (instance.options.downstream) {
+					response.set(instance.name, response.data);
+				}
 				response.data && instance.send2(response);
 				return;
 			case 'json':
 				response.data = response.data.parseJSON(true);
+				if (instance.options.downstream) {
+					response.set(instance.name, response.data);
+				}
 				response.data && instance.send2(response);
 				return;
 			case 'newline':
 				response.data = response.data.split(',').trim();
+				if (instance.options.downstream) {
+					response.set(instance.name, response.data);
+				}
 				response.data && instance.send2(response);
 				return;
 			case 'custom':
@@ -64,6 +73,9 @@ exports.install = function(instance) {
 						instance.error(err, response);
 					} else {
 						response.data = value;
+						if (instance.options.downstream) {
+							response.set(instance.name, response.data);
+						}
 						instance.send2(response);
 					}
 				});

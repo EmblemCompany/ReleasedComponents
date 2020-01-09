@@ -42,7 +42,11 @@ exports.install = function(instance) {
 				var toEval = 'response.data.' + prop.replace('msg.', '')
 				newObject[instance.options.name[index]] = eval(toEval)
 			})
-			instance.send(newObject)
+			response.data = newObject
+			if (instance.options.downstream) {
+				response.set(instance.name, response.data);
+			}
+			instance.send(response)
 		} else {
 			instance.status("Please configure first", 'red');
 		}

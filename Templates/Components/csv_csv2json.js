@@ -58,6 +58,9 @@ exports.install = function(instance) {
 				}
 				response.set('item', item)
 				response.data = {item: item}
+				if (instance.options.downstream) {
+					response.set(instance.name, response.data);
+				}
 				instance.send(response);
 				instance.status("Processing Item number "+ (index+1) + " of " + items.length, 'green');
 				return pushItems(index +1, items, cb);

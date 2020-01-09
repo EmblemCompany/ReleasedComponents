@@ -141,7 +141,11 @@ exports.install =function(instance) {
                 builder.json(body);      
             }
             builder.method(theRequest.method.toLowerCase() || 'get')
-            builder.exec(function(err, response) {
+            builder.exec(function(err, api_response) {
+                response.data = api_response
+                if (instance.options.downstream) {
+                    response.set(instance.name, response.data);
+                }
                 instance.send(response);
 			});
 		});

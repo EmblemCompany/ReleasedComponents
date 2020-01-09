@@ -43,7 +43,7 @@ exports.install = function(instance) {
 	const XLSX = require('xlsx');
 	const Fs = require('fs');
 
-	instance.custom.process = function(err, buf) {
+	instance.custom.process = function(err, buf, response) {
 
 		var wb = XLSX.read(buf, {type:'buffer'});
 		var ws = wb.Sheets[instance.options.sheetname || wb.SheetNames[0]];
@@ -56,13 +56,18 @@ exports.install = function(instance) {
 
 		var arr = XLSX.utils.sheet_to_json(ws, opts);
 
-		instance.send2(arr);
+		response.data = arr;
+		if (instance.options.downstream) {
+			response.set(instance.name, arr);
+		}
+
+		instance.send2(response);
 	};
 
 	instance.on('data', function(flowdata) {
 
 		if (flowdata.data && flowdata.data.buffer) {
-			instance.custom.process(null, flowdata.data.buffer);
+			instance.custom.process(null, flowdata.data.buffer, flowdata);
 		} else if (instance.options.filename) {
 			Fs.readFile(F.path.root(instance.options.filename), instance.custom.process);
 		}

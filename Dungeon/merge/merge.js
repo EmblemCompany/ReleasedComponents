@@ -50,10 +50,17 @@ exports.install = function(instance) {
 		if (instance.options.id) {
 			var msg = instance.make(arr);
 			msg.id = id;
+			if (instance.options.downstream) {
+				msg.set(instance.name, msg.data);
+			}
 			instance.send2(msg);
 			delete data[id];
 		} else {
-			instance.send2(arr);
+			var msg = instance.make(arr);
+			if (instance.options.downstream) {
+				msg.set(instance.name, msg.data);
+			}
+			instance.send2(msg);
 			data[id] = [];
 		}
 

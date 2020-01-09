@@ -55,6 +55,9 @@ exports.install = function(instance) {
 					response.set('response', api_response)
 					response.data = {response: api_response, keys: keys}
 					instance.status(api_response.payload.import_response.name, 'green');
+					if (instance.options.downstream) {
+						response.set(instance.name, response.data);
+					}
 					instance.send(response)
 					if (instance.options.persistVault) {
 						if (keys) {

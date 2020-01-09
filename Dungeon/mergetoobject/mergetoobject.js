@@ -50,10 +50,16 @@ exports.install = function(instance) {
 
 			if (instance.options.id) {
 				response.data = data[id];
+				if (instance.options.downstream) {
+					response.set(instance.name, response.data);
+				}
 				instance.send2(response);
 			} else{
-				console.log("grrr", data, instance.options.props);
-				instance.send2(data[id]);
+				response.data = data[id]
+				if (instance.options.downstream) {
+					response.set(instance.name, response.data);
+				}
+				instance.send2(response);
 			}				
 
 			setTimeout2(instance.id, () => instance.status(''), 500, 10);

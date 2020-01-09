@@ -60,12 +60,18 @@ exports.install = function(instance) {
 					data.data = err;
 				else
 					data = instance.make(err, 0);
+				if (instance.options.downstream) {
+					data.set(instance.name, data.data);
+				}
 				instance.send(0, data);
 			} else {
 				if (instance.options.keepmessage)
 					data.data = response;
 				else
 					data = instance.make(response, 1);
+				if (instance.options.downstream) {
+					data.set(instance.name, data.data);
+				}
 				instance.send(1, data);
 			}
 		}, data, data.repository.controller);
@@ -74,7 +80,11 @@ exports.install = function(instance) {
 	instance.custom.duration = function() {
 		var avg = (dursum / durcount).floor(2);
 		instance.status(avg + ' sec.');
-		instance.send2(2, avg);
+		data = instance.make(avg, 1);
+		if (instance.options.downstream) {
+			data.set(instance.name, data.data);
+		}
+		instance.send2(2, data);
 	};
 
 	instance.on('service', function() {

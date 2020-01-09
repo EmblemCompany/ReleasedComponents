@@ -53,6 +53,9 @@ exports.install = function(instance) {
 	};
 
 	instance.on('data', function(flowdata) {
+		if (instance.options.downstream) {
+			flowdata.set(instance.name, flowdata.data);
+		}
 		instance.send(flowdata);
 		if (!instance.options.dbname || !instance.options.template)
 			return;

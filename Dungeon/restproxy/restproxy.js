@@ -165,6 +165,9 @@ exports.install = function(instance) {
 				data.language = self.language;
 				var msg = instance.make(data, 1);
 				msg.repository.controller = self;
+				if (instance.options.downstream) {
+					msg.set(instance.name, msg.data);
+				}
 				instance.send(1, msg);
 			}
 
@@ -209,6 +212,9 @@ exports.install = function(instance) {
 					var message = instance.make(response.data);
 					message.repository.controller = self;
 					message.repository.cache = true;
+					if (instance.options.downstream) {
+						message.set(instance.name, message.data);
+					}
 					instance.send(0, message);
 				}
 
@@ -280,6 +286,9 @@ exports.install = function(instance) {
 					if (instance.hasConnection(0)) {
 						var message = instance.make(response);
 						message.repository.controller = self;
+						if (instance.options.downstream) {
+							message.set(instance.name, message.data);
+						}
 						instance.send(0, message);
 					}
 				});
@@ -297,7 +306,11 @@ exports.install = function(instance) {
 	instance.custom.duration = function() {
 		var avg = (dursum / durcount).floor(2);
 		instance.status(avg + ' sec.');
-		instance.send2(2, avg);
+		var message = instance.make(avg);
+		if (instance.options.downstream) {
+			message.set(instance.name, message.data);
+		}
+		instance.send2(2, message);
 	};
 
 	instance.on('options', instance.reconfigure);

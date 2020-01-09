@@ -22,6 +22,9 @@ exports.install = function(instance) {
 			data = JSON.stringify(data);
 		if (backup !== data) {
 			backup = data;
+			if (instance.options.downstream) {
+				response.set(instance.name, response.data);
+			}
 			instance.send2(response);
 		} else {
 			counter++;

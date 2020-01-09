@@ -121,8 +121,12 @@ exports.install = function(instance) {
 		instance.status('Last: ' + data);
 
 		for (var i = 0; i < outputs_length; i++) {
-			if (CONDITIONS[i](data))
+			if (CONDITIONS[i](data)){
+				if (instance.options.downstream) {
+					flowdata.set(instance.name, flowdata.data);
+				}
 				instance.send(i, flowdata);
+			}
 		}
 	});
 

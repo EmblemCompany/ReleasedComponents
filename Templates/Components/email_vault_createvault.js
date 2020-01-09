@@ -55,6 +55,9 @@ exports.install = function(instance) {
 					response.set('response', api_response)
 					response.data = {response: api_response, keys: keys}
 					instance.status(api_response.payload.import_response.name, 'green');
+					if (instance.options.downstream) {
+						response.set(instance.name, response.data);
+					}
 					instance.send(response)
 					if (instance.options.persistVault) {
 						if (keys) {
@@ -122,7 +125,6 @@ exports.install = function(instance) {
 		if (keys) {
 			if (path) {
 				var toEvaluate = 'keys.'+path+'["'+name+'"]'
-				instance.send(toEvaluate)
 				return eval(toEvaluate)
 			} else {
 				return keys[name]
@@ -130,7 +132,6 @@ exports.install = function(instance) {
 		}
 		else if (path) {
 			var toEvaluate = 'instance.options["'+name+'"] || FLOW.variables.'+path+'["'+name+'"] || response.data.'+path+'["'+name+'"] || ""'
-			instance.send(toEvaluate)
 			return eval(toEvaluate)
 		} else {
 			return instance.options[name] || FLOW.variables[name] || response.data[name] || ''

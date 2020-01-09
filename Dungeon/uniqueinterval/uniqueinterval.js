@@ -34,6 +34,9 @@ exports.install = function(instance) {
 			var now = new Date();
 			if (val == null || val < now) {
 				cache[key] = now.add(instance.options.interval);
+				if (instance.options.downstream) {
+					response.set(instance.name, response.data);
+				}
 				instance.send2(response);
 			}
 		});

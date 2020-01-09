@@ -84,7 +84,9 @@ exports.html = `
 exports.install = function(instance) {
 
 	instance.on('data', function(flowdata, next) {
-
+		if (instance.options.downstream) {
+			flowdata.set(instance.name, flowdata.data);
+		}
 		instance.send2(1, flowdata.clone());
 
 		var data = flowdata.data;

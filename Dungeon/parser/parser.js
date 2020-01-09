@@ -33,15 +33,27 @@ exports.readme = `# XML/Newline parser (CSV) parser
 
 exports.install = function(instance) {
 	var streamer;
-	instance.on('data', response => streamer && streamer(response.data));
+	instance.on('data', response => {
+		streamer && streamer(response)
+	});
 	instance.reconfigure = function() {
 		var options = instance.options;
 		switch (options.parser) {
 			case 'beginend':
-				streamer = U.streamer(options.begin, options.end, (data) => instance.send2(data));
+				streamer = U.streamer(options.begin, options.end, (response) => {
+					if (instance.options.downstream) {
+						response.set(instance.name, response.data);
+					}
+					instance.send2(response.data)
+				});
 				break;
 			case 'newline':
-				streamer = U.streamer('\n', (data) => instance.send2(data));
+				streamer = U.streamer('\n', (response) => {
+					if (instance.options.downstream) {
+						response.set(instance.name, response.data);
+					}
+					instance.send2(response.data)
+				});
 				break;
 			default:
 				streamer = null;
