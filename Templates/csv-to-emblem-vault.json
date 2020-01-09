@@ -11,7 +11,7 @@
   "components": [
     {
       "id": "1578424786067",
-      "component": "createvault",
+      "component": "csv_createvault",
       "tab": "1578341155899",
       "name": "Create Emblem Vault",
       "x": 144,
@@ -28,7 +28,7 @@
     },
     {
       "id": "1578425960831",
-      "component": "mergeupstream",
+      "component": "csv_mergeupstream",
       "tab": "1578341155899",
       "name": "Merge Upstream",
       "x": 12,
@@ -42,7 +42,7 @@
     },
     {
       "id": "1578426528676",
-      "component": "transformobject",
+      "component": "csv_transformobject",
       "tab": "1578341155899",
       "name": "Transform Object",
       "x": 207,
@@ -65,7 +65,7 @@
     },
     {
       "id": "1578434234906",
-      "component": "httpdownloader",
+      "component": "csv_httpdownloader",
       "tab": "1578341155899",
       "name": "Download CSV",
       "x": 141,
@@ -79,7 +79,7 @@
     },
     {
       "id": "1578434266055",
-      "component": "trigger",
+      "component": "csv_trigger",
       "tab": "1578341155899",
       "name": "Trigger",
       "x": 9,
@@ -93,7 +93,7 @@
     },
     {
       "id": "1578439286225",
-      "component": "csv2json",
+      "component": "csv_csv2json",
       "tab": "1578341155899",
       "name": "CSV 2 JSON",
       "x": 324,
@@ -107,9 +107,9 @@
     },
     {
       "id": "1578500758956",
-      "component": "debug",
+      "component": "csv_debug",
       "tab": "1578341155899",
-      "name": "Debug",
+      "name": "Show in Console",
       "x": 402,
       "y": 448,
       "connections": {},

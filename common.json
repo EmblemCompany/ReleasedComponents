@@ -351,7 +351,47 @@
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Templates/Components/btc_alert_sendsms.js",
                 "version": "0.0.1",
                 "display-name": "BTC Alert Template Send SMS"
-            }
-        ]
+			},
+			{
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Templates/Components/csv_trigger.js",
+                "version": "0.0.1",
+                "display-name": "CSV Template Trigger"
+			},
+			{
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Templates/Components/csv_httpdownloader.js",
+                "version": "1.0.2",
+                "display-name": "CSV Template HTTP Downloader"
+			},
+			{
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Templates/Components/csv_csv2json.js",
+                "version": "0.0.2",
+                "display-name": "CSV Template CSV 2 JSON"
+			},
+			{
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Templates/Components/csv_createvault.js",
+                "version": "0.0.2",
+                "display-name": "CSV Template Create Emblem Vault"
+			},
+			{
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Templates/Components/csv_csv2json.js",
+                "version": "0.0.2",
+                "display-name": "CSV Template CSV 2 JSON"
+			},
+			{
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Templates/Components/csv_mergeupstream.js",
+                "version": "0.0.2",
+                "display-name": "CSV Template Merge Upstream"
+			},
+			{
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Templates/Components/csv_transformobject.js",
+                "version": "0.0.1",
+                "display-name": "CSV Template Transform Object"
+			},
+			{
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Templates/Components/csv_debug.js",
+                "version": "2.0.3",
+                "display-name": "CSV Template Debug"
+			}
+		]
     }
 ]

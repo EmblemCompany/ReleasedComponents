@@ -1,5 +1,5 @@
-exports.id = 'debug';
-exports.title = 'Debug';
+exports.id = 'csv_debug';
+exports.title = 'CSV Template Debug';
 exports.author = 'Peter Širka';
 exports.color = '#967ADC';
 exports.click = true;
@@ -14,6 +14,10 @@ Writes data to the console tab
 ## Fields
 
 *Enabled*: enable/disable output to the console tab
+
+## Stuff You Need to Know
+
+This template uses the Degub component to show you the data coming out of the Transform component. In a production use case, you would likely write this to a file or a database.
 
 `;
 
