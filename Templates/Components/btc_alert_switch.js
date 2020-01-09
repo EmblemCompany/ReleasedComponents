@@ -70,7 +70,7 @@ exports.html = `<style>
 						<div class="cond-col1 mt5"><strong>$index</strong></div>
 						<div class="cond-col2 pr10"><div data-jc="dropdown" data-jc-path="conditions[$index].operator" data-jc-config="items:,>|>,<|<,>=|>=,<=|<=,==|==,!==|!==,startsWith (for strings only)|startsWith,endsWith (for strings only)|endsWith,indexOf|indexOf,Regex (for strings only)|Regex" class="m"></div></div>
 						<div class="cond-col3 pr10"><div data-jc="dropdown" data-jc-path="conditions[$index].datatype" data-jc-config="items:,Number,String,Boolean"></div></div>
-						<div class="cond-col4 pr10"><div data-jc="textbox" data-jc-path="conditions[$index].value" data-jc-config="placeholder:@(enter value)"></div></div>
+						<div class="cond-col4 pr10"><div data-jc="textbox" data-jc-path="conditions[$index].value" data-jc-config="placeholder:@(enter value);keypress:false"></div></div>
 						<div class="cond-col5"><button class="exec button button-small cond-remove" data-exec="FUNC.switchcomponent_remove_condition" data-index="$index"><i class="fa fa-trash"></i></button></div>
 					</div>
 				</div>
