@@ -11,6 +11,10 @@ exports.icon = 'play';
 exports.readme = `# Trigger
 
 This component starts the workflow when clicked. To start it, click the tiny white box with the 'x' on the bottom of the component.  Then watch the magic happen!
+
+## Having trouble?
+
+Check that you don't have the app paused. If you see a small green arrow in the toolbar, click it to make things run again.
 `;
 
 

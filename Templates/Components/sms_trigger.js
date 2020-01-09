@@ -13,6 +13,10 @@ exports.readme = `# Trigger
 This component starts the workflow when clicked. To start it, click the tiny white box with the 'x' on the bottom of the component.  Then watch the magic happen!
 
 **Note that for this template to execute fully, you will need to enter a phone number for the text recipient in the Send SMS component.
+
+## Having trouble?
+
+Check that you don't have the app paused. If you see a small green arrow in the toolbar, click it to make things run again.
 `;
 
 

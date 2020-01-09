@@ -12,7 +12,12 @@ exports.readme = `# Trigger
 
 This component starts the workflow when clicked. To start it, click the tiny white box with the 'x' on the bottom of the component.  Then watch the magic happen!
 
-**Note that for this template to execute fully, you will need to enter a recipient email address in the Send Email component!`;
+**Note that for this template to execute fully, you will need to enter a recipient email address in the Send Email component!
+
+## Having trouble?
+
+Check that you don't have the app paused. If you see a small green arrow in the toolbar, click it to make things run again.
+`;
 
 exports.html = `<div class="padding">
 	<div data-jc="dropdown__datatype__items:,String|string,Integer|integer,Float|float,Boolean|boolean,Date|date,Object|object,Base64 as Buffer|buffer" class="m">@(Data type (String by default))</div>
