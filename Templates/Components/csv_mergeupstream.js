@@ -16,9 +16,7 @@ This component Merges all upstream results into a single object
 
 ## Stuff you need to know
 
-Learn more about using upstream data [here](https://unspecifiedsupport.freshdesk.com/support/solutions/articles/60000182172-using-a-component-s-response-data)!
-
-In this template, we are combining the users in the CSV with the Emblem Vaults just created for them into a single object that can be used downstream.
+In this template, we are combining each user in the CSV with the Emblem Vaults just created for them into a single object that can be used downstream.
 `;
 
 exports.html = ``;

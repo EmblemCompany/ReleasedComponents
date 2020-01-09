@@ -16,7 +16,7 @@ This component Merges all upstream results into a single object
 
 ## Stuff you need to know
 
-Learn more [here](https://unspecifiedsupport.freshdesk.com/support/solutions/articles/60000182172-using-a-component-s-response-data)!
+Who the fuck knows who this works.
 `;
 
 exports.html = ``;

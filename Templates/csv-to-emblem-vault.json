@@ -128,7 +128,7 @@
                 "color": "gray"
             },
             "options": {
-                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/user-sample.csv"
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Templates/user-sample.csv"
             },
             "color": "#5D9CEC",
             "notes": ""
