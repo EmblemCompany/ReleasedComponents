@@ -78,15 +78,25 @@ exports.install = function(instance) {
 			Fs.readFile(path, function(err, buf){
 				if (err)
 					instance.throw(err);
-				else
-					instance.send2({ buffer: buf });
+				else {
+					if (instance.options.downstream) {
+						flowdata.set(instance.name, { buffer: buf });
+					}
+					flowdata.data = { buffer: buf }
+					instance.send2(flowdata);
+				}
 			});
 		else
 			Fs.readFile(path, enc, function(err, data){
 				if (err)
 					instance.throw(err);
-				else
-					instance.send2({ data: data });
+				else {
+					if (instance.options.downstream) {
+						flowdata.set(instance.name, { data: data });
+					}
+					flowdata.data = { data: data }
+					instance.send2(flowdata);
+				}
 			});
 	});
 };

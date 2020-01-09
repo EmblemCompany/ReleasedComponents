@@ -42,7 +42,11 @@ exports.install = function(instance) {
 		var item = queue.shift();
 		item && (timeout = setTimeout(function() {
 			timeout = null;
-			instance.send2(item);
+			if (instance.options.downstream) {
+				response.set(instance.name, item);
+				response.data = item
+			}
+			instance.send2(response);
 			instance.custom.send();
 			if (queue.length)
 				instance.status(queue.length + 'x pending', 'red');
