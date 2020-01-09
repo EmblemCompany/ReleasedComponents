@@ -73,7 +73,7 @@
       "connections": { "0": [{ "index": "0", "id": "1578439286225" }] },
       "disabledio": { "input": [], "output": [] },
       "state": { "text": "", "color": "gray" },
-      "options": { "url": "" },
+      "options": { "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/user-sample.csv" },
       "color": "#5D9CEC",
       "notes": ""
     },
@@ -87,10 +87,7 @@
       "connections": { "0": [{ "index": "0", "id": "1578434234906" }] },
       "disabledio": { "input": [], "output": [] },
       "state": { "text": "", "color": "gray" },
-      "options": {
-        "datatype": "object",
-        "data": "{url: 'https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/user-sample.csv'}"
-      },
+      "options": {},
       "color": "#8CC152",
       "notes": ""
     },
