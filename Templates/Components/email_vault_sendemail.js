@@ -1,6 +1,6 @@
 exports.id ="email_vault_sendemail";
 exports.title ="Email Vault Template Send Email";
-exports.group = "Templates Only";
+exports.group = "Template Components";
 exports.color ="#61affe";
 exports.input =true;
 exports.output =1;
@@ -51,13 +51,13 @@ exports.html = `<div class="padding">
         <div class="row">
             <div class="col-md-12">
                 <div data-jc="textbox" data-jc-path="subject" data-jc-config="placeholder:Subject of the email">@(subject) </div>
-                <div class="help">To inject data into this field, use {msg.<path>} syntax <a href="https://unspecifiedsupport.freshdesk.com/support/solutions/articles/60000182172-using-a-component-s-response-data">More info here</a></div>
+                <div class="help">To inject data into this field, use {msg.<path>} syntax <a href="https://unspecifiedsupport.freshdesk.com/support/solutions/articles/60000182172-using-a-component-s-response-data" target="_blank">More info here</a></div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
                 <div data-jc="textarea" data-jc-path="body" data-jc-config="placeholder:Body of the email">@(body) </div>
-                <div class="help">To inject data into this field, use {msg.<path>} syntax <a href="https://unspecifiedsupport.freshdesk.com/support/solutions/articles/60000182172-using-a-component-s-response-data">More info here</a></div>
+                <div class="help">To inject data into this field, use {msg.<path>} syntax <a href="https://unspecifiedsupport.freshdesk.com/support/solutions/articles/60000182172-using-a-component-s-response-data" target="_blank">More info here</a></div>
             </div>
         </div>
 </div>`

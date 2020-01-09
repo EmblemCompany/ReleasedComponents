@@ -1,6 +1,6 @@
 exports.id ="btc_alert_sendsms";
 exports.title ="BTC Alert Template Send SMS";
-exports.group ="Templates Only";
+exports.group ="Template Components";
 exports.color ="#49cc90";
 exports.input =true;
 exports.output =1;

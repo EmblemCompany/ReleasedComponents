@@ -14,8 +14,8 @@
             "component": "sms_trigger",
             "tab": "1577813912294",
             "name": "Trigger",
-            "x": 89,
-            "y": 32,
+            "x": 26,
+            "y": 232,
             "connections": {
                 "0": [
                     {
@@ -34,16 +34,15 @@
             },
             "options": {},
             "color": "#F6BB42",
-            "notes": "",
-			"errors": {}
+            "notes": ""
         },
         {
             "id": "1577813918881",
             "component": "sms_getcoinbalancebyaddress",
             "tab": "1577813912294",
             "name": "Get Coin Balance by Address",
-            "x": 231,
-            "y": 155,
+            "x": 236,
+            "y": 311,
             "connections": {
                 "0": [
                     {
@@ -61,24 +60,23 @@
                 "color": "gray"
             },
             "options": {
-                "service": "dexray2",
                 "host": "api.emblemvault.io",
-                "asset": "coval",
-                "coin": "eth",
+                "service": "dexray2",
+                "debug": true,
                 "address": "0x5b3cfb86a9575a2c42fd88aa71f0957004fa9209",
-                "debug": true
+                "coin": "eth",
+                "asset": "coval"
             },
             "color": "#61affe",
-            "notes": "",
-			"errors": {}
+            "notes": ""
         },
         {
             "id": "1577814031038",
             "component": "sms_sendsms",
             "tab": "1577813912294",
             "name": "Send SMS",
-            "x": 555,
-            "y": 257,
+            "x": 543,
+            "y": 377,
             "connections": {},
             "disabledio": {
                 "input": [],
@@ -89,20 +87,79 @@
                 "color": "gray"
             },
             "options": {
-                "debug": true,
-                "messages": "[]",
-                "password": "",
-                "username": "",
+                "to": "",
                 "msg": "Hi from Emblem! Your balance on {msg.response.address} is {msg.response.balance}. Enjoy!",
-                "to": ""
+                "username": "",
+                "password": "",
+                "messages": "[]",
+                "debug": true
             },
             "color": "#49cc90",
-            "notes": "",
-			"errors": {}
+            "notes": ""
+        },
+        {
+            "id": "1578538297628",
+            "component": "comment",
+            "tab": "1577813912294",
+            "name": "SEND SMS WITH CRYPTO BALANCE TEMPLATE",
+            "x": 48,
+            "y": 9,
+            "connections": {},
+            "disabledio": {
+                "input": [],
+                "output": []
+            },
+            "state": {
+                "text": "",
+                "color": "gray"
+            },
+            "options": {},
+            "color": "#704cff",
+            "notes": ""
+        },
+        {
+            "id": "1578538353835",
+            "component": "comment",
+            "tab": "1577813912294",
+            "name": "1. Double click the Send SMS component and enter a recipient phone number",
+            "x": 49,
+            "y": 57,
+            "connections": {},
+            "disabledio": {
+                "input": [],
+                "output": []
+            },
+            "state": {
+                "text": "",
+                "color": "gray"
+            },
+            "options": {},
+            "color": "#704cff",
+            "notes": ""
+        },
+        {
+            "id": "1578538395335",
+            "component": "comment",
+            "tab": "1577813912294",
+            "name": "2. Start the Circuit by clicking the white button on the bottom of the Trigger component",
+            "x": 48,
+            "y": 106,
+            "connections": {},
+            "disabledio": {
+                "input": [],
+                "output": []
+            },
+            "state": {
+                "text": "",
+                "color": "gray"
+            },
+            "options": {},
+            "color": "#704cff",
+            "notes": ""
         }
     ],
     "variables": "",
     "panel": "info",
     "url": "http://127.0.0.1:8000/$flow/#main",
-    "created": "2020-01-02T18:05:15.619Z"
+    "created": "2020-01-09T02:54:28.459Z"
 }

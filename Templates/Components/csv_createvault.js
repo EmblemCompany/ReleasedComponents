@@ -1,5 +1,5 @@
-exports.id = 'email_vault_createvault';
-exports.title = 'Email Vault Template Create Emblem Vault';
+exports.id = 'csv_createvault';
+exports.title = 'CSV Template Create Emblem Vault';
 exports.group = 'Template Components';
 exports.color = '#37BC9B';
 exports.input = true;
@@ -26,6 +26,10 @@ This component creates an emblem vault, and by default, a new identity to store 
 The response object is a large, complex data object that represents both the keys for the identity that stores the vault that created, and all of the information contained in a vault.
 
 Read more about Emblem Vaults here.
+
+## Stuff You Need to Know
+
+In this template, a vault will be created for each user represented in the CSV file.
 `;
 
 exports.install = function(instance) {

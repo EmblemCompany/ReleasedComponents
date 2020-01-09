@@ -3,6 +3,7 @@
 You need to configure this component.
 
 __Outputs__:
+
 - `green` message has been sent successfully
 - `red` an error while sending
 
@@ -18,6 +19,6 @@ __Attachments__:
 
 ```javascript
 [
-	{ filename: '/absolute/path/to/some/file.pdf', name: 'report.pdf' },
-	{ filename: '/or/absolute/path/to/package.zip' }
+  { filename: '/absolute/path/to/some/file.pdf', name: 'report.pdf' },
+  { filename: '/or/absolute/path/to/package.zip' }
 ]```

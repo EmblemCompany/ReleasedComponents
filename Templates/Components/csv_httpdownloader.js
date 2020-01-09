@@ -1,6 +1,6 @@
-exports.id = 'httpdownloader';
-exports.title = 'HTTP Downloader';
-exports.group = 'HTTP';
+exports.id = 'csv_httpdownloader';
+exports.title = 'CSV Template HTTP Downloader';
+exports.group = 'Template Components';
 exports.color = '#5D9CEC';
 exports.icon = 'cloud-download';
 exports.input = true;
@@ -16,6 +16,10 @@ This component uses HTTP to download a file from a remote server.
 *url*: Enter the full URL of the file you wish to download
 
 *Download in Chunks?*: Check this if you are downloading a large or binary file.
+
+## Stuff You Need to Know
+
+For this template, the file is already selevted for you. It is an arbitrary set of 28 user ids and email addresses, intended to represent users from an exgternal system who will be assigned Emblem Vaults.
 `;
 
 exports.html = `
@@ -55,10 +59,7 @@ exports.install = function(instance) {
 		} else {
             url && U.request(url, FLAGS, {}, function(err, data, status, headers, host) {
                 if (response && !err) {
-					response.data = data;
-					if (instance.options.downstream) {
-						response.set(instance.name, response);
-					}
+                    response.data = data;
                     instance.send2(response);
                 } else if (err)
                     instance.error(err, response);

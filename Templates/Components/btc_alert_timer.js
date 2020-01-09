@@ -1,7 +1,7 @@
 exports.id = 'btc_alert_timer';
 exports.title = 'BTC Alert Template Timer';
 exports.version = '1.0.0';
-exports.group = 'Templates Only';
+exports.group = 'Template Components';
 exports.color = '#F6BB42';
 exports.output = 1;
 exports.click = true;

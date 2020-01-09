@@ -1,6 +1,6 @@
-exports.id = 'csv2json';
-exports.title = 'CSV 2 JSON';
-exports.group = 'IO';
+exports.id = 'csv_csv2json';
+exports.title = 'CSV Template CSV 2 JSON';
+exports.group = 'Template Components';
 exports.color = '#656D78';
 exports.input = true;
 exports.output = 1;
@@ -9,6 +9,19 @@ exports.icon = 'file-csv';
 exports.version = '0.0.2';
 exports.npm = []
 exports.options = { outputs: 1 };
+
+exports.readme = `# CSV 2 JSON
+
+This component converts specified csv file to json. This makes it easy to use and manipulate the data in downstream components.
+
+## Fields
+
+*filename*: If using a file stored on disk to read from, enter the filename with full path here. If no filename is specified, it will look to the input for the CSV data.
+
+## Stuff You Need to Know
+
+In this template, we are using this component to transform the CSV data we are getting in to an JSON object that we can manipulate and use as input for other components downstream.
+`;
 
 exports.html = `<div class="padding">
 	<div class="row">
@@ -19,18 +32,7 @@ exports.html = `<div class="padding">
 	</div>
 </div>`;
 
-exports.readme = `# CSV 2 JSON
-
-This component converts specified csv file to json. This makes it easy to use and manipulate the data in downstream components.
-
-## Fields
-
-*filename*: If using a file stored on disk to read from, enter the filename with full path here. If no filename is specified, it will look to the input for the CSV data.
-`;
-
 exports.install = function(instance) {
-	var chunk = 0;
-	var lastChunk;
 	instance.on('data', function(response) {
 		const csv = require("csvtojson");
 		if (response.data && !response.data.filename) {
