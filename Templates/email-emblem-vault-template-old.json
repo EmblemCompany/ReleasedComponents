@@ -2,7 +2,7 @@
     "tabs": [
         {
             "id": "1578341155899",
-            "name": "Email Emblem Vault Template",
+            "name": "Email Emblem Vault",
             "icon": "fa-object-ungroup",
             "linker": "main",
             "index": 0
@@ -15,7 +15,7 @@
             "tab": "1578341155899",
             "name": "Trigger",
             "x": 57,
-            "y": 230,
+            "y": 70,
             "connections": {
                 "0": [
                     {
@@ -34,7 +34,8 @@
             },
             "options": {},
             "color": "#F6BB42",
-            "notes": ""
+            "notes": "",
+			"errors": {}
         },
         {
             "id": "1578341165178",
@@ -42,7 +43,7 @@
             "tab": "1578341155899",
             "name": "Create Emblem Vault",
             "x": 215,
-            "y": 307,
+            "y": 147,
             "connections": {
                 "0": [
                     {
@@ -57,13 +58,14 @@
             },
             "state": {
                 "text": "",
-                "color": "gray"
+                "color": "green"
             },
             "options": {
                 "debug": true
             },
             "color": "#37BC9B",
-            "notes": ""
+            "notes": "",
+			"errors": {}
         },
         {
             "id": "1578341171534",
@@ -71,7 +73,7 @@
             "tab": "1578341155899",
             "name": "Send Email",
             "x": 456,
-            "y": 368,
+            "y": 208,
             "connections": {},
             "disabledio": {
                 "input": [],
@@ -82,78 +84,19 @@
                 "color": "gray"
             },
             "options": {
-                "from": "\"Emblem Vault\" <emblem@unspecified.me>",
-                "to": "",
-                "subject": "Backup of Emblem Vault: {msg.response.payload.import_response.name}",
+                "debug": true,
                 "body": "<h2>Emblem Identity</h2>\n\n<p>Your Emblem Identity private key is ...</p>\n\n<p>(drumroll please)</p>\n\n<code>{msg.keys.key}</code>\n\n<p>Keep that somewhere safe!</p>\n\n<h2>Emblem Vault</h2>\n\n<p>Your secret shares for the vault that was just created are below:</p>\n\n<p>ID share: </p>\n\n<code>{msg.response.id_share}</code>\n\n<p>Your share: </p>\n\n<code>{msg.response.my_share}</code>",
-                "debug": true
+                "subject": "Backup of Emblem Vault: {msg.response.payload.import_response.name}",
+                "to": "",
+                "from": "\"Emblem Vault\" <emblem@unspecified.me>"
             },
             "color": "#61affe",
-            "notes": ""
-        },
-        {
-            "id": "1578539210603",
-            "component": "comment",
-            "tab": "1578341155899",
-            "name": "EMAIL EMBLEM VAULT BACKUP TEMPLATE",
-            "x": 66,
-            "y": 16,
-            "connections": {},
-            "disabledio": {
-                "input": [],
-                "output": []
-            },
-            "state": {
-                "text": "",
-                "color": "gray"
-            },
-            "options": {},
-            "color": "#704cff",
-            "notes": ""
-        },
-        {
-            "id": "1578539238921",
-            "component": "comment",
-            "tab": "1578341155899",
-            "name": "1. Double-click the Send Email component and enter a recipient email address",
-            "x": 67,
-            "y": 64,
-            "connections": {},
-            "disabledio": {
-                "input": [],
-                "output": []
-            },
-            "state": {
-                "text": "",
-                "color": "gray"
-            },
-            "options": {},
-            "color": "#704cff",
-            "notes": ""
-        },
-        {
-            "id": "1578539270068",
-            "component": "comment",
-            "tab": "1578341155899",
-            "name": "2. Start the Circuit by clicking the white button on the bottom of the Trigger component",
-            "x": 68,
-            "y": 111,
-            "connections": {},
-            "disabledio": {
-                "input": [],
-                "output": []
-            },
-            "state": {
-                "text": "",
-                "color": "gray"
-            },
-            "options": {},
-            "color": "#704cff",
-            "notes": ""
+            "notes": "",
+			"errors": {}
         }
     ],
     "variables": "",
     "panel": "info",
     "url": "http://127.0.0.1:8000/$flow/#main",
-    "created": "2020-01-09T03:09:36.767Z"
+    "created": "2020-01-06T20:20:02.068Z"
 }
