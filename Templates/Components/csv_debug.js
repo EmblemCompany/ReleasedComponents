@@ -1,5 +1,6 @@
 exports.id = 'csv_debug';
 exports.title = 'CSV Template Debug';
+exports.group = 'Template Components';
 exports.author = 'Peter Širka';
 exports.color = '#967ADC';
 exports.click = true;
