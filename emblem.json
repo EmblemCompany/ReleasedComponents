@@ -93,12 +93,12 @@
         "name": "Blockchain.com",
         "items": [
             {
-                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Blockchain/bitcoinblockws.js",
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Blockchain/bitcoinblocksws.js",
                 "version": "0.0.1",
                 "display-name": "Bitcoin Blocks"
             },
             {
-                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Blockchain/bitcointransactionws.js",
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Blockchain/bitcointransactionsws.js",
                 "version": "0.0.1",
                 "display-name": "Bitcoin Transactions"
             }
