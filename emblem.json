@@ -88,5 +88,40 @@
                 "display-name": "Get Asset Details"
             }
         ]
+    },
+    {
+        "name": "Blockchain.com",
+        "items": [
+            {
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Blockchain/bitcoinblockws.js",
+                "version": "0.0.1",
+                "display-name": "Bitcoin Blocks"
+            },
+            {
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Blockchain/bitcointransactionws.js",
+                "version": "0.0.1",
+                "display-name": "Bitcoin Transactions"
+            }
+        ]
+    },
+    {
+        "name": "Shrimpy",
+        "items": [
+            {
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Shrimpy/getassetpopularity.js",
+                "version": "0.0.1",
+                "display-name": "Get Asset Popularity"
+            },
+            {
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Shrimpy/getexchangeassets.js",
+                "version": "0.0.1",
+                "display-name": "Get Exchange Assets"
+            },
+            {
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Shrimpy/getorderbooks.js",
+                "version": "0.0.1",
+                "display-name": "Get Order Books"
+            }
+        ]
     }
 ]
