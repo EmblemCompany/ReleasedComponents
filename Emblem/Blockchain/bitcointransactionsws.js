@@ -17,6 +17,8 @@ exports.html = `<div class="padding">
 exports.readme = `# Bitcoin transactions
 
 Toggle flow of incoming data by pressing the button.
+
+[Blockchain Documentation](https://www.blockchain.com/api/api_websocket)
 `;
 
 exports.install = function(instance) {

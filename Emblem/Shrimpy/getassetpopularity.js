@@ -26,6 +26,7 @@ exports.html = `<div class="padding">
 </div>`;
 
 exports.readme = `# Shrimpy Get Order Books
+[Shrimpy Documentation](https://developers.shrimpy.io/docs/#get-asset-popularity)
 `;
 
 exports.install = function(instance) {

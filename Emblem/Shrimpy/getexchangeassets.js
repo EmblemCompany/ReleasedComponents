@@ -18,6 +18,8 @@ exports.html = `<div class="padding">
 </div>`;
 
 exports.readme = `# Shrimpy Get Exchange Assets
+
+[Shrimpy Documentation](https://developers.shrimpy.io/docs/#get-exchange-assets)
 `;
 
 exports.install = function(instance) {
