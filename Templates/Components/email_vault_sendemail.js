@@ -4,7 +4,7 @@ exports.group = "Template Components";
 exports.color ="#61affe";
 exports.input =true;
 exports.output =1;
-exports.version ="0.0.2";
+exports.version ="0.0.3";
 exports.author ="Shannon Code";
 exports.icon ="paper-plane";
 
