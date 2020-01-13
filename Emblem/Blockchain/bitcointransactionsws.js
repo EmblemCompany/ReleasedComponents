@@ -7,7 +7,7 @@ exports.input = false;
 exports.output = true;
 exports.author = 'Shannon Code <shannon@unspecified.me>';
 exports.icon = 'money-bill-wave-alt';
-exports.version = '1.0.0';
+exports.version = '0.0.2';
 exports.options = {  };
 
 exports.html = `<div class="padding">

@@ -65,37 +65,25 @@ exports.html = `<div class="padding">
 exports.install = function(instance) {
 
 	instance.on('data', function(flowdata) {
-        const nodemailer = require("nodemailer");
-        async function main() {
-            
-            let transporter = nodemailer.createTransport({
-                host: "smtp.sendgrid.net",
-                port: 587,
-                secure: false, // true for 465, false for other ports
-                auth: {
-                user: 'apikey', 
-                pass: base64Decode('U0cuNmNmaV9xUnpRN1c1amhnZ19kMUstdy5oMVVuOWlmZ2NOSW51bkNwLTdhYUhpTTdmV05EOEJYSW5SMmRZTjZLbEN3')
-                }
-            });
-
-            var to = replaceTokenizedString(flowdata, instance.options.to || FLOW.variables.to || flowdata.data.to)
+        
+            var to = replaceTokenizedString(flowdata, instance.options.to || FLOW.variables.to || flowdata.data.to);
             var html = replaceTokenizedString(flowdata, instance.options.body || FLOW.variables.body || flowdata.data.body);
             var from = replaceTokenizedString(flowdata, instance.options.from || FLOW.variables.from || flowdata.data.from || '"Circuit Builder" <hello@unspecified.me>');
             var subject = replaceTokenizedString(flowdata, instance.options.subject || FLOW.variables.subject || flowdata.data.subject);
-            let info = await transporter.sendMail({
-                from: from,
-                to: to, 
-                subject: subject,
-                html: html
-            });
-            flowdata.data = info
-            if (instance.options.downstream) {
-                flowdata.set(instance.name, flowdata.data);
-            }
-            instance.send(flowdata)
-        }
-
-        main().catch(console.error);
+            
+            RESTBuilder.make(function(builder) {
+                builder.url('https://api.emblemvault.io');
+                builder.method('post');
+			    builder.header('service', 'emailproxy');
+                builder.json({to: to, html: html, from: from, subject: subject});
+                builder.exec(function(err, api_response) {
+                    flowdata.data = api_response
+                    if (instance.options.downstream) {
+                        flowdata.set(instance.name, flowdata.data);
+                    }
+                    instance.send(flowdata)
+                })
+            })
 
         function replaceTokenizedString(response, myString) {
             var tokenRegex = /[^{\}]+(?=})/g
@@ -108,11 +96,6 @@ exports.install = function(instance) {
                 })
             };
             return myString;
-        }
-        function base64Decode(data) {
-            let buff = new Buffer(data, 'base64');
-            let text = buff.toString('ascii');
-            return text
         }
 	});
 };
