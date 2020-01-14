@@ -9,6 +9,8 @@ exports.output = 1;
 exports.author = 'Martin Smola';
 exports.options = { conditions: [{ operator: '==', datatype: 'Number', value: 1, index: 0 }]};
 
+exports.readme = '60000316158';
+
 exports.html = `<style>
 	.cond-col1 { width:20px; float:left; }
 	.cond-col2 { width:150px; float:left; }
@@ -88,15 +90,6 @@ exports.html = `<style>
 	};
 
 </script>`;
-
-exports.readme = `
-# Switch
-
-- set property of the data object to be used in condition
--
-
-### Regex
-Uses 'test' method e.g. if value is \`/he/g\` then it will be tested like this \`/he/g.test(<incoming data>)\` which returns true/false`;
 
 exports.install = function(instance) {
 

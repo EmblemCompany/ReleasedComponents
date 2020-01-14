@@ -8,19 +8,8 @@ exports.output = 1;
 exports.click = true;
 exports.icon = 'exchange';
 exports.options = { interval: 8000, ports: ['80'], interface: 'eth0', enabled: true };
-exports.readme = `# Network monitoring
 
-This component monitors network in Linux systems. It uses \`netstat\` and \`ifconfig\` commands.
-
-__Data Example__:
-
-\`\`\`javascript
-{
-	download: 474549649408, // in bytes
-	upload: 39125245952, // in bytes
-	open: 34 // count of open connections
-}
-\`\`\``;
+exports.readme = '60000315992';
 
 exports.html = `<div class="padding">
 	<div class="row">

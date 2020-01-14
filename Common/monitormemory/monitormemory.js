@@ -8,19 +8,8 @@ exports.output = 1;
 exports.click = true;
 exports.icon = 'microchip';
 exports.options = { interval: 8000, enabled: true };
-exports.readme = `# Memory monitoring
 
-This component monitors memory \`bytes\` consumption in Linux systems. It uses \`free\` command.
-
-__Data Example__:
-
-\`\`\`javascript
-{
-	total: 33558769664,
-	used: 1998868480,
-	free: 2653708288
-}
-\`\`\``;
+exports.readme = '60000315977';
 
 exports.html = `<div class="padding">
 	<div class="row">

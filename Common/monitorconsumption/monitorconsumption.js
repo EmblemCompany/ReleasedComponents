@@ -9,22 +9,8 @@ exports.output = 1;
 exports.icon = 'bug';
 exports.options = { interval: 5000, enabled: true, monitorconsumption: true, monitorsize: true, monitorconnections: true, monitorfiles: true };
 exports.click = true;
-exports.readme = `# Consumption monitoring
 
-This component measure CPU and memory consumption, open files and open connections of this application. It uses these Linux commands: \`ps\`, \`lsof\`, \`netstat\` and \`df\`.
-
-__Data Example__:
-
-\`\`\`javascript
-{
-	cpu: 0, // percentage
-	memory: 4096, // in bytes
-	size: 34303, // directory size in bytes
-	files: 34, // count of open files
-	connections: 343, // count of connections
-	uptime: '1-12:34:00'
-}
-\`\`\``;
+exports.readme = '60000315904';
 
 exports.html = `<div class="padding">
 	<div class="row">

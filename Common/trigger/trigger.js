@@ -8,17 +8,14 @@ exports.version = '1.1.0';
 exports.author = 'Martin Smola';
 exports.icon = 'play';
 
+exports.readme = '60000316175';
+
 exports.html = `<div class="padding">
 	<div data-jc="dropdown__datatype__items:,String|string,Integer|integer,Float|float,Boolean|boolean,Date|date,Object|object,Base64 as Buffer|buffer" class="m">@(Data type (String by default))</div>
 	<div data-jc="textbox__data__placeholder:@(e.g. Hello world or { hello: 'world'} or ['hello', 'world']))" class="m">@(Data)</div>
 	<div data-jc="checkbox__restart">Trigger 5s after initialization.</div>
 	<div class="help">@(Useful when there's a need to run certain flow when the app restarts, etc.)</div>
 </div>`;
-
-exports.readme = `# Trigger
-
-- Clicking on the component starts the chain
-- Settings allows to set a data-type and a value`;
 
 exports.install = function(instance) {
 

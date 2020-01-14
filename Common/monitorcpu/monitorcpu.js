@@ -8,19 +8,8 @@ exports.output = 1;
 exports.icon = 'microchip';
 exports.options = { enabled: true };
 exports.click = true;
-exports.readme = `# CPU monitoring
 
-This component monitors CPU \`% percentage\` consumption in Linux systems. It uses \`mpstat\` command.
-
-__Data Example__:
-
-\`\`\`javascript
-{
-	cpu: 30, // percentage
-	cores: [4, 60, 0], // percentage
-	count: 3 // count of cores
-}
-\`\`\``;
+exports.readme = '60000315919';
 
 exports.html = `<div class="padding">
 	<div class="row">

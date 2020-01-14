@@ -8,6 +8,8 @@ exports.version = '1.1.0';
 exports.author = 'Peter Širka';
 exports.icon = 'forward';
 
+exports.readme = '60000316176';
+
 exports.html = `<div class="padding">
 	<section class="m">
 		<label><i class="fa fa-code"></i>@(A)</label>
@@ -24,11 +26,6 @@ exports.html = `<div class="padding">
 		</div>
 	</section>
 </div>`;
-
-exports.readme = `# Toggle Trigger
-
-- Clicking on the component starts the chain
-- Settings allows to set a data-type and a value`;
 
 exports.install = function(instance) {
 

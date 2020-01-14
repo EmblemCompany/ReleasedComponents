@@ -9,6 +9,8 @@ exports.author = 'Peter Širka';
 exports.icon = 'calendar';
 exports.options = { time: '', repeat: '', noweeks: false, start: '' };
 
+exports.readme = '60000316114';
+
 exports.html = `<div class="padding">
 	<div class="row">
 		<div class="col-md-3 col-sm-4 m">
@@ -35,19 +37,6 @@ exports.html = `<div class="padding">
 		</div>
 	</section>
 </div>`;
-
-exports.readme = `# Scheduler
-
-Scheduler will trigger flow at the given time and date. You can optionally define a data-type of the output and the data.
-
-In Frequency and Start fields following can be used:
-- second(s)
-- minute(s)
-- hour(s)
-- day(s)
-- month(s)
-- year(s)
-- week(s)`;
 
 exports.install = function(instance) {
 

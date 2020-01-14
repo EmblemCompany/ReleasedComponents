@@ -9,6 +9,8 @@ exports.output = 1;
 exports.author = 'Martin Smola';
 exports.options = {};
 
+exports.readme = '60000316038';
+
 exports.html = `<div class="padding">
 	<div data-jc="dropdown" data-jc-path="broker" data-jc-config="datasource:mqttconfig.brokers;required:true" class="m">@(Brokers)</div>
 	<div data-jc="textbox" data-jc-path="topic" data-jc-config="placeholder:hello/world">Topic</div>
@@ -27,24 +29,6 @@ exports.html = `<div class="padding">
 		!component.name && (component.name = options.broker + (options.topic ? ' -> ' + options.topic : ''));
 	});
 </script>`;
-
-exports.readme = `# MQTT publish
-
-If the topic field is left empty and the data object does not have a 'topic' property then nothing is send.
-Also if data object has a valid topic property it is assumed the object also have data property which is send as a payload;
-Example:
-\`\`\`javacsript
-{
-	topic: '/topic',
-	data: {
-		hello: 'world'
-	}
-}
-// in above case only { hello: 'world' } is published
-\`\`\`
-
-If the topic field is not empty then the entire incomming data object is passed to the output.`;
-
 
 exports.install = function(instance) {
 

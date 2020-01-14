@@ -11,6 +11,8 @@ exports.options = { host: '127.0.0.1', port: 1883, ws: false, portws: 1884 };
 exports.traffic = false;
 exports.npm = ['mosca'];
 
+exports.readme = '60000316008';
+
 exports.html = `<div class="padding">
 	<div class="row">
 		<div class="col-md-6">
@@ -61,17 +63,6 @@ exports.html = `<div class="padding">
 		console.log('NOTES', component.notes);
 	});
 </script>`;
-
-exports.readme = `
-# MQTT Broker
-
-Uses Mosca https://github.com/mcollina/mosca
-
-## Outputs
-- (green) new client connected --> (object) client
-- (red) client disconnected    --> (object) client
-- (white) new message          --> (object) { packet, client }
-`;
 
 exports.install = function(instance) {
 	var mosca = require('mosca');

@@ -10,6 +10,8 @@ exports.icon = 'random';
 exports.options = {  };
 exports.npm = ['xlsx'];
 
+exports.readme = '60000316238';
+
 exports.html = `<div class="padding">
 	<div class="row">
 		<div class="col-md-6">
@@ -29,14 +31,6 @@ exports.html = `<div class="padding">
 		</div>
 	</div>
 </div>`;
-
-exports.readme = `# XLS to JSON
-
-This component tries to transform \`Excell spreadsheet\` to \`json\`. If there's a buffer property in an incomming data then filename option is ignored.
-
-## Options
-
-- filename relative to the application root`;
 
 exports.install = function(instance) {
 

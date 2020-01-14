@@ -9,6 +9,8 @@ exports.icon = 'comment';
 exports.version = '1.0.0';
 exports.options = {  };
 
+exports.readme = '60000316221';
+
 exports.html = `<div class="padding">
 	<div class="row m">
 		<div class="col-md-3">
@@ -35,16 +37,6 @@ exports.html = `<div class="padding">
 	</div>
 	<div data-jc="codemirror" data-jc-path="parser" data-jc-config="type:javascript;height:250;tabs:true;trim:true" class="m">@(Parser)</div>
 </div>`;
-
-exports.readme = `# WebSocket Client
-## Documentation
-https://docs.totaljs.com/latest/en.html#api~WebSocketClient
-
-## Input
-Input is used to send message to the server
-
-## Output
-All recieved messages are send to the output`;
 
 exports.install = function(instance) {
 

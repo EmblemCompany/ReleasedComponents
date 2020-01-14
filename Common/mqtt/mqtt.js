@@ -12,6 +12,8 @@ exports.options = { host: '127.0.0.1', port: 1883 };
 exports.traffic = false;
 exports.npm = ['mqtt'];
 
+exports.readme = '60000316023';
+
 exports.html = `<div class="padding">
 	<div class="row">
 		<div class="col-md-6">
@@ -64,9 +66,6 @@ exports.html = `<div class="padding">
 		!component.name && (component.name = '{0} @ {1}:{2}'.format(options.username || '', options.host, options.port || '1883'));
 	});
 </script>`;
-
-exports.readme = `
-# MQTT Broker`;
 
 var MQTT_BROKERS = [];
 var mqtt;

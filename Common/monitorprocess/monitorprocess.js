@@ -8,21 +8,7 @@ exports.output = 1;
 exports.icon = 'exchange';
 exports.click = true;
 exports.options = { interval: 8000, process: 'total', enabled: true };
-exports.readme = `# Process monitoring
-
-This component monitors a process in Linux systems. It uses \`ps\` and \`lsof\` commands.
-
-__Data Example__:
-
-\`\`\`javascript
-{
-	name: 'total', // name of process
-	cpu: 10, // in percentage
-	memory: 39125245952, // in bytes
-	files: 34, // count of open files
-	uptime: '1-12:04:34'
-}
-\`\`\``;
+exports.readme = '60000315995';
 
 exports.html = `<div class="padding">
 	<div class="row">

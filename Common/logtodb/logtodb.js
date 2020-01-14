@@ -18,31 +18,7 @@ exports.html = `<div class="padding">
 		</div>
 	</div>
 </div>`;
-exports.readme = `# Log to DB
-
-Logs a string into a DB (NoSQL embedded).
-Time stamp is added automaticaly.
-
-Incoming data are passed to output.
-
-Template uses Total.js framework view syntax.
-
-Incomming object is available as \`@{model}\`
-
-\`@{repository.time}\` inserts \`new Date().getTime()\`
-
-## Template example
-Data:
-\`\`\`javascript
-{
-	name: 'some process',
-	exec: 'restart'
-}
-\`\`\`
-Template:
-\`A process "@{model.propname}" executed "@{model.exec}" \`
-Output:
-*A process "some process" executed "restart"*`;
+exports.readme = '60000315802';
 
 exports.install = function(instance) {
 

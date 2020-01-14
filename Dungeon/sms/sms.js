@@ -7,6 +7,10 @@ exports.author = 'Peter Širka';
 exports.version = '1.0.0';
 exports.icon = 'commenting-o';
 
+exports.readme = `# SMS sender
+
+The component has to be configured. Sender uses [NEXMO API provider](https://www.nexmo.com). Raw data will be send as a SMS message.`;
+
 exports.html = `<div class="padding">
 	<div class="row">
 		<div class="col-md-6 m">
@@ -25,10 +29,6 @@ exports.html = `<div class="padding">
 		</div>
 	</div>
 </div>`;
-
-exports.readme = `# SMS sender
-
-The component has to be configured. Sender uses [NEXMO API provider](https://www.nexmo.com). Raw data will be send as a SMS message.`;
 
 exports.install = function(instance) {
 

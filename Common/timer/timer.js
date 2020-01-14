@@ -9,6 +9,8 @@ exports.author = 'Peter Širka';
 exports.icon = 'clock-o';
 exports.options = { interval: 1000 };
 
+exports.readme = '60000316159';
+
 exports.html = `<div class="padding">
 	<div class="row">
 		<div class="col-md-3 m">
@@ -23,10 +25,6 @@ exports.html = `<div class="padding">
 		</div>
 	</section>
 </div>`;
-
-exports.readme = `# Timer
-
-Timer will trigger flow in the given interval (in milliseconds). You can optionally define a data-type of the output and the data.`;
 
 exports.install = function(instance) {
 

@@ -8,19 +8,8 @@ exports.output = 1;
 exports.icon = 'hdd-o';
 exports.click = true;
 exports.options = { interval: 8000, path: '/', enabled: true };
-exports.readme = `# Disk monitoring
 
-This component monitors disk \`bytes\` consumption in Linux systems. It uses \`df\` command.
-
-__Data Example__:
-
-\`\`\`javascript
-{
-	total: 474549649408,
-	used: 39125245952,
-	free: 411294994432
-}
-\`\`\``;
+exports.readme = '60000315976';
 
 exports.html = `<div class="padding">
 	<div class="row">

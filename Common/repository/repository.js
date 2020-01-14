@@ -9,22 +9,7 @@ exports.icon = 'suitcase';
 exports.version = '1.0.0';
 exports.cloning = false;
 exports.options = { code: 'set(\'token\', \'123456\');\nsend();' };
-exports.readme = `# Repository
-
-This component can write/read data from \`FlowData\` message repository or from \`Flow\` instance.
-
-\`\`\`javascript
-// value {Object} contains received data
-// flowdata {Object} a current flowdata
-
-// set(key, value); sets a key/value
-// get(key); gets a value according to the key
-// set2(key, value); sets a key/value in Flow instance
-// get2(key); gets a value according to the key from Flow instance
-
-// Sends data next
-send();
-\`\`\``;
+exports.readme = '60000316099';
 
 exports.html = `<div class="padding">
 	<div data-jc="codemirror" data-jc-path="code" data-jc-config="type:javascript;required:true;height:500">@(Code)</div>

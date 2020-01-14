@@ -7,6 +7,8 @@ exports.version = '1.0.0';
 exports.author = 'Gyula Décsi';
 exports.icon = 'commenting-o';
 
+exports.readme = '60000316192';
+
 exports.html = `<div class="padding">
 	<div class="row">
 		<div class="col-md-6 m">
@@ -25,10 +27,6 @@ exports.html = `<div class="padding">
 		</div>
 	</div>
 </div>`;
-
-exports.readme = `# SMS sender (Twilio)
-
-The component has to be configured. Sender uses [Twilio API provider](https://www.twilio.com). Raw data will be send as a SMS message.`;
 
 exports.install = function(instance) {
 

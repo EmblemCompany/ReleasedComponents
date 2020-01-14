@@ -7,9 +7,8 @@ exports.input = true;
 exports.output = 1;
 exports.author = 'Peter Širka';
 exports.icon = 'refresh';
-exports.readme = `# Modified
 
-This component compares a new value with a previous value. If the values are different then sends new data to next component.`;
+exports.readme = '60000315847';
 
 exports.install = function(instance) {
 	var backup = undefined;

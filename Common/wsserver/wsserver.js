@@ -10,6 +10,8 @@ exports.version = '1.0.0';
 exports.options = {  };
 exports.cloning = false;
 
+exports.readme = '60000316237';
+
 exports.html = `<div class="padding">
 	<div class="row">
 		<div class="col-md-6">
@@ -23,18 +25,6 @@ exports.html = `<div class="padding">
 		</div>
 	</div>
 </div>`;
-
-exports.readme = `# WebSocket Server
-## Input
-- #1 > broadcast a message to all clients
-- #2 > send a message to a specific client by ID (use id or find method \`{ id: <some-id>, find: function..., data: <data-to-send> }\`)
-
-## Output
-All recieved messages are send to the output
-
-## Documentation
-https://docs.totaljs.com/latest/en.html#api~WebSocketClient
-`;
 
 exports.install = function(instance) {
 

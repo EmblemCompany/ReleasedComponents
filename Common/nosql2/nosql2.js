@@ -8,65 +8,8 @@ exports.icon = 'database';
 exports.input = true;
 exports.output = 1;
 exports.options = {};
-exports.readme = `# NoSQL embedded
 
-## Outputs
-- response from nosql engine
-
-## Settings
-- collection: (optional) if not set, incomming data object must have a 'collection' property set
-- method: (optional) if not set, incomming data object must have a 'method' property set
-
-## Input
-\`\`\`javascript
-{
-	collection: 'users', // optional, will override settings value
-	method: 'users', // optional, will override settings value
-	idname: 'key', // optional, value of query.key will be used as an id
-	// for Insert, Read, Update, Remove
-	query: <document object>, 
-	// for Query
-	query: [], 
-}
-\`\`\`
-## Insert
-
-- will insert recieved data
-- expects data to be an Object
-- returns error, success, id
-
-## Read
-
-- will read a document by id
-- expects data to be an Object with an \`id\` property(unless specified by idname)
-- returns error, response
-
-## Update
-
-- will update document by id
-- expects data to be an Object with \`id\` property(unless specified by idname) and all the props to be updated
-- returns error, response
-- if response is 0 then update failed
-
-## Remove
-
-- will remove document by id
-- expects data to be an Object with an \`id\` property(unless specified by idname)
-- returns error, response
-- if response is 0 then remove failed
-
-## Query
-
-- will query DB
-- expects data to be an Array as shown bellow
-- returns error, response
-
-\`\`\`javascript
-[
-	['where', 'sensor', 'temp'], // builder.where('sensor', 'temp');
-	['limit', 2]                 // builder.limit(2);
-]
-\`\`\``;
+exports.readme = '60000316055';
 
 exports.html = `
 <div class="padding">

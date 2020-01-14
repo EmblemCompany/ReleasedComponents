@@ -8,6 +8,8 @@ exports.output = 1;
 exports.author = 'Peter Širka';
 exports.icon = 'cloud-upload';
 
+exports.readme = '60000315832';
+
 exports.html = `<div class="padding">
 	<div data-jc="textbox" data-jc-path="url" class="m" data-jc-config="required:true;maxlength:500;placeholder:@(E.g. https\\://www.totaljs.com)">@(URL address)</div>
 	<div class="row">
@@ -42,27 +44,6 @@ exports.html = `<div class="padding">
 		</div>
 	</section>
 </div>`;
-
-exports.readme = `# Request
-
-This component creates a request with received data.
-
-__Response:__
-\`\`\`javascript
-{
-	data: String,
-	headers: Object,
-	status: Number,
-	host: String
-}
-\`\`\`
-
-__Dynamic arguments__:
-Are performed via FlowData repository and can be used for URL address or for custom headers/cookies/auth. Use \`repository\` component for creating of dynamic arguments. Dynamic values are replaced in the form \`{key}\`:
-
-- url address e.g. \`https://.../{key}/\`
-- headers values e.g. \`{token}\`
-- cookies values e.g. \`{token}\``;
 
 exports.install = function(instance) {
 

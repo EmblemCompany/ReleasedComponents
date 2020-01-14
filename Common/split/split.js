@@ -8,9 +8,8 @@ exports.output = 1;
 exports.options = {};
 exports.author = 'Jiří Travěnec';
 exports.icon = 'code-fork';
-exports.readme = `# Split
 
-This component iterates over the received data and sends every item separately.`;
+exports.readme = '60000316157';
 
 exports.install = function(instance) {
 	instance.on('data', function (response) {
