@@ -9,16 +9,7 @@ exports.author = 'Peter Širka';
 exports.icon = 'clock-o';
 exports.options = { interval: 1000 };
 
-exports.readme = `# Timer
-
-Timer will trigger flow in the given interval (in milliseconds). You can optionally define a data-type of the output and the data.
-
-In this template, this timer is set to trigger every 2 minutes (120000ms)
-
-## Having trouble?
-
-Check that you don't have the app paused. If you see a small green arrow in the toolbar, click it to make things run again.
-`;
+exports.readme = '60000317749';
 
 
 exports.html = `<div class="padding">
