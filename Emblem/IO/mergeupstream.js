@@ -8,16 +8,7 @@ exports.version ="0.0.2";
 exports.author ="Shannon Code";
 exports.icon ="compress-arrows-alt";
 
-exports.readme = `# Merge Upstream
-
-This component Merges all upstream results into a single object
-
-## NO FIELDS HERE!
-
-## Stuff you need to know
-
-Who the fuck knows who this works.
-`;
+exports.readme = '60000315220';
 
 exports.html = ``;
 

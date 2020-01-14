@@ -10,10 +10,7 @@ exports.icon = 'fingerprint';
 exports.options = {  };
 exports.npm = [];
 
-exports.readme = `# Get Saved Emblem Identity
-
-Retrieves the Emblem Identity created earlier within a circuit. Requires you have previously used the *Create Emblem Identity* component.
-`;
+exports.readme = '60000315183';
 
 exports.html = ``;
 

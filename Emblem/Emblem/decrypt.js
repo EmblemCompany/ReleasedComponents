@@ -10,17 +10,7 @@ exports.icon = 'unlock-alt';
 exports.options = {  };
 exports.npm = [];
 
-exports.readme = `# Decrypt a String
-
-Um, decrypts a string.
-
-## Fields
-
-*Data* (optional): This is the data to decrypt. Only enter data in this field if you are not otherwise sending data to this component from an upstream component (such as *Encrypt String*)
-
-*Password* (optional): Enter a password to be used to decrypt the data, if data was encrypted with a password.
-
-`;
+exports.readme = '60000315094';
 
 exports.html = `
 <div class="padding">

@@ -10,9 +10,7 @@ exports.icon = 'fingerprint';
 exports.options = {  };
 exports.npm = [];
 
-exports.readme = `# Create Emblem Identity
-
-Create a new identity to store Emblem Vaults. Once you have created this identity, you can begin creating Emblem Vaults and storing them in this identity.`;
+exports.readme = '60000314999';
 
 exports.html = ``;
 

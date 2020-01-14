@@ -373,11 +373,6 @@
                 "display-name": "CSV Template Create Emblem Vault"
 			},
 			{
-                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Templates/Components/csv_csv2json.js",
-                "version": "0.0.2",
-                "display-name": "CSV Template CSV 2 JSON"
-			},
-			{
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Templates/Components/csv_mergeupstream.js",
                 "version": "0.0.2",
                 "display-name": "CSV Template Merge Upstream"

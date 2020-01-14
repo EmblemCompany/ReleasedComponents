@@ -10,6 +10,8 @@ exports.version = '0.0.2';
 exports.npm = []
 exports.options = { outputs: 1 };
 
+exports.readme = '60000315205';
+
 exports.html = `<div class="padding">
 	<div class="row">
 		<div class="col-md-12">
@@ -18,15 +20,6 @@ exports.html = `<div class="padding">
 		</div>
 	</div>
 </div>`;
-
-exports.readme = `# CSV 2 JSON
-
-This component converts specified csv file to json. This makes it easy to use and manipulate the data in downstream components.
-
-## Fields
-
-*filename*: If using a file stored on disk to read from, enter the filename with full path here. If no filename is specified, it will look to the input for the CSV data.
-`;
 
 exports.install = function(instance) {
 	var chunk = 0;

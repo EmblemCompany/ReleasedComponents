@@ -10,28 +10,7 @@ exports.icon = 'random';
 exports.options = {  };
 exports.npm = [];
 
-exports.readme = `# Random String Generator
-
-Generates a random string for use in multiple applications, used to generate a seed, for example.
-
-## Fields
-
-*Length*: How long should the random string be? Default is 64 if not specified.
-
-*Chars*: Which characters are allowed in the string? Default is hex if not specified.
-
-Use the following table for reference:
-
-|What to enter in the field|What it means you will get as allowable characters|
-|--------------------------|--------------------------------------------------|
-|hex                       |The string generated will be a hex string         |
-|OR any combination of:    |                                                  |
-|a                         |Lowercase letters (abcdefghijklmnopqrstuvwxyz)    |
-|A                         |Uppercase letters (ABCDEFGHIJKLMNOPQRSTUVWXYZ)    |
-|#                         |Digits (0123456789)                               |
-|!                         |Special Characters (!@#$%^&*()_+-={}[]:";\'<>?,./|\\)|
-
-`;
+exports.readme = '60000315190';
 
 exports.html = `
 <div class="padding">

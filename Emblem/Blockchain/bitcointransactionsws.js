@@ -14,12 +14,7 @@ exports.html = `<div class="padding">
 	<div data-jc="checkbox__raw">Raw Transactions (Not simplified)</div>
 </div>`;
 
-exports.readme = `# Bitcoin transactions
-
-Toggle flow of incoming data by pressing the button.
-
-[Blockchain Documentation](https://www.blockchain.com/api/api_websocket)
-`;
+exports.readme = '60000314893';
 
 exports.install = function(instance) {
 

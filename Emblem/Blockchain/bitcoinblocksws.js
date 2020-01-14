@@ -10,14 +10,9 @@ exports.icon = 'cubes';
 exports.version = '0.0.2';
 exports.options = {  };
 
+exports.readme = '60000314750';
+
 exports.html = ``;
-
-exports.readme = `# Bitcoin transactions
-
-Toggle flow of incoming data by pressing the button.
-
-[Blockchain Documentation](https://www.blockchain.com/api/api_websocket)
-`;
 
 exports.install = function(instance) {
 
