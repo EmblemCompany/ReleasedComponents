@@ -7,6 +7,7 @@ exports.output =1;
 exports.version ="0.0.1";
 exports.author ="Shannon Code";
 exports.icon ="info-circle";
+exports.kbid ="60000301839"
 
 exports.readme = `# Get Asset Details
 
