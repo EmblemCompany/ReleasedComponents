@@ -12,25 +12,7 @@ exports.options ={
     host: "api.emblemvault.io"
 };
 
-exports.readme = `# Emblem:Get Dynamic Coin Balance
-
-This component will retrieve the balance from any cryptocurrency coin on any blockchain, given the address.
-
-## Fields
-
-*Asset*: This is the name of the asset on the blockchain you are requesting a balance from.
-
-*Coin*: This is the name of the blockchain your asset lives on.
-
-*Address*: This is the address that contains the asset you would like the balance for.
-
-## What is the difference between asset and coin?
-
-In the most popular example, BTC, these are the same. The blockchain is the Bitcoin chain and the asset is Bitcoin.
-
-In other examples, however, like ETH, there are many assets that use the same blockchain. Every ERC-20 asset uses an ETH address. Entering asset ensures that you get only the balance for that asset.
-
-`;
+exports.readme = '60000318151';
 
 exports.html = `<div class="padding">
         <div class="row">

@@ -8,27 +8,7 @@ exports.version ="0.0.1";
 exports.author ="Shannon Code";
 exports.icon ="sms";
 
-exports.readme = `# Send SMS
-
-This component sends an SMS message using ClickSend.
-
-## Fields
-
-*msg*: Enter the message that will go into the SMS here.
-
-*to*: Enter the phone number for the recipient here. This 
-needs to be in the E.164 standard format, which looks like the following: +[country code][subscriber number]. An example US phone number would be +18888511920.
-
-## Stuff you need to know
-
-In the *msg* field, you can retrieve data from the previous component. The Console tab of that component displays the json response. To use that response data, enter {message.<your json path here>}. For example, in this template, {message.response.balance} retrieves the balance from Emblem: Get Dynamic Coin Balance. 
-
-Learn more [here](https://unspecifiedsupport.freshdesk.com/support/solutions/articles/60000182172-using-a-component-s-response-data)!
-
-## Having trouble?
-
-Did you check that you entered a phone number for a recipient, and that it is in the correct format?
-`;
+exports.readme = '60000318108';
 
 exports.html = `<div class="padding">
     <div class="row">
