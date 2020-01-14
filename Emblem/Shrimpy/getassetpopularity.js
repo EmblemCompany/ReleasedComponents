@@ -9,7 +9,7 @@ exports.author = 'Shannon Code <shannon@unspecified.me>';
 exports.icon = 'balance-scale';
 exports.version = '1.0.0';
 exports.options = {  };
-exports.npm = ["shrimpy-node"];
+exports.npm = [];
 
 exports.readme = '60000315392';
 
