@@ -1,1 +1,258 @@
-﻿{"tabs":[{"id":"1578357251268","name":"BTC Alert Template","icon":"fa-object-ungroup","linker":"main","index":0}],"components":[{"id":"1578357258685","component":"btc_alert_assetsid","tab":"1578357251268","name":"Get Asset Details","x":173,"y":334,"connections":{"0":[{"index":"0","id":"1578357742195"}]},"disabledio":{"input":[],"output":[]},"state":{"text":"","color":"gray"},"options":{"debug":true,"id":"bitcoin"},"color":"#61affe","notes":""},{"id":"1578357742195","component":"btc_alert_switch","tab":"1578357251268","name":"Threshold Picker","x":353,"y":427,"connections":{"0":[{"index":"0","id":"1578358722390"}],"1":[{"index":"0","id":"1578358853944"}]},"disabledio":{"input":[],"output":[]},"state":{"text":"Last: 7997.5050022735520920","color":"gray"},"options":{"conditions":[{"operator":">","datatype":"Number","value":"10000","index":0},{"operator":"<","datatype":"Number","value":"6500","index":1}],"debug":true,"property":"data.priceUsd"},"color":"#ffa824","notes":"","output":2},{"id":"1578358722390","component":"btc_alert_sendsms","tab":"1578357251268","name":"Text SELL SELL SELL","x":550,"y":309,"connections":{},"disabledio":{"input":[],"output":[]},"state":{"text":"","color":"gray"},"options":{"debug":true,"to":"","msg":"SELL SELL SELL"},"color":"#DA4453","notes":""},{"id":"1578358853944","component":"btc_alert_sendsms","tab":"1578357251268","name":"Text BUY BUY BUY","x":548,"y":580,"connections":{},"disabledio":{"input":[],"output":[]},"state":{"text":"","color":"gray"},"options":{"debug":true,"to":"","msg":"BUY BUY BUY"},"color":"#49cc90","notes":""},{"id":"1578359503768","component":"btc_alert_timer","tab":"1578357251268","name":"Every 2 minutes","x":21.77777777777778,"y":242.33333333333334,"connections":{"0":[{"index":"0","id":"1578357258685"}]},"disabledio":{"input":[],"output":[]},"state":{"text":"","color":"gray"},"options":{"interval":120000,"data":"{}","datatype":"object","debug":true},"color":"#F6BB42","notes":""},{"id":"1578540583958","component":"comment","tab":"1578357251268","name":"BTC BUY/SELL ALERT TEMPLATE","x":54,"y":6,"connections":{},"disabledio":{"input":[],"output":[]},"state":{"text":"","color":"gray"},"options":{},"color":"#704cff","notes":""},{"id":"1578540604570","component":"comment","tab":"1578357251268","name":"1. Double click the Threshold picker and verify or modify the high/low numbers","x":53,"y":54,"connections":{},"disabledio":{"input":[],"output":[]},"state":{"text":"","color":"gray"},"options":{},"color":"#704cff","notes":""},{"id":"1578540636862","component":"comment","tab":"1578357251268","name":"2. Double click the Send SMS components and enter a recipient phone number","x":54,"y":101,"connections":{},"disabledio":{"input":[],"output":[]},"state":{"text":"","color":"gray"},"options":{},"color":"#704cff","notes":""},{"id":"1578540672541","component":"comment","tab":"1578357251268","name":"3. Wait. This Circuit fires by itself every 2 minutes!","x":55,"y":147,"connections":{},"disabledio":{"input":[],"output":[]},"state":{"text":"","color":"gray"},"options":{},"color":"#704cff","notes":""}],"variables":"","panel":"debug","url":"http://127.0.0.1:8000/$flow/#main","created":"2020-01-09T03:33:41.561Z"}
+﻿{
+    "tabs": [
+        {
+            "id": "1578357251268",
+            "name": "BTC Alert Template",
+            "icon": "fa-object-ungroup",
+            "linker": "main",
+            "index": 0
+        }
+    ],
+    "components": [
+        {
+            "id": "1578357258685",
+            "component": "btc_alert_assetsid",
+            "tab": "1578357251268",
+            "name": "Get Asset Details",
+            "x": 173,
+            "y": 334,
+            "connections": {
+                "0": [
+                    {
+                        "index": "0",
+                        "id": "1578357742195"
+                    }
+                ]
+            },
+            "disabledio": {
+                "input": [],
+                "output": []
+            },
+            "state": {
+                "text": "",
+                "color": "gray"
+            },
+            "options": {
+                "debug": true,
+                "id": "bitcoin"
+            },
+            "color": "#61affe",
+            "notes": ""
+        },
+        {
+            "id": "1578357742195",
+            "component": "btc_alert_switch",
+            "tab": "1578357251268",
+            "name": "Threshold Picker",
+            "x": 353,
+            "y": 427,
+            "connections": {
+                "0": [
+                    {
+                        "index": "0",
+                        "id": "1578358722390"
+                    }
+                ],
+                "1": [
+                    {
+                        "index": "0",
+                        "id": "1578358853944"
+                    }
+                ]
+            },
+            "disabledio": {
+                "input": [],
+                "output": []
+            },
+            "state": {
+                "text": "Last: 7997.5050022735520920",
+                "color": "gray"
+            },
+            "options": {
+                "conditions": [
+                    {
+                        "operator": ">",
+                        "datatype": "Number",
+                        "value": "10000",
+                        "index": 0
+                    },
+                    {
+                        "operator": "<",
+                        "datatype": "Number",
+                        "value": "6500",
+                        "index": 1
+                    }
+                ],
+                "debug": true,
+                "property": "data.priceUsd"
+            },
+            "color": "#ffa824",
+            "notes": "",
+            "output": 2
+        },
+        {
+            "id": "1578358722390",
+            "component": "btc_alert_sendsms",
+            "tab": "1578357251268",
+            "name": "Text SELL SELL SELL",
+            "x": 550,
+            "y": 309,
+            "connections": {},
+            "disabledio": {
+                "input": [],
+                "output": []
+            },
+            "state": {
+                "text": "",
+                "color": "gray"
+            },
+            "options": {
+                "debug": true,
+                "to": "",
+                "msg": "SELL SELL SELL"
+            },
+            "color": "#DA4453",
+            "notes": ""
+        },
+        {
+            "id": "1578358853944",
+            "component": "btc_alert_sendsms",
+            "tab": "1578357251268",
+            "name": "Text BUY BUY BUY",
+            "x": 548,
+            "y": 580,
+            "connections": {},
+            "disabledio": {
+                "input": [],
+                "output": []
+            },
+            "state": {
+                "text": "",
+                "color": "gray"
+            },
+            "options": {
+                "debug": true,
+                "to": "",
+                "msg": "BUY BUY BUY"
+            },
+            "color": "#49cc90",
+            "notes": ""
+        },
+        {
+            "id": "1578359503768",
+            "component": "btc_alert_timer",
+            "tab": "1578357251268",
+            "name": "Every 2 minutes",
+            "x": 21.77777777777778,
+            "y": 242.33333333333334,
+            "connections": {
+                "0": [
+                    {
+                        "index": "0",
+                        "id": "1578357258685"
+                    }
+                ]
+            },
+            "disabledio": {
+                "input": [],
+                "output": []
+            },
+            "state": {
+                "text": "",
+                "color": "gray"
+            },
+            "options": {
+                "interval": 120000,
+                "data": "{}",
+                "datatype": "object",
+                "debug": true
+            },
+            "color": "#F6BB42",
+            "notes": ""
+        },
+        {
+            "id": "1578540583958",
+            "component": "comment",
+            "tab": "1578357251268",
+            "name": "BTC BUY/SELL ALERT TEMPLATE",
+            "x": 54,
+            "y": 6,
+            "connections": {},
+            "disabledio": {
+                "input": [],
+                "output": []
+            },
+            "state": {
+                "text": "",
+                "color": "gray"
+            },
+            "options": {},
+            "color": "#704cff",
+            "notes": ""
+        },
+        {
+            "id": "1578540604570",
+            "component": "comment",
+            "tab": "1578357251268",
+            "name": "1. Double click the Threshold picker and verify or modify the high/low numbers",
+            "x": 53,
+            "y": 54,
+            "connections": {},
+            "disabledio": {
+                "input": [],
+                "output": []
+            },
+            "state": {
+                "text": "",
+                "color": "gray"
+            },
+            "options": {},
+            "color": "#704cff",
+            "notes": ""
+        },
+        {
+            "id": "1578540636862",
+            "component": "comment",
+            "tab": "1578357251268",
+            "name": "2. Double click the Send SMS components and enter a recipient phone number",
+            "x": 54,
+            "y": 101,
+            "connections": {},
+            "disabledio": {
+                "input": [],
+                "output": []
+            },
+            "state": {
+                "text": "",
+                "color": "gray"
+            },
+            "options": {},
+            "color": "#704cff",
+            "notes": ""
+        },
+        {
+            "id": "1578540672541",
+            "component": "comment",
+            "tab": "1578357251268",
+            "name": "3. Wait. This Circuit fires by itself every 2 minutes!",
+            "x": 55,
+            "y": 147,
+            "connections": {},
+            "disabledio": {
+                "input": [],
+                "output": []
+            },
+            "state": {
+                "text": "",
+                "color": "gray"
+            },
+            "options": {},
+            "color": "#704cff",
+            "notes": ""
+        }
+    ],
+    "variables": "",
+    "panel": "debug",
+    "url": "http://127.0.0.1:8000/$flow/#main",
+    "created": "2020-01-09T03:33:41.561Z"
+}
