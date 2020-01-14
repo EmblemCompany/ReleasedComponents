@@ -22,9 +22,7 @@ exports.html = `<div class="padding">
 	</div>
 </div>`;
 
-exports.readme = `# File Writer
-
-This component writes data into the file.`;
+exports.readme = '60000315588';
 
 exports.install = function(instance) {
 

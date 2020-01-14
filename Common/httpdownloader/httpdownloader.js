@@ -7,16 +7,8 @@ exports.input = true;
 exports.output = 1;
 exports.version = '1.0.2';
 exports.author = 'Peter Širka';
-exports.readme = `# HTTP Downloader
 
-This component uses HTTP to download a file from a remote server.
-
-## Fields
-
-*url*: Enter the full URL of the file you wish to download
-
-*Download in Chunks?*: Check this if you are downloading a large or binary file.
-`;
+exports.readme = '60000315630';
 
 exports.html = `
 <div class="padding">

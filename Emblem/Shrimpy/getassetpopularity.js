@@ -10,20 +10,9 @@ exports.icon = 'balance-scale';
 exports.version = '1.0.0';
 exports.options = {  };
 exports.npm = ["shrimpy-node"];
-exports.readme = `# Shrimpy Get Asset Popularity
 
-This component retrieves aggregate information about asset percentage popularity of the chosen exchange. The popularity of an asset is calculated based on the percentage of portfolios that contain the asset. For example, if there are two users, one with 50% Bitcoin and one with 5% Bitcoin, the asset popularity for Bitcoin would be 100% because 100% of portfolios contain Bitcoin
+exports.readme = '60000315392';
 
-## Fields
-
-*Select an Exchange* (required): This is the exchange you want to get asset popularity from.
-
-*Public Key* (required): The public key provided by Shrimpy. [Get API Key Here](https://developers.shrimpy.io/signup)
-
-*Private Key* (required):The private key provided by Shrimpy. [Get API Key Here](https://developers.shrimpy.io/signup)
-
-[Shrimpy Documentation](https://developers.shrimpy.io/docs/#get-asset-popularity)
-`;
 exports.html = `<div class="padding">
     <div class="row">
         <div class="col-md-6">

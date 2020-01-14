@@ -9,19 +9,7 @@ exports.input = 2;
 exports.output = 1;
 exports.options = { increment: 1, initialvalue: 1 };
 
-exports.readme = `# Count
-
-This component counts the number of messages received.
-
-## Fields
-
-- Initial Value: What number should be output on the receipt of the first message.
-- Increment: What should the increment be for each following message received.
-
-## Response
-
-Integer value based on the initial value and increment settings.
-`;
+exports.readme = '60000315456';
 
 exports.html = `<div class="padding">
 <div data-jc="textbox" data-jc-path="initialvalue" data-jc-config="placeholder:1;increment:true;type:number;align:center">@(Initial Value)</div>

@@ -10,6 +10,9 @@ exports.icon = 'chart-pie';
 exports.version = '1.0.0';
 exports.options = {  };
 exports.npm = ["shrimpy-node"];
+
+exports.readme = '60000315408';
+
 exports.html = `<div class="padding">
     <div class="row">
         <div class="col-md-6">
@@ -28,24 +31,6 @@ exports.html = `<div class="padding">
         </div>
     </div>
 </div>`;
-
-exports.readme = `# Shrimpy Get Order Books
-
-This component retrieves live order book data for the exchange specified.
-
-## Fields
-
-*Select an Exchange* (required): This is the exchange you want to get asset popularity from.
-
-*Base Symbol* (optional): The base symbol. (e.g. XLM for a XLM-BTC market) quantity is in these units.
-
-*Quote Symbol* (optional): The quote symbol. (e.g. BTC for a XLM-BTC market).
-
-*Limit* (optional): The maximum number of asks and bids to retrieve. Defaults to 10 if not supplied.
-
-
-[Shrimpy Documentation](https://developers.shrimpy.io/docs/#get-order-books)
-`;
 
 exports.install = function(instance) {
     const Shrimpy = require('shrimpy-node');

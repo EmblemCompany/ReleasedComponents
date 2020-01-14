@@ -8,26 +8,7 @@ exports.version ="0.0.3";
 exports.author ="Shannon Code";
 exports.icon ="paper-plane";
 
-exports.readme = `# Send Email
-
-This component sends an Email using SendGrid.
-
-## Fields
-
-*From*: Enter the email address this email will be from. The format is: ["My Name" <my@email.com>]
-
-*To*: Enter the email address of the intended recipient of this email. This is email address only.
-
-*Subject*: Enter the subject of the email. This can utilize data from the previous component.
-
-*Body*: Enter the body for the email. HTML is supported. If plain text is required, enter only plain text. This can utilize data from the previous component.
-
-## Stuff you need to know
-
-In the *Subject* and *Body* fields, you can retrieve data from the previous component. The Console tab of that component displays the json response. To use that response data, enter {msg.<your json path here>}. 
-
-Learn more [here](https://unspecifiedsupport.freshdesk.com/support/solutions/articles/60000182172-using-a-component-s-response-data)!
-`;
+exports.readme = '60000315418';
 
 exports.html = `<div class="padding">
         <div class="row">

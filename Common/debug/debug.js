@@ -7,15 +7,8 @@ exports.input = true;
 exports.icon = 'bug';
 exports.version = '2.0.3';
 exports.options = { enabled: true, repository: false, type: 'data' };
-exports.readme = `# Debug
 
-Writes data to the console tab
-
-## Fields
-
-*Enabled*: enable/disable output to the console tab
-
-`;
+exports.readme = '60000315471';
 
 exports.html = `<div class="padding">
 	<div class="row">

@@ -9,14 +9,7 @@ exports.version = '1.0.0';
 exports.author = 'Peter Širka';
 exports.options = { delay: 1000 };
 
-exports.readme = `# Delay
-
-This component just pauses (a delay) between receiving and sending data.
-
-## Fields
-
-*Delay*: This is the amount of time to pause between receiving data and sending data. It is in milliseconds.
-`;
+exports.readme = '60000315472';
 
 exports.html = `<div class="padding">
 	<div class="row">

@@ -17,9 +17,7 @@ exports.html = `<div class="padding">
 	</div>
 </div>`;
 
-exports.readme = `# Feed to delay
-It will only send data if it doesn't recieve anything in past x seconds.
-So if it keeps getting new data before the timeout it will never send anything.`;
+exports.readme = '60000315544';
 
 exports.install = function(instance) {
 
