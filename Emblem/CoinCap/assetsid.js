@@ -9,34 +9,7 @@ exports.author ="Shannon Code";
 exports.icon ="info-circle";
 exports.kbid ="60000301839";
 
-exports.readme ="60000301839";
-
-// exports.readme = `# Get Asset Details
-
-// This component uses the CoinCap API to retrieve details for any specifif coin they support. Possible details are listed in the tables below.
-
-// ### Request
-// | Key       | Required | Value   | Description |
-// |-----------|----------|---------|-------------|
-// | id        | required | bitcoin |  asset id   |
-
-// ### Response
-
-// | Key               | Description |
-// |-------------------|-------------|
-// | id                | unique identifier for asset |
-// | rank              | rank is in ascending order - this number is directly associated with the marketcap whereas the highest marketcap receives rank 1 |
-// | symbol            | most common symbol used to identify this asset on an exchange |
-// | name              | proper name for asset |
-// | supply            | available supply for trading |
-// | maxSupply         | total quantity of asset issued |
-// | marketCapUsd      | supply x price |
-// | volumeUsd24Hr     | quantity of trading volume represented in USD over the last 24 hours |
-// | priceUsd          | volume-weighted price based on real-time market data, translated to USD |
-// | changePercent24Hr | the direction and value change in the last 24 hours |
-// | vwap24Hr          | Volume Weighted Average Price in the last 24 hours |
-    
-// `;
+exports.readme ='60000301839';
 
 exports.html = `
 <div class="padding">
