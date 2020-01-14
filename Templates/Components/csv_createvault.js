@@ -11,26 +11,7 @@ exports.options = {  };
 exports.npm = [];
 exports.html = ``;
 
-exports.readme = `# Create Vault
-
-This creates an Emblem Vault.
-
-## No Fields Here!
-
-## Stuff You Need to Know
-
-This component creates an emblem vault, and by default, a new identity to store the Emblem Vault into.  In case you are working with a locally saved identity where you want to store multiple vaults, it first checks to see if you have a specific identity saved locally. 
-
-## Response
-
-The response object is a large, complex data object that represents both the keys for the identity that stores the vault that created, and all of the information contained in a vault.
-
-Read more about Emblem Vaults here.
-
-## Stuff You Need to Know
-
-In this template, a vault will be created for each user represented in the CSV file.
-`;
+exports.readme = '60000317930';
 
 exports.install = function(instance) {
 	

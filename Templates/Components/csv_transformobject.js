@@ -8,18 +8,7 @@ exports.version ="0.0.1";
 exports.author ="Shannon Code";
 exports.icon ="map-signs";
 
-exports.readme = `# Transform Object
-
-This component allows you to create a new object, specifying which properties to include
-
-## No Fields Here!
-
-## Stuff you need to know
-
-Learn more about using upstream data [here](https://unspecifiedsupport.freshdesk.com/support/solutions/articles/60000182172-using-a-component-s-response-data)!
-
-This template is using this component to map data properties into friendly names, so the output will be easily readable.
-`;
+exports.readme = '';
 
 exports.html = `
 <div class="padding">

@@ -7,20 +7,7 @@ exports.input = true;
 exports.output = 1;
 exports.version = '1.0.2';
 exports.author = 'Peter Širka';
-exports.readme = `# HTTP Downloader
-
-This component uses HTTP to download a file from a remote server.
-
-## Fields
-
-*url*: Enter the full URL of the file you wish to download
-
-*Download in Chunks?*: Check this if you are downloading a large or binary file.
-
-## Stuff You Need to Know
-
-For this template, the file is already selevted for you. It is an arbitrary set of 28 user ids and email addresses, intended to represent users from an exgternal system who will be assigned Emblem Vaults.
-`;
+exports.readme = '60000317989';
 
 exports.html = `
 <div class="padding">

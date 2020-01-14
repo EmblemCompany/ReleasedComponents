@@ -8,19 +8,7 @@ exports.input = true;
 exports.icon = 'bug';
 exports.version = '2.0.3';
 exports.options = { enabled: true, repository: false, type: 'data' };
-exports.readme = `# Debug
-
-Writes data to the console tab
-
-## Fields
-
-*Enabled*: enable/disable output to the console tab
-
-## Stuff You Need to Know
-
-This template uses the Degub component to show you the data coming out of the Transform component. In a production use case, you would likely write this to a file or a database.
-
-`;
+exports.readme = '60000317974';
 
 exports.html = `<div class="padding">
 	<div class="row">
