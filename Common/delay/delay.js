@@ -14,7 +14,7 @@ exports.readme = '60000315472';
 exports.html = `<div class="padding">
 	<div class="row">
 		<div class="col-md-3">
-			<div data-jc="textbox" data-jc-path="delay" data-jc-config="placeholder:@(In milliseconds);maxlength:10;type:number;increment:true;align:center">@(Delay)</div>
+			<div data-jc="textbox" data-jc-path="delay" data-jc-config="placeholder:@(In milliseconds);maxlength:10;type:number;increment:true;align:center">@(Delay (in milliseconds))</div>
 		</div>
 	</div>
 </div>`;

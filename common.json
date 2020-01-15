@@ -225,7 +225,7 @@
 			{
 				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/monitornetwork/monitornetwork.js",
 				"version": "1.0.0",
-                "display-name": "Nomitor Network"
+                "display-name": "Monitor Network"
 			},
 			{
 				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/monitorprocess/monitorprocess.js",
