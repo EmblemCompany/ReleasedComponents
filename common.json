@@ -108,16 +108,6 @@
 		"name": "Notifications",
 		"items": [
 			{
-				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/email/email.js",
-				"version": "1.4.0",
-                "display-name": "Email"
-			},
-			{
-				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/sms/sms.js",
-				"version": "1.0.0",
-                "display-name": "SMS"
-			},
-			{
 				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/twilio/twilio.js",
 				"version": "1.0.0",
                 "display-name": "Twilio"
@@ -133,39 +123,9 @@
                 "display-name": "HTTP Downloader"
 			},
 			{
-				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/httpgeoip/httpgeoip.js",
-				"version": "1.0.0",
-                "display-name": "HTTP Geo IP"
-			},
-			{
-				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/httplistener/httplistener.js",
-				"version": "1.0.0",
-                "display-name": "HTTP Listener"
-			},
-			{
-				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/httpreceiver/httpreceiver.js",
-				"version": "1.0.0",
-                "display-name": "HTTP Receiver"
-			},
-			{
-				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/httpredirect/httpredirect.js",
-				"version": "1.0.0",
-                "display-name": "HTTP Redirect"
-			},
-			{
 				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/httprequest/httprequest.js",
 				"version": "2.0.0",
                 "display-name": "HTTP Request"
-			},
-			{
-				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/httpresponse/httpresponse.js",
-				"version": "2.0.0",
-                "display-name": "HTTP Response"
-			},
-			{
-				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/httproute/httproute.js",
-				"version": "1.2.2",
-                "display-name": "HTTP Route"
 			}
 		]
 	},
