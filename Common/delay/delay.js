@@ -5,7 +5,7 @@ exports.icon = 'clock-o';
 exports.group = 'Time';
 exports.input = true;
 exports.output = 1;
-exports.version = '1.0.0';
+exports.version = '1.0.1';
 exports.author = 'Peter Širka';
 exports.options = { delay: 1000 };
 
