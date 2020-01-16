@@ -39,7 +39,7 @@
             },
             {
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/decrypt.js",
-                "version": "0.0.1",
+                "version": "0.0.2",
                 "display-name": "Decrypt String"
             }
         ]

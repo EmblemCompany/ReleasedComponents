@@ -4,7 +4,7 @@ exports.group = 'Emblem';
 exports.color = '#37BC9B';
 exports.input = true;
 exports.output = 1;
-exports.version = '0.0.1';
+exports.version = '0.0.2';
 exports.author = 'Shannon Code';
 exports.icon = 'unlock-alt';
 exports.options = {  };
@@ -32,7 +32,7 @@ exports.html = `
 exports.install = function(instance) {
     var Crypto = require('crypto-js')
 	instance.on('data', function(flowdata) {
-        var data = instance.options.encrypted || flowdata.data.encrypted || FLOW.variables.data 
+        var data = instance.options.data || flowdata.data.encrypted || FLOW.variables.data 
         if (data.includes('{msg.')) {
             data = replaceTokenizedString(flowdata, data)
         }
@@ -49,8 +49,9 @@ exports.install = function(instance) {
             const decrypted = Crypto.AES.decrypt(data, password).toString(Crypto.enc.Utf8);
             return {decrypted: JSON.parse(decrypted)};
         } catch (exception) {
-            console.log('Incorrect password or invalid backup file');
-            throw new Error(exception.message);
+            return {err: 'Incorrect password or invalid backup file'};
+            // console.log('Incorrect password or invalid backup file');
+            // throw new Error(exception.message);
         }
     }
 
