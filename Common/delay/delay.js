@@ -5,7 +5,7 @@ exports.icon = 'clock-o';
 exports.group = 'Time';
 exports.input = true;
 exports.output = 1;
-exports.version = '1.0.0';
+exports.version = '1.0.1';
 exports.author = 'Peter Širka';
 exports.options = { delay: 1000 };
 
@@ -35,11 +35,8 @@ exports.install = function(instance) {
 		var item = queue.shift();
 		item && (timeout = setTimeout(function() {
 			timeout = null;
-			if (instance.options.downstream) {
-				response.set(instance.name, item);
-				response.data = item
-			}
-			instance.send2(response);
+			
+			instance.send2(item);
 			instance.custom.send();
 			if (queue.length)
 				instance.status(queue.length + 'x pending', 'red');

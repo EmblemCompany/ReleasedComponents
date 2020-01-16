@@ -79,7 +79,7 @@
 		"items": [
 			{
 				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/delay/delay.js",
-				"version": "1.0.0",
+				"version": "1.0.1",
                 "display-name": "Delay"
 			},
 			{
