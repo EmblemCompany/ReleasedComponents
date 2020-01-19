@@ -136,11 +136,6 @@
 				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/wsclient/wsclient.js",
 				"version": "1.0.0",
                 "display-name": "Websocket Client"
-			},
-			{
-				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/wsserver/wsserver.js",
-				"version": "1.0.0",
-                "display-name": "Websocket Server"
 			}
 		]
 	},
