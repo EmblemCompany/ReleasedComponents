@@ -27,8 +27,6 @@ exports.html = `<div class="padding">
 		</div>
 	</div>
 	<hr class="nmt" />
-	<div data-jc="checkbox" data-jc-path="noweeks" class="m">@(No weeks)</div>
-	<br />
 	<section>
 		<label><i class="fa fa-random"></i>@(Output data)</label>
 		<div class="padding">
