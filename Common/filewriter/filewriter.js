@@ -11,7 +11,7 @@ exports.options = { filename: '', append: true, delimiter: '\\n' };
 
 exports.html = `<div class="padding">
 	<div data-jc="textbox" data-jc-path="filename" data-jc-config="placeholder:@(Type a filename with extension, e.g. output.txt);maxlength:100">@(Filename)</div>
-	<div class="help m">@(The file will be stored in the public directory. Can be accessed via HTTP e.g. <code>https://domain/filename.txt</code>)</div>
+	<div class="help m">@(The file will be stored in the public directory.</div>
 	<div class="m">
 		<div data-jc="checkbox" data-jc-path="append">Append mode</div>
 	</div>
