@@ -14,10 +14,10 @@ exports.html = `
 <div class="padding">
 	<div class="row">
 		<div class="col-md-6 m">
-			<div data-jc="textboxlist" data-jc-path="name" data-placeholder="@(Type name of this property)">@(name)</div>
+			<div data-jc="textboxlist" data-jc-path="properties" data-placeholder="@(Type properties to include here)">@(Property)</div>
 		</div>
 		<div class="col-md-6 m">
-			<div data-jc="textboxlist" data-jc-path="properties" data-placeholder="@(Type properties to include here)">@(properties)</div>
+			<div data-jc="textboxlist" data-jc-path="name" data-placeholder="@(Type name of this property)">@(Name)</div>
 		</div>
 	</div>
 </div>`;
