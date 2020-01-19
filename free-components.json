@@ -16,11 +16,6 @@
 				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/scheduler/scheduler.js",
 				"version": "1.0.0",
                 "display-name": "Scheduler"
-			},
-			{
-				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/wsclient/wsclient.js",
-				"version": "1.0.0",
-                "display-name": "Websocket Client"
 			}
 		]
 	},
@@ -138,14 +133,9 @@
                 "display-name": "HTTP Request"
 			},
 			{
-				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/nosql/nosql.js",
-				"version": "1.2.0",
-                "display-name": "NOSQL"
-			},
-			{
-				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/nosql2/nosql2.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/wsclient/wsclient.js",
 				"version": "1.0.0",
-                "display-name": "NOSQL 2"
+                "display-name": "Websocket Client"
 			},
 			{
 				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/wsserver/wsserver.js",
