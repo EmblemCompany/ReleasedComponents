@@ -4,7 +4,7 @@ exports.group = 'Emblem Services';
 exports.color = '#37BC9B';
 exports.input = true;
 exports.output = 1;
-exports.version = '0.0.3';
+exports.version = '0.0.4';
 exports.author = 'Shannon Code';
 exports.icon = 'random';
 exports.options = {  };
@@ -36,7 +36,7 @@ exports.install = function(instance) {
         var chars = instance.options.chars || flowdata.data.chars || FLOW.variables.chars || 'hex'
         flowdata.data = randomString(length, chars)
         if (instance.options.downstream) {
-            response.set(instance.name, response.data);
+            flowdata.set(instance.name, flowdata.data);
         }
         instance.send(flowdata)
     });
