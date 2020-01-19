@@ -138,11 +138,6 @@
                 "display-name": "HTTP Request"
 			},
 			{
-				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/logtodb/logtodb.js",
-				"version": "1.0.0",
-                "display-name": "Log to DB"
-			},
-			{
 				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/nosql/nosql.js",
 				"version": "1.2.0",
                 "display-name": "NOSQL"
