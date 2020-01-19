@@ -23,7 +23,7 @@ exports.html = `<div class="padding">
         </div>
         <div class="row">
             <div class="col-md-12">
-                <div data-jc="textbox" data-jc-path="coin" data-jc-config="placeholder:btc">@(coin) </div>
+                <div data-jc="textbox" data-jc-path="coin" data-jc-config="placeholder:btc">@(chain) </div>
                 <div class="help">This is the blockchain the asset lives on, such as eth for Coval.</div>
             </div>
         </div>
