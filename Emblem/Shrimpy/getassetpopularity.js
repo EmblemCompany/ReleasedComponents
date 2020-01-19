@@ -7,7 +7,7 @@ exports.input = true;
 exports.output = true;
 exports.author = 'Shannon Code <shannon@unspecified.me>';
 exports.icon = 'balance-scale';
-exports.version = '1.0.0';
+exports.version = '0.0.1';
 exports.options = {  };
 exports.npm = [];
 
