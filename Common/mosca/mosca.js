@@ -1,5 +1,5 @@
 exports.id = 'mqttserver';
-exports.title = 'MQTT server(Mosca)';
+exports.title = 'Mosca MQTT Broker';
 exports.group = 'Messaging';
 exports.color = '#888600';
 exports.version = '1.1.0';
