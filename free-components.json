@@ -220,12 +220,12 @@
 			{
 				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/mosca/mosca.js",
 				"version": "1.1.0",
-                "display-name": "Mosca"
+                "display-name": "Mosca MQTT Broker"
 			},
 			{
 				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/mqtt/mqtt.js",
 				"version": "1.0.1",
-                "display-name": "MQTT"
+                "display-name": "MQTT Server"
 			},
 			{
 				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/mqttpublish/mqttpublish.js",
