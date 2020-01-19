@@ -1,6 +1,6 @@
 exports.id = 'mqttpublish';
 exports.title = 'MQTT publish';
-exports.group = 'MQTT';
+exports.group = 'Messaging';
 exports.color = '#888600';
 exports.version = '1.1.0';
 exports.icon = 'sign-out';

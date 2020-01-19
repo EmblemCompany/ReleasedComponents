@@ -1,6 +1,6 @@
 exports.id = 'trigger';
 exports.title = 'Trigger';
-exports.group = 'Inputs';
+exports.group = 'ACTIONS TO START WITH';
 exports.color = '#F6BB42';
 exports.click = true;
 exports.output =  1;

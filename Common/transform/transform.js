@@ -1,6 +1,6 @@
 exports.id = 'transform';
-exports.title = 'Data Transformation';
-exports.group = 'Parsers';
+exports.title = 'Data Transform';
+exports.group = 'Data Manipulation';
 exports.color = '#37BC9B';
 exports.version = '1.0.0';
 exports.input = true;

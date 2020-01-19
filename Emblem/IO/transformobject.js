@@ -1,6 +1,6 @@
 exports.id ="transformobject";
 exports.title ="Transform Object";
-exports.group = "IO";
+exports.group = "Data Manipulation";
 exports.color ="#37BC9B";
 exports.input =true;
 exports.output =1;

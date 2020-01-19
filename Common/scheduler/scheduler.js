@@ -1,6 +1,6 @@
 exports.id = 'scheduler';
 exports.title = 'Scheduler';
-exports.group = 'Time';
+exports.group = 'ACTIONS TO START WITH';
 exports.version = '1.0.0';
 exports.color = '#F6BB42';
 exports.output = 1;

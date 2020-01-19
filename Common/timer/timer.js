@@ -1,7 +1,7 @@
 exports.id = 'timer';
 exports.title = 'Timer';
 exports.version = '1.0.0';
-exports.group = 'Time';
+exports.group = 'ACTIONS TO START WITH';
 exports.color = '#F6BB42';
 exports.output = 1;
 exports.click = true;

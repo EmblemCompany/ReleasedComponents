@@ -1,6 +1,6 @@
 exports.id = 'console';
 exports.title = 'Console';
-exports.group = 'Inputs';
+exports.group = 'Develop and Debug';
 exports.color = '#917DD6';
 exports.output = ['#3BAFDA', '#F6BB42', '#DA4453'];
 exports.click = true;

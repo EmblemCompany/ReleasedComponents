@@ -1,0 +1,66 @@
+ACTIONS TO START WITH
+*Trigger
+*Timer
+*Scheduler
+*Websocket Client
+
+Emblem Services
+*Create Emblem Identity
+*Create Emblem Vault
+*Decrypt String
+*Encrypt String
+*Get Coin Balance by Address
+*Get Emblem Vaults by Identity
+*Get Saved Emblem Identity
+*Random String Generator
+
+Blockchain.com
+*Bitcoin Blocks
+*Bitcoin Transactions
+
+CoinCap API 2.0
+*Get Asset Details
+
+Shrimpy
+*Get Asset Populatiry
+*Get Exchange Assets
+*Get Order Books
+
+Files and Data I/O
+*File Reader
+*File Writer
+*HTTP Downloader
+*HTTP Request
+*NoSql/NoSql2
+*Log to Db
+*Websocket Server
+
+Data Manipulation
+*Merge Upstream
+*Transform
+*Transform Object
+*CSV to JSON
+*XML to JSON
+
+Logic
+*Count
+*Delay
+*Duration
+*Modified
+*Split
+*Switch
+
+Messaging
+*Send Email
+*Send SMS
+*Mosca/MQTT
+*Twilio
+
+Develop and Debug
+*Code
+*Comment
+*Console
+*Debug
+
+Third-party Providers
+*IFTTT Hook Request

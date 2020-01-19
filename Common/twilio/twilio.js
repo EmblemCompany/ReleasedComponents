@@ -1,6 +1,6 @@
 exports.id = 'twilio';
 exports.title = 'Twilio';
-exports.group = 'Notifications';
+exports.group = 'Messaging';
 exports.color = '#8CC152';
 exports.input = true;
 exports.version = '1.0.0';

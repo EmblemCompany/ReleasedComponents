@@ -1,6 +1,6 @@
 exports.id = 'code';
 exports.title = 'Code';
-exports.group = 'Common';
+exports.group = 'Develop and Debug';
 exports.color = '#656D78';
 exports.input = true;
 exports.output = 1;

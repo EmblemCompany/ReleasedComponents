@@ -1,6 +1,6 @@
 exports.id = 'wsclient';
 exports.title = 'WebSocket Client';
-exports.group = 'WebSocket';
+exports.group = 'ACTIONS TO START WITH';
 exports.color = '#97c5ff';
 exports.input = true;
 exports.output = true;

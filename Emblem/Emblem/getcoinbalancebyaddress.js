@@ -1,6 +1,6 @@
 exports.id ="getdynamiccoinbalance";
 exports.title ="Get Coin Balance by Address";
-exports.group ="Emblem";
+exports.group ="Emblem Services";
 exports.color ="#61affe";
 exports.input =true;
 exports.output =1;

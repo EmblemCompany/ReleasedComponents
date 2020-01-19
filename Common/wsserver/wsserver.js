@@ -1,6 +1,6 @@
 exports.id = 'wsserver';
 exports.title = 'WebSocket Server';
-exports.group = 'WebSocket';
+exports.group = 'Files and Data I/O';
 exports.color = '#97c5ff';
 exports.input = 2;
 exports.output = 1;

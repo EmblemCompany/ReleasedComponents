@@ -2,6 +2,7 @@ const Fs = require('fs');
 
 exports.id = 'filewriter';
 exports.title = 'File Writer';
+exports.group = 'Files and Data I/O';
 exports.color = '#656D78';
 exports.icon = 'file-text-o';
 exports.input = true;

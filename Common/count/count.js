@@ -1,6 +1,7 @@
 const ID = 'count';
 exports.id = 'count';
 exports.title = 'Count';
+exports.group = 'Logic';
 exports.version = '1.0.0';
 exports.author = 'John Graves';
 exports.color = '#656D78';

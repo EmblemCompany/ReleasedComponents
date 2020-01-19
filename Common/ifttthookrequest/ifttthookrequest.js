@@ -1,6 +1,6 @@
 exports.id = 'ifttthookrequest';
 exports.title = 'IFTTT hook request';
-exports.group = 'IFTTT';
+exports.group = 'Third-party Providers';
 exports.version = '1.0.0';
 exports.author = 'Martin Smola';
 exports.icon = 'exchange';

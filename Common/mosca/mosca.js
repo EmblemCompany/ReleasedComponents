@@ -1,6 +1,6 @@
 exports.id = 'mqttserver';
 exports.title = 'MQTT server(Mosca)';
-exports.group = 'MQTT';
+exports.group = 'Messaging';
 exports.color = '#888600';
 exports.version = '1.1.0';
 exports.icon = 'server';

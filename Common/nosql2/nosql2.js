@@ -1,7 +1,7 @@
 exports.id = 'nosql2';
 exports.title = 'NoSQL 2';
 exports.version = '1.0.0';
-exports.group = 'Databases';
+exports.group = 'Files and Data I/O';
 exports.author = 'Martin Smola';
 exports.color = '#D770AD';
 exports.icon = 'database';

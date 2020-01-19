@@ -1,6 +1,6 @@
 exports.id = 'xlstojson';
 exports.title = 'XLS to JSON';
-exports.group = 'Parsers';
+exports.group = 'Data Manipulation';
 exports.color = '#37BC9B';
 exports.input = true;
 exports.output = 1;

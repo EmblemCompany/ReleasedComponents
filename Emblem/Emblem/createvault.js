@@ -1,6 +1,6 @@
 exports.id = 'createvault';
 exports.title = 'Create Emblem Vault';
-exports.group = 'Emblem';
+exports.group = 'Emblem Services';
 exports.color = '#37BC9B';
 exports.input = true;
 exports.output = 1;

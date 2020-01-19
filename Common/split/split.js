@@ -1,6 +1,6 @@
 exports.id = 'split';
 exports.title = 'Split';
-exports.group = 'Common';
+exports.group = 'Logic';
 exports.version = '1.1.1';
 exports.color = '#656D78';
 exports.input = true;

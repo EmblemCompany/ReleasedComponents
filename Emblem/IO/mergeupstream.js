@@ -1,6 +1,6 @@
 exports.id ="mergeupstream";
 exports.title ="Merge Upstream";
-exports.group = "IO";
+exports.group = "Data Manipulation";
 exports.color ="#ffa824";
 exports.input =true;
 exports.output =1;

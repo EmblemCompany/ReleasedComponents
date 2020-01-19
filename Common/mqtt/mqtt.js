@@ -1,6 +1,6 @@
 exports.id = 'mqtt';
 exports.title = 'MQTT broker';
-exports.group = 'MQTT';
+exports.group = 'Messaging';
 exports.color = '#888600';
 exports.version = '1.0.1';
 exports.icon = 'exchange';

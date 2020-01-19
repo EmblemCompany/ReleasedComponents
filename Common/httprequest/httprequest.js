@@ -1,6 +1,6 @@
 exports.id = 'httprequest';
 exports.title = 'HTTP Request';
-exports.group = 'HTTP';
+exports.group = 'Files and Data I/O';
 exports.color = '#5D9CEC';
 exports.input = true;
 exports.version = '2.0.0';

@@ -1,6 +1,6 @@
 exports.id = 'modified';
 exports.title = 'Modified';
-exports.group = 'Common';
+exports.group = 'Logic';
 exports.color = '#656D78';
 exports.version = '1.0.0';
 exports.input = true;

@@ -1,6 +1,6 @@
 exports.id = 'csv2json';
 exports.title = 'CSV 2 JSON';
-exports.group = 'IO';
+exports.group = 'Data Manipulation';
 exports.color = '#656D78';
 exports.input = true;
 exports.output = 1;
