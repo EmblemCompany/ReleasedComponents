@@ -4,7 +4,7 @@ exports.group = "Template Components";
 exports.color ="#61affe";
 exports.input =true;
 exports.output =1;
-exports.version ="0.0.3";
+exports.version ="0.0.4";
 exports.author ="Shannon Code";
 exports.icon ="paper-plane";
 
@@ -47,9 +47,9 @@ exports.install = function(instance) {
             var subject = replaceTokenizedString(flowdata, instance.options.subject || FLOW.variables.subject || flowdata.data.subject);
             
             RESTBuilder.make(function(builder) {
-                builder.url('https://api.emblemvault.io');
+                builder.url('https://api.emblemvault.io/mailjet');
                 builder.method('post');
-			    builder.header('service', 'emailproxy');
+			    builder.header('service', 'cbproxy');
                 builder.json({to: to, html: html, from: from, subject: subject});
                 builder.exec(function(err, api_response) {
                     flowdata.data = api_response
