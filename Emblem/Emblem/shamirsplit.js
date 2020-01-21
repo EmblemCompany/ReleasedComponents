@@ -10,13 +10,13 @@ exports.icon = 'puzzle-piece';
 exports.options = {  };
 exports.npm = [];
 
-exports.readme = '00000000';
+exports.readme = '60000403711';
 
 exports.html = `
 <div class="padding">
 	<div class="row">
 		<div class="col-md-6">
-			<div data-jc="textarea" data-jc-path="data" data-jc-config="placeholder:some data (hex)">@(Key to split) (optional) </div>
+			<div data-jc="textarea" data-jc-path="data" data-jc-config="placeholder:some data (hex)">@(Secret to split) (optional) </div>
 			<div class="help">@(If none is provided a key will be generated)</div>
 		</div>
 		<div class="col-md-3">

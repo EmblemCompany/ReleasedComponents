@@ -10,7 +10,7 @@ exports.icon = 'puzzle-piece';
 exports.options = {  };
 exports.npm = [];
 
-exports.readme = '00000000';
+exports.readme = '60000403769';
 
 exports.html = `
 <div class="padding">
