@@ -61,6 +61,31 @@
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/randomstring.js",
                 "version": "0.0.4",
                 "display-name": "Emblem: Random String Generator"
+			},
+			{
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/mnemonicgenerate.js",
+                "version": "0.0.1",
+                "display-name": "Emblem: Generate Mnenomic Phrase"
+            },
+			{
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/mnemonicdecode.js",
+                "version": "0.0.1",
+                "display-name": "Emblem: Mnemonic Phrase Decode"
+			},
+			{
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/sha256.js",
+                "version": "0.0.1",
+                "display-name": "Emblem: SHA-256"
+			},
+			{
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/shamirsplit.js",
+                "version": "0.0.1",
+                "display-name": "Emblem: Shamir Secret Split"
+			},
+			{
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/shamirjoin.js",
+                "version": "0.0.1",
+                "display-name": "Emblem: Shamir Secret Join"
             }
 		]
 	},
