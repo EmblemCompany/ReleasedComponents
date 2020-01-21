@@ -16,8 +16,8 @@ exports.html = `
 <div class="padding">
 	<div class="row">
 		<div class="col-md-6">
-			<div data-jc="textarea" data-jc-path="data" data-jc-config="placeholder:some data (hex)">@(hex) </div>
-			<div class="help">@(Data to encode)</div>
+			<div data-jc="textarea" data-jc-path="data" data-jc-config="placeholder:some data ">@(Seed Data) (optional) </div>
+			<div class="help">Hex used to seed the random number generator.</div>
 		</div>
 	</div>
 </div>`;
@@ -27,11 +27,20 @@ exports.install = function(instance) {
 	
 
 	instance.on('data', function(flowdata) {
-		var mnemonic = new Mnemonic(replaceTokenizedString(flowdata, instance.options.data || flowdata.data));
+		var mnemonic;
+		if (!instance.options.split) {
+			mnemonic = new Mnemonic(replaceTokenizedString(flowdata, instance.options.data || flowdata.data));
+		} else {
+			mnemonic = new Mnemonic();
+		}
 		var phrase = mnemonic.Generate();
+		var shares;
+		if (instance.options.split) {
+			shares = mnemonic.Split();
+		}
 		var seedHex = mnemonic.ToSeedHex(phrase);
 		var entropy = mnemonic.ToEntropy(phrase)
-		flowdata.data = {phrase: phrase, seedHex: seedHex, entropy: entropy};	
+		flowdata.data = {phrase: phrase, seedHex: seedHex, entropy: entropy, shares: shares};
 		if (instance.options.downstream) {
 			flowdata.set(instance.name, flowdata.data);
 		}
