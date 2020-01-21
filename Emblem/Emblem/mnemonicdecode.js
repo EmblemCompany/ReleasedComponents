@@ -6,11 +6,11 @@ exports.input = true;
 exports.output = 1;
 exports.version = '0.0.1';
 exports.author = 'Shannon Code';
-exports.icon = 'comment-dots';
+exports.icon = 'unlock-alt';
 exports.options = {  };
 exports.npm = [];
 
-exports.readme = '00000000';
+exports.readme = '60000402403';
 
 exports.html = `
 <div class="padding">
