@@ -6,18 +6,18 @@ exports.input = true;
 exports.output = 1;
 exports.version = '0.0.1';
 exports.author = 'Shannon Code';
-exports.icon = 'comment-dots';
+exports.icon = 'key';
 exports.options = {  };
 exports.npm = [];
 
-exports.readme = '00000000';
+exports.readme = '60000401696';
 
 exports.html = `
 <div class="padding">
 	<div class="row">
 		<div class="col-md-6">
-			<div data-jc="textarea" data-jc-path="data" data-jc-config="placeholder:some data ">@(Seed Data) (optional) </div>
-			<div class="help">Hex used to seed the random number generator.</div>
+			<div data-jc="textarea" data-jc-path="data" data-jc-config="placeholder:some data (hex)">@(Hex String) </div>
+			<div class="help">@(This is the 32-bit or 64-bit hex data to encode)</div>
 		</div>
 	</div>
 </div>`;
