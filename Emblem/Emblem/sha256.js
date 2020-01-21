@@ -10,13 +10,13 @@ exports.icon = 'code-branch';
 exports.options = {  };
 exports.npm = [];
 
-exports.readme = '0000000000';
+exports.readme = '60000403470';
 
 exports.html = `
 <div class="padding">
     <div class="row">
         <div class="col-md-6">
-            <div data-jc="textarea" data-jc-path="data" data-jc-config="placeholder:some data">@(data) </div>
+            <div data-jc="textarea" data-jc-path="data" data-jc-config="placeholder:some data">@(Data) </div>
             <div class="help">@(Data to hash)</div>
         </div>
     </div>
