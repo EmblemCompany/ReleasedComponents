@@ -28,10 +28,25 @@ exports.html = `
             </div>
         </div>
     </div>
+    <div class="padding bg-smoke">
+        <section>
+            <label><i class="fa fa-lock"></i>@(ClickSend authentication)</label>
+            <div class="padding npb">
+                <div class="row">
+                    <div class="col-md-6 m">
+                        <div data-jc="textbox" data-jc-path="username">@(Username)</div>
+                    </div>
+                    <div class="col-md-6 m">
+                        <div data-jc="textbox" data-jc-path="password">@(Password)</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 `;
 
 var request = {
-    "auth-removed": {
+    "auth": {
         "type": "basic",
         "basic": [
             {
@@ -51,9 +66,6 @@ var request = {
         {
             "key": "Content-Type",
             "value": "application/json"
-        }, {
-            "key": "Authorization",
-            "value": "Basic aGVsbG9AdW5zcGVjaWZpZWQubWU6VU5zcDNjaWZpM2QxNyE="
         }
     ],
     "body": [
