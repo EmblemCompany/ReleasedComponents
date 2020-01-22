@@ -4,7 +4,7 @@ exports.group ="Messaging";
 exports.color ="#49cc90";
 exports.input =true;
 exports.output =1;
-exports.version ="0.0.4";
+exports.version ="0.0.5";
 exports.author ="Shannon Code";
 exports.icon ="sms";
 
