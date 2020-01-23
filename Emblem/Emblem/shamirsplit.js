@@ -4,7 +4,7 @@ exports.group = 'Emblem Services';
 exports.color = '#37BC9B';
 exports.input = true;
 exports.output = 1;
-exports.version = '0.0.1';
+exports.version = '0.0.2';
 exports.author = 'Shannon Code';
 exports.icon = 'puzzle-piece';
 exports.options = {  };
@@ -25,7 +25,7 @@ exports.html = `
 		</div>
 		<div class="col-md-3">
 			<div data-jc="textbox" data-jc-path="threshold" data-jc-config="increment:true;type:number;align:center;minimum:2">@(Shares required to recover) </div>
-			<div class="help">@(Hoe many pieces are required to recreate the key)</div>
+			<div class="help">@(How many pieces are required to recreate the key)</div>
 		</div>
 	</div>
 </div>`;
