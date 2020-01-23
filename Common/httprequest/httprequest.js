@@ -3,7 +3,7 @@ exports.title = 'HTTP Request';
 exports.group = 'Files and Data I/O';
 exports.color = '#5D9CEC';
 exports.input = true;
-exports.version = '2.0.0';
+exports.version = '2.0.1';
 exports.output = 1;
 exports.author = 'Peter Širka';
 exports.icon = 'cloud-upload';
@@ -11,7 +11,7 @@ exports.icon = 'cloud-upload';
 exports.readme = '60000315832';
 
 exports.html = `<div class="padding">
-	<div data-jc="textbox" data-jc-path="url" class="m" data-jc-config="required:true;maxlength:500;placeholder:@(E.g. https\\://www.totaljs.com)">@(URL address)</div>
+	<div data-jc="textbox" data-jc-path="url" class="m" data-jc-config="required:true;maxlength:500;placeholder:@(E.g. https\\://api.emblemvault.io)">@(URL address)</div>
 	<div class="row">
 		<div class="col-md-6 m">
 			<div data-jc="dropdown" data-jc-path="method" data-jc-config="required:true;items:,GET,POST,PUT,DELETE">@(HTTP method)</div>
