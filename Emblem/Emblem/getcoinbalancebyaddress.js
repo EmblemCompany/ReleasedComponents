@@ -4,7 +4,7 @@ exports.group ="Emblem Services";
 exports.color ="#61affe";
 exports.input =true;
 exports.output =1;
-exports.version ="0.0.6";
+exports.version ="0.0.2";
 exports.author ="Shannon Code";
 exports.icon ="coins";
 exports.options ={
@@ -36,116 +36,22 @@ exports.html = `<div class="padding">
 </div>
 `;
 
-var request = {
-    "method": "GET",
-    "header": [],
-    "url": {
-        "raw": "{{host}}:{{port}}/:coin/:address/balance?asset=xcp",
-        "host": [
-            "{{host}}"
-        ],
-        "port": "{{port}}",
-        "path": [
-            ":coin",
-            ":address",
-            "balance"
-        ],
-        "query": [
-            {
-                "key": "asset",
-                "value": "xcp"
-            }
-        ],
-        "variable": [
-            {
-                "key": "coin",
-                "value": "xcp"
-            },
-            {
-                "key": "address",
-                "value": "19cCGRb5XLuuzoRvDLyRm888G8ank5WFyM"
-            }
-        ]
-    }
-};
 exports.install =function(instance) {
 
-	instance.on('data', function(response) {
-        theRequest = request
+	instance.on('data', function(flowdata) {
         RESTBuilder.make(function(builder) {
-			var url = generateUrl(theRequest)
+            var url = 'https://api.emblemvault.io/'+replaceTokenizedString(flowdata, flowdata.data.coin || instance.options.coin)+'/'+replaceTokenizedString(flowdata, flowdata.data.address || instance.options.address)+'/balance?asset='+ replaceTokenizedString(flowdata, flowdata.data.assert || instance.options.asset)
             builder.url(url);
-            if (instance.options.service || response.data.service || FLOW.variables.service ) {
-                builder.header('service', instance.options.service || response.data.service || FLOW.variables.service)
-            }
-            if (theRequest.header) {
-                theRequest.header.forEach(header=>{
-                    builder.header(header.key, header.value)
-                })                
-            }
-            if (theRequest.auth) {
-                if (instance.options['username']) {
-                    if (instance.options['username'].includes('msg.')) {
-                        instance.options['username'] = response.data[instance.options["username"].replace('msg.', '')]
-                    }
-                } 
-                if (instance.options['password']) {
-                    if (instance.options['password'].includes('msg.')) {
-                        instance.options['password'] = response.data[instance.options["password"].replace('msg.', '')]
-                    }
-                }
-                builder.auth(instance.options['username'] || response.data.username || FLOW.variables.username, instance.options['password'] || response.data.password || FLOW.variables.password)
-            }
-            var body = {}
-            if (theRequest.body) {
-                var body = {}
-                if (theRequest.body.mode) {
-                    theRequest.body = theRequest.body[theRequest.body.mode]
-                }
-                theRequest.body.forEach(item=>{
-                    if (instance.options[item.key] || response.data[item.key] || FLOW.variables[item.key]) {
-                        if (instance.options[item.key].includes('${')) {
-                            var pieces = instance.options[item.key].split('$')
-                            var replacedPieces = []
-                            pieces.forEach((piece, index)=>{
-                                if (piece.includes('{') && piece.includes('}')) {
-                                    var editedPiece = piece.replace('{', 'response.data.')
-                                    editedPiece = editedPiece.replace('}', '')
-                                    var replacement = eval(editedPiece.trim())				                    
-                                    replacedPieces.push(replacement)
-                                } else {
-                                    replacedPieces.push(piece)
-                                }
-                                if (pieces.length === index) {
-                                    instance.options[item.key] = replacedPieces.join('')
-                                }
-                            })
-                            instance.options[item.key] = replacedPieces.join('')
-                        }
-                        if (instance.options[item.key].includes('msg.')) {
-                            instance.options[item.key] = response.data[instance.options[item.key].replace('msg.', '')]
-                        }                        
-                        try {
-                            body[item.key] = JSON.parse(instance.options[item.key] || response.data[item.key] || FLOW.variables[item.key])
-                        } catch(err){
-                            body[item.key] = instance.options[item.key] || response.data[item.key] || FLOW.variables[item.key]
-                        }                        
-                    } else {
-                        body[item.key] = item.value
-                    }
-                    
-                })
-                builder.json(body);      
-            }
-            builder.method(theRequest.method.toLowerCase() || 'get')
+            builder.header('service', 'dexray2')
+            builder.method('get')
             builder.exec(function(err, api_response) {
-                response.data = api_response;
-                if (instance.options.downstream) {
-                    response.set(instance.name, response.data);
+				flowdata.data = {response: api_response}
+				if (instance.options.downstream) {
+                    flowdata.set(instance.name, flowdata.data);
                 }
-                instance.send(response);
+				instance.send(flowdata)
 			});
-		});
+        });
 	});
 
 	instance.custom.send = function(message) {
@@ -159,44 +65,15 @@ exports.install =function(instance) {
 	instance.on('options', instance.reconfigure);
     instance.reconfigure();
     
-    function generateUrl(request) {
-        var url;
-        if (request.url.protocol) {
-            url = request.url.protocol + '://'
-        } else {
-            url = 'http://'
-        }
-        if (request.url.host) {
-            var host = request.url.host.join('.')
-            if (host.includes('{{host}}')) {
-                host = host.replace('{{host}}', instance.options.host || response.data.host || FLOW.variables.host)
-            }
-            url = url + host
-        }        
-        if (request.url.path) {
-            url = url +  '/' + request.url.path.join('/')
-        }
-        if (request.url.query) {
-            url = url + '?'
-            request.url.query.forEach(kvp => {
-                if (instance.options[kvp.key] || response.data[kvp.key]) {
-                    if (instance.options[kvp.key].includes('msg.')) {
-                        instance.options[kvp.key] = response.data[instance.options[kvp.key].replace('msg.', '')]
-                    }
-                    url = url + kvp.key + '=' + instance.options[kvp.key] || response.data[kvp.key] || FLOW.variables[kvp.key] + '&'
-                }
+    function replaceTokenizedString(response, myString) {
+        var tokenRegex = /[^{\}]+(?=})/g
+        var replaceArray = myString.match(tokenRegex);
+        if (replaceArray) {
+            replaceArray.forEach(item=>{
+                    objectPath = item.replace('msg.', 'response.data.');
+                    myString = myString.replace('{' + item + '}', eval(objectPath));
             })
         }
-        if (request.url.variable) {
-            request.url.variable.forEach(kvp => {
-                if (instance.options[kvp.key] || response.data[kvp.key] || FLOW.variables[kvp.key]) {
-                    if (instance.options[kvp.key].includes('msg.')) {
-                        instance.options[kvp.key] = response.data[instance.options[kvp.key].replace('msg.', '')]
-                    }
-                    url = url.replace(':'+kvp.key, instance.options[kvp.key] || response.data[kvp.key] || FLOW.variables[kvp.key])
-                }
-            })
-        }
-        return url
-    }
+        return myString;
+    }    
 };

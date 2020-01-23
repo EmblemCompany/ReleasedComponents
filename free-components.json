@@ -44,7 +44,7 @@
 			},
 			{
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/getcoinbalancebyaddress.js",
-                "version": "0.0.6",
+                "version": "0.0.2",
                 "display-name": "Emblem: Get Coin Balance by Address"
             },
             {
@@ -314,7 +314,7 @@
             },
             {
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Templates/Components/sms_getcoinbalancebyaddress.js",
-                "version": "0.0.1",
+                "version": "0.0.2",
                 "display-name": "SMS Template Get Coin Balance by Address"
             },
             {
