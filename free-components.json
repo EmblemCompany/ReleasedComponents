@@ -319,7 +319,7 @@
             },
             {
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Templates/Components/sms_sendsms.js",
-                "version": "0.0.1",
+                "version": "0.0.2",
                 "display-name": "SMS Template Send SMS"
 			},
 			{
@@ -354,7 +354,7 @@
 			},
 			{
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Templates/Components/btc_alert_sendsms.js",
-                "version": "0.0.1",
+                "version": "0.0.2",
                 "display-name": "BTC Alert Template Send SMS"
 			},
 			{
