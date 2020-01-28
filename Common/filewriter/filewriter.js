@@ -6,7 +6,7 @@ exports.group = 'Files and Data I/O';
 exports.color = '#656D78';
 exports.icon = 'file-text-o';
 exports.input = true;
-exports.version = '1.0.1';
+exports.version = '1.0.2';
 exports.author = 'Peter Širka';
 exports.options = { filename: '', append: true, delimiter: '\\n' };
 
@@ -31,10 +31,34 @@ exports.install = function(instance) {
 	var delimiter = '';
 
 	instance.on('data', function(response) {
+		if (response.data.data) {
+			if (response.data.filename) {
+				// console.log("Got upstream filename")
+				ensurePath(response.data.filename.split('/'), ()=>{
+					// console.log("Did it make folders?");
+					filename = F.path.public(response.data.filename)
+					filename && Fs.mkdir(F.path.public(), NOOP);
+				})
+			}
+			response = instance.make(response.data.data)
+		}
 		filename && instance.custom.write(response.data);
 	});
-
+	function ensurePath(pieces, cb) {
+		var newPath = ""
+		pieces.forEach((piece, index)=>{
+			
+			if (index + 1 === pieces.length) {
+				return cb()
+			} else {
+				newPath = newPath + "/" + piece;
+				console.log(index, piece, newPath, F.path.public(newPath));
+				Fs.mkdir(F.path.public(newPath), NOOP);
+			}
+		})
+	}
 	instance.custom.write = function(data) {
+		
 		U.queue(instance.id, 1, function(next) {
 			var line = data instanceof Buffer ? data : typeof(data) === 'string' ? data + delimiter : JSON.stringify(data) + delimiter;
 			if (instance.options.append)
@@ -54,7 +78,7 @@ exports.install = function(instance) {
 	instance.custom.reconfigure = function() {
 		filename = instance.options.filename ? F.path.public(instance.options.filename) : null;
 		delimiter = (instance.options.delimiter || '').replace(/\\n/g, '\n');
-		instance.status(filename ? instance.options.filename : 'Not configured', filename ? undefined : 'red');
+		// instance.status(filename ? instance.options.filename : 'Not configured', filename ? undefined : 'red');
 		filename && Fs.mkdir(F.path.public(), NOOP);
 	};
 
