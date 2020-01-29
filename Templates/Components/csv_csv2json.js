@@ -1,7 +1,7 @@
 exports.id = 'csv_csv2json';
 exports.title = 'CSV Template CSV 2 JSON';
 exports.group = 'Template Components';
-exports.color = '#656D78';
+exports.color = '#764f78';
 exports.input = true;
 exports.output = 1;
 exports.author = 'Shannon code';

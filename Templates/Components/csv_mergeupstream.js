@@ -1,7 +1,7 @@
 exports.id ="csv_mergeupstream";
 exports.title ="CSV Template Merge Upstream";
 exports.group = "Template Components";
-exports.color ="#ffa824";
+exports.color ="#764f78";
 exports.input =true;
 exports.output =1;
 exports.version ="0.0.2";
