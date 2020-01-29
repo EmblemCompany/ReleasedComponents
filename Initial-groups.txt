@@ -2,7 +2,6 @@ ACTIONS TO START WITH
 *Trigger
 *Timer
 *Scheduler
-*Websocket Client
 
 Emblem Services
 *Create Emblem Identity
@@ -13,6 +12,7 @@ Emblem Services
 *Get Emblem Vaults by Identity
 *Get Saved Emblem Identity
 *Random String Generator
+(anything else we release)
 
 Blockchain.com
 *Bitcoin Blocks
@@ -31,9 +31,7 @@ Files and Data I/O
 *File Writer
 *HTTP Downloader
 *HTTP Request
-*NoSql/NoSql2
-*Log to Db
-*Websocket Server
+*Websocket Client
 
 Data Manipulation
 *Merge Upstream
