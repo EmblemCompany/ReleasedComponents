@@ -21,7 +21,7 @@ exports.html = `<div class="padding">
     </div>
     <div class="row">
         <div class="col-md-3">
-            <div data-jc="textbox" data-jc-path="baseSymbol" data-jc-config="placeholder:xlm;required:false">@(Base Symbol) </div>
+            <div data-jc="textbox" data-jc-path="baseSymbol" data-jc-config="placeholder:eth;required:false">@(Base Symbol) </div>
         </div>
         <div class="col-md-3">
             <div data-jc="textbox" data-jc-path="quoteSymbol" data-jc-config="placeholder:btc;required:false">@(Quote Symbol) </div>
