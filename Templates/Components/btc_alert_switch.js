@@ -1,7 +1,7 @@
 exports.id = 'btc_alert_switch';
 exports.title = 'BTC Alert Template Switch';
 exports.group = 'Template Components';
-exports.color = '#ffa824';
+exports.color = '#4e895d';
 exports.version = '1.1.1';
 exports.icon = 'code-fork';
 exports.input = true;

@@ -1,7 +1,7 @@
 exports.id ="transformobject";
 exports.title ="Transform Object";
 exports.group = "Data Manipulation";
-exports.color ="#37BC9B";
+exports.color ="#764f78";
 exports.input =true;
 exports.output =1;
 exports.version ="0.0.1";

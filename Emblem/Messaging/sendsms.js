@@ -1,7 +1,7 @@
 exports.id ="sendsms";
 exports.title ="Send SMS";
 exports.group ="Messaging";
-exports.color ="#49cc90";
+exports.color ="#00CED1";
 exports.input =true;
 exports.output =1;
 exports.version ="0.0.5";

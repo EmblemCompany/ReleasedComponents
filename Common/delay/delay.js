@@ -1,6 +1,6 @@
 exports.id = 'delay';
 exports.title = 'Delay';
-exports.color = '#656D78';
+exports.color = '#4e895d';
 exports.icon = 'clock-o';
 exports.group = 'Logic';
 exports.input = true;

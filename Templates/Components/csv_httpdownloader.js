@@ -1,7 +1,7 @@
 exports.id = 'csv_httpdownloader';
 exports.title = 'CSV Template HTTP Downloader';
 exports.group = 'Template Components';
-exports.color = '#5D9CEC';
+exports.color = '#ffa500';
 exports.icon = 'cloud-download';
 exports.input = true;
 exports.output = 1;

@@ -1,7 +1,7 @@
 exports.id = 'modified';
 exports.title = 'Modified';
 exports.group = 'Logic';
-exports.color = '#656D78';
+exports.color = '#4e895d';
 exports.version = '1.0.0';
 exports.input = true;
 exports.output = 1;

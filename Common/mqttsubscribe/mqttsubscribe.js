@@ -1,7 +1,7 @@
 exports.id = 'mqttsubscribe';
 exports.title = 'MQTT subscribe';
 exports.group = 'Messaging';
-exports.color = '#888600';
+exports.color = '#00CED1';
 exports.version = '1.1.0';
 exports.icon = 'sign-in';
 exports.output = 1;

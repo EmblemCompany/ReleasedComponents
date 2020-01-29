@@ -1,7 +1,7 @@
 exports.id ="mergeupstream";
 exports.title ="Merge Upstream";
 exports.group = "Data Manipulation";
-exports.color ="#ffa824";
+exports.color ="#764f78";
 exports.input =true;
 exports.output =1;
 exports.version ="0.0.2";

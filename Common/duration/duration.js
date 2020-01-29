@@ -1,7 +1,7 @@
 exports.id = 'duration';
 exports.title = 'Duration';
 exports.group = 'Logic';
-exports.color = '#656D78';
+exports.color = '#4e895d';
 exports.output = 1;
 exports.input = 2;
 exports.cloning = false;

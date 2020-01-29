@@ -1,7 +1,7 @@
 exports.id ="email_vault_sendemail";
 exports.title ="Email Vault Template Send Email";
 exports.group = "Template Components";
-exports.color ="#61affe";
+exports.color ="#00CED1";
 exports.input =true;
 exports.output =1;
 exports.version ="0.0.4";

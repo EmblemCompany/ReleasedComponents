@@ -1,7 +1,7 @@
 exports.id = 'mqtt';
 exports.title = 'MQTT Server';
 exports.group = 'Messaging';
-exports.color = '#888600';
+exports.color = '#00CED1';
 exports.version = '1.0.1';
 exports.icon = 'exchange';
 exports.input = false;

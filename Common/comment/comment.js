@@ -1,7 +1,7 @@
 exports.id = 'comment';
 exports.title = 'Comment';
 exports.group = 'Develop and Debug';
-exports.color = '#704cff';
+exports.color = '#791d12';
 exports.author = 'Martin Smola';
 exports.icon = 'comment';
 exports.traffic = false;

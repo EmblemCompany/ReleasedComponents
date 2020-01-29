@@ -1,7 +1,7 @@
 exports.id = 'email_vault_trigger';
 exports.title = 'Email Vault Template Trigger';
 exports.group = 'Template Components';
-exports.color = '#F6BB42';
+exports.color = '#10bd27';
 exports.click = true;
 exports.output =  1;
 exports.version = '0.0.1';
