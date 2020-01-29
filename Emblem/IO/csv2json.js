@@ -1,7 +1,7 @@
 exports.id = 'csv2json';
 exports.title = 'CSV 2 JSON';
 exports.group = 'Data Manipulation';
-exports.color = '#656D78';
+exports.color = '#764f78';
 exports.input = true;
 exports.output = 1;
 exports.author = 'Shannon code';

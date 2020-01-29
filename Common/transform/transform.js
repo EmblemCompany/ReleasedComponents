@@ -1,7 +1,7 @@
 exports.id = 'transform';
 exports.title = 'Data Transform';
 exports.group = 'Data Manipulation';
-exports.color = '#37BC9B';
+exports.color = '#764f78';
 exports.version = '1.0.0';
 exports.input = true;
 exports.output = 1;
