@@ -1,7 +1,7 @@
 exports.id = 'httpdownloader';
 exports.title = 'HTTP Downloader';
 exports.group = 'Files and Data I/O';
-exports.color = '#fcdc79';
+exports.color = '#ffa500';
 exports.icon = 'cloud-download';
 exports.input = true;
 exports.output = 1;
