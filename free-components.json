@@ -75,7 +75,7 @@
 			{
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/sha256.js",
                 "version": "0.0.1",
-                "display-name": "Emblem: SHA-256"
+                "display-name": "Emblem: SHA-256 Hash"
 			},
 			{
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/shamirsplit.js",

@@ -1,5 +1,5 @@
 exports.id = 'sha256';
-exports.title = 'SHA-256';
+exports.title = 'SHA-256 Hash';
 exports.group = 'Emblem Services';
 exports.color = '#172F55';
 exports.input = true;
