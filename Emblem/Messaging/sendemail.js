@@ -1,7 +1,7 @@
 exports.id ="sendemail";
 exports.title ="Send Email";
 exports.group = "Messaging";
-exports.color ="#61affe";
+exports.color ="#b8375d";
 exports.input =true;
 exports.output =1;
 exports.version ="0.0.3";
