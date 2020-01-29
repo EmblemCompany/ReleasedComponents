@@ -1,7 +1,7 @@
 exports.id = 'getemblemvaultsbyidentity';
 exports.title = 'Get Emblem Vaults by Identity';
 exports.group = 'Emblem Services';
-exports.color = '#9FA6B1';
+exports.color = '#61affe';
 exports.input = true;
 exports.output = 1;
 exports.version = '0.0.2';
