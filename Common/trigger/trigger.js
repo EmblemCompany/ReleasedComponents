@@ -1,10 +1,10 @@
 exports.id = 'trigger';
 exports.title = 'Trigger';
 exports.group = 'ACTIONS TO START WITH';
-exports.color = '#F6BB42';
+exports.color = '#00FF00';
 exports.click = true;
 exports.output =  1;
-exports.version = '1.1.0';
+exports.version = '1.1.1';
 exports.author = 'Martin Smola';
 exports.icon = 'play';
 

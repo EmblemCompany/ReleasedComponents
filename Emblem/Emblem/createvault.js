@@ -1,10 +1,10 @@
 exports.id = 'createvault';
 exports.title = 'Create Emblem Vault';
 exports.group = 'Emblem Services';
-exports.color = '#37BC9B';
+exports.color = '#9FA6B1';
 exports.input = true;
 exports.output = 1;
-exports.version = '0.0.10';
+exports.version = '0.0.11';
 exports.author = 'Shannon Code';
 exports.icon = 'piggy-bank';
 exports.options = {  };

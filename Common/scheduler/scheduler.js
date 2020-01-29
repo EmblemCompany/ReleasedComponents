@@ -1,8 +1,8 @@
 exports.id = 'scheduler';
 exports.title = 'Scheduler';
 exports.group = 'ACTIONS TO START WITH';
-exports.version = '1.0.0';
-exports.color = '#F6BB42';
+exports.version = '1.0.1';
+exports.color = '#00FF00';
 exports.output = 1;
 exports.click = true;
 exports.author = 'Peter Širka';

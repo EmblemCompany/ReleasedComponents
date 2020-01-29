@@ -1,10 +1,10 @@
 exports.id = 'sha256';
 exports.title = 'SHA-256 Hash';
 exports.group = 'Emblem Services';
-exports.color = '#172F55';
+exports.color = '#9FA6B1';
 exports.input = true;
 exports.output = 1;
-exports.version = '0.0.1';
+exports.version = '0.0.2';
 exports.author = 'Shannon Code';
 exports.icon = 'code-branch';
 exports.options = {  };

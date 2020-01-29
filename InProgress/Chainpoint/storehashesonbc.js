@@ -33,7 +33,16 @@ exports.install = function(instance) {
 	
 	async function runIt(flowdata) {
 		if (instance.options.hashes || flowdata.data) {
-			let proofhandles = await chp.submitHashes(instance.options.hashes || flowdata.data);
+			let incomingData = (instance.options.hashes || flowdata.data);
+			if (!Array.isArray(incomingData)) {
+				var result = [];
+				var keys = Object.keys(incomingData);
+				keys.forEach(function(key){
+					result.push(incomingData[key]);
+				});
+				incomingData = result;
+			}
+			let proofhandles = await chp.submitHashes(incomingData);
 			instance.status("Hashes sent! Waiting for 15 seconds to receive response");
             await new Promise(resolve => setTimeout(resolve, 15000));
             let proofs = await chp.getProofs(proofhandles);

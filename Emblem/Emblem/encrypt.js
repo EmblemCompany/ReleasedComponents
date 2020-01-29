@@ -1,10 +1,10 @@
 exports.id = 'encrypt';
 exports.title = 'Encrypt String';
 exports.group = 'Emblem Services';
-exports.color = '#37BC9B';
+exports.color = '#9FA6B1';
 exports.input = true;
 exports.output = 1;
-exports.version = '0.0.3';
+exports.version = '0.0.4';
 exports.author = 'Shannon Code';
 exports.icon = 'lock';
 exports.options = {  };

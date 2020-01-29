@@ -1,10 +1,10 @@
 exports.id = 'mnemonicgenerate';
 exports.title = 'Generate Mnemonic Phrase';
 exports.group = 'Emblem Services';
-exports.color = '#F784AC';
+exports.color = '#9FA6B1';
 exports.input = true;
 exports.output = 1;
-exports.version = '0.0.1';
+exports.version = '0.0.2';
 exports.author = 'Shannon Code';
 exports.icon = 'key';
 exports.options = {  };

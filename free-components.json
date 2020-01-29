@@ -4,17 +4,17 @@
 		"items": [
 			{
 				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/trigger/trigger.js",
-				"version": "1.1.0",
+				"version": "1.1.1",
                 "display-name": "Trigger"
 			},
 			{
 				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/timer/timer.js",
-				"version": "1.0.0",
+				"version": "1.0.1",
                 "display-name": "Timer"
 			},
 			{
 				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/scheduler/scheduler.js",
-				"version": "1.0.0",
+				"version": "1.0.1",
                 "display-name": "Scheduler"
 			}
 		]
@@ -24,17 +24,17 @@
 		"items": [
 			{
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/createemblemidentity.js",
-                "version": "0.0.9",
+                "version": "0.0.10",
                 "display-name": "Emblem: Create Emblem Identity"
 			},
 			{
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/createvault.js",
-                "version": "0.0.10",
+                "version": "0.0.11",
                 "display-name": "Emblem: Create Emblem Vault"
 			},
 			{
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/decrypt.js",
-                "version": "0.0.3",
+                "version": "0.0.4",
                 "display-name": "Emblem: Decrypt String"
 			},
 			{
@@ -44,7 +44,7 @@
 			},
 			{
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/getcoinbalancebyaddress.js",
-                "version": "0.0.2",
+                "version": "0.0.3",
                 "display-name": "Emblem: Get Coin Balance by Address"
             },
             {
@@ -54,37 +54,37 @@
             },
             {
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/getsavedemblemidentity.js",
-                "version": "0.0.1",
+                "version": "0.0.2",
                 "display-name": "Emblem: Get Saved Emblem Identity"
             },
             {
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/randomstring.js",
-                "version": "0.0.4",
+                "version": "0.0.5",
                 "display-name": "Emblem: Random String Generator"
 			},
 			{
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/mnemonicgenerate.js",
-                "version": "0.0.1",
+                "version": "0.0.2",
                 "display-name": "Emblem: Generate Mnenomic Phrase"
             },
 			{
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/mnemonicdecode.js",
-                "version": "0.0.1",
+                "version": "0.0.2",
                 "display-name": "Emblem: Mnemonic Phrase Decode"
 			},
 			{
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/sha256.js",
-                "version": "0.0.1",
+                "version": "0.0.2",
                 "display-name": "Emblem: SHA-256 Hash"
 			},
 			{
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/shamirsplit.js",
-                "version": "0.0.2",
+                "version": "0.0.3",
                 "display-name": "Emblem: Shamir Secret Split"
 			},
 			{
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/shamirjoin.js",
-                "version": "0.0.1",
+                "version": "0.0.2",
                 "display-name": "Emblem: Shamir Secret Join"
             }
 		]

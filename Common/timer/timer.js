@@ -1,8 +1,8 @@
 exports.id = 'timer';
 exports.title = 'Timer';
-exports.version = '1.0.0';
+exports.version = '1.0.1';
 exports.group = 'ACTIONS TO START WITH';
-exports.color = '#F6BB42';
+exports.color = '#00FF00';
 exports.output = 1;
 exports.click = true;
 exports.author = 'Peter Širka';

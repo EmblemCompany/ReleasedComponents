@@ -1,10 +1,10 @@
 exports.id = 'getsavedemblemidentity';
 exports.title = 'Get Saved Emblem Identity';
 exports.group = 'Emblem Services';
-exports.color = '#37BC9B';
+exports.color = '#9FA6B1';
 exports.input = true;
 exports.output = 1;
-exports.version = '0.0.1';
+exports.version = '0.0.2';
 exports.author = 'Shannon Code';
 exports.icon = 'fingerprint';
 exports.options = {  };
