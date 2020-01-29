@@ -1,7 +1,7 @@
 exports.id = 'filereader';
 exports.title = 'File Reader';
 exports.group = 'Files and Data I/O';
-exports.color = '#e4cb79';
+exports.color = '#ffc61a';
 exports.icon = 'file-text-o';
 exports.input = 1;
 exports.output = 1;
