@@ -1,7 +1,7 @@
 exports.id = 'trigger';
 exports.title = 'Trigger';
 exports.group = 'ACTIONS TO START WITH';
-exports.color = '#008000';
+exports.color = '#00b300';
 exports.click = true;
 exports.output =  1;
 exports.version = '1.1.1';
