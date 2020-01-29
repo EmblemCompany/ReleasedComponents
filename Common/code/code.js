@@ -1,7 +1,7 @@
 exports.id = 'code';
 exports.title = 'Code';
 exports.group = 'Develop and Debug';
-exports.color = '#656D78';
+exports.color = '#791d12';
 exports.input = true;
 exports.output = 1;
 exports.author = 'Peter Širka';
