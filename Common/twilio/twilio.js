@@ -1,7 +1,7 @@
 exports.id = 'twilio';
 exports.title = 'Twilio';
 exports.group = 'Messaging';
-exports.color = '#b8375d';
+exports.color = '#00CED1';
 exports.input = true;
 exports.version = '1.0.0';
 exports.author = 'Gyula Décsi';
