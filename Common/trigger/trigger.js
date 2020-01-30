@@ -21,7 +21,7 @@ exports.install = function(instance) {
 
 	var value;
 
-	instance.on('click', () => value && instance.send2(value));
+	instance.on('click', () => instance.send2(value));
 
 	instance.reconfigure = function() {
 		var options = instance.options;
