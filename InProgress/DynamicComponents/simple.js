@@ -1,4 +1,4 @@
-// #### https://wiki.totaljs.com/jcomponent/03-globals/#method-ajax-
+// #### https://github.com/shrimpy-dev/shrimpy-node
 exports.id = 'simple';
 exports.title = 'Simple';
 exports.group = 'Simple';
@@ -16,6 +16,9 @@ exports.html = `<div class="padding">
     <div class="row">
         <div class="col-md-6">
             <div class="simpleComponent" data-jc="dropdown" data-jc-path="foo" data-jc-config="datasource:bar;required:true" class="m">@(Select an Exchange)</div>
+        </div>
+        <div class="col-md-6">
+            <button class="exec button cond-remove" data-exec="serverside" data-index="$index"><i class="fa fa-server"></i></button>
         </div>
     </div>
 </div>
@@ -36,7 +39,10 @@ exports.html = `<div class="padding">
                 });
             })
             .catch(error => console.log('error', error));
-    })
+    });
+    function serverside(){
+        TRIGGER('name', 'bar');
+    }
 </script>
 `;
 
@@ -49,3 +55,14 @@ exports.install = function(instance) {
             instance.send(response);
     });
 };
+
+FLOW.trigger('name', function(next, data) {    
+
+    // Data sent from client-side
+    console.log(data);
+
+    // Sends back some data
+    next([1, 2, 3, 4]);
+    
+});
+
