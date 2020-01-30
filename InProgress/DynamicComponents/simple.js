@@ -1,4 +1,4 @@
-// #### https://github.com/shrimpy-dev/shrimpy-node
+// #### https://wiki.totaljs.com/jcomponent/03-globals/#method-ajax-
 exports.id = 'simple';
 exports.title = 'Simple';
 exports.group = 'Simple';
