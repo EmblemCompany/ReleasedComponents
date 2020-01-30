@@ -51,7 +51,7 @@ exports.install = function(instance) {
 			if (instance.options.downstream) {
 				flowdata.set(instance.name, flowdata.data);
 			};
-			instance.send(flowdata)
+			instance.send(flowdata);
 		} else {
 			instance.send({error:"No hashes found! Please enter some in the fields or send some in from an upstream component."});
 		};
