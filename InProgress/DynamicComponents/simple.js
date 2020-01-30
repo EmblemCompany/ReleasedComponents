@@ -18,7 +18,27 @@ exports.html = `<div class="padding">
             <div class="simpleComponent" data-jc="dropdown" data-jc-path="foo" data-jc-config="datasource:bar;required:true" class="m">@(Select an Exchange)</div>
         </div>
     </div>
-</div>`;
+</div>
+<script>
+    var bar = [];
+    ON('open.simple', function(component, options) {
+        var requestOptions = {
+            method: 'GET',
+            redirect: 'follow'
+        };
+        
+        fetch("https://shapeshift.io/onlinecoins", requestOptions)
+            .then(response => response.text())
+            .then(result => {
+                bar = JSON.parse(result);
+                FIND('dropdown', function(component) {
+                    component.bind('', bar);
+                });
+            })
+            .catch(error => console.log('error', error));
+    })
+</script>
+`;
 
 exports.readme = '60000315409';
 
