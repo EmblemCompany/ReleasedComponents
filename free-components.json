@@ -4,7 +4,7 @@
 		"items": [
 			{
 				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/trigger/trigger.js",
-				"version": "1.1.1",
+				"version": "1.1.2",
                 "display-name": "Trigger"
 			},
 			{

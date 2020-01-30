@@ -4,7 +4,7 @@ exports.group = 'ACTIONS TO START WITH';
 exports.color = '#10bd27';
 exports.click = true;
 exports.output =  1;
-exports.version = '1.1.1';
+exports.version = '1.1.2';
 exports.author = 'Martin Smola';
 exports.icon = 'play';
 
