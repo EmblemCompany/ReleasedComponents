@@ -1,6 +1,7 @@
 const CoinGecko = require('coingecko-api');
 const CoinGeckoClient = new CoinGecko();
-const TRIGGER = 'getCoinGeckoEventTypesList';
+const TYPESTRIGGER = 'getCoinGeckoEventTypesList';
+const COUNTRIESTRIGGER = 'getCoinGeckoCountries';
 
 exports.id = 'getevents';
 exports.title = 'CoinGecko Get Events';
@@ -24,16 +25,18 @@ exports.html = `
     </div>
     <div class="row">
         <div class="col-md-6">
-            <div data-jc="input" data-jc-path="country" data-jc-config="placeholder:US" class="m">@(Country Code)</div>
-            <div class="help">Enter a 2-digit country code here. See <a href="https://www.coingecko.com/en/api#/events/countries" target="_blank">this page</a> for more info.</div>
+            <div data-jc="dropdown" data-jc-path="countries" data-jc-config="datasource:countrylist;empty:" class="m">@(Country of Event)</div>
         </div>
     </div>
 </div>
 <script>
+    var typelist = [];
+
     ON('open.getevents', function(component, options) {
-	    TRIGGER('{0}', 'typelist');
+        TRIGGER('getCoinGeckoEventTypesList', 'typelist');
+        TRIGGER('getCoinGeckoCountries', 'countrylist');
     });
-</script>`.format(TRIGGER);
+</script>`;
 
 exports.readme = '60000477722';
 
@@ -45,7 +48,8 @@ exports.install = function(instance) {
 
     async function runIt(flowdata) {
         let data = await CoinGeckoClient.events.all({
-            type: instance.options.type
+            type: instance.options.types,
+            country_code: instance.options.countries
         });
 
         flowdata.data = data;
@@ -57,14 +61,15 @@ exports.install = function(instance) {
     };
 };
 
-FLOW.trigger(TRIGGER, function(next) {
-    console.log("in it bitch");
-    var typelist = getTypes();
-    next(typelist);
+FLOW.trigger(TYPESTRIGGER, function(next) {
+    CoinGeckoClient.events.fetchTypes().then(types=> {
+        next(types.data.data);
+    });
 });
 
-async function getTypes() {
-    let types = await CoinGeckoClient.events.fetchTypes();
-    console.log("got something like this", types.data.data);
-    return types.data.data;
-}
+FLOW.trigger(COUNTRIESTRIGGER, function(next) {
+    CoinGeckoClient.events.fetchCountries().then(countries=> {
+        var whatevs = countries.data.data.map(item=>{return {name: item.country, id: item.code}});
+        next(whatevs);
+    });
+})
