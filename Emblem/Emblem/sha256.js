@@ -4,7 +4,7 @@ exports.group = 'Emblem Services';
 exports.color = '#61affe';
 exports.input = true;
 exports.output = 1;
-exports.version = '0.0.2';
+exports.version = '0.0.3';
 exports.author = 'Shannon Code';
 exports.icon = 'code-branch';
 exports.options = {  };
@@ -24,18 +24,22 @@ exports.html = `
 `;
 
 exports.install = function(instance) {
-    var CryptoJS = require('crypto-js')
-	instance.on('data', function(flowdata) {
-
-        var data = replaceTokenizedString(flowdata, instance.options.data || FLOW.variables.data || flowdata.data)
-        var hash = CryptoJS.SHA256(data);
-
-        flowdata.data = {hash: hash.toString(CryptoJS.enc.Hex)}
-        if (instance.options.downstream) {
-            flowdata.set(instance.name, flowdata.data);
+    var crypto = require('crypto');
+    var isBuffer = false;
+    var hash = "";
+    instance.on('data', (flowdata)=>{
+        
+        if (flowdata.data && Buffer.isBuffer(flowdata.data.buffer)) {
+            isBuffer = true
+            var shasum = crypto.createHash('sha256');
+            shasum.update(flowdata.data.buffer);
+            hash = shasum.digest('hex');
+        } else {
+            hash = crypto.createHash('sha256').update(replaceTokenizedString(flowdata, instance.options.data || flowdata.data.data || flowdata.data)).digest('hex');
         }
+        flowdata.data = {isBuffer: isBuffer, hash: hash}
         instance.send(flowdata)
-    });
+    })
 
     function replaceTokenizedString(response, myString) {
         var tokenRegex = /[^{\}]+(?=})/g
