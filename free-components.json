@@ -109,7 +109,7 @@
         "items": [
             {
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/CoinCap/assetsid.js",
-                "version": "0.0.1",
+                "version": "0.0.2",
                 "display-name": "CoinCap API 2.0: Get Asset Details"
             }
         ]
