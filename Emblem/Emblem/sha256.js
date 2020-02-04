@@ -4,7 +4,7 @@ exports.group = 'Emblem Services';
 exports.color = '#61affe';
 exports.input = true;
 exports.output = 1;
-exports.version = '0.0.3';
+exports.version = '0.0.4';
 exports.author = 'Shannon Code';
 exports.icon = 'code-branch';
 exports.options = {  };
@@ -30,7 +30,14 @@ exports.install = function(instance) {
     instance.on('data', (flowdata)=>{
         
         if (flowdata.data && flowdata.data.buffer) {
-            flowdata.data.buffer = Buffer.from(flowdata.data.buffer)
+            if (!Buffer.isBuffer(flowdata.data)) {
+                flowdata.data.buffer = Buffer.from(flowdata.data.buffer)
+            } else {
+                var bfr = flowdata.data
+                delete flowdata.data
+                flowdata.data = {buffer: bfr}
+                // flowdata.data.buffer = flowdata.data
+            }
             isBuffer = true
             var shasum = crypto.createHash('sha256');
             shasum.update(flowdata.data.buffer);
