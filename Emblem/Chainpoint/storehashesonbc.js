@@ -6,7 +6,7 @@ exports.input = true;
 exports.output = true;
 exports.author = 'Dawn Code <dawn@unspecified.me>';
 exports.icon = 'link';
-exports.version = '0.0.1';
+exports.version = '0.0.2';
 exports.options = {  };
 exports.npm = [];
 
@@ -33,7 +33,7 @@ exports.install = function(instance) {
 	
 	async function runIt(flowdata) {
 		if (instance.options.hashes || flowdata.data) {
-			let incomingData = (instance.options.hashes || flowdata.data);
+			let incomingData = (instance.options.hashes || flowdata.data.hash ? [flowdata.data.hash] : flowdata.data);
 			if (!Array.isArray(incomingData)) {
 				var result = [];
 				var keys = Object.keys(incomingData);

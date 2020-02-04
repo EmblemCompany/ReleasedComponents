@@ -139,7 +139,7 @@
 		"items": [
 			{
 				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Chainpoint/storehashesonbc.js",
-				"version": "0.0.1",
+				"version": "0.0.2",
                 "display-name": "ChainPoint: Store Hashes on Blockchain"
 			},
 			{
