@@ -4,17 +4,23 @@
 exports.id = 'ethwebsocket';
 exports.title = 'Ethereum Events';
 exports.group = 'Ethereum';
-exports.color = 'red';
+exports.color = '#6F748D';
 exports.click = true;
 exports.input = false;
 exports.output = true;
 exports.author = 'Shannon Code <shannon@unspecified.me>';
-exports.icon = 'money-bill-wave-alt';
-exports.version = '0.0.2';
+exports.icon = 'exchange-alt';
+exports.version = '0.0.3';
 exports.options = {  };
 
-exports.html = `<div class="padding">
-	<div data-jc="checkbox__raw">Raw Transactions (Not simplified)</div>
+exports.html = `
+<div class="padding">
+	<div class="row">
+		<div class="col-md-6">
+			<div data-jc="textbox" data-jc-path="amberdatakey" data-jc-config="type:password">@(amberdatakey) (required) </div>
+			<div class="help"></div>
+		</div>
+	</div>
 </div>`;
 
 exports.readme = '00000';
@@ -25,7 +31,7 @@ exports.install = function(instance) {
 
 	var W3CWebSocket = require('websocket').w3cwebsocket;
  
-	var client = new W3CWebSocket('wss://ws.web3api.io?x-api-key=UAK7d678b6284724438320dc35f1c31ec13&x-amberdata-blockchain-id=ethereum-mainnet', 'echo-protocol');
+	var client = new W3CWebSocket('wss://ws.web3api.io?x-api-key=' + (instance.options.amberdatakey || 'UAK7d678b6284724438320dc35f1c31ec13') + '&x-amberdata-blockchain-id=ethereum-mainnet', 'echo-protocol');
 
 	client.onerror = function() {
 		console.log('Connection Error');
@@ -55,7 +61,7 @@ exports.install = function(instance) {
 			subscribed = false;
 			client.send(JSON.stringify({"jsonrpc":"2.0","id":0,"method":"unsubscribe","params":["block"]}));
 		} else {
-			instance.status("Subscribed");
+			instance.status("Subscribed", "green");
 			subscribed = true;
 			client.send(JSON.stringify({"jsonrpc":"2.0","id":2,"method":"subscribe","params":["transaction"]}));
 		}
