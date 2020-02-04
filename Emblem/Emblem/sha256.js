@@ -29,7 +29,8 @@ exports.install = function(instance) {
     var hash = "";
     instance.on('data', (flowdata)=>{
         
-        if (flowdata.data && Buffer.isBuffer(flowdata.data.buffer)) {
+        if (flowdata.data && flowdata.data.buffer) {
+            flowdata.data.buffer = Buffer.from(flowdata.data.buffer)
             isBuffer = true
             var shasum = crypto.createHash('sha256');
             shasum.update(flowdata.data.buffer);
