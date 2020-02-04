@@ -135,6 +135,21 @@
         ]
 	},
 	{
+		"name": "ChainPoint",
+		"items": [
+			{
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/ChainPoint/storehashesonbc.js",
+				"version": "0.0.1",
+                "display-name": "ChainPoint: Store Hashes on Blockchain"
+			},
+			{
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/ChainPoint/verifyproofs.js",
+				"version": "0.0.1",
+                "display-name": "ChainPoint: Verify Proofs"
+			}
+		]
+	},
+	{
 		"name": "Files and Data I/O",
 		"items": [
 			{
