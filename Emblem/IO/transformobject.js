@@ -35,6 +35,7 @@ exports.install = function(instance) {
 			if (instance.options.merge) {
 				var tmp = {data: response.data}
 				tmp.upstream = response.repository
+				delete response.repository
 				response.data = tmp
 			}
 			instance.options.properties.forEach((prop, index)=>{

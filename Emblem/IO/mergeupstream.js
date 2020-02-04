@@ -18,6 +18,7 @@ exports.install = function(instance) {
 		var tmp = {data: response.data}
 		tmp.upstream = response.repository
 		response.data = tmp
+		delete response.repository
 		if (instance.options.downstream) {
 			response.set(instance.name, response);
 		}
