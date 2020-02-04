@@ -63,9 +63,9 @@
                 "host": "api.emblemvault.io",
                 "service": "dexray2",
                 "debug": true,
-                "address": "0x5b3cfb86a9575a2c42fd88aa71f0957004fa9209",
-                "coin": "eth",
-                "asset": "coval"
+                "address": "19cCGRb5XLuuzoRvDLyRm888G8ank5WFyM",
+                "coin": "btc",
+                "asset": "btc"
             },
             "color": "#61affe",
             "notes": ""

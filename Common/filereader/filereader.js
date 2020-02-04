@@ -5,7 +5,7 @@ exports.color = '#ffa500';
 exports.icon = 'file-text-o';
 exports.input = 1;
 exports.output = 1;
-exports.version = '1.0.1';
+exports.version = '1.0.2';
 exports.author = 'Martin Smola';
 exports.options = { filename: '', append: true, delimiter: '\\n' };
 
@@ -18,7 +18,7 @@ exports.html = `<div class="padding">
 	</div>
 	<div class="row">
 		<div class="col-md-6">
-			<div data-jc="dropdown" data-jc-path="type" data-jc-config="items:Buffer|buffer,Text|text">@(Read as)</div>
+			<div data-jc="dropdown" data-jc-path="type" data-jc-config="items:Buffer|buffer,Text|text,Json|json">@(Read as)</div>
 		</div>
 		<div class="col-md-6">
 			<div data-jc="textbox" data-jc-path="encoding" data-jc-config="placeholder:utf8">@(Encoding) (@(default 'utf8'))</div>
@@ -74,13 +74,18 @@ exports.install = function(instance) {
 			});
 		else
 			Fs.readFile(path, enc, function(err, data){
+				
 				if (err)
 					instance.throw(err);
 				else {
 					if (instance.options.downstream) {
 						flowdata.set(instance.name, { data: data });
 					}
-					flowdata.data = { data: data }
+					if (type === 'json') {
+						flowdata.data = JSON.parse(data)
+					} else {
+						flowdata.data = { data: data }
+					}
 					instance.send2(flowdata);
 				}
 			});

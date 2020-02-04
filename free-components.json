@@ -154,7 +154,7 @@
 		"items": [
 			{
 				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Common/filereader/filereader.js",
-				"version": "1.0.1",
+				"version": "1.0.2",
                 "display-name": "File Reader"
 			},
 			{
@@ -184,7 +184,7 @@
 		"items": [
 			{
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/IO/mergeupstream.js",
-                "version": "0.0.2",
+                "version": "0.0.3",
                 "display-name": "Merge Upstream"
 			},
 			{
@@ -194,7 +194,7 @@
 			},
 			{
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/IO/transformobject.js",
-                "version": "0.0.1",
+                "version": "0.0.2",
                 "display-name": "Transform Object"
 			},
 			{
