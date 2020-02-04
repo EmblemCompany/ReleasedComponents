@@ -138,12 +138,12 @@
 		"name": "ChainPoint",
 		"items": [
 			{
-				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/ChainPoint/storehashesonbc.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Chainpoint/storehashesonbc.js",
 				"version": "0.0.1",
                 "display-name": "ChainPoint: Store Hashes on Blockchain"
 			},
 			{
-				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/ChainPoint/verifyproofs.js",
+				"url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Chainpoint/verifyproofs.js",
 				"version": "0.0.1",
                 "display-name": "ChainPoint: Verify Proofs"
 			}
