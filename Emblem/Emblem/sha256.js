@@ -46,6 +46,9 @@ exports.install = function(instance) {
             hash = crypto.createHash('sha256').update(replaceTokenizedString(flowdata, instance.options.data || flowdata.data.data || flowdata.data)).digest('hex');
         }
         flowdata.data = {isBuffer: isBuffer, hash: hash}
+        if (instance.options.downstream) {
+            flowdata.set(instance.name, flowdata.data);
+        };
         instance.send(flowdata)
     })
 

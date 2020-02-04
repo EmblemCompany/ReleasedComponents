@@ -50,6 +50,9 @@ exports.install = function(instance) {
             },
             function (status, response) {
                 flowdata.data = {status: status, response: response}
+                if (instance.options.downstream) {
+                    flowdata.set(instance.name, flowdata.data);
+                };
                 instance.send(flowdata)
                 // handle status, response
             }

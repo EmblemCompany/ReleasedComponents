@@ -68,6 +68,9 @@ exports.install = function(instance) {
                     delete flowdata.data.repository
                     delete data.message
                     flowdata.data.response = data
+                    if (instance.options.downstream) {
+                        flowdata.set(instance.name, flowdata.data);
+                    };
                     instance.send(flowdata)
                 },
                 presence: function(presenceEvent) {
