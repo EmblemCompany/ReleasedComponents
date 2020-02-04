@@ -20,7 +20,7 @@ exports.html = `
 <div class="padding">
     <div class="row">
         <div class="col-md-6">
-            <div data-jc="dropdown" data-jc-path="types" data-jc-config="datasource:typelist;empty:" class="m">@(Select an Event Type)</div>
+            <div data-jc="dropdown" data-jc-path="types" data-jc-config="datasource:typelist;empty:" class="m">@(Event Type)</div>
         </div>
     </div>
     <div class="row">
@@ -38,7 +38,7 @@ exports.html = `
     });
 </script>`;
 
-exports.readme = '60000477722';
+exports.readme = '60000531495';
 
 exports.install = function(instance) {
 
@@ -47,10 +47,11 @@ exports.install = function(instance) {
     });
 
     async function runIt(flowdata) {
-        let data = await CoinGeckoClient.events.all({
-            type: instance.options.types,
-            country_code: instance.options.countries
-        });
+        json = {};
+        if(instance.options.types) json["type"] = instance.options.types;
+        if(instance.options.countries) json["country_code"] = instance.options.countries;
+        
+        let data = await CoinGeckoClient.events.all(json);
 
         flowdata.data = data;
 
