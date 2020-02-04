@@ -1,5 +1,5 @@
 exports.id = 'getstatusupdates';
-exports.title = 'CoinGecko Get Status Updates';
+exports.title = 'Get Status Updates';
 exports.group = 'CoinGecko';
 exports.color = '#8bc53f';
 exports.input = true;
@@ -36,10 +36,11 @@ exports.install = function(instance) {
     });
     
     async function runIt(flowdata) {
-        let data = await CoinGeckoClient.statusUpdates.all({
-            category: instance.options.category,
-            project_type: instance.options.project_type
-        });
+        json = {};
+        if(instance.options.category) json["category"] = instance.options.category;
+        if(instance.options.project_type) json["project_type"] = instance.options.project_type;
+
+        let data = await CoinGeckoClient.statusUpdates.all(json);
 
         flowdata.data = data;
 

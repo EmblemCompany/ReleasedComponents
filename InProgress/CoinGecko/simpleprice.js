@@ -4,7 +4,7 @@ const COINSTRIGGER = 'getCoinGeckoCoins';
 const VSTRIGGER = 'getCoinGeckoVsCurrencies';
 
 exports.id = 'simpleprice';
-exports.title = 'CoinGecko Simple Price';
+exports.title = 'Simple Price';
 exports.group = 'CoinGecko';
 exports.color = '#8bc53f';
 exports.input = true;
@@ -20,12 +20,12 @@ exports.html = `
 <div class="padding">
     <div class="row">
         <div class="col-md-6">
-            <div data-jc="listbox" data-jc-path="coins" data-jc-config="multiple:true;datasource:coinlist;search:Search;empty:" class="m">@(Select Coin(s))</div>
+            <div data-jc="inputtags" data-jc-path="coins" data-jc-config="required:true;placeholder:Type a coin name;dirsource:coinlist" class="m">@(Select Coin(s))</div>
         </div>
     </div>
     <div class="row">
         <div class="col-md-6">
-            <div data-jc="listbox" data-jc-path="vs_currencies" data-jc-config="multiple:true;datasource:vscurrencies;search:Search;empty:" class="m">@(Vs Currencies)</div><div class="help">Which currency or currencies should the coin be compared against?</div>
+            <div data-jc="inputtags" data-jc-path="vs_currencies" data-jc-config="required:true;placeholder:vs currency name;dirsource:vscurrencies" class="m">@(Vs Currency(ies))</div><div class="help">Which currency or currencies should the coin be compared against?</div>
         </div>
     </div>
 </div>
@@ -45,10 +45,11 @@ exports.install = function(instance) {
     });
 
     async function runIt(flowdata) {
-        let data = await CoinGeckoClient.simple.price({
-            ids: instance.options.coins,
-            vs_currencies: instance.options.vs_currencies
-        });
+        json = {};
+        if(instance.options.coins) json["ids"] = instance.options.coins;
+        if(instance.options.vs_currencies) json["vs_currencies"] = instance.options.vs_currencies;
+
+        let data = await CoinGeckoClient.simple.price(json);
 
         flowdata.data = data;
 

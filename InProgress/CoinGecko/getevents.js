@@ -4,7 +4,7 @@ const TYPESTRIGGER = 'getCoinGeckoEventTypesList';
 const COUNTRIESTRIGGER = 'getCoinGeckoCountries';
 
 exports.id = 'getevents';
-exports.title = 'CoinGecko Get Events';
+exports.title = 'Get Events';
 exports.group = 'CoinGecko';
 exports.color = '#8bc53f';
 exports.input = true;
@@ -30,8 +30,6 @@ exports.html = `
     </div>
 </div>
 <script>
-    var typelist = [];
-
     ON('open.getevents', function(component, options) {
         TRIGGER('getCoinGeckoEventTypesList', 'typelist');
         TRIGGER('getCoinGeckoCountries', 'countrylist');
