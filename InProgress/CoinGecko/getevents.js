@@ -50,8 +50,6 @@ exports.install = function(instance) {
         json = {};
         if(instance.options.types) json["type"] = instance.options.types;
         if(instance.options.countries) json["country_code"] = instance.options.countries;
-
-        console.log(json);
         
         let data = await CoinGeckoClient.events.all(json);
 
