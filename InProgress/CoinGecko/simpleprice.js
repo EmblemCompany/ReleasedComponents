@@ -25,7 +25,7 @@ exports.html = `
     </div>
     <div class="row">
         <div class="col-md-6">
-            <div data-jc="inputtags" data-jc-path="vs_currencies" data-jc-config="required:true;placeholder:vs currency name;dirsource:vscurrencies" class="m">@(Vs Currency(ies))</div><div class="help">Which currency or currencies should the coin be compared against?</div>
+            <div data-jc="inputtags" data-jc-path="vs_currencies" data-jc-config="required:true;placeholder:vs currency name;dirsource:vscurrencies;limit:1" class="m">@(Vs Currency(ies))</div><div class="help">Which currency or currencies should the coin be compared against?</div>
         </div>
     </div>
 </div>
@@ -53,10 +53,10 @@ exports.install = function(instance) {
 
         flowdata.data = data;
 
-			if (instance.options.downstream) {
-				flowdata.set(instance.name, flowdata.data);
-			};
-			instance.send(flowdata);
+        if (instance.options.downstream) {
+            flowdata.set(instance.name, flowdata.data);
+        };
+        instance.send(flowdata);
     };
 };
 
@@ -69,6 +69,7 @@ FLOW.trigger(COINSTRIGGER, function(next) {
 
 FLOW.trigger(VSTRIGGER, function(next) {
     CoinGeckoClient.simple.supportedVsCurrencies().then(currencies=> {
-        next(currencies.data);
+        var whatevs = currencies.data.map(item=>{return {name: item, id: item}});
+        next(whatevs);
     });
 })
