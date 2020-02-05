@@ -24,7 +24,7 @@ exports.html = `
 </div>
 `;
 
-exports.readme = '60000477722';
+exports.readme = '60000544122';
 
 exports.install = function(instance) {
 

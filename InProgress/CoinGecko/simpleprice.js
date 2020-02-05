@@ -36,7 +36,7 @@ exports.html = `
     });
 </script>`;
 
-exports.readme = '60000477722';
+exports.readme = '60000544278';
 
 exports.install = function(instance) {
 
