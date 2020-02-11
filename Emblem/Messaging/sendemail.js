@@ -39,7 +39,7 @@ exports.html = `<div class="padding">
         <h3>SMTP server information</h3>
         <div class="row">
             <div class="col-md-6">
-                <div data-jc="textbox" data-jc-path="host" data-jc-config="placeholder:Body of the email">@(host) </div>
+                <div data-jc="textbox" data-jc-path="host" data-jc-config="placeholder:Host (in the form of smtp.example.com">@(host) </div>
                 <div class="help">To inject data into this field, use {msg.<path>} syntax <a href="https://unspecifiedsupport.freshdesk.com/support/solutions/articles/60000182172-using-a-component-s-response-data" target="_blank">More info here</a></div>
             </div>
             <div class="col-md-6">
