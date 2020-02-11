@@ -13,7 +13,7 @@ exports.author = 'Dawn Code <dawn@unspecified.me>';
 exports.icon = 'calendar-day';
 exports.version = '0.0.1';
 exports.options = {  };
-exports.npm = [];
+exports.npm = [ coingecko-api ];
 
 
 exports.html = `
