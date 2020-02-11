@@ -8,7 +8,7 @@ exports.author = 'Dawn Code <dawn@unspecified.me>';
 exports.icon = 'newspaper';
 exports.version = '0.0.1';
 exports.options = {  };
-exports.npm = [ coingecko-api ];
+exports.npm = [ 'coingecko-api' ];
 
 
 exports.html = `
