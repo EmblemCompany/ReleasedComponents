@@ -13,12 +13,6 @@ exports.readme = ''
 exports.html = `<div class="padding">
     <div class="row">
         <div class="col-md-12">
-            <div data-jc="textbox" data-jc-path="defaultMessage" data-jc-config="placeholder:Default Slack message">@(defaultMessage) </div>
-            <div class="help">Say something bruh</div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
             <div data-jc="textbox" data-jc-path="slackToken" data-jc-config="placeholder:OAuthToken">@(slackToken) </div>
             <div class="help">You need a token bruh</div>
         </div>
@@ -27,6 +21,12 @@ exports.html = `<div class="padding">
         <div class="col-md-12">
             <div data-jc="textbox" data-jc-path="conversationId" data-jc-config="placeholder:conversationId">@(conversationId) </div>
             <div class="help">What channel bruh</div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <div data-jc="textbox" data-jc-path="defaultMessage" data-jc-config="placeholder:Default Slack message">@(defaultMessage) </div>
+            <div class="help">Say something bruh</div>
         </div>
     </div>
 </div>
