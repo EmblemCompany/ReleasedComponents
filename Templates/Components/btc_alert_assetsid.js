@@ -14,11 +14,16 @@ exports.html = `
 <div class="padding">
     <div class="row">
         <div class="col-md-12">
-            <div data-jc="textbox" data-jc-path="id" data-jc-config="placeholder:bitcoin">@(id) </div>
-            <div class="help"></div>
+        <div data-jc="listbox" data-jc-path="id" data-jc-config="datasource:coinslist;search:Search;empty:">@(Select a coin) </div>
+        <div class="help"></div>
         </div>
     </div>
 </div>
+<script>
+    ON('open.assetsid', function(component, options) {
+        TRIGGER('getCoinCapCoins', 'coinslist');
+    });
+</script>
 `;
 
 var request = {
@@ -43,6 +48,8 @@ var request = {
     },
     "description": "`### Request\n\n| Key       | Required | Value   | Description |\n|-----------|----------|---------|-------------|\n| id        | required | bitcoin |  asset id   |\n\n### Response\n\n| Key       \t\t| Description |\n|-------------------|-------------|\n| id\t\t\t\t| unique identifier for asset |\n| rank\t\t\t\t| rank is in ascending order - this number is directly associated with the marketcap whereas the highest marketcap receives rank 1 |\n| symbol\t\t\t| \tmost common symbol used to identify this asset on an exchange |\n| name\t\t\t\t| proper name for asset |\n| supply\t\t\t| available supply for trading |\n| maxSupply \t\t| total quantity of asset issued |\n| marketCapUsd\t\t| supply x price |\n| volumeUsd24Hr \t| \tquantity of trading volume represented in USD over the last 24 hours |\n| priceUsd\t\t\t| volume-weighted price based on real-time market data, translated to USD |\n| changePercent24Hr | the direction and value change in the last 24 hours |\n| vwap24Hr\t\t\t| \tVolume Weighted Average Price in the last 24 hours |"
 };
+
+const COINSTRIGGER = 'getCoinCapCoins';
 
 exports.install =function(instance) {
 
@@ -114,8 +121,7 @@ exports.install =function(instance) {
                 builder.json(body);      
             }
             builder.method(theRequest.method.toLowerCase() || 'get')
-            builder.exec(function(err, api_response) {
-                response.data = api_response
+            builder.exec(function(err, response) {
                 if (instance.options.downstream) {
                     response.set(instance.name, response.data);
                 }
@@ -176,3 +182,18 @@ exports.install =function(instance) {
         return url
     }
 };
+
+FLOW.trigger(COINSTRIGGER, function(next) {
+    var request2 = require('request');
+    var options = {
+        'method': 'GET',
+        'url': 'https://api.coincap.io/v2/assets',
+        'headers': {}
+    };
+    request2(options, function (error, response) { 
+        if (error) throw new Error(error);
+        var list = JSON.parse(response.body).data.map(item=> {return {name: item.name, id: item.id}});
+        next(list);
+        console.log(list);
+    });
+});
