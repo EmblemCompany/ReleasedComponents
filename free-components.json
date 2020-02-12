@@ -269,7 +269,7 @@
 		"items": [
 			{
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Messaging/sendemail.js",
-                "version": "0.0.3",
+                "version": "0.0.4",
                 "display-name": "Send Email"
             },
 			{
