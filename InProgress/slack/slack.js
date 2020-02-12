@@ -36,8 +36,6 @@ exports.install = function(instance) {
     const { WebClient } = require('@slack/web-api')
     const util = require('util')
 
-    console.log(util.inspect(instance.options, {depth: 4}))
-
     // An access token (from your Slack app or custom integration - xoxp, xoxb)
     let token = FLOW.variables.slackToken || instance.options.slackToken
     let conversationId = FLOW.variables.conversationId || instance.options.conversationId
@@ -50,28 +48,24 @@ exports.install = function(instance) {
         fuckups.push("This component requires a Slack conversation ID")
     }
     if (fuckups.length > 0) {
-        instance.status(fuckups.join, "red");
+        instance.status(fuckups.join('\n'), "red");
     }
     const web = new WebClient(token)
     const sendit = async function(message) {
-        instance.send(0, 'Sending message')
-        instance.send(0, JSON.stringify({token, conversationId, message}))
         let response
         try {
             let body = { channel: conversationId, text: message }
             instance.send(0, JSON.stringify(body))
             response = await web.chat.postMessage(body)
-            instance.send(0, 'Message sent')
         } catch (err) {
             instance.send(0, `Slack message post failed: ${err.message}`)
+            throw err
         }
     }
 
 	instance.on('data', function(flowdata) {
-        instance.send(0, 'WTF CHARLES')
-        instance.send(0, util.inspect(flowdata.data, {depth: 4}))
         let message = flowdata.data['message']
-        message = message || FLOW.variables.message || instance.options.message || FLOW.variables.defaultMessage || instance.options.defaultMessage
+        message = message || FLOW.variables.defaultMessage || instance.options.defaultMessage
         sendit(message)
     })
 }
