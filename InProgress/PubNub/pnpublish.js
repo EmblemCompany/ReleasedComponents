@@ -31,7 +31,7 @@ exports.html = `
     </div>
 </div>`;
 
-exports.readme = '0000000';
+exports.readme = '60000534034';
 
 exports.install = function(instance) {
     var pubnub;
