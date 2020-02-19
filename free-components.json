@@ -150,6 +150,26 @@
 		]
 	},
 	{
+        "name": "CoinGecko",
+        "items": [
+            {
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/CoinGecko/getevents.js",
+                "version": "0.0.1",
+                "display-name": "CoinGecko Events"
+			},
+			{
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/CoinGecko/simpleprice.js",
+                "version": "0.0.1",
+                "display-name": "CoinGecko Simple Price"
+			},
+			{
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/CoinGecko/getstatusupdates.js",
+                "version": "0.0.1",
+                "display-name": "CoinGecko Status Updates"
+            }
+        ]
+	},
+	{
 		"name": "Files and Data I/O",
 		"items": [
 			{
