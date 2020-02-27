@@ -4,7 +4,6 @@ exports.version = '1.0.0';
 exports.author = 'Martin Smola';
 exports.color = '#303E4D';
 exports.icon = 'sign-in';
-exports.input = false;
 exports.output = 1;
 exports.options = {};
 exports.readme = `# Virtual wire in
@@ -19,9 +18,16 @@ exports.html = `<div class="padding">
 		!component.name && (component.name = options.wirename);
 	});
 	WATCH('settings.virtualwirein.wirename', function(path, value, type){
-		if (type === 2)
+		if (type === 2) {
+			console.log('path', path, 'value', value);
 			SET('settings.virtualwirein.wirename', value.slug());
+		}			
 	});
+	function HOOK(){
+
+	}
+	window.HOOK = HOOK;
+	
 </script>`;
 
 exports.install = function(instance) {
@@ -33,14 +39,23 @@ exports.install = function(instance) {
 			instance.status('Not configured', 'red');
 	};
 
-	ON('virtualwire', function(wirename, flowdata){
+	ON('virtualwire', function(wirename, flowdata, shouldCallback){
 		if (instance.options.wirename && instance.options.wirename === wirename){
 			if (instance.options.downstream) {
 				flowdata.set(instance.name, flowdata.data);
 			}
+			if (shouldCallback) {
+				var callbacks = flowdata.get('callbacks');
+				if (!callbacks || callbacks.length < 1) {
+					callbacks = [wirename]
+				} else {
+					callbacks.push(wirename)
+				}
+				flowdata.set('callbacks', callbacks)
+				
+			}
 			instance.send(flowdata);
 		}
-			
 	});
 
 	instance.on('options', instance.custom.reconfigure);
