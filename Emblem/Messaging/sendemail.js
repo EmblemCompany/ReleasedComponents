@@ -10,15 +10,14 @@ exports.icon ="paper-plane";
 
 exports.readme = '60000315418';
 
-exports.html = `<div class="padding">
+exports.html = `
+<div class="padding">
         <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6">
                 <div data-jc="textbox" data-jc-path="from" data-jc-config="placeholder:Who is this email coming from?">@(from) </div>
                 <div class="help">Format: "My Name" &lt;my@email.com&gt; </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12">
+            <div class="col-md-6">
                 <div data-jc="textbox" data-jc-path="to" data-jc-config="placeholder:Recipient email address">@(to) </div>
                 <div class="help"></div>
             </div>
@@ -35,29 +34,30 @@ exports.html = `<div class="padding">
                 <div class="help">To inject data into this field, use {msg.<path>} syntax <a href="https://unspecifiedsupport.freshdesk.com/support/solutions/articles/60000182172-using-a-component-s-response-data" target="_blank">More info here</a></div>
             </div>
         </div>
-        <hr>
+        <hr/>
         <h3>SMTP server information</h3>
-        <div class="row">
-            <div class="col-md-6">
-                <div data-jc="textbox" data-jc-path="host" data-jc-config="placeholder:Host (in the form of smtp.example.com)">@(host) </div>
-                <div class="help">To inject data into this field, use {msg.<path>} syntax <a href="https://unspecifiedsupport.freshdesk.com/support/solutions/articles/60000182172-using-a-component-s-response-data" target="_blank">More info here</a></div>
-            </div>
-            <div class="col-md-6">
-                <div data-jc="textbox" data-jc-path="port" data-jc-config="type:number;increment:true;placeholder:587">@(port) </div>
-                <div class="help">To inject data into this field, use {msg.<path>} syntax <a href="https://unspecifiedsupport.freshdesk.com/support/solutions/articles/60000182172-using-a-component-s-response-data" target="_blank">More info here</a></div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6">
-                <div data-jc="textbox" data-jc-path="username" data-jc-config="placeholder:Email address or SMTP username">@(username) </div>
+        <section>
+            <div class="row">
+                <div class="col-md-6">
+                    <div data-jc="textbox" data-jc-path="host" data-jc-config="placeholder:Host (in the form of smtp.example.com)">@(host) </div>
                     <div class="help">To inject data into this field, use {msg.<path>} syntax <a href="https://unspecifiedsupport.freshdesk.com/support/solutions/articles/60000182172-using-a-component-s-response-data" target="_blank">More info here</a></div>
                 </div>
-            <div class="col-md-6">
-                <div data-jc="textbox" data-jc-path="password" data-jc-config="type:password;placeholder:Email password or SMTP password">@(password) </div>
+                <div class="col-md-6">
+                    <div data-jc="textbox" data-jc-path="port" data-jc-config="type:number;increment:true;placeholder:587">@(port) </div>
                     <div class="help">To inject data into this field, use {msg.<path>} syntax <a href="https://unspecifiedsupport.freshdesk.com/support/solutions/articles/60000182172-using-a-component-s-response-data" target="_blank">More info here</a></div>
                 </div>
             </div>
-        </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div data-jc="textbox" data-jc-path="username" data-jc-config="placeholder:Email address or SMTP username">@(username) </div>
+                        <div class="help">To inject data into this field, use {msg.<path>} syntax <a href="https://unspecifiedsupport.freshdesk.com/support/solutions/articles/60000182172-using-a-component-s-response-data" target="_blank">More info here</a></div>
+                    </div>
+                <div class="col-md-6">
+                    <div data-jc="textbox" data-jc-path="password" data-jc-config="type:password;placeholder:Email password or SMTP password">@(password) </div>
+                        <div class="help">To inject data into this field, use {msg.<path>} syntax <a href="https://unspecifiedsupport.freshdesk.com/support/solutions/articles/60000182172-using-a-component-s-response-data" target="_blank">More info here</a></div>
+                </div>
+            </div>
+        </section>
 </div>`
 
 exports.install = function(instance) {

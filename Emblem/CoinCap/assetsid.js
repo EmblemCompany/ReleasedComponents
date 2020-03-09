@@ -26,7 +26,6 @@ exports.html = `
 </script>
 `;
 
-
 var request = {
     "method": "GET",
     "header": [],
