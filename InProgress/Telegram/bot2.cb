@@ -1,0 +1,208 @@
+{
+	"tabs": [
+		{
+			"id": "1582644753258",
+			"name": "Main",
+			"icon": "fa-object-ungroup",
+			"linker": "main",
+			"index": 0
+		}
+	],
+	"components": [
+		{
+			"id": "1582644962682",
+			"component": "code",
+			"tab": "1582644753258",
+			"name": "Code",
+			"x": 334,
+			"y": 116,
+			"connections": {
+				"0": [
+					{
+						"index": "0",
+						"id": "1582644983658"
+					}
+				]
+			},
+			"disabledio": {
+				"input": [],
+				"output": []
+			},
+			"state": {
+				"text": "",
+				"color": "gray"
+			},
+			"options": {
+				"outputs": 1,
+				"code": "//https://github.com/yagop/node-telegram-bot-api\nsend(0,{\"msg\": \"Bot initialized\"})\nconst TelegramBot = require('node-telegram-bot-api');\n// replace the value below with the Telegram token you receive from @BotFather\nconst token = '1088710286:AAFwGpYp0wnGFZNIZbA-EALNHis14iALKVY';\n\n// Create a bot that uses 'polling' to fetch new updates\nconst bot = new TelegramBot(token, {polling: true});\n\n// Matches \"/echo [whatever]\"\nbot.onText(/\\/echo (.+)/, (msg, match) => {\n  // 'msg' is the received Message from Telegram\n  // 'match' is the result of executing the regexp above on the text content\n  // of the message\n\n  const chatId = msg.chat.id;\n  const resp = match[1]; // the captured \"whatever\"\n\n  // send back the matched \"whatever\" to the chat\n  bot.sendMessage(chatId, resp);\n});\n\n// Listen for any kind of message. There are different kinds of\n// messages.\nbot.on('message', (msg) => {\n  const chatId = msg.chat.id;\n\tmsg.text = msg.text.toLowerCase()\n\tsend(0, msg);\n  // send a message to the chat acknowledging receipt of their message\n  // bot.sendMessage(chatId, 'Received your message.....');\n});",
+				"keepmessage": true
+			},
+			"color": "#791d12",
+			"notes": ""
+		},
+		{
+			"id": "1582644983658",
+			"component": "switch",
+			"tab": "1582644753258",
+			"name": "Switch",
+			"x": 555,
+			"y": 255,
+			"connections": {
+				"0": [
+					{
+						"index": "0",
+						"id": "1582645004370"
+					}
+				],
+				"1": [
+					{
+						"index": "0",
+						"id": "1582715079210"
+					}
+				]
+			},
+			"disabledio": {
+				"input": [],
+				"output": []
+			},
+			"state": {
+				"text": "",
+				"color": "gray"
+			},
+			"options": {
+				"conditions": [
+					{
+						"operator": "indexOf",
+						"datatype": "String",
+						"value": "test",
+						"index": 0
+					},
+					{
+						"operator": "indexOf",
+						"datatype": "String",
+						"value": "fuck",
+						"index": 1
+					}
+				],
+				"property": "text"
+			},
+			"color": "#4e895d",
+			"notes": "",
+			"output": 2
+		},
+		{
+			"id": "1582645004370",
+			"component": "code",
+			"tab": "1582644753258",
+			"name": "Code",
+			"x": 765,
+			"y": 141,
+			"connections": {
+				"0": [
+					{
+						"index": "0",
+						"id": "1582645037554"
+					}
+				]
+			},
+			"disabledio": {
+				"input": [],
+				"output": []
+			},
+			"state": {
+				"text": "",
+				"color": "gray"
+			},
+			"options": {
+				"outputs": 1,
+				"code": "//https://github.com/yagop/node-telegram-bot-api\n\nconst TelegramBot = require('node-telegram-bot-api');\n// replace the value below with the Telegram token you receive from @BotFather\nconst token = '1088710286:AAFwGpYp0wnGFZNIZbA-EALNHis14iALKVY';\n\n// Create a bot that uses 'polling' to fetch new updates\nconst bot = new TelegramBot(token, {polling: false});\n\nbot.sendMessage(value.chat.id, \"did someone say test ?\");\nsend(0, value)",
+				"keepmessage": true
+			},
+			"color": "#791d12",
+			"notes": ""
+		},
+		{
+			"id": "1582645026322",
+			"component": "trigger",
+			"tab": "1582644753258",
+			"name": "Trigger",
+			"x": 125,
+			"y": 167,
+			"connections": {
+				"0": [
+					{
+						"index": "0",
+						"id": "1582644962682"
+					}
+				]
+			},
+			"disabledio": {
+				"input": [],
+				"output": []
+			},
+			"state": {
+				"text": "",
+				"color": "gray"
+			},
+			"options": {},
+			"color": "#10bd27",
+			"notes": ""
+		},
+		{
+			"id": "1582645037554",
+			"component": "debug",
+			"tab": "1582644753258",
+			"name": "Debug",
+			"x": 1039,
+			"y": 256,
+			"connections": {},
+			"disabledio": {
+				"input": [],
+				"output": []
+			},
+			"state": {
+				"text": "Enabled",
+				"color": "gray"
+			},
+			"options": {
+				"type": "data",
+				"repository": false,
+				"enabled": true
+			},
+			"color": "#791d12",
+			"notes": ""
+		},
+		{
+			"id": "1582715079210",
+			"component": "code",
+			"tab": "1582644753258",
+			"name": "Code",
+			"x": 767,
+			"y": 327,
+			"connections": {
+				"0": [
+					{
+						"index": "0",
+						"id": "1582645037554"
+					}
+				]
+			},
+			"disabledio": {
+				"input": [],
+				"output": []
+			},
+			"state": {
+				"text": "",
+				"color": "gray"
+			},
+			"options": {
+				"outputs": 1,
+				"code": "//https://github.com/yagop/node-telegram-bot-api\n\nconst TelegramBot = require('node-telegram-bot-api');\n// replace the value below with the Telegram token you receive from @BotFather\nconst token = '1088710286:AAFwGpYp0wnGFZNIZbA-EALNHis14iALKVY';\n\n// Create a bot that uses 'polling' to fetch new updates\nconst bot = new TelegramBot(token, {polling: false});\n\nbot.sendMessage(value.chat.id, \"omg dont say that in here\");\nsend(0, value)",
+				"keepmessage": true
+			},
+			"color": "#791d12",
+			"notes": ""
+		}
+	],
+	"version": 102
+}

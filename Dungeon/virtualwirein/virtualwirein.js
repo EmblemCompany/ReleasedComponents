@@ -1,6 +1,6 @@
 exports.id = 'virtualwirein';
 exports.title = 'Virtual wire in';
-exports.version = '1.0.0';
+exports.version = '1.0.1';
 exports.author = 'Martin Smola';
 exports.color = '#303E4D';
 exports.icon = 'sign-in';
