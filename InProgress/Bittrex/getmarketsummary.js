@@ -1,7 +1,7 @@
 exports.id = 'getmarket';
 exports.title = 'Get Specific Martket 24Hr Summary';
 exports.group = 'Bittrex';
-exports.color = '#8bc53f';
+exports.color = '#0084d4';
 exports.input = true;
 exports.output = true;
 exports.author = 'Stacy Howerton <stacy@unspecified.me>';

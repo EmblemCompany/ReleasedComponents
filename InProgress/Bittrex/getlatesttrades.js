@@ -1,7 +1,7 @@
 exports.id = 'getlatesttrades';
 exports.title = 'Get Latest Trades for a Market';
 exports.group = 'Bittrex';
-exports.color = '#8bc53f';
+exports.color = '#0084d4';
 exports.input = true;
 exports.output = true;
 exports.author = 'Stacy Howerton <stacy@unspecified.me>';
