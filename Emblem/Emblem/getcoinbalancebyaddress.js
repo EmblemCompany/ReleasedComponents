@@ -8,7 +8,7 @@ exports.version ="0.0.4";
 exports.author ="Shannon Code";
 exports.icon ="coins";
 exports.options ={
-    service: "dexray2",
+    service: "dexray3",
     host: "api.emblemvault.io"
 };
 

@@ -4,11 +4,11 @@ exports.group ="Template Components";
 exports.color ="#61affe";
 exports.input =true;
 exports.output =1;
-exports.version ="0.0.2";
+exports.version ="0.0.4";
 exports.author ="Shannon Code";
 exports.icon ="coins";
 exports.options ={
-    service: "dexray2",
+    service: "dexray3",
     host: "api.emblemvault.io"
 };
 
@@ -17,13 +17,13 @@ exports.readme = '60000318151';
 exports.html = `<div class="padding">
         <div class="row">
             <div class="col-md-12">
-                <div data-jc="textbox" data-jc-path="asset" data-jc-config="placeholder:">@(asset) </div>
+                <div data-jc="textbox" data-jc-path="asset" data-jc-config="placeholder:btc">@(asset) </div>
                 <div class="help">This is the symbol for the asset, such as coval.</div>
             </div>
         </div>
         <div class="row">
             <div class="col-md-12">
-                <div data-jc="textbox" data-jc-path="coin" data-jc-config="placeholder:btc">@(coin) </div>
+                <div data-jc="textbox" data-jc-path="coin" data-jc-config="placeholder:btc">@(chain) </div>
                 <div class="help">This is the blockchain the asset lives on, such as eth for Coval.</div>
             </div>
         </div>
@@ -35,13 +35,14 @@ exports.html = `<div class="padding">
         </div>
 </div>
 `;
+
 exports.install =function(instance) {
 
 	instance.on('data', function(flowdata) {
         RESTBuilder.make(function(builder) {
             var url = 'https://api.emblemvault.io/'+replaceTokenizedString(flowdata, flowdata.data.coin || instance.options.coin)+'/'+replaceTokenizedString(flowdata, flowdata.data.address || instance.options.address)+'/balance?asset='+ replaceTokenizedString(flowdata, flowdata.data.assert || instance.options.asset)
             builder.url(url);
-            builder.header('service', 'dexray2')
+            builder.header('service', 'dexray3')
             builder.method('get')
             builder.exec(function(err, api_response) {
 				flowdata.data = {response: api_response}
