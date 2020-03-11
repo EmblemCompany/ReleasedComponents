@@ -44,7 +44,7 @@
 			},
 			{
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/getcoinbalancebyaddress.js",
-                "version": "0.0.3",
+                "version": "0.0.4",
                 "display-name": "Emblem: Get Coin Balance by Address"
             },
             {
