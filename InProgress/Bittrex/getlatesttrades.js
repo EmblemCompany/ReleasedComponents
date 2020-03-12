@@ -1,3 +1,9 @@
+const MARKETSTRIGGER = 'getBittrexMarkets';
+const { BittrexClient } = require('bittrex-node')
+let client = new BittrexClient({
+    apiKey: '',
+    apiSecret: ''
+});
 exports.id = 'getlatesttrades';
 exports.title = 'Get Latest Trades for a Market';
 exports.group = 'Bittrex';
@@ -15,9 +21,15 @@ exports.html = `
 <div class="padding">
     <div class="row">
         <div class="col-md-6">
+            <div data-jc="dropdown" data-jc-path="markets" data-jc-config="datasource:marketlist;required:true;empty:" class="m">@(Market Name)</div>
         </div>
     </div>
-</div>`;
+</div>
+<script>
+    ON('open.getlatesttrades', function(component, options) {
+        TRIGGER('getBittrexMarkets', 'marketlist');
+    });
+</script>`;
 
 exports.readme = '60000611324';
 
@@ -27,23 +39,27 @@ exports.install = function(instance) {
         publicKey: '',
         secretKey: '',
         verbose: true,
-        //TODO add the ticker options
     });
     instance.on('data', function(flowdata) {
         runIt(flowdata);
     });
 
     function runIt(flowdata) {
-        json = {};
-        api.getMarketHistory('BTC-ZEN').then((response) => { // TODO replace with options
-            console.log('[getMarketHistory(BTC-ZEN)] response:', response);
+        api.getMarketHistory(instance.options.markets).then((response) => {
             flowdata.data = response;
             instance.send(flowdata);
         }).catch((error) => {
-            console.error('[getMarketHistory(BTC-ZEN)] error:', error);
+            console.error('[getMarketHistory('+instance.options.markets+')] error:', error);
         }).finally(() => {
-            console.log('[getMarketHistory(BTC-ZEN)] done!');
+            console.log('[getMarketHistory('+instance.options.markets+')] done!');
         });
     };
 };
+
+FLOW.trigger(MARKETSTRIGGER, function(next) {
+    client.markets().then(markets=> {
+        var marketinfo = markets.map(item=>{return {name: item.MarketName, id: item.MarketName}});
+        next(marketinfo);
+    });
+});
 
