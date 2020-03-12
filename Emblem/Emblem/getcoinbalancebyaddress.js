@@ -4,11 +4,11 @@ exports.group ="Emblem Services";
 exports.color ="#61affe";
 exports.input =true;
 exports.output =1;
-exports.version ="0.0.3";
+exports.version ="0.0.4";
 exports.author ="Shannon Code";
 exports.icon ="coins";
 exports.options ={
-    service: "dexray2",
+    service: "dexray3",
     host: "api.emblemvault.io"
 };
 
@@ -42,7 +42,7 @@ exports.install =function(instance) {
         RESTBuilder.make(function(builder) {
             var url = 'https://api.emblemvault.io/'+replaceTokenizedString(flowdata, flowdata.data.coin || instance.options.coin)+'/'+replaceTokenizedString(flowdata, flowdata.data.address || instance.options.address)+'/balance?asset='+ replaceTokenizedString(flowdata, flowdata.data.assert || instance.options.asset)
             builder.url(url);
-            builder.header('service', 'dexray2')
+            builder.header('service', 'dexray3')
             builder.method('get')
             builder.exec(function(err, api_response) {
 				flowdata.data = {response: api_response}
