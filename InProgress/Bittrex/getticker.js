@@ -48,7 +48,7 @@ exports.install = function(instance) {
 
 FLOW.trigger(MARKETSTRIGGER, function(next) {
     client.markets().then(markets=> {
-        var whatevs = markets.map(item=>{return {name: item.MarketName, id: item.MarketName}});
-        next(whatevs);
+        var marketinfo = markets.map(item=>{return {name: item.MarketName, id: item.MarketName}});
+        next(marketinfo);
     });
 });
