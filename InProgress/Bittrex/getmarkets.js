@@ -1,7 +1,7 @@
 exports.id = 'getmarkets';
 exports.title = 'Get Markets';
 exports.group = 'Bittrex';
-exports.color = '#8bc53f';
+exports.color = '#0084d4';
 exports.input = true;
 exports.output = true;
 exports.author = 'Stacy Howerton <stacy@unspecified.me>';
@@ -9,7 +9,6 @@ exports.icon = 'chart-bar';
 exports.version = '0.0.1';
 exports.options = {  };
 exports.npm = [];
-
 
 exports.html = `
 <div class="padding">
