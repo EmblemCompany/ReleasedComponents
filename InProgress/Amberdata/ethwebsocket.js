@@ -76,6 +76,9 @@ exports.install = function(instance) {
 	instance.on('click', () => toggleSubscribe())
 	const eventMap = ['block', 'uncle', 'transaction', 'function']
 	function toggleSubscribe() {
+		if (!instance.options.blockchainid) {
+			return instance.status("Not Configured", "red")
+		}
 		if (subscribed) {
 			instance.status("UnSubscribed", "red");
 			client = makeClient();
