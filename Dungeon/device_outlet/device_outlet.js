@@ -30,7 +30,7 @@ Bellow data will toggle on and anything else off
 `;
 
 exports.html = `<div class="padding">
-	<p>The label you specify above will apear in DashBoard component's settings form.</p>
+	<p>The label you specify above will appear in DashBoard component's settings form.</p>
 	<div class="row">
 		<div class="col-md-4">
 			<div data-jc="dropdown" data-jc-path="default" data-jc-config="items:On|true,Off|false">Default value</div>
