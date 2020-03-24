@@ -14,7 +14,7 @@ exports.readme = '60000315471';
 exports.html = `<div class="padding">
 	<div class="row">
 		<div class="col-md-12">
-			<div data-jc="dropdown" data-jc-path="type" data-jc-config="items:Message data|data,Message repository|repository,Message data + Message repository|both;required:true" class="m">@(Output type)</div>
+			<div data-jc="dropdown" data-jc-path="type" data-jc-config="items:Message data|data,Message repository|repository,Message data + Message repository|both,Event Logs|logs,Message data + Event Logs|all;required:true" class="m">@(Output type)</div>
 			<div data-jc="textbox" data-jc-path="property" data-jc-config="placeholder: @(e.g. address.street)" class="m">@(Path to the property (leave empty to show the whole data object))</div>
 			<div data-jc="textbox" data-jc-path="group" data-jc-config="placeholder: @(e.g. Temperature)" class="m">@(A group name)</div>
 			<div data-jc="checkbox" data-jc-path="enabled">@(Enabled)</div>
@@ -30,6 +30,7 @@ exports.install = function(instance) {
 			var opt = instance.options;
 			var rep = response.repository;
 			var val = response.data;
+			var log = response.events;
 			var id = response.id;
 
 			switch (instance.options.type){
@@ -41,6 +42,15 @@ exports.install = function(instance) {
 					break;
 				case 'repository':
 					instance.debug(safeparse(opt.property ? U.get(rep, opt.property) : rep), undefined, opt.group, id);
+					break;
+				case 'logs':
+					instance.debug(safeparse(opt.property ? U.get(log, opt.property) : log), undefined, opt.group, id);
+					break;
+				case 'all':
+					var data = {};
+					data.events = log;
+					data.data = val instanceof Error ? { error: val.message, stack: val.stack } : val;
+					instance.debug(safeparse(opt.property ? U.get(data, opt.property) : data), undefined, opt.group, id);
 					break;
 				case 'data':
 				default:
