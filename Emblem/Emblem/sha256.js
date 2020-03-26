@@ -4,7 +4,7 @@ exports.group = 'Emblem Services';
 exports.color = '#61affe';
 exports.input = true;
 exports.output = 1;
-exports.version = '0.0.4';
+exports.version = '0.0.5';
 exports.author = 'Shannon Code';
 exports.icon = 'code-branch';
 exports.options = {  };
@@ -53,11 +53,23 @@ exports.install = function(instance) {
     })
 
     function replaceTokenizedString(response, myString) {
+        if (myString === '{msg.data}' && typeof(response.data) === 'object'){
+            return JSON.stringify(response.data)
+        } else if (response.data.data) {
+            try {
+                var d = JSON.parse(response.data.data)
+                if (typeof(d)==='object') {
+                    return response.data.data
+                }
+            } catch(err){ }            
+        }
+        
         var tokenRegex = /[^{\}]+(?=})/g
         var replaceArray = myString.match(tokenRegex);
         if (replaceArray) {
             replaceArray.forEach(item=>{
                     objectPath = item.replace('msg.', 'response.data.')
+                    console.log(response)
                     myString = myString.replace('{' + item + '}', eval(objectPath))
             })
         }
