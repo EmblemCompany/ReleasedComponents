@@ -40,12 +40,12 @@ exports.install = function(instance) {
         
         if (!data || !password) {
             if (!data) {
-                instance.status('Please supply soem data to encrypt','red')
-                instance.error('No data was supplied. Please supply data to encrypt in the componnet settings, incoming data, or global variables')
+                instance.status('Please supply some data to encrypt','red')
+                instance.error('No data was supplied. Please supply data to encrypt in the component settings, incoming data, or global variables')
             }
             if (!password) {
                 instance.status('Please supply a password to encrypt with','red')
-                instance.error('No password was supplied. Please supply a password in the componnet settings, incoming data, or global variables')
+                instance.error('No password was supplied. Please supply a password in the component settings, incoming data, or global variables')
             }
         } else {
             instance.status('')
