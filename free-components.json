@@ -170,6 +170,51 @@
         ]
 	},
 	{
+		"name": "Covid-19",
+		"items": [
+			{
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Covid-19/latestglobalcount.js",
+                "version": "0.0.1",
+                "display-name": "Covid-19 Latest Global Count"
+			},
+			{
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Covid-19/getglobalcountbydaterange.js",
+                "version": "0.0.1",
+                "display-name": "Covid-19 Get Global Count by Date Range"
+			},
+			{
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Covid-19/getglobalcountbydate.js",
+                "version": "0.0.1",
+                "display-name": "Covid-19 Get Global Count by Date"
+			},
+			{
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Covid-19/getcountryhistoricdata.js",
+                "version": "0.0.1",
+                "display-name": "Covid-19 Get Country Historic Data"
+			},
+			{
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Covid-19/getcountrydatafordate.js",
+                "version": "0.0.1",
+                "display-name": "Covid-19 Get Country Data for Date"
+			},
+			{
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/CoronavirusApi/getstatetimeseries.js",
+                "version": "0.0.1",
+                "display-name": "Coronavirus API Get Time Series Data by State"
+			}
+		]
+	},
+	{
+		"name": "Twitter",
+		"items": [
+			{
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Twitter/twitterpostupdate.js",
+                "version": "0.0.1",
+                "display-name": "Twitter Post an update"
+			}
+		]
+	},
+	{
 		"name": "Files and Data I/O",
 		"items": [
 			{
