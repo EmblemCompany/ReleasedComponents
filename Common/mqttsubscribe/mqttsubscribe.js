@@ -51,7 +51,7 @@ exports.install = function(instance) {
 			return;
 		}
 
-		instance.status('Not configured', 'red');
+		instance.status('Configure me before you use me!', 'red');
 	};
 
 	instance.on('options', instance.custom.reconfigure);

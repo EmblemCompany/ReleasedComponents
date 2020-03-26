@@ -61,7 +61,7 @@ exports.install = function(instance) {
 				var code = 'var send = function(index, value) { if (options.keepmessage) { if (instance.options.downstream) { flowdata.set(instance.name, value); } flowdata.data = value; instance.send2(index, flowdata); } else instance.send2(index, value);}; var error = function(err) { instance.throw(err); }; ' + instance.options.code;
 				fn = new Function('value', 'instance', 'flowdata', 'options', 'repository', 'require', code);
 			} else {
-				instance.status('Not configured', 'red');
+				instance.status('Configure me before you use me!', 'red');
 				fn = null;
 			}
 		} catch (e) {

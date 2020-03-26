@@ -97,7 +97,7 @@ exports.install = function(instance) {
 	instance.reconfigure = function() {
 		var options = instance.options;
 		can = options.url && options.url && options.method && options.stringify ? true : false;
-		instance.status(can ? '' : 'Not configured', can ? undefined : 'red');
+		instance.status(can ? '' : 'Configure me before you use me!', can ? undefined : 'red');
 
 		if (!can)
 			return;

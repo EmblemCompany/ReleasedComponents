@@ -164,7 +164,7 @@ exports.install = function(instance) {
 		can = (options.smtp || options.type !== 'smtp') && !!options.subject;
 
 		if (!can) {
-			instance.status('Not configured', 'red');
+			instance.status('Configure me before you use me!', 'red');
 			return;
 		}
 

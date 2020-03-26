@@ -307,7 +307,7 @@ exports.install = function(instance) {
 			instance.status('');
 			instance.custom.init && instance.custom.init();
 		} else {
-			instance.status('Not configured', 'red');
+			instance.status('Configure me before you use me!', 'red');
 			fn = null;
 		}
 	};

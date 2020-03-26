@@ -64,7 +64,7 @@ exports.install = function(instance) {
 				instance.send(flowdata)
 			});
 		} else {
-			instance.status("Please Configure", "red")
+			instance.status("Configure me before you use me!", "red")
 		}
 	}
 

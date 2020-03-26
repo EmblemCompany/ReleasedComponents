@@ -75,8 +75,8 @@ exports.install = function(instance) {
 		if (instance.options.props && instance.options.props.length)
 			instance.status('');
 		else
-			instance.status('Not configured', 'red');
+			instance.status('Configure me before you use me!', 'red');
 	});
 
-	instance.status(instance.options.props && instance.options.props.length ? '' : 'Not configured', 'red');
+	instance.status(instance.options.props && instance.options.props.length ? '' : 'Configure me before you use me!', 'red');
 };

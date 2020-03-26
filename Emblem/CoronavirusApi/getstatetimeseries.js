@@ -92,7 +92,7 @@ exports.install = function(instance) {
     
     function checkConfigure() {
         if (!instance.options.state) {
-            instance.status("Not configured", "red");
+            instance.status("Configure me before you use me!", "red");
         } else {
             instance.status('');
         };

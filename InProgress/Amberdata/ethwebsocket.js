@@ -77,7 +77,7 @@ exports.install = function(instance) {
 	const eventMap = ['block', 'uncle', 'transaction', 'function']
 	function toggleSubscribe() {
 		if (!instance.options.blockchainid) {
-			return instance.status("Not Configured", "red")
+			return instance.status("Configure me before you use me!", "red")
 		}
 		if (subscribed) {
 			instance.status("UnSubscribed", "red");

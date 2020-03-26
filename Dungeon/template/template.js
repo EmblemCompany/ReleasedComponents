@@ -37,7 +37,7 @@ exports.install = function(instance) {
 
 	instance.reconfigure = function() {
 		can = instance.options.template ? true : false;
-		instance.status(can ? '' : 'Not configured', can ? undefined : 'red');
+		instance.status(can ? '' : 'Configure me before you use me!', can ? undefined : 'red');
 	};
 
 	instance.on('options', instance.reconfigure);

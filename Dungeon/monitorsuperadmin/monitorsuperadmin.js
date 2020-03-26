@@ -102,7 +102,7 @@ exports.install = function(instance) {
 		else if (instance.options.token && instance.options.url)
 			instance.status('Disabled', 'red');
 		else
-			instance.status('Not configured', 'red');
+			instance.status('Configure me before you use me!', 'red');
 	};
 
 	instance.on('click', function() {

@@ -78,7 +78,7 @@ exports.install = function(instance) {
 	instance.custom.reconfigure = function() {
 		filename = instance.options.filename ? F.path.public(instance.options.filename) : null;
 		delimiter = (instance.options.delimiter || '').replace(/\\n/g, '\n');
-		// instance.status(filename ? instance.options.filename : 'Not configured', filename ? undefined : 'red');
+		// instance.status(filename ? instance.options.filename : 'Configure me before you use me!', filename ? undefined : 'red');
 		filename && Fs.mkdir(F.path.public(), NOOP);
 	};
 

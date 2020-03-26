@@ -129,7 +129,7 @@ exports.install = function(instance) {
 		ERRORS = [];
 
 		if (!options.conditions.length) {
-			instance.status('Not configured', 'red');
+			instance.status('Configure me before you use me!', 'red');
 			CONDITIONS = [];
 			outputs_length = 0;
 			return;
