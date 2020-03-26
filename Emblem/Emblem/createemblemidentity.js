@@ -4,7 +4,7 @@ exports.group = 'Emblem Services';
 exports.color = '#61affe';
 exports.input = true;
 exports.output = 1;
-exports.version = '0.0.10';
+exports.version = '0.0.11';
 exports.author = 'Shannon Code';
 exports.icon = 'fingerprint';
 exports.options = {  };
@@ -20,7 +20,7 @@ exports.install = function(instance) {
 	var hdkey = new Coval.Secure.HDKey()
 
 	instance.on('data', function(flowdata) {
-		var keys = generateKey()
+		var keys = generateKey(flowdata)
 		instance.status(keys.address, 'green');
 		flowdata.data = keys
 		if (instance.options.downstream) {
@@ -29,13 +29,22 @@ exports.install = function(instance) {
 		instance.send(flowdata)
 	
 	});
-	function generateKey() {
-		return hdkey.StandardHDKey('0', function(address, key){
-			var accessToken = {}
+	function generateKey(flowdata) {
+		var accessToken = {}
 			accessToken.method="mock"
 			accessToken.unloq_id = randomString(6, '#')
 			accessToken.unloq_key = randomString(64, 'hex')
-			return keys = {accessToken: accessToken, address: address, keyType: 'wallet', keyOriginator: 'CircuitBuilder', key: key.privateKey.toString()}
+
+		if (typeof(flowdata.data) == "object" && flowdata.data.hash) {
+			var bitcore = hdkey.GetBitcore();
+			var pk = bitcore.HDPrivateKey.fromSeed(flowdata.data.hash, bitcore.Networks.mainnet);
+    		var d = pk.derive("m/0'/0/" + 0, false);
+			var address = d.privateKey.toAddress().toString();
+			// console.log({pk: pk, d: d, address: address})
+			return keys = {accessToken: accessToken, address: address, keyType: 'wallet', keyOriginator: 'CircuitBuilder', key: d.privateKey.toString() }
+		}
+		return hdkey.StandardHDKey('0', function(address, key){
+			return keys = {accessToken: accessToken, address: address, keyType: 'wallet', keyOriginator: 'CircuitBuilder', key: key.privateKey.toString() }
 		})
 	}
 	function randomString(length, chars) {
