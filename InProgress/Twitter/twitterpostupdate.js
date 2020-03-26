@@ -1,4 +1,3 @@
-// #### https://github.com/shrimpy-dev/shrimpy-node
 exports.id = 'twitterpostupdate';
 exports.title = 'Post an update';
 exports.group = 'Twitter';
