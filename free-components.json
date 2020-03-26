@@ -24,7 +24,7 @@
 		"items": [
 			{
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/createemblemidentity.js",
-                "version": "0.0.10",
+                "version": "0.0.11",
                 "display-name": "Emblem: Create Emblem Identity"
 			},
 			{
@@ -349,7 +349,7 @@
             },
             {
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Templates/Components/sms_getcoinbalancebyaddress.js",
-                "version": "0.0.2",
+                "version": "0.0.4",
                 "display-name": "SMS Template Get Coin Balance by Address"
             },
             {
