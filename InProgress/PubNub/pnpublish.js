@@ -35,7 +35,7 @@ exports.readme = '60000534034';
 
 exports.install = function(instance) {
     var pubnub;
-    instance.status("Not Configured", "red")
+    instance.status("Configure me before you use me!", "red")
     subscribe()
     instance.on('data', (flowdata)=>{
         pubnub.publish(

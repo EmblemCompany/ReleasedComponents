@@ -37,7 +37,7 @@ exports.install = function(instance) {
 			}
 			instance.send(response)
 		} else {
-			instance.status("Please configure first", 'red');
+			instance.status("Configure me before you use me!", 'red');
 		}
 	});
 };

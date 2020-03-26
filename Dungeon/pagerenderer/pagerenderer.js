@@ -71,7 +71,7 @@ exports.install = function(instance) {
 
 	instance.custom.reconfigure = function() {
 		ready = instance.options.template ? true : false;
-		instance.status(ready ? '' : 'Not configured', ready ? undefined : 'red');
+		instance.status(ready ? '' : 'Configure me before you use me!', ready ? undefined : 'red');
 		ready && make_template();
 	};
 

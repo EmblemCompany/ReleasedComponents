@@ -36,7 +36,7 @@ exports.install = function(instance) {
 		if (instance.options.wirename) {
 			instance.status(instance.options.wirename);
 		} else
-			instance.status('Not configured', 'red');
+			instance.status('Configure me before you use me!', 'red');
 	};
 
 	ON('virtualwire', function(wirename, flowdata, shouldCallback){

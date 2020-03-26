@@ -292,7 +292,7 @@ exports.install = function(instance) {
     
     function checkConfigure() {
         if (!instance.options.country || !instance.options.date) {
-            instance.status("Not configured", "red");
+            instance.status("Configure me before you use me!", "red");
         } else {
             instance.status('');
         };

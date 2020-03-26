@@ -36,7 +36,7 @@ exports.readme = '60000534042';
 exports.install = function(instance) {
     var pubnub;
     var subscribed = false;
-    instance.status("Not Configured", "red")
+    instance.status("Configure me before you use me!", "red")
     /* instance.on('click', ()=>{
         subscribe()
     }) */

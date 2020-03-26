@@ -49,7 +49,7 @@ exports.install = function(instance) {
 					break;
 			}
 		} else
-			instance.status('Not configured', 'red');
+			instance.status('Configure me before you use me!', 'red');
 	};
 
 	instance.on('data', function(response) {

@@ -62,7 +62,7 @@ exports.install = function(instance) {
 			d = data;
 
 		if (!event || ! key)
-			return instance.status('No config to use', 'red');
+			return instance.status('Configure me before you use me!', 'red');
 
 		U.request(url.format(event, key), ['post', 'json'], d || EMPTYOBJECT, function(err, data, status) {
 			if (instance.options.downstream) {

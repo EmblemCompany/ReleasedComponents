@@ -43,7 +43,7 @@ exports.install = function(instance) {
 
 	instance.custom.reconfigure = function() {
 		var can = instance.options.template ? true : false;
-		instance.status(can ? '' : 'Not configured', can ? undefined : 'red');
+		instance.status(can ? '' : 'Configure me before you use me!', can ? undefined : 'red');
 		templates = templates.remove('id', instance.id);
 		templates.push({ id: instance.id, name: instance.options.name });
 	};
