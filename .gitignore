@@ -1,2 +1,4 @@
 .DS_Store
 InProgress/CloudRun/Runner/node_modules/
+
+*secret*
