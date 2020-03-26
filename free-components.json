@@ -94,12 +94,12 @@
         "items": [
             {
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Blockchain/bitcoinblocksws.js",
-                "version": "0.0.2",
+                "version": "0.0.3",
                 "display-name": "Blockchain.com: Bitcoin Blocks"
             },
             {
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Blockchain/bitcointransactionsws.js",
-                "version": "0.0.2",
+                "version": "0.0.3",
                 "display-name": "Blockchain.com: Bitcoin Transactions"
             }
         ]
