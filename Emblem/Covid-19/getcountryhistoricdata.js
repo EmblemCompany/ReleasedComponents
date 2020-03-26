@@ -1,25 +1,22 @@
-exports.id = 'getcountrydatafordate';
-exports.title = 'Get Country Data for Date';
+exports.id = 'getcountryhistoricdata';
+exports.title = 'Get Country Historic Data';
 exports.group = 'Covid-19';
 exports.color = '#002d72';
 exports.input = true;
 exports.output = true;
 exports.author = 'Dawn Code <dawn@unspecified.me>';
-exports.icon = 'head-side-mask';
+exports.icon = 'lungs-virus';
 exports.version = '0.0.1';
 exports.options = {  };
 exports.npm = [ ];
 
-exports.readme = '60000631999';
+exports.readme = '60000632000';
 
 exports.html = `
 <div class="padding">
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12">
             <div data-jc="dropdown" data-jc-path="country" data-jc-config="datasource:countries;required" class="m">@(Country)</div><div class="help"></div>
-        </div>
-        <div class="col-md-6">
-            <div data-jc="input" data-jc-path="date" data-jc-config="type:date;placeholder:Date;format:yyyy-MM-dd;required" class="m">@(Please enter or choose a date)</div><div class="help"></div>
         </div>
     </div>
 </div>
@@ -277,7 +274,6 @@ exports.html = `
 `;
 
 exports.install = function(instance) {
-
     checkConfigure();
 
     instance.on('data', function(flowdata) {
@@ -297,7 +293,7 @@ exports.install = function(instance) {
             instance.status('');
         };
     };
-    
+
     async function runIt(flowdata) {
 
         let data;
@@ -305,7 +301,7 @@ exports.install = function(instance) {
         var request = require('request');
         var options = {
             'method': 'GET',
-            'url': 'https://covidapi.info/api/v1/country/' + instance.options.country + '/' + instance.options.date,
+            'url': 'https://covidapi.info/api/v1/country/' + instance.options.country,
             'headers': {}
         };
 

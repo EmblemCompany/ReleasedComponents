@@ -24,7 +24,7 @@
 		"items": [
 			{
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Emblem/createemblemidentity.js",
-                "version": "0.0.10",
+                "version": "0.0.11",
                 "display-name": "Emblem: Create Emblem Identity"
 			},
 			{
@@ -94,12 +94,12 @@
         "items": [
             {
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Blockchain/bitcoinblocksws.js",
-                "version": "0.0.2",
+                "version": "0.0.3",
                 "display-name": "Blockchain.com: Bitcoin Blocks"
             },
             {
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Blockchain/bitcointransactionsws.js",
-                "version": "0.0.2",
+                "version": "0.0.3",
                 "display-name": "Blockchain.com: Bitcoin Transactions"
             }
         ]
@@ -168,6 +168,51 @@
                 "display-name": "CoinGecko Status Updates"
             }
         ]
+	},
+	{
+		"name": "Covid-19",
+		"items": [
+			{
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Covid-19/latestglobalcount.js",
+                "version": "0.0.1",
+                "display-name": "Covid-19 Latest Global Count"
+			},
+			{
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Covid-19/getglobalcountbydaterange.js",
+                "version": "0.0.1",
+                "display-name": "Covid-19 Get Global Count by Date Range"
+			},
+			{
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Covid-19/getglobalcountbydate.js",
+                "version": "0.0.1",
+                "display-name": "Covid-19 Get Global Count by Date"
+			},
+			{
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Covid-19/getcountryhistoricdata.js",
+                "version": "0.0.1",
+                "display-name": "Covid-19 Get Country Historic Data"
+			},
+			{
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Covid-19/getcountrydatafordate.js",
+                "version": "0.0.1",
+                "display-name": "Covid-19 Get Country Data for Date"
+			},
+			{
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/CoronavirusApi/getstatetimeseries.js",
+                "version": "0.0.1",
+                "display-name": "Coronavirus API Get Time Series Data by State"
+			}
+		]
+	},
+	{
+		"name": "Twitter",
+		"items": [
+			{
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Twitter/twitterpostupdate.js",
+                "version": "0.0.1",
+                "display-name": "Twitter Post an update"
+			}
+		]
 	},
 	{
 		"name": "Files and Data I/O",
@@ -349,7 +394,7 @@
             },
             {
                 "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Templates/Components/sms_getcoinbalancebyaddress.js",
-                "version": "0.0.2",
+                "version": "0.0.4",
                 "display-name": "SMS Template Get Coin Balance by Address"
             },
             {

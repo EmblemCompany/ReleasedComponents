@@ -6,8 +6,9 @@ exports.click = true;
 exports.input = false;
 exports.output = true;
 exports.author = 'Shannon Code <shannon@unspecified.me>';
-exports.icon = 'cubes';
-exports.version = '0.0.2';
+exports.icon = 'bitcoin';
+exports.brand = true;
+exports.version = '0.0.3';
 exports.options = {  };
 
 exports.readme = '60000314750';

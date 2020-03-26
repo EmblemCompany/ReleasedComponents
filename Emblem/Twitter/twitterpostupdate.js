@@ -1,4 +1,3 @@
-// #### https://github.com/shrimpy-dev/shrimpy-node
 exports.id = 'twitterpostupdate';
 exports.title = 'Post an update';
 exports.group = 'Twitter';
@@ -12,7 +11,7 @@ exports.version = '0.0.1';
 exports.options = {  };
 exports.npm = [];
 
-exports.readme = '60000315392';
+exports.readme = '60000631997';
 
 exports.html = `<div class="padding">
 <div class="row">

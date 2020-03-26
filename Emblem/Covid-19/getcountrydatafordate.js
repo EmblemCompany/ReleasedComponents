@@ -1,22 +1,25 @@
-exports.id = 'getcountryhistoricdata';
-exports.title = 'Get Country Historic Data';
+exports.id = 'getcountrydatafordate';
+exports.title = 'Get Country Data for Date';
 exports.group = 'Covid-19';
 exports.color = '#002d72';
 exports.input = true;
 exports.output = true;
 exports.author = 'Dawn Code <dawn@unspecified.me>';
-exports.icon = 'lungs-virus';
+exports.icon = 'head-side-mask';
 exports.version = '0.0.1';
 exports.options = {  };
 exports.npm = [ ];
 
-exports.readme = '60000544122';
+exports.readme = '60000631999';
 
 exports.html = `
 <div class="padding">
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-6">
             <div data-jc="dropdown" data-jc-path="country" data-jc-config="datasource:countries;required" class="m">@(Country)</div><div class="help"></div>
+        </div>
+        <div class="col-md-6">
+            <div data-jc="input" data-jc-path="date" data-jc-config="type:date;placeholder:Date;required" class="m">@(Please enter or choose a date)</div><div class="help"></div>
         </div>
     </div>
 </div>
@@ -274,6 +277,7 @@ exports.html = `
 `;
 
 exports.install = function(instance) {
+
     checkConfigure();
 
     instance.on('data', function(flowdata) {
@@ -287,13 +291,13 @@ exports.install = function(instance) {
     instance.on('options', instance.custom.reconfigure);
     
     function checkConfigure() {
-        if (!instance.options.country) {
+        if (!instance.options.country || !instance.options.date) {
             instance.status("Not configured", "red");
         } else {
             instance.status('');
         };
     };
-
+    
     async function runIt(flowdata) {
 
         let data;
@@ -301,7 +305,7 @@ exports.install = function(instance) {
         var request = require('request');
         var options = {
             'method': 'GET',
-            'url': 'https://covidapi.info/api/v1/country/' + instance.options.country,
+            'url': 'https://covidapi.info/api/v1/country/' + instance.options.country + '/' + new Date(instance.options.date).format('yyyy-MM-dd'),
             'headers': {}
         };
 
