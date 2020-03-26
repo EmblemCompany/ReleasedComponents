@@ -291,7 +291,7 @@ exports.install = function(instance) {
     instance.on('options', instance.custom.reconfigure);
     
     function checkConfigure() {
-        if (!instance.options.country) {
+        if (!instance.options.country || !instance.options.date) {
             instance.status("Not configured", "red");
         } else {
             instance.status('');

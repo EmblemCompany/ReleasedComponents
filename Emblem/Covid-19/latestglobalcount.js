@@ -14,21 +14,9 @@ exports.readme = '60000632003';
 
 exports.install = function(instance) {
 
-    checkConfigure();
-
     instance.on('data', function(flowdata) {
         runIt(flowdata);
     });
-
-    instance.custom.reconfigure = function() {
-        checkConfigure();
-    };
-
-    instance.on('options', instance.custom.reconfigure);
-    
-    function checkConfigure() {
-        instance.status('');
-    };
     
     async function runIt(flowdata) {
 
