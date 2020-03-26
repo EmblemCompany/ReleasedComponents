@@ -16,7 +16,7 @@ exports.html = `
 <div class="padding">
     <div class="row">
         <div class="col-md-6">
-            <div data-jc="input" data-jc-path="date" data-jc-config="type:date;placeholder:Date;format:yyyy-MM-dd;required" class="m">@(Please enter or choose a date) </div><div class="help"></div>
+            <div data-jc="input" data-jc-path="date" data-jc-config="type:date;placeholder:Date;required" class="m">@(Please enter or choose a date) </div><div class="help"></div>
         </div>
     </div>
 </div>
@@ -37,7 +37,7 @@ exports.install = function(instance) {
     instance.on('options', instance.custom.reconfigure);
     
     function checkConfigure() {
-        if (!instance.options.country) {
+        if (!instance.options.date) {
             instance.status("Not configured", "red");
         } else {
             instance.status('');
@@ -51,7 +51,7 @@ exports.install = function(instance) {
         var request = require('request');
         var options = {
             'method': 'GET',
-            'url': 'https://covidapi.info/api/v1/global/' + instance.options.date,
+            'url': 'https://covidapi.info/api/v1/global/' + new Date(instance.options.date).format('yyyy-MM-dd'),
             'headers': {}
         };
 

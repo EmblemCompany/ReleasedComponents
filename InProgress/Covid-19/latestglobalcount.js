@@ -27,11 +27,7 @@ exports.install = function(instance) {
     instance.on('options', instance.custom.reconfigure);
     
     function checkConfigure() {
-        if (!instance.options.country) {
-            instance.status("Not configured", "red");
-        } else {
-            instance.status('');
-        };
+        instance.status('');
     };
     
     async function runIt(flowdata) {

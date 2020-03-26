@@ -16,10 +16,10 @@ exports.html = `
 <div class="padding">
     <div class="row">
         <div class="col-md-6">
-            <div data-jc="input" data-jc-path="startdate" data-jc-config="type:date;placeholder:Date;format:yyyy-MM-dd;required" class="m">@(Please enter or choose a START date) </div><div class="help"></div>
+            <div data-jc="input" data-jc-path="startdate" data-jc-config="type:date;placeholder:Date;required" class="m">@(Please enter or choose a START date) </div><div class="help"></div>
         </div>
         <div class="col-md-6">
-            <div data-jc="input" data-jc-path="enddate" data-jc-config="type:date;placeholder:Date;format:yyyy-MM-dd;required" class="m">@(Please enter or choose an END date) </div><div class="help"></div>
+            <div data-jc="input" data-jc-path="enddate" data-jc-config="type:date;placeholder:Date;required" class="m">@(Please enter or choose an END date) </div><div class="help"></div>
         </div>
     </div>
 </div>
@@ -40,7 +40,7 @@ exports.install = function(instance) {
     instance.on('options', instance.custom.reconfigure);
     
     function checkConfigure() {
-        if (!instance.options.country) {
+        if (!instance.options.startdate || !instance.options.enddate) {
             instance.status("Not configured", "red");
         } else {
             instance.status('');
@@ -54,7 +54,7 @@ exports.install = function(instance) {
         var request = require('request');
         var options = {
             'method': 'GET',
-            'url': 'https://covidapi.info/api/v1/global/' + instance.options.startdate + '/' + instance.options.enddate,
+            'url': 'https://covidapi.info/api/v1/global/' + new Date(instance.options.startdate).format('yyyy-MM-dd') + '/' + new Date(instance.options.enddate).format('yyyy-MM-dd'),
             'headers': {}
         };
 

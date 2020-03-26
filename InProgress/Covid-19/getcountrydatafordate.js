@@ -19,7 +19,7 @@ exports.html = `
             <div data-jc="dropdown" data-jc-path="country" data-jc-config="datasource:countries;required" class="m">@(Country)</div><div class="help"></div>
         </div>
         <div class="col-md-6">
-            <div data-jc="input" data-jc-path="date" data-jc-config="type:date;placeholder:Date;format:yyyy-MM-dd;required" class="m">@(Please enter or choose a date)</div><div class="help"></div>
+            <div data-jc="input" data-jc-path="date" data-jc-config="type:date;placeholder:Date;required" class="m">@(Please enter or choose a date)</div><div class="help"></div>
         </div>
     </div>
 </div>
@@ -305,7 +305,7 @@ exports.install = function(instance) {
         var request = require('request');
         var options = {
             'method': 'GET',
-            'url': 'https://covidapi.info/api/v1/country/' + instance.options.country + '/' + instance.options.date,
+            'url': 'https://covidapi.info/api/v1/country/' + instance.options.country + '/' + new Date(instance.options.date).format('yyyy-MM-dd'),
             'headers': {}
         };
 
