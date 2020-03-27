@@ -55,7 +55,7 @@ exports.install = function(instance) {
 		type = null;
 
 		if (!can) {
-			instance.status('Not configured', 'red');
+			instance.status('Configure me before you use me!', 'red');
 			return;
 		}
 

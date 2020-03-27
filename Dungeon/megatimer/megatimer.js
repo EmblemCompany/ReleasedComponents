@@ -348,7 +348,7 @@ exports.install = function(instance) {
 		var options = instance.options;
 
 		if (!options.type) {
-			instance.status('Not configured', 'red');
+			instance.status('Configure me before you use me!', 'red');
 			return;
 		}
 

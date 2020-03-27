@@ -1,16 +1,16 @@
-exports.id = 'getglobalcountbydaterange';
-exports.title = 'Get Global Count by Date Range';
+exports.id = 'getglobaltimeseriesbyrange';
+exports.title = 'Get Global Timeseries Data by Range';
 exports.group = 'Covid-19';
 exports.color = '#002d72';
 exports.input = true;
 exports.output = true;
 exports.author = 'Dawn Code <dawn@unspecified.me>';
-exports.icon = 'disease';
+exports.icon = 'shield-virus';
 exports.version = '0.0.1';
 exports.options = {  };
 exports.npm = [ ];
 
-exports.readme = '60000632002';
+exports.readme = '60000633106';
 
 exports.html = `
 <div class="padding">
@@ -54,7 +54,7 @@ exports.install = function(instance) {
         var request = require('request');
         var options = {
             'method': 'GET',
-            'url': 'https://covidapi.info/api/v1/global/' + new Date(instance.options.startdate).format('yyyy-MM-dd') + '/' + new Date(instance.options.enddate).format('yyyy-MM-dd'),
+            'url': 'https://covidapi.info/api/v1/global/timeseries/' + new Date(instance.options.startdate).format('yyyy-MM-dd') + '/' + new Date(instance.options.enddate).format('yyyy-MM-dd'),
             'headers': {}
         };
 

@@ -6,7 +6,7 @@ exports.input = true;
 exports.output = true;
 exports.author = 'Dawn Code <dawn@unspecified.me>';
 exports.icon = 'head-side-cough';
-exports.version = '0.0.1';
+exports.version = '0.0.2';
 exports.options = {  };
 exports.npm = [ ];
 
@@ -38,7 +38,7 @@ exports.html = `
         {"name":"Illinois","id":"IL"},
         {"name":"Indiana","id":"IN"},
         {"name":"Iowa","id":"IA"},
-        {"name":"Kansa","id":"KS"},
+        {"name":"Kansas","id":"KS"},
         {"name":"Kentucky","id":"KY"},
         {"name":"Lousiana","id":"LA"},
         {"name":"Maine","id":"ME"},
@@ -92,7 +92,7 @@ exports.install = function(instance) {
     
     function checkConfigure() {
         if (!instance.options.state) {
-            instance.status("Not configured", "red");
+            instance.status("Configure me before you use me!", "red");
         } else {
             instance.status('');
         };

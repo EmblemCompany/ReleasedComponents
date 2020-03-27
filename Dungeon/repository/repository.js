@@ -36,7 +36,7 @@ exports.install = function(instance) {
 				var send = next = () => instance.send2(flowdata);` + instance.options.code;
 				fn = new Function('value', 'instance', 'flowdata', code);
 			} else {
-				instance.status('Not configured', 'red');
+				instance.status('Configure me before you use me!', 'red');
 				fn = null;
 			}
 		} catch (e) {

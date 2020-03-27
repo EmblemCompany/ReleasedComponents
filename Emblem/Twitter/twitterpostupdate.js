@@ -113,7 +113,7 @@ exports.install = function(instance) {
             || (!FLOW.variables.twitter_access_token_key && !instance.options.twitter_access_token_key)
             || (!FLOW.variables.twitter_access_token_secret && !instance.options.twitter_access_token_secret)
         ) {
-            instance.status("This component requires configuration", "red");
+            instance.status("Configure me before you use me!", "red");
         } else {
             instance.status("");
         }

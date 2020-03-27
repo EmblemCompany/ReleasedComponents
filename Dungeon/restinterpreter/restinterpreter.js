@@ -66,7 +66,7 @@ exports.install = function(instance) {
 
 			instance.status('Channel: ' + channel);
 		} else
-			instance.status('Not configured', 'red');
+			instance.status('Configure me before you use me!', 'red');
 	};
 
 	instance.on('options', instance.reconfigure);

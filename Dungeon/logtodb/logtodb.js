@@ -24,7 +24,7 @@ exports.install = function(instance) {
 
 	instance.custom.reconfigure = function() {
 		if (!instance.options.dbname || !instance.options.template)
-			return instance.status('Not configured', 'red');
+			return instance.status('Configure me before you use me!', 'red');
 		instance.status('');
 	};
 
