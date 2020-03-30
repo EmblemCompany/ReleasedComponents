@@ -198,8 +198,28 @@
                 "display-name": "Covid-19 Get Country Data for Date"
 			},
 			{
-                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/CoronavirusApi/getstatetimeseries.js",
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Covid-19/getglobaltimeseriesbyrange.js",
                 "version": "0.0.1",
+                "display-name": "Covid-19 Get Global Timeseries Data by Date Range"
+			},
+			{
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Covid-19/getcountrytimeseriesbyrange.js",
+                "version": "0.0.1",
+                "display-name": "Covid-19 Get Country Timeseries Data by Date Range"
+			},
+			{
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Covid-19/latestcountrytimeseries.js",
+                "version": "0.0.1",
+                "display-name": "Covid-19 Get Latest Country Timeseries Data"
+			},
+			{
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/Covid-19/getglobaldatewisecount.js",
+                "version": "0.0.1",
+                "display-name": "Covid-19 Get Global Datewise Count"
+			},
+			{
+                "url": "https://raw.githubusercontent.com/UnspecifiedLLC/ReleasedComponents/master/Emblem/CoronavirusApi/getstatetimeseries.js",
+                "version": "0.0.2",
                 "display-name": "Coronavirus API Get Time Series Data by State"
 			}
 		]
