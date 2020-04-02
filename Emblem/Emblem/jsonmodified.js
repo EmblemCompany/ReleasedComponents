@@ -1,16 +1,16 @@
-exports.id = 'webpagemodified';
-exports.title = 'Webpage Modified';
+exports.id = 'jsonmodified';
+exports.title = 'JSON Url Modified';
 exports.group = 'Files and Data I/O';
 exports.color = '#479DED';
 exports.input = true;
 exports.output = 2;
 exports.author = 'Shannon Code <shannon@unspecified.me>';
-exports.icon = 'atlas';
+exports.icon = 'code-branch';
 exports.version = '0.0.1';
 exports.options = {  };
 exports.npm = [];
 
-exports.readme = '60000641472';
+exports.readme = '60000650339';
 
 exports.html = `<div class="padding">
 <div class="row">
@@ -18,7 +18,7 @@ exports.html = `<div class="padding">
         <div data-jc="textbox" data-jc-path="url" data-jc-config="required:true;">@(Webpage URL) </div>
     </div>
     <div class="col-md-6">
-        <div data-jc="textbox" data-jc-path="selector" data-jc-config="required:false;">@(jQuery Selector) (Optional) </div>
+        <div data-jc="textbox" data-jc-path="json" data-jc-config="required:false;">@(JSON Selector) (Optional) </div>
     </div>
 </div>
     <div class="row">
@@ -30,7 +30,6 @@ exports.html = `<div class="padding">
     </div>
 </div>
 <style>.themedark .ui-radiobutton-selected i, .themedark .ui-radiobutton {color: white !important;border-color:white;}</style>
-<script>var outputtypes = ['Total.js', 'express', 'Hapi', 'Koa', 'Sails'];</script>
 `;
 
 exports.install = function(instance) {
@@ -48,15 +47,54 @@ exports.install = function(instance) {
     instance.on('data', (flowdata) => {
         request( { uri: instance.options.url || FLOW.variables.url },
             function(error, response, body) {
-                var $ = cheerio.load(body);
-                var cleaned
+                var isJson, $, cleaned;
                 try {
-                    cleaned = stripHtml($(instance.options.selector || FLOW.variables.selector || 'body').html())
-                    instance.send(1, cleaned)
-                } catch(err){
-                    instance.error(err.message);
-                    return instance.throw(err)
+                    body = JSON.parse(body)
+                    isJson = true
+                } catch(err) {
+                    isJson = false
                 }
+
+                if (isJson) {
+                    if (instance.options.json || FLOW.variables.json) {
+                        var selectors = (instance.options.json || FLOW.variables.json).split('.')
+                        var selectorString = ""
+                        var prop = "";
+                        var bodyString = "";
+                        selectors.forEach(item=>{
+                            try {
+                                var items = eval("body"+selectorString + '["'+item+'"]');
+                                if (items) {
+                                    selectorString = selectorString + '["'+item+'"]';
+                                } else {
+                                    prop = item;
+                                }
+                                
+                            } catch(e) {
+                                prop = item
+                            }
+                        })
+                        var temp = eval("body" + selectorString)
+                        if (Array.isArray(temp) && temp.length > 0 && prop) {
+                            temp.forEach(item=>{
+                                var location = eval('item.' + prop );
+                                bodyString = bodyString + '\r\n' + location;
+                            })
+                            cleaned = stripHtml(bodyString);
+                            instance.send(1, cleaned);
+                        } else {
+                            cleaned = stripHtml(JSON.stringify(temp));
+                            instance.send(1, cleaned);
+                        }
+                    } else {
+                        cleaned = stripHtml(JSON.stringify(body));
+                        instance.send(1, cleaned);
+                    }
+                } else {
+                    instance.error("Not JSON");
+                    return instance.throw("Not JSON")
+                }
+                
                 if (backup !== cleaned) {
                     if (!backup) {
                         instance.status("First capture", "green")
@@ -78,9 +116,9 @@ exports.install = function(instance) {
                             if (instance.options.output === 'structuredreport') {
                                 var insertions = textDiff.filter(item=>{ return item[0] === 1})
                                 var deletions = textDiff.filter(item=>{ return item[0] === -1})
-                                instance.send(0,instance.make({data: report, insertions: insertions, deletions: deletions, url: instance.options.url || FLOW.variables.url}))
+                                instance.send(0, instance.make({data: report, insertions: insertions, deletions: deletions, url: instance.options.url || FLOW.variables.url}))
                             } else {
-                                instance.send(0,instance.make(report));
+                                instance.send(0, instance.make(report));
                             }
                             
                         }
