@@ -3,7 +3,8 @@ exports.title = 'Webpage Modified';
 exports.group = 'Files and Data I/O';
 exports.color = '#479DED';
 exports.input = true;
-exports.output = 2;
+exports.output = true;
+exports.click = true;
 exports.author = 'Shannon Code <shannon@unspecified.me>';
 exports.icon = 'atlas';
 exports.version = '0.0.1';
@@ -22,13 +23,26 @@ exports.html = `<div class="padding">
     </div>
 </div>
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-6">
             <div class="padding">
                 <div data-jc="radiobutton" data-jc-path="output" data-jc-config="items:structuredreport|Structured Report,htmlreport|Html Report,list|List of changes;required:true;">Output type</div>
             </div>
         </div>
+        <div class="col-md-6">
+            <div class="padding">
+                <div data-jc="checkbox" data-jc-path="debug_output" data-jc-config="">@(Debug Output?) </div>
+            </div>
+        </div>
     </div>
 </div>
+<script>
+ON('save.webpagemodified', function(component, options) {
+    if (options.debug_output) {
+        component.output = 2;
+    } else {
+        component.output = 1;
+    }
+});</script>
 <style>.themedark .ui-radiobutton-selected i, .themedark .ui-radiobutton {color: white !important;border-color:white;}</style>
 <script>var outputtypes = ['Total.js', 'express', 'Hapi', 'Koa', 'Sails'];</script>
 `;
@@ -44,15 +58,22 @@ exports.install = function(instance) {
 
     var backup = undefined;
     var counter = 0;
-    
+    instance.on('click', () => {
+        checkConfig()
+        doWork(instance.make({}))
+    });
     instance.on('data', (flowdata) => {
+        doWork(flowdata);
+    });
+
+    function doWork(flowdata) {
         request( { uri: instance.options.url || FLOW.variables.url },
             function(error, response, body) {
                 var $ = cheerio.load(body);
                 var cleaned
                 try {
                     cleaned = stripHtml($(instance.options.selector || FLOW.variables.selector || 'body').html())
-                    instance.send(1, cleaned)
+                    // instance.send(1, cleaned)
                 } catch(err){
                     instance.error(err.message);
                     return instance.throw(err)
@@ -60,7 +81,7 @@ exports.install = function(instance) {
                 if (backup !== cleaned) {
                     if (!backup) {
                         instance.status("First capture", "green")
-                        return backup = cleaned
+                        backup = cleaned
                     } else {
                         textDiff = diff.main(backup, cleaned)
                         diff.cleanupSemantic(textDiff)
@@ -85,16 +106,16 @@ exports.install = function(instance) {
                             
                         }
                     }
-                    
-
                 } else {
                     counter++;
                     instance.status('Not modified: {0}x'.format(counter));
                 }
+                if (instance.options.debug_output) {
+                    instance.send(1,cleaned);
+                }
             }
         );
-        
-    });
+    }
 
     instance.on('options', ()=>{
         checkConfig();
@@ -109,7 +130,7 @@ exports.install = function(instance) {
         ) {
             instance.status("Configure me before you use me!", "red");
         } else {
-            var backup = undefined;
+            backup = undefined;
             instance.status("");
         }
     }
