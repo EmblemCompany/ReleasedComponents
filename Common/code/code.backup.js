@@ -18,7 +18,6 @@ exports.html = `<div class="padding">
 			<div class="help m">@(Minimum is 1)</div>
 		</div>
 	</div>
-	<span class="link expand" style="color:green;float:right;display:none;" onclick="toggle()"><i class="fa fa-arrows-alt"></i></span>
 	<div data-jc="codemirror" data-jc-path="code" data-jc-config="type:javascript;required:true;height:500;tabs:true;trim:true" class="m">@(Code)</div>
 	<div data-jc="checkbox" data-jc-path="keepmessage">@(Keep message instance)</div>
 </div>
@@ -38,56 +37,6 @@ exports.html = `<div class="padding">
 			component.output = options.outputs || 1;
 		}
 	});
-	var container, header, editor, parent, html, expand = '';
-	var mode = "minimized";
-	setTimeout(()=>{
-		container = $(".ui-codemirror");
-		header = $(".ui-modal-header");
-		editor = $(".CodeMirror");
-		parent = $(".ui-modal-visible");
-		html = $('div[data-jc-id="html.code"]');
-		expand = $(".link.expand");
-		expand.show();
-		console.log("loaded", container, header, editor, parent, html, expand);
-	}, 2000);
-	
-
-	function fullscreen(){
-		expand.detach();
-		header.prepend(expand);
-		header.appendTo(parent);
-		editor.appendTo(parent);
-		expand.find("i").removeClass("fa-arrows-alt");
-		expand.find("i").addClass("fa-compress-arrows-alt");
-		expand.css("line-height", "50px");
-		expand.css("padding-right", "5px");
-		parent.css("padding","25px");
-		editor.css("height","95%");
-		html.hide();
-		mode = "fullscreen";
-	}
-
-	function restore() {
-		expand.detach();
-		editor.detach();
-		html.prepend(header);
-		editor.appendTo(container);
-		editor.css("height", "unset");
-		expand.find("i").removeClass("fa-compress-arrows-alt");
-		expand.find("i").addClass("fa-arrows-alt");
-		expand.css("line-height","unset");
-		expand.insertBefore(editor.parent().parent());
-		html.show();
-		mode = "minimized";
-	}
-
-	function toggle() {
-		if (mode === "minimized") {
-			fullscreen();
-		} else {
-			restore();
-		}
-	}
 </script>`;
 
 exports.install = function(instance) {

@@ -57,7 +57,7 @@ exports.install = function(instance) {
 	var pagetemplate = '';
 
 	instance.on('data', function(flowdata){
-		console.log('DATA', ready, flowdata.data);
+		//console.log('DATA', ready, flowdata.data);
 		if (!ready)
 			return;
 
